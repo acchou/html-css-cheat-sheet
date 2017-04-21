@@ -1,0 +1,29 @@
+body {
+    font-family: 'Source Code Pro', monospace;
+}
+
+.topic {
+    height: 1000px;
+}
+
+.nav-element {
+    width: 6em;
+    text-align: center;
+    padding: 1em 2em;
+    background-color: lightBlue;
+    display: inline-block;
+    color: #color-primary-2;
+}
+
+.nav-element:link, .nav-element:visited {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: grey;
+}
