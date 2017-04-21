@@ -1,29 +1,21 @@
 body {
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    padding: 32px 64px;
+}
+
+.title, .subtitle {
+    font-weight: 300;
+}
+
+.title {
+    font-size: 3em;
 }
 
 .topic {
-    height: 1000px;
+    height: 100px;
 }
 
-.nav-element {
-    width: 6em;
-    text-align: center;
-    padding: 1em 2em;
-    background-color: lightBlue;
-    display: inline-block;
-    color: #color-primary-2;
-}
-
-.nav-element:link, .nav-element:visited {
-    text-decoration: none;
-    color: black;
-}
-
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: grey;
+.code {
+    font-family: 'Source Code Pro', monospace;     
 }
