@@ -8,14 +8,73 @@
     </head>
     <body>
         <h1 class="title">HTML and CSS cheat sheet</h1>
-        <div class="topic">
-            <h2 class="subtitle">HTML</h2>
-            <p>This is html.</p>
+        <div class="language">
+            <div class="topic">
+                <h2>HTML Template</h2>
+                <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Title&lt;/title&gt;
+        &lt;link href="style.css" type="text/css" rel="stylesheet"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        ...
+    &lt;/body&gt;
+&lt;/html&gt;
+                </code></pre>
+            </div>
+            <div class="topic">
+                <h2>div</h2>
+            </div>
         </div>
-        <br>
-        <div class="topic">
-            <h2 class="subtitle">CSS</h2>
-            <p>This is css.</p>
+        <div class="language">
+            <div class="topic">
+                <h2>CSS Template</h2>
+                <code>
+                    <table>
+                        <thead>
+                            <th>selector</th>
+                            <th>matched element</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>tag</td>
+                                <td>&lt;tag&gt;...&lt;/tag&gt;</td>
+                            </tr>
+                            <tr>
+                                <td>.class</td>
+                                <td>&lt;div class="class"&gt;...&lt;/div&gt;</td>
+                            </tr>
+                            <tr>
+                                <td>.class tag</td>
+                                <td>&lt;div class="class"&gt;&lt;tag&gt;...&lt;/tag&gt;&lt;/div&gt;</td>
+                            </tr>
+                            <tr>
+                                <td>#id</td>
+                                <td>&lt;tag id="id"&gt;...&lt;/tag&gt;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </code>
+                <pre><code>
+tag {
+    property: value;
+}
+
+.class {
+    property: value;
+}
+
+.class tag {
+    property: value;
+}
+
+#id {
+    property: value;
+}
+                </code></pre>
+            </div>
         </div>
     </body>
 </html>
