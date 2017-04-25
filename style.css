@@ -1,6 +1,5 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 300;
     padding: 0px 20px;
 }
 
@@ -35,7 +34,10 @@ code {
     font-family: 'Source Code Pro', monospace;
     font-size: 10pt;
     overflow: scroll;
-    padding: 0.25em 2em;
-    position: relative;
+    padding: 0em 0.5em;
     width: 100%;
+}
+
+th {
+    text-align: left;
 }

@@ -35,44 +35,51 @@
                     <table>
                         <thead>
                             <th>selector</th>
-                            <th>matched element</th>
+                            <th>matches</th>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>tag</td>
+                                <td><pre><code>
+tag {
+   property: value;
+}
+                                </code></pre></td>
                                 <td>&lt;tag&gt;...&lt;/tag&gt;</td>
                             </tr>
                             <tr>
-                                <td>.class</td>
+                                <td><pre><code>
+ .class {
+    property: value;
+}
+                                </code></pre></td>
                                 <td>&lt;div class="class"&gt;...&lt;/div&gt;</td>
                             </tr>
                             <tr>
-                                <td>.class tag</td>
+                                <td><pre><code>
+ .class tag {
+    property: value;
+}
+                                </code></pre></td>
                                 <td>&lt;div class="class"&gt;&lt;tag&gt;...&lt;/tag&gt;&lt;/div&gt;</td>
                             </tr>
                             <tr>
-                                <td>#id</td>
+                                <td><pre><code>
+ #id {
+    property: value;
+}
+                                </code></pre></td>
                                 <td>&lt;tag id="id"&gt;...&lt;/tag&gt;</td>
                             </tr>
                         </tbody>
                     </table>
                 </code>
                 <pre><code>
-tag {
-    property: value;
-}
 
-.class {
-    property: value;
-}
 
-.class tag {
-    property: value;
-}
 
-#id {
-    property: value;
-}
+
+
+
                 </code></pre>
             </div>
         </div>
