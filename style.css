@@ -7,8 +7,13 @@ body {
     font-size: 20pt;
 }
 
+.sheet {
+    display: flex;
+}
+
 .snippet {
     display: inline-flex;
+    flex-direction: column;
     margin: 1em 0 1em 0;
     padding: 0px 20px;
 }
@@ -37,10 +42,18 @@ code {
     white-space: pre;
 }
 
+table {
+    border-collapse: collapse;
+}
+
+table code {
+    padding: 1em 1.5em;
+}
+
 th {
     text-align: left;
-    padding-left: 1em;
-    border-bottom: 2px solid black;
+    padding: 0.5em 0.5em 0.5em 1em;
+    border-bottom: 2px solid white;
 }
 
 td {
