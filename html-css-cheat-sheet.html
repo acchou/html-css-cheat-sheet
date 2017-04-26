@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>HTML and CSS cheat sheet</title>
-        <link href="style.css" type="text/css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
-    </head>
-    <body>
-        <h1 class="title">HTML and CSS cheat sheet</h1>
-        <div class="language">
-            <div class="topic">
-                <h2>HTML Template</h2>
-                <pre><code>
+
+<head>
+    <title>HTML and CSS cheat sheet</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="title">HTML and CSS cheat sheet</h1>
+    <div class="snippet">
+        <h2>HTML Template</h2>
+        <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -22,66 +23,64 @@
         ...
     &lt;/body&gt;
 &lt;/html&gt;
-                </code></pre>
-            </div>
-            <div class="topic">
-                <h2>div</h2>
-            </div>
-        </div>
-        <div class="language">
-            <div class="topic">
-                <h2>CSS Template</h2>
-                <code>
-                    <table>
-                        <thead>
-                            <th>selector</th>
-                            <th>matches</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><pre><code>
+        </code>
+    </div>
+    <div class="snippet">
+        <h2>div</h2>
+    </div>
+    <div class="snippet">
+        <h2>Flexbox</h2>
+        <code>
+display: flex;
+display: 
+                </code>
+    </div>
+    <div class="snippet">
+        <h2>CSS Template</h2>
+        <table>
+            <thead>
+                <th>selector</th>
+                <th>matches</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <code>
 tag {
    property: value;
-}
-                                </code></pre></td>
-                                <td>&lt;tag&gt;...&lt;/tag&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><pre><code>
- .class {
+}</code>
+                    </td>
+                    <td><code>&lt;tag&gt;...&lt;/tag&gt;</code></td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>
+.class {
     property: value;
-}
-                                </code></pre></td>
-                                <td>&lt;div class="class"&gt;...&lt;/div&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><pre><code>
+}</code>
+                    </td>
+                    <td><code>&lt;div class="class"&gt;...&lt;/div&gt;</code></td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>
  .class tag {
     property: value;
-}
-                                </code></pre></td>
-                                <td>&lt;div class="class"&gt;&lt;tag&gt;...&lt;/tag&gt;&lt;/div&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><pre><code>
- #id {
+}</code>
+                    </td>
+                    <td><code>&lt;div class="class"&gt;&lt;tag&gt;...&lt;/tag&gt;&lt;/div&gt;</code></td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>
+#id {
     property: value;
-}
-                                </code></pre></td>
-                                <td>&lt;tag id="id"&gt;...&lt;/tag&gt;</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </code>
-                <pre><code>
-
-
-
-
-
-
-                </code></pre>
-            </div>
-        </div>
-    </body>
+}</code>
+                    </td>
+                    <td><code>&lt;tag id="id"&gt;...&lt;/tag&gt;</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
 </html>

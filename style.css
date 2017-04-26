@@ -7,37 +7,42 @@ body {
     font-size: 20pt;
 }
 
-.topic {
-    display: inline-block;
+.snippet {
+    display: inline-flex;
     margin: 1em 0 1em 0;
     padding: 0px 20px;
-    width: 45%;
 }
 
-.topic h2 {
+.snippet h2 {
     background-color: cornflowerblue;
     color: white;
     font-size: 12pt;
     margin: 0;
-    padding: 0.25em 0em 0.25em 1em;
+    padding: 0.25em 1em 0.25em 1em;
 }
 
-pre {
-    margin: 0;
+.snippet table {
+    background-color: #eee;
 }
 
 code {
     background-color: #eee;
     box-sizing: border-box;
     color: #222;
-    display: block;
+    display: inline-block;
     font-family: 'Source Code Pro', monospace;
     font-size: 10pt;
     overflow: scroll;
-    padding: 0em 0.5em;
-    width: 100%;
+    padding: 0em 1em;
+    white-space: pre;
 }
 
 th {
     text-align: left;
+    padding-left: 1em;
+    border-bottom: 2px solid black;
+}
+
+td {
+    border-bottom: 2px solid white;
 }
