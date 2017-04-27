@@ -26,11 +26,21 @@ body {
     padding: 0.25em 1em 0.25em 1em;
 }
 
+.snippet .match {
+    display: flex;
+    /* align-items: stretch; */
+    align-content: center;
+}
+
+.selector, .element {
+    align-content: center;
+}
+
 .snippet table {
     background-color: #eee;
 }
 
-code, table.code td {
+code, .code {
     background-color: #eee;
     box-sizing: border-box;
     color: #222;
@@ -80,8 +90,14 @@ td {
     padding: 1em 0;
 }
 
+.table .header {
+    display: table-cell;
+    padding: 0.5em 1em;
+    text-decoration-line: underline;
+}
+
 .table .row .data {
     display: table-cell;
     flex: 0 0 auto;
-    padding-left: 1em;
+    padding: 1em 1em;
 }
