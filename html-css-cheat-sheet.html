@@ -38,44 +38,49 @@ flex-direction: row;
                 </code>
         </div>
         <div class="snippet">
+            <h2>Common HTML Elements</h2>
+            <table class="code">
+                <tr>
+                    <td>
+                    </td>
+                    <td>Headings</td>
+                </tr>
+            </table>
+        </div>
+        <div class="snippet">
             <h2>CSS Template</h2>
-            <table>
+            <div class="table">
+                <div class="row">
+                    <div class="data">tag { <div class="scope">property: value;</div>}</div>
+                    <div class="data">&lt;tag&gt;...&lt;/tag&gt;</div>
+                </div>
+                <div class="row">
+                    <div class="data">.class { <div class="scope">property: value;</div> }</div>
+                    <div class="data">&lt;div class="class"&gt;...&lt;/div&gt;</div>
+                </div>
+            </div>
+
+            <table class="code">
                 <thead>
                     <th>selector</th>
                     <th>matches</th>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>
-                            <code>tag {
-   property: value;
-}</code>
-                        </td>
-                        <td><code>&lt;tag&gt;...&lt;/tag&gt;</code></td>
+                        <td>tag { <div class="scope">property: value;</div>}</td>
+                        <td>&lt;tag&gt;...&lt;/tag&gt;</td>
                     </tr>
                     <tr>
-                        <td>
-                            <code>.class {
-    property: value;
-}</code>
-                        </td>
-                        <td><code>&lt;div class="class"&gt;...&lt;/div&gt;</code></td>
+                        <td>.class { <div class="scope">property: value;</div> }</td>
+                        <td>&lt;div class="class"&gt;...&lt;/div&gt;</td>
                     </tr>
                     <tr>
-                        <td>
-                            <code>.class tag {
-    property: value;
-}</code>
-                        </td>
-                        <td><code>&lt;div class=&quot;class&quot;&gt;&#10;    &lt;tag&gt;...&lt;/tag&gt;&#10;&lt;/div&gt;</code></td>
+                        <td>.class tag { <div class="scope">property: value;</div>}</td>
+                        <td>&lt;div class=&quot;class&quot;&gt;<div class="scope">&lt;tag&gt;...&lt;/tag&gt;</div>&lt;/div&gt;</td>
                     </tr>
                     <tr>
-                        <td>
-                            <code>#id {
-    property: value;
-}</code>
-                        </td>
-                        <td><code>&lt;tag id="id"&gt;...&lt;/tag&gt;</code></td>
+                        <td>#id { <div class="scope">property: value;</div> }</td>
+                        <td>&lt;tag id="id"&gt;...&lt;/tag&gt;</td>
                     </tr>
                 </tbody>
             </table>
@@ -83,9 +88,15 @@ flex-direction: row;
         <div class="snippet">
             <h2>Colors</h2>
             <code>
-                color: white;
-                color: rgb(red, green, blue);
-                color: hsl(hue, saturantion, lightness);
+color: white;
+color: #01f;
+color: #0011ff;
+color: rgb(red, green, blue);
+color: hsl(hue, saturation, lightness);
+
+/* <comment>alpha transparency</comment> */
+color: rgb(red, green, blue, alpha);
+color: hsl(hue, saturation, lightness, alpha);
             </code>
         </div>
     </div>

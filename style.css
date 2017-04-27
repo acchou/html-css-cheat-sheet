@@ -8,7 +8,7 @@ body {
 }
 
 .sheet {
-    display: flex;
+    display: block;
 }
 
 .snippet {
@@ -30,7 +30,7 @@ body {
     background-color: #eee;
 }
 
-code {
+code, table.code td {
     background-color: #eee;
     box-sizing: border-box;
     color: #222;
@@ -46,8 +46,9 @@ table {
     border-collapse: collapse;
 }
 
-table code {
-    padding: 1em 1.5em;
+.scope {
+    display: block;
+    padding-left: 2em;
 }
 
 th {
@@ -56,6 +57,31 @@ th {
     border-bottom: 2px solid white;
 }
 
-td {
+tr {
     border-bottom: 2px solid white;
+}
+
+td {
+    /* border-bottom: 2px solid white; */
+}
+
+.table {
+    display: table;
+    flex-direction: column;
+    background: #eee;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 10pt;
+    overflow: hidden;
+    /* border: 1pt solid red; */
+}
+
+.table .row {
+    display: table-row;
+    padding: 1em 0;
+}
+
+.table .row .data {
+    display: table-cell;
+    flex: 0 0 auto;
+    padding-left: 1em;
 }
