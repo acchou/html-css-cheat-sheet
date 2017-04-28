@@ -32,11 +32,12 @@ body {
     background-color: #eee;
 }
 
-/* XXX */
 .selector, .element {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1em;
 }
 
 .snippet table {
