@@ -44,20 +44,38 @@ body {
     background-color: #eee;
 }
 
+code, .code {
+    font-family: 'Source Code Pro', monospace;
+    white-space: pre;
+}
+
 code {
     background-color: #eee;
     color: #222;
     display: block;
-    font-family: 'Source Code Pro', monospace;
     font-size: 10pt;
-    white-space: pre;
 }
 
-.codeblock.headers {
+.codeblock.noverticalpadding {
     padding: 0em 1em;
 }
 
 .codeblock {
     background-color: #eee;
     padding: 1em 1em;
+}
+
+/* Formatting code in headers. Default header padding 
+   makes code look too loose. */
+.code.top {
+    padding-bottom: 0;
+}
+
+.code.mid {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.code.bot {
+    padding-top: 0;
 }

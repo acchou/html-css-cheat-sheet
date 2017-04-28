@@ -39,7 +39,7 @@
         </div>
         <div class="snippet">
             <h2>Headers</h2>
-            <div class="codeblock headers">
+            <div class="codeblock noverticalpadding">
                 <code><h1>&lt;h1&gt;</h1></code>
                 <code><h2>&lt;h2&gt;</h2></code>
                 <code><h3>&lt;h3&gt;</h3></code>
@@ -49,44 +49,76 @@
             </div>
         </div>
         <div class="snippet">
-            <h2>CSS element selector</h2>
-            <div class="match">
-                <div class="selector">
-                    <code>tag {</code>
-                    <code>  property: value;</code>
-                    <code>}</code>
-                </div>
-                <div class="element">
-                    <code>&lt;tag&gt;...&lt;/tag&gt;</code>
-                </div>
+            <h2 class="code">&lt;any&gt;</h2>
+            <div class="codeblock">
+                <code>any {</code>
+                <code>  property: value;</code>
+                <code>}</code>
             </div>
         </div>
-        
-        <!-- <table class="code">
-                <thead>
-                    <th>selector</th>
-                    <th>matches</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>tag { <div class="scope">property: value;</div>}</td>
-                        <td>&lt;tag&gt;...&lt;/tag&gt;</td>
-                    </tr>
-                    <tr>
-                        <td>.class { <div class="scope">property: value;</div> }</td>
-                        <td>&lt;div class="class"&gt;...&lt;/div&gt;</td>
-                    </tr>
-                    <tr>
-                        <td>.class tag { <div class="scope">property: value;</div>}</td>
-                        <td>&lt;div class=&quot;class&quot;&gt;<div class="scope">&lt;tag&gt;...&lt;/tag&gt;</div>&lt;/div&gt;</td>
-                    </tr>
-                    <tr>
-                        <td>#id { <div class="scope">property: value;</div> }</td>
-                        <td>&lt;tag id="id"&gt;...&lt;/tag&gt;</td>
-                    </tr>
-                </tbody>
-            </table> -->
-
+        <div class="snippet">
+            <h2 class="code">&lt;div class="apple"&gt;</h2>
+            <div class="codeblock">
+                <code>.apple {</code>
+                <code>    property: value;</code>
+                <code>}</code>
+            </div>
+        </div>
+        <div class="snippet">
+            <h2 class="code">&lt;tag id="id"&gt;</h2>
+            <div class="codeblock">
+                <code>#id {</code>
+                <code>    property: value;</code>
+                <code>}</code>
+            </div>
+        </div>
+        <div class="snippet">
+            <h2 class="code">&lt;div class="apple orange"&gt;</h2>
+            <div class="codeblock">
+                <code>.apple.orange {</code>
+                <code>    property: value;</code>
+                <code>}</code>
+            </div>
+            <div class="codeblock">
+                <code>div.apple.orange {</code>
+                <code>    property: value;</code>
+                <code>}</code>
+            </div>
+        </div>
+        <div class="snippet">
+            <h2 class="code">&lt;parent&gt;&hellip;&lt;descendant&gt;</h2>
+            <div class="codeblock">
+                <code>parent descendant {</code>
+                <code>    property: value;</code>
+                <code>}</code>
+            </div>
+        </div>
+        <div class="snippet">
+            <h2 class="code">&lt;parent&gt;&lt;child&gt;</h2>
+            <div class="codeblock">
+                <code>parent > child {</code>
+                <code>    property: value;</code>
+                <code>}</code>
+            </div>
+        </div>
+        <div class="snippet">
+            <h2 class="code">&lt;/brother&gt;&lt;me&gt;</h2>
+            <div class="codeblock">
+                <code>brother + me {</code>
+                <code>    property: value;</code>
+                <code>}</code>
+            </div>
+        </div>
+        <div class="snippet">
+            <h2 class="code top">&lt;sibling&gt;</h2>
+            <h2 class="code mid"> &vellip;</h2>
+            <h2 class="code bot">&lt;me&gt;</h2>
+            <div class="codeblock">
+                <code>sibling ~ me {</code>
+                <code>    property: value;</code>
+                <code>}</code>
+            </div>
+        </div>
         <div class="snippet">
             <h2>Colors</h2>
             <div class="codeblock">
