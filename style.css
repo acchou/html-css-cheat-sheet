@@ -29,11 +29,13 @@ body {
 .snippet .match {
     display: flex;
     align-items: stretch;
-    /* align-content: center; */
+    background-color: #eee;
 }
 
-.element {
+/* XXX */
+.selector, .element {
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -48,6 +50,10 @@ code {
     font-family: 'Source Code Pro', monospace;
     font-size: 10pt;
     white-space: pre;
+}
+
+.codeblock.headers {
+    padding: 0em 1em;
 }
 
 .codeblock {
