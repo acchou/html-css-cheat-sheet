@@ -18,7 +18,7 @@ body {
     padding: 0px 20px;
 }
 
-.snippet h2 {
+.snippet > h2 {
     background-color: cornflowerblue;
     color: white;
     font-size: 12pt;
@@ -28,76 +28,29 @@ body {
 
 .snippet .match {
     display: flex;
-    /* align-items: stretch; */
-    align-content: center;
+    align-items: stretch;
+    /* align-content: center; */
 }
 
-.selector, .element {
-    align-content: center;
+.element {
+    display: flex;
+    align-items: center;
 }
 
 .snippet table {
     background-color: #eee;
 }
 
-code, .code {
+code {
     background-color: #eee;
-    box-sizing: border-box;
     color: #222;
-    display: inline-block;
+    display: block;
     font-family: 'Source Code Pro', monospace;
     font-size: 10pt;
-    overflow: scroll;
-    padding: 0em 1em;
     white-space: pre;
 }
 
-table {
-    border-collapse: collapse;
-}
-
-.scope {
-    display: block;
-    padding-left: 2em;
-}
-
-th {
-    text-align: left;
-    padding: 0.5em 0.5em 0.5em 1em;
-    border-bottom: 2px solid white;
-}
-
-tr {
-    border-bottom: 2px solid white;
-}
-
-td {
-    /* border-bottom: 2px solid white; */
-}
-
-.table {
-    display: table;
-    flex-direction: column;
-    background: #eee;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 10pt;
-    overflow: hidden;
-    /* border: 1pt solid red; */
-}
-
-.table .row {
-    display: table-row;
-    padding: 1em 0;
-}
-
-.table .header {
-    display: table-cell;
-    padding: 0.5em 1em;
-    text-decoration-line: underline;
-}
-
-.table .row .data {
-    display: table-cell;
-    flex: 0 0 auto;
+.codeblock {
+    background-color: #eee;
     padding: 1em 1em;
 }
