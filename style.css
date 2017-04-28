@@ -3,6 +3,14 @@ body {
     padding: 0px 20px;
 }
 
+ul, ol {
+    margin: 0;
+}
+
+h2 {
+    font-weight: normal;
+}
+
 .title {
     font-size: 20pt;
 }
@@ -16,6 +24,7 @@ body {
     flex-direction: column;
     margin: 1em 0 1em 0;
     padding: 0px 20px;
+    max-width: 40%;
 }
 
 .snippet > h2 {
@@ -63,6 +72,7 @@ code {
 .codeblock {
     background-color: #eee;
     padding: 1em 1em;
+    overflow: scroll;
 }
 
 /* Formatting code in headers. Default header padding 
@@ -79,3 +89,15 @@ code {
 .code.bot {
     padding-top: 0;
 }
+
+.section {
+    /* border: 1px double black; */
+    display: block;
+    padding: 0 20px;
+    margin: 20px;
+}
+
+.section > h2 {
+    font-size: 12pt;
+}
+
