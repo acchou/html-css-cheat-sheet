@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div class="snippet">
-                    <h2>Linebreak</h2>
+                    <h2>Line break</h2>
                     <div class="codeblock">
                         <code>&lt;br&gt;</code>
                     </div>
@@ -165,6 +165,14 @@
                         <code>}</code>
                     </div>
                 </div>
+                <div class="snippet">
+                    <h2 class="code">&lt;any&gt;</h2>
+                    <div class="codeblock">
+                        <code>* {</code>
+                        <code>    property: value;</code>
+                        <code>}</code>
+                    </div>
+                </div>
             </div>
             <div class="section">
                 <h2>Combinators</h2>
@@ -204,13 +212,28 @@
                 </div>
             </div>
             <div class="section">
-                <h2>Box model</h2>
+                <h2>Flexbox</h2>
                 <div class="snippet">
-                    <h2>Flexbox</h2>
+                    <h2>Flexbox Parent</h2>
                     <div class="codeblock">
-                        <code>display: flex;</code>
-                        <code>display: inline-flex;</code>
-                        <code>flex-direction: row;</code>
+                        <code>display: flex/inline-flex;</code>
+                        <code>flex-direction: row/column/row-reverse/column-reverse;</code>
+                        <code>flex-wrap: wrap/nowrap/wrap-reverse;</code>
+                        <code>flex-flow: flex-direction flex-wrap;</code>
+                        <code>justify-content: flex-start/center/flex-end/space-between/space-around;</code>
+                        <code>align-items: flex-start/center/flex-end/baseline/stretch;</code>
+                        <code>align-content: flex-start/center/flex-end/space-between/space-around/stretch;</code>
+                    </div>
+                </div>
+                <div class="snippet">
+                    <h2>Flexbox child</h2>
+                    <div class="codeblock">
+                        <code>order: int;</code>
+                        <code>flex-basis: auto/content/sz;</code>
+                        <code>flex-grow: uint;</code>
+                        <code>flex-shrink: uint;</code>
+                        <code>flex: flex-grow flex-shrink flex-basis;</code>
+                        <code>align-self: flex-start/center/flex-end/baseline/stretch;</code>
                     </div>
                 </div>
             </div>
