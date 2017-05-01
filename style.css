@@ -34,10 +34,6 @@ h2 {
     padding: 0.25em 1em 0.25em 1em;
 }
 
-.snippet.fixedwidth-20 {
-    width: 20%;
-}
-
 code, .code {
     font-family: 'Source Code Pro', monospace;
     white-space: pre;
@@ -94,10 +90,9 @@ code.comment {
 .box {
     display: inline-block;
     vertical-align: middle;
-    height: 1.5em;
-    width: 1.5em;
-    /* padding: 2px 6px 4px 6px; */
-    background-color: gray;
+    min-height: 1.5em;
+    min-width: 1.5em;
+    background-color: #aaa;
     margin: 4px;
     color: white;
     border-radius: 4px;
@@ -108,13 +103,22 @@ code.comment {
     background-color: white;
 }
 
+.box.font-2x {
+    font-size: 1.5em;
+}
+
+.box.font-3x {
+    font-size: 2em;
+}
+
 .flex {
     display: flex;
-    border: 1px solid black;
+    border: 1px dashed #999;
 }
 
 .flex.inline {
     display: inline-flex;
+    vertical-align: middle;
 }
 
 .flex.row {
@@ -142,4 +146,61 @@ code.comment {
 
 .flex.wrap-reverse {
     flex-wrap: wrap-reverse;
+}
+
+.flex.width-12 {
+    width: 12em;
+}
+
+.flex.height-2x {
+    height: 4.5em;
+}
+
+.flex.justify-start {
+    justify-content: flex-start;
+}
+
+.flex.justify-center {
+    justify-content: center;
+}
+
+.flex.justify-end {
+    justify-content: flex-end;
+}
+
+.flex.justify-between {
+    justify-content: space-between;
+}
+
+.flex.justify-around {
+    justify-content: space-around;
+}
+
+.flex.align-start {
+    align-items: flex-start;
+}
+
+.flex.align-center {
+    align-items: center;
+}
+
+.flex.align-end {
+    align-items: flex-end;
+}
+
+.flex.align-baseline {
+    align-items: baseline;
+}
+
+.flex.align-stretch {
+    align-items: stretch;
+}
+
+div.baseline:after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    border: 1px solid grey;
+    width: 11em;
+    margin-left: 8px;
 }

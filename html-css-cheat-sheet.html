@@ -214,23 +214,25 @@
             </div>
         </div>
         <div class="section">
-            <h2>Flexbox Parent</h2>
+            <h2>Flexbox containers</h2>
             <div class="snippet">
                 <h2>Display</h2>
-                <div class="codeblock">
+                <div class="codeblock" title="A block using flexbox for child elements">
                     <div class="box placeholder"></div>
                     <div class="flex">
-                        <div class="box">x</div>
-                        <div class="box">x</div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
                     </div>
                     <div class="box placeholder"></div>
                     <code>display: flex;</code>
                 </div>
-                <div class="codeblock">
+                <div class="codeblock" title="An inline block using flexbox for child elements">
                     <div class="box placeholder"></div>
                     <div class="flex inline">
-                        <div class="box">x</div>
-                        <div class="box">x</div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
                     </div>
                     <div class="box placeholder"></div>
                     <code>display: inline-flex;</code>
@@ -267,10 +269,10 @@
                     <code>flex-direction: column-reverse;</code>
                 </div>
             </div>
-            <div class="snippet fixedwidth-20">
+            <div class="snippet">
                 <h2>Wrap</h2>
                 <div class="codeblock">
-                    <div class="flex wrap">
+                    <div class="flex wrap width-12">
                         <div class="box">1</div>
                         <div class="box">2</div>
                         <div class="box">3</div>
@@ -283,7 +285,7 @@
                     <code>flex-wrap: wrap;</code>
                 </div>
                 <div class="codeblock">
-                    <div class="flex nowrap">
+                    <div class="flex nowrap width-12">
                         <div class="box">1</div>
                         <div class="box">2</div>
                         <div class="box">3</div>
@@ -296,7 +298,7 @@
                     <code>flex-wrap: nowrap;</code>
                 </div>
                 <div class="codeblock">
-                    <div class="flex wrap-reverse">
+                    <div class="flex wrap-reverse width-12">
                         <div class="box">1</div>
                         <div class="box">2</div>
                         <div class="box">3</div>
@@ -317,14 +319,89 @@
             </div>
             <div class="snippet">
                 <h2>Justification</h2>
+                <div class="codeblock" title="Justify items at the start of the flexbox container along main axis">
+                    <div class="flex justify-start">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <code>justify-content: flex-start;</code>
+                </div>
+                <div class="codeblock" title="Justify items at the center of the flexbox container along main axis">
+                    <div class="flex justify-center">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <code>justify-content: center;</code>
+                </div>
+                <div class="codeblock" title="Justify items at the end of the flexbox container along main axis">
+                    <div class="flex justify-end">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <code>justify-content: flex-end;</code>
+                </div>
+                <div class="codeblock" title="Justify items with equal space between items along main axis">
+                    <div class="flex justify-between">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <code>justify-content: space-between;</code>
+                </div>
                 <div class="codeblock">
-                    <code>justify-content: flex-start|center|flex-end|space-between|space-around;</code>
+                    <div class="flex justify-around" title="Justify items with equal space on either side of each item along main axis">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <code>justify-content: space-around;</code>
                 </div>
             </div>
             <div class="snippet">
                 <h2>Alignment on cross axis</h2>
                 <div class="codeblock">
-                    <code>align-items: flex-start|center|flex-end|baseline|stretch;</code>
+                    <div class="flex align-start height-2x">
+                        <div class="box">1</div>
+                        <div class="box font-2x">2</div>
+                        <div class="box font-3x">3</div>
+                    </div>
+                    <code>align-items: flex-start;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="flex align-center height-2x">
+                        <div class="box">1</div>
+                        <div class="box font-2x">2</div>
+                        <div class="box font-3x">3</div>
+                    </div>
+                    <code>align-items: center;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="flex align-end height-2x">
+                        <div class="box">1</div>
+                        <div class="box font-2x">2</div>
+                        <div class="box font-3x">3</div>
+                    </div>
+                    <code>align-items: flex-end;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="flex align-baseline height-2x">
+                        <div class="baseline"></div>
+                        <div class="box">1</div>
+                        <div class="box font-2x">2</div>
+                        <div class="box font-3x">3</div>
+                    </div>
+                    <code>align-items: baseline;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="flex align-stretch height-2x">
+                        <div class="box">1</div>
+                        <div class="box font-2x">2</div>
+                        <div class="box font-3x">3</div>
+                    </div>
+                    <code>align-items: stretch;</code>
                 </div>
             </div>
             <div class="snippet">
@@ -336,7 +413,7 @@
         </div>
         <!-- section Flexbox parent -->
         <div class="section">
-            <h2>Flexbox child</h2>
+            <h2>Flexbox Items</h2>
             <div class="snippet">
                 <h2>Order</h2>
                 <div class="codeblock">
