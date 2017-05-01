@@ -22,9 +22,8 @@ h2 {
 .snippet {
     display: inline-flex;
     flex-direction: column;
-    margin: 1em 0 1em 0;
-    padding: 0px 20px;
-    max-width: 40%;
+    margin: 16px;
+    background-color: #eee;
 }
 
 .snippet > h2 {
@@ -35,44 +34,28 @@ h2 {
     padding: 0.25em 1em 0.25em 1em;
 }
 
-.snippet .match {
-    display: flex;
-    align-items: stretch;
-    background-color: #eee;
-}
-
-.selector, .element {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 1em;
-}
-
-.snippet table {
-    background-color: #eee;
-}
-
 code, .code {
     font-family: 'Source Code Pro', monospace;
     white-space: pre;
 }
 
 code {
-    background-color: #eee;
     color: #222;
     display: block;
     font-size: 10pt;
 }
 
-.codeblock.noverticalpadding {
-    padding: 0em 1em;
+.codeblock.noverticalmargin {
+    margin: 0em 1em;
 }
 
 .codeblock {
-    background-color: #eee;
-    padding: 1em 1em;
+    margin: 1em;
     overflow: scroll;
+}
+
+.codeblock.first {
+    padding-bottom: 0;
 }
 
 /* Formatting code in headers. Default header padding 
@@ -90,8 +73,11 @@ code {
     padding-top: 0;
 }
 
+code.comment {
+    color: #bbb;
+}
+
 .section {
-    /* border: 1px double black; */
     display: block;
     padding: 0 20px;
     margin: 20px;
@@ -101,3 +87,37 @@ code {
     font-size: 12pt;
 }
 
+.box {
+    display: inline-block;
+    height: 1.5em;
+    width: 1.5em;
+    background-color: crimson;
+    margin: 4px;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    border: 1px solid red;
+}
+
+.flex.inline {
+    display: inline-flex;
+}
+
+.flex.row {
+}
+
+.flex.column {
+    flex-direction: column;
+}
+
+.flex.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex.column-reverse {
+    flex-direction: column-reverse;
+}
