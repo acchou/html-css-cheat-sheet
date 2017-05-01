@@ -218,19 +218,21 @@
             <div class="snippet">
                 <h2>Display</h2>
                 <div class="codeblock">
-                    <div class="box"></div>
+                    <div class="box placeholder"></div>
                     <div class="flex">
                         <div class="box">x</div>
+                        <div class="box">x</div>
                     </div>
-                    <div class="box"></div>
+                    <div class="box placeholder"></div>
                     <code>display: flex;</code>
                 </div>
                 <div class="codeblock">
-                    <div class="box"></div>
+                    <div class="box placeholder"></div>
                     <div class="flex inline">
                         <div class="box">x</div>
+                        <div class="box">x</div>
                     </div>
-                    <div class="box"></div>
+                    <div class="box placeholder"></div>
                     <code>display: inline-flex;</code>
                 </div>
             </div>
@@ -265,10 +267,46 @@
                     <code>flex-direction: column-reverse;</code>
                 </div>
             </div>
-            <div class="snippet">
+            <div class="snippet fixedwidth-20">
                 <h2>Wrap</h2>
                 <div class="codeblock">
-                    <code>flex-wrap: wrap|nowrap|wrap-reverse;</code>
+                    <div class="flex wrap">
+                        <div class="box">1</div>
+                        <div class="box">2</div>
+                        <div class="box">3</div>
+                        <div class="box">4</div>
+                        <div class="box">5</div>
+                        <div class="box">6</div>
+                        <div class="box">7</div>
+                        <div class="box">8</div>
+                    </div>
+                    <code>flex-wrap: wrap;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="flex nowrap">
+                        <div class="box">1</div>
+                        <div class="box">2</div>
+                        <div class="box">3</div>
+                        <div class="box">4</div>
+                        <div class="box">5</div>
+                        <div class="box">6</div>
+                        <div class="box">7</div>
+                        <div class="box">8</div>
+                    </div>
+                    <code>flex-wrap: nowrap;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="flex wrap-reverse">
+                        <div class="box">1</div>
+                        <div class="box">2</div>
+                        <div class="box">3</div>
+                        <div class="box">4</div>
+                        <div class="box">5</div>
+                        <div class="box">6</div>
+                        <div class="box">7</div>
+                        <div class="box">8</div>
+                    </div>
+                    <code>flex-wrap: wrap-reverse;</code>
                 </div>
             </div>
             <div class="snippet">
