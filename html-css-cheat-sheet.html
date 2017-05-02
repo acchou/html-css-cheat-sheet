@@ -239,6 +239,7 @@
                 </div>
             </div>
             <div class="snippet">
+                <h2 class="code">flex-direction:</h2>
                 <h2>Direction</h2>
                 <div class="codeblock">
                     <div class="flex row">
@@ -274,7 +275,8 @@
                 </div>
             </div>
             <div class="snippet">
-                <h2>Wrap</h2>
+                <h2 class="code">flex-wrap:</h2>
+                <h2>Wrap items across lines</h2>
                 <div class="codeblock">
                     <div class="flex wrap width-12">
                         <div class="box">1</div>
@@ -286,7 +288,7 @@
                         <div class="box">7</div>
                         <div class="box">8</div>
                     </div>
-                    <code>flex-wrap: wrap;</code>
+                    <code>wrap;</code>
                 </div>
                 <div class="codeblock">
                     <div class="flex nowrap width-12">
@@ -299,7 +301,7 @@
                         <div class="box">7</div>
                         <div class="box">8</div>
                     </div>
-                    <code>flex-wrap: nowrap;</code>
+                    <code>nowrap;</code>
                 </div>
                 <div class="codeblock">
                     <div class="flex wrap-reverse width-12">
@@ -312,24 +314,26 @@
                         <div class="box">7</div>
                         <div class="box">8</div>
                     </div>
-                    <code>flex-wrap: wrap-reverse;</code>
+                    <code>wrap-reverse;</code>
                 </div>
             </div>
             <div class="snippet">
+                <h2 class="code">flex-flow:</h2>
                 <h2>Flow</h2>
                 <div class="codeblock">
-                    <code>flex-flow: &lt;flex-direction&gt; &lt;flex-wrap&gt;;</code>
+                    <code>&lt;flex-direction&gt; &lt;flex-wrap&gt;;</code>
                 </div>
             </div>
             <div class="snippet">
-                <h2>Justification</h2>
+                <h2 class="code">justify-content:</h2>
+                <h2>Justification of items</h2>
                 <div class="codeblock" title="Justify items at the start of the flexbox container along main axis">
                     <div class="flex justify-start">
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
                     </div>
-                    <code>justify-content: flex-start;</code>
+                    <code>flex-start;</code>
                 </div>
                 <div class="codeblock" title="Justify items at the center of the flexbox container along main axis">
                     <div class="flex justify-center">
@@ -337,7 +341,7 @@
                         <div class="box"></div>
                         <div class="box"></div>
                     </div>
-                    <code>justify-content: center;</code>
+                    <code>center;</code>
                 </div>
                 <div class="codeblock" title="Justify items at the end of the flexbox container along main axis">
                     <div class="flex justify-end">
@@ -345,7 +349,7 @@
                         <div class="box"></div>
                         <div class="box"></div>
                     </div>
-                    <code>justify-content: flex-end;</code>
+                    <code>flex-end;</code>
                 </div>
                 <div class="codeblock" title="Justify items with equal space between items along main axis">
                     <div class="flex justify-between">
@@ -353,7 +357,7 @@
                         <div class="box"></div>
                         <div class="box"></div>
                     </div>
-                    <code>justify-content: space-between;</code>
+                    <code>space-between;</code>
                 </div>
                 <div class="codeblock" title="Justify items with equal space on either side of each item along main axis">
                     <div class="flex justify-around">
@@ -361,106 +365,114 @@
                         <div class="box"></div>
                         <div class="box"></div>
                     </div>
-                    <code>justify-content: space-around;</code>
+                    <code>space-around;</code>
                 </div>
             </div>
             <div class="snippet">
+                <h2 class="code">align-items:</h2>
                 <h2>Alignment on cross axis</h2>
-                <div class="codeblock">
-                    <div class="flex align-start taller">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="flex align-start taller">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>flex-start;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="flex align-center taller">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>center;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="flex align-end taller">
+                                <div class="box"></div>
+                                <div class="box "></div>
+                                <div class="box "></div>
+                            </div>
+                            <code>flex-end;</code>
+                        </div>
                     </div>
-                    <code>align-items: flex-start;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="flex align-center taller">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="flex align-baseline taller">
+                                <div class="baseline"></div>
+                                <div class="box">a</div>
+                                <div class="box bigger">b</div>
+                                <div class="box biggest">c</div>
+                            </div>
+                            <code>baseline;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="flex align-stretch taller">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>stretch;</code>
+                        </div>
                     </div>
-                    <code>align-items: center;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="flex align-end taller">
-                        <div class="box"></div>
-                        <div class="box "></div>
-                        <div class="box "></div>
-                    </div>
-                    <code>align-items: flex-end;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="flex align-baseline taller">
-                        <div class="baseline"></div>
-                        <div class="box">a</div>
-                        <div class="box bigger">b</div>
-                        <div class="box biggest">c</div>
-                    </div>
-                    <code>align-items: baseline;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="flex align-stretch taller">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                    </div>
-                    <code>align-items: stretch;</code>
                 </div>
             </div>
             <div class="snippet">
+                <h2 class="code">align-content:</h2>
                 <h2>Alignment of wrapped lines</h2>
                 <div class="columns">
                     <div class="column">
                         <div class="codeblock inline">
-                            <div class="flex wrap content-start tallest">
+                            <div class="flex wrap content-start taller">
                                 <div class="box flatter fullwidth"></div>
                                 <div class="box flatter fullwidth"></div>
                                 <div class="box flatter fullwidth"></div>
                             </div>
-                            <code>align-content: flex-start;</code>
+                            <code>flex-start;</code>
                         </div>
                         <div class="codeblock inline">
-                            <div class="flex wrap content-center tallest">
+                            <div class="flex wrap content-center taller">
                                 <div class="box flatter fullwidth"></div>
                                 <div class="box flatter fullwidth"></div>
                                 <div class="box flatter fullwidth"></div>
                             </div>
-                            <code>align-content: center;</code>
+                            <code>center;</code>
                         </div>
                         <div class="codeblock inline">
-                            <div class="flex wrap content-end tallest">
+                            <div class="flex wrap content-end taller">
                                 <div class="box flatter fullwidth"></div>
                                 <div class="box flatter fullwidth"></div>
                                 <div class="box flatter fullwidth"></div>
                             </div>
-                            <code>align-content: flex-end;</code>
+                            <code>flex-end;</code>
                         </div>
                     </div>
                     <div class="column">
                         <div class="codeblock inline">
-                            <div class="flex wrap content-between tallest">
+                            <div class="flex wrap content-between taller">
                                 <div class="box flatter fullwidth"></div>
                                 <div class="box flatter fullwidth"></div>
                                 <div class="box flatter fullwidth"></div>
                             </div>
-                            <code>align-content: space-between;</code>
+                            <code>space-between;</code>
                         </div>
                         <div class="codeblock inline">
-                            <div class="flex wrap content-around tallest">
+                            <div class="flex wrap content-around taller">
                                 <div class="box flatter fullwidth"></div>
                                 <div class="box flatter fullwidth"></div>
                                 <div class="box flatter fullwidth"></div>
                             </div>
-                            <code>align-content: space-around;</code>
+                            <code>space-around;</code>
                         </div>
                         <div class="codeblock inline">
-                            <div class="flex wrap content-stretch tallest">
+                            <div class="flex wrap content-stretch taller">
                                 <div class="box flatter fullwidth"></div>
                                 <div class="box flatter fullwidth"></div>
                                 <div class="box flatter fullwidth"></div>
                             </div>
-                            <code>align-content: stretch;</code>
+                            <code>stretch;</code>
                         </div>
                     </div>
                 </div>

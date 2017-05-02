@@ -117,7 +117,8 @@ code.comment {
 }
 
 .box.flatter {
-    min-height: 14px;
+    min-height: 8px;
+    margin: 2px;
 }
 
 .box.wider {
@@ -125,7 +126,7 @@ code.comment {
 }
 
 .box.fullwidth {
-    min-width: 95%;
+    min-width: 97%;
 }
 
 .flex {
