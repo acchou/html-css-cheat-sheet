@@ -45,17 +45,22 @@ code {
     font-size: 10pt;
 }
 
-.codeblock.noverticalmargin {
-    margin: 0em 1em;
-}
-
 .codeblock {
     margin: 1em;
     overflow: scroll;
 }
 
+.codeblock.noverticalmargin {
+    margin: 0em 1em;
+}
+
 .codeblock.first {
     padding-bottom: 0;
+}
+
+.codeblock.inline {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Formatting code in headers. Default header padding 
@@ -103,12 +108,24 @@ code.comment {
     background-color: white;
 }
 
-.box.font-2x {
+.box.bigger {
     font-size: 1.5em;
 }
 
-.box.font-3x {
+.box.biggest {
     font-size: 2em;
+}
+
+.box.flatter {
+    min-height: 14px;
+}
+
+.box.wider {
+    min-width: 3em;
+}
+
+.box.fullwidth {
+    min-width: 95%;
 }
 
 .flex {
@@ -147,13 +164,24 @@ code.comment {
 .flex.wrap-reverse {
     flex-wrap: wrap-reverse;
 }
+.flex.width-4 {
+    width: 4em;
+}
+
+.flex.width-8 {
+    width: 8em;
+}
 
 .flex.width-12 {
     width: 12em;
 }
 
-.flex.height-2x {
+.flex.taller {
     height: 4.5em;
+}
+
+.flex.tallest {
+    height: 8em;
 }
 
 .flex.justify-start {
@@ -200,7 +228,82 @@ div.baseline:after {
     position: absolute;
     content: "";
     display: inline-block;
-    border: 1px solid grey;
-    width: 11em;
+    border: 1px dotted grey;
+    width: 7em;
     margin-left: 8px;
+}
+
+.flex.content-start {
+    align-content: flex-start;
+}
+
+.flex.content-center {
+    align-content: center;
+}
+
+.flex.content-end {
+    align-content: flex-end;
+}
+
+.flex.content-between {
+    align-content: space-between;
+}
+
+.flex.content-around {
+    align-content: space-around;
+}
+
+.flex.content-stretch {
+    align-content: stretch;
+}
+
+div.columns {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* For the flexbox 'order' property snippet. */
+.first, .second {
+    order: 1;
+}
+
+.box.flex-basis-auto {
+    flex-basis: auto;
+}
+
+.box.flex-basis-content {
+    flex-basis: content;
+}
+
+.box.flex-basis-percent {
+    flex-basis: 50%;
+}
+
+.box.flex-basis-50px {
+    flex-basis: 50px;
+}
+
+.box.grow-0 {
+    flex-grow: 0;
+}
+
+.box.grow-5 {
+    flex-grow: 5;
+}
+
+.box.grow-10 {
+    flex-grow: 10;
+}
+
+.box.grow-20 {
+    flex-grow: 20;
+}
+
+.box.grow-40 {
+    flex-grow: 40;
 }
