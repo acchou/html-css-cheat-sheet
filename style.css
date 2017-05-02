@@ -7,10 +7,6 @@ ul, ol {
     margin: 0;
 }
 
-h2 {
-    font-weight: normal;
-}
-
 .title {
     font-size: 20pt;
 }
@@ -26,12 +22,20 @@ h2 {
     background-color: #eee;
 }
 
-.snippet > h2 {
+.snippet > h2, .snippet > h3 {
     background-color: cornflowerblue;
     color: white;
     font-size: 12pt;
+    font-weight: normal;
     margin: 0;
-    padding: 0.25em 1em 0.25em 1em;
+    padding: 6px 12px;
+    /* padding: 0.25em 1em 0.25em 1em; */
+}
+
+.snippet > h3 {
+    font-size: 11pt;
+    color: #777;
+    background-color: #eee;
 }
 
 code, .code {
