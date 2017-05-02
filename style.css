@@ -235,13 +235,18 @@ code.comment {
     align-items: stretch;
 }
 
-div.baseline:after {
+div.line:after, div.line-short:after {
     position: absolute;
     content: "";
     display: inline-block;
     border: 1px dotted grey;
     width: 7em;
     margin-left: 8px;
+}
+
+div.line-short:after {
+    width: 3.5em;
+    /* margin-left: 12px; */
 }
 
 .flex.content-start {
