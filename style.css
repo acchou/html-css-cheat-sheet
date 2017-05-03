@@ -58,12 +58,12 @@ code {
 }
 
 .codeblock {
-    margin: 1em;
+    margin: 16px;
     overflow: scroll;
 }
 
 .codeblock.noverticalmargin {
-    margin: 0em 1em;
+    margin: 0 16px;
 }
 
 .codeblock.first {
@@ -385,3 +385,14 @@ div.column {
 .align-self-stretch {
     align-self: stretch;
 }
+
+.font-example {
+    display: inline-block;
+    font-size: 24pt;
+}
+
+a:link, a:visited {
+    color: darkblue;
+    text-decoration: none;
+}
+
