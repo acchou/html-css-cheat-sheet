@@ -148,6 +148,8 @@ code.comment {
 .flex {
     display: flex;
     border: 1px dashed #999;
+    /* background-color: white; */
+    border-radius: 4px;
 }
 
 .flex.noborder {
@@ -291,6 +293,7 @@ div.columns {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-around;
 }
 
 div.column {
