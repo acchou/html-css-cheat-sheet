@@ -41,6 +41,7 @@ ul, ol {
 
 .snippet > h3 {
     font-size: 11pt;
+    font-weight: normal;
     color: #777;
     background-color: initial;
 }
@@ -101,9 +102,11 @@ code.comment {
 
 .section > h2 {
     font-size: 12pt;
+    font-weight: normal;
 }
 
 .box {
+    font-family: 'Source Code Pro', monospace;
     display: inline-block;
     vertical-align: middle;
     min-height: 1.5em;
@@ -336,8 +339,8 @@ div.column {
     flex-grow: 20;
 }
 
-.grow-100 {
-    flex-grow: 100;
+.grow-99 {
+    flex-grow: 99;
 }
 
 .shrink-0 {
@@ -356,8 +359,8 @@ div.column {
     flex-shrink: 20;
 }
 
-.shrink-100 {
-    flex-shrink: 100;
+.shrink-99 {
+    flex-shrink: 99;
 }
 
 .align-self-start {

@@ -528,10 +528,10 @@
                             </div>
                             <div class="codeblock">
                                 <div class="flex width-10">
-                                    <div class="box grow-100">100</div>
+                                    <div class="box grow-99">99</div>
                                     <div class="box grow-20 placeholder">20</div>
                                 </div>
-                                <code>100;</code>
+                                <code>99;</code>
                             </div>
                         </div>
                         <div class="snippet column">
@@ -561,10 +561,10 @@
                             </div>
                             <div class="codeblock">
                                 <div class="flex width-10">
-                                    <div class="box flex-basis-100pct shrink-100">100</div>
+                                    <div class="box flex-basis-100pct shrink-99">99</div>
                                     <div class="box flex-basis-100pct shrink-20">20</div>
                                 </div>
-                                <code>100;</code>
+                                <code>99;</code>
                             </div>
                         </div>
                         <div class="snippet column" title="Flex item's initial size along main axis">
@@ -587,6 +587,12 @@
                                     <div class="box flex-basis-50pct">abc</div>
                                 </div>
                                 <code>50%;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="flex">
+                                    <div class="box flex-basis-100pct">abc</div>
+                                </div>
+                                <code>100%;</code>
                             </div>
                         </div>
                     </div>
@@ -676,13 +682,66 @@
         <div class="section">
             <h2>Colors</h2>
             <div class="snippet">
-                <h2>Solid Colors</h2>
-                <div class="codeblock">
-                    <code>color: white;</code>
-                    <code>color: #0ef;</code>
-                    <code>color: #00eeff;</code>
-                    <code>color: rgb(red, green, blue);</code>
-                    <code>color: hsl(hue, sat%, light%);</code>
+                <h2>color:</h2>
+                <div class="flex inline justify-around noborder columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="box" style="color: white;">A</div>
+                            <code>white;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box placeholder" style="color: black">A</div>
+                            <code>black;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box placeholder" style="color: red">A</div>
+                            <code>red;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box placeholder" style="color: green">A</div>
+                            <code>green;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box placeholder" style="color: blue">A</div>
+                            <code>blue;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="box placeholder" style="color: #222">A</div>
+                            <code>#222;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box placeholder" style="color: #777">A</div>
+                            <code>#777;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box placeholder" style="color: #999">A</div>
+                            <code>#999;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box placeholder" style="color: #bbb">A</div>
+                            <code>#bbb;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box placeholder" style="color: #ccc">A</div>
+                            <code>#ccc;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="box placeholder" style="color: #777">A</div>
+                            <code>#777777;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box placeholder" style="color: rgb(150, 50, 10);">A</div>
+                            <code>rgb(red, green, blue);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box placeholder" style="color: hsl(20, 90%, 50%);">A</div>
+                            <code>hsl(hue, sat%, light%);</code>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="snippet">
