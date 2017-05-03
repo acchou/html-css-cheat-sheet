@@ -22,6 +22,13 @@ ul, ol {
     background-color: #eee;
 }
 
+.snippet.container {
+    margin: 0;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-top: none;
+}
+
 .snippet > h2, .snippet > h3 {
     background-color: cornflowerblue;
     color: white;
@@ -35,7 +42,7 @@ ul, ol {
 .snippet > h3 {
     font-size: 11pt;
     color: #777;
-    background-color: #eee;
+    background-color: initial;
 }
 
 code, .code {
@@ -280,6 +287,7 @@ div.line-short:after {
 div.columns {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
 }
 
 div.column {
