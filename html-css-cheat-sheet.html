@@ -5,7 +5,7 @@
     <title>HTML5 and CSS cheat sheet</title>
     <link href="style.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
 </head>
 
 <body>
@@ -215,6 +215,42 @@
                     <code>sibling ~ self {</code>
                     <code>    property: value;</code>
                     <code>}</code>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Box model</h2>
+            <div class="snippet">
+                <h2 class="code">display:</h2>
+                <div class="codeblock">
+                    <div class="figure">
+                        before
+                        <div class="box block">a</div>
+                        <div class="box block">b</div>
+                        <div class="box block">c</div>
+                        after
+                    </div>
+                    <code>block;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="figure">
+                        before
+                        <div class="box inline-block">a</div>
+                        <div class="box inline-block">b</div>
+                        <div class="box inline-block">c</div>
+                        after
+                    </div>
+                    <code>inline-block;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="figure">
+                        before
+                        <div class="box inline nomargin">a</div>
+                        <div class="box inline nomargin">b</div>
+                        <div class="box inline nomargin">c</div>
+                        after
+                    </div>
+                    <code>inline;</code>
                 </div>
             </div>
         </div>
@@ -1072,6 +1108,188 @@
                     <code>"Source Code Pro", monospace;</code>
                 </div>
             </div>
+            <div class="snippet">
+                <h2 class="code">font-size:</h2>
+                <h3>Browser default size 16px. </h3>
+                <h3><span class="code">em</span> and <span class="code">%</span> are relative to parent font size.</h3>
+                <h3><span class="code">rem</span> is like <span class="code">em</span> relative to <span class="code">html</span>                    element font size.</h3>
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: xx-large;'>Aa</div>
+                            <code>xx-large;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: x-large;'>Aa</div>
+                            <code>x-large;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: large;'>Aa</div>
+                            <code>large;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: medium;'>Aa</div>
+                            <code>medium;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: small;'>Aa</div>
+                            <code>small;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: x-small;'>Aa</div>
+                            <code>x-small;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 32px;'>Aa</div>
+                            <code>32px;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 24px;'>Aa</div>
+                            <code>24px;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 18px;'>Aa</div>
+                            <code>18px;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 16px;'>Aa</div>
+                            <code>16px;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 13px;'>Aa</div>
+                            <code>13px;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 10px;'>Aa</div>
+                            <code>10px;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 8px;'>Aa</div>
+                            <code>8px;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 2em;'>Aa</div>
+                            <code>2em;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 1.5em;'>Aa</div>
+                            <code>1.5em;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 1.125em;'>Aa</div>
+                            <code>1.125em;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 1em;'>Aa</div>
+                            <code>1em;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 0.813em;'>Aa</div>
+                            <code>0.813em;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 0.625em;'>Aa</div>
+                            <code>0.625em;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 0.5em;'>Aa</div>
+                            <code>0.5em;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 200%;'>Aa</div>
+                            <code>200%;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 150%;'>Aa</div>
+                            <code>150%;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 112.5%;'>Aa</div>
+                            <code>112.5%;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 100%;'>Aa</div>
+                            <code>100%;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 81.3%;'>Aa</div>
+                            <code>81.3%;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 62.5%;'>Aa</div>
+                            <code>62.5%;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-size: 50%;'>Aa</div>
+                            <code>50%;</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2 class="code">font-weight:</h2>
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="font-example" style='font-weight: lighter;'>Aa</div>
+                            <code>lighter;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-weight: normal;'>Aa</div>
+                            <code>normal;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-weight: bolder;'>Aa</div>
+                            <code>bolder;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="font-example" style='font-weight: 300;'>Aa</div>
+                            <code>300;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-weight: 400;'>Aa</div>
+                            <code>400;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-weight: 700;'>Aa</div>
+                            <code>700;</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="snippet">
+                <h2>Misc font properties</h2>
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="font-example" style='font-style: italic;'>Aa Bb Cc</div>
+                            <code>font-style: italic;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-variant: small-caps;'>Aa Bb Cc</div>
+                            <code>font-variant: small-caps;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-kerning: none; font-size: 14pt;'>AVAVAV|AVAVAV|AVAVAV|AVAVAV</div>
+                            <code>font-kerning: none;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="font-example" style='font-kerning: normal; font-size: 14pt;'>AVAVAV|AVAVAV|AVAVAV|AVAVAV</div>
+                            <code>font-kerning: normal;</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- <div class="snippet">
                 <h2>Source Pro</h2>
                 <div class="codeblock narrow">

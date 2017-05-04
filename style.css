@@ -46,13 +46,16 @@ ul, ol {
     background-color: initial;
 }
 
-code, .code {
+code, .code, span.code {
     font-family: 'Source Code Pro', monospace;
     white-space: pre;
 }
 
-code {
+code, span.code {
     color: #222;
+}
+
+code {
     display: block;
     font-size: 10pt;
 }
@@ -145,10 +148,29 @@ code.comment {
     margin-left: 5px;
 }
 
+.box.nomargin {
+    margin: 0;
+}
+
+.inline {
+    display: inline;
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.figure {
+    border: 1px dashed #999;
+}
+
 .flex {
     display: flex;
     border: 1px dashed #999;
-    /* background-color: white; */
     border-radius: 4px;
 }
 
@@ -388,7 +410,7 @@ div.column {
 
 .font-example {
     display: inline-block;
-    font-size: 24pt;
+    font-size: 32px;
 }
 
 a:link, a:visited {
