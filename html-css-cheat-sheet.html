@@ -222,35 +222,59 @@
             <h2>Box model</h2>
             <div class="snippet">
                 <h2 class="code">display:</h2>
+                <h3>Basic display modes</h3>
                 <div class="codeblock">
                     <div class="figure">
-                        before
-                        <div class="box block">a</div>
-                        <div class="box block">b</div>
-                        <div class="box block">c</div>
-                        after
+                        <div class="box placeholder"></div>
+                        <div class="box block">x</div>
+                        <div class="box placeholder"></div>
                     </div>
                     <code>block;</code>
                 </div>
                 <div class="codeblock">
                     <div class="figure">
-                        before
-                        <div class="box inline-block">a</div>
-                        <div class="box inline-block">b</div>
-                        <div class="box inline-block">c</div>
-                        after
+                        <div class="box placeholder"></div>
+                        <div class="box inline-block">x</div>
+                        <div class="box placeholder"></div>
                     </div>
                     <code>inline-block;</code>
                 </div>
                 <div class="codeblock">
                     <div class="figure">
-                        before
-                        <div class="box inline nomargin">a</div>
-                        <div class="box inline nomargin">b</div>
-                        <div class="box inline nomargin">c</div>
-                        after
+                        <div class="box placeholder"></div>
+                        <div class="box inline nomargin">x</div>
+                        <div class="box placeholder"></div>
                     </div>
                     <code>inline;</code>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2 class="code">box-sizing:</h2>
+                <h3>Specify the box size as content-only or inclusive of border.</h3>
+                <div class="codeblock">
+
+                    <div class="border-box">
+                        <code class="inverse">border</code>
+                        <div class="padding-box">
+                            <code>padding</code>
+                            <div class="content-box highlight-border">
+                                <code>content</code>
+                            </div>
+                        </div>
+                    </div>
+                    <code>content-box;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="border-box highlight-border">
+                        <code class="inverse">border</code>
+                        <div class="padding-box">
+                            <code>padding</code>
+                            <div class="content-box">
+                                <code>content</code>
+                            </div>
+                        </div>
+                    </div>
+                    <code>border-box;</code>
                 </div>
             </div>
         </div>

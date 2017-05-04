@@ -1,5 +1,6 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
+    font-weight: normal;
     padding: 0px 20px;
 }
 
@@ -97,6 +98,10 @@ code.comment {
     color: #bbb;
 }
 
+code.inverse {
+    color: white;
+}
+
 .section {
     display: block;
     padding: 0 0;
@@ -152,6 +157,35 @@ code.comment {
     margin: 0;
 }
 
+/* Styles for creating figures related to the Box model */
+.border-box {
+    background-color: grey; 
+    display: inline-block;
+    padding: 1em; 
+    padding-top: 0; 
+    text-indent: -0.75em; 
+    vertical-align: top; 
+}
+
+.padding-box {
+    background-color: hsl(120, 20%, 75%); 
+    display: block; 
+    padding: 1em; 
+    padding-top: 0;
+    text-align: left;
+}
+
+.content-box {
+    background-color: hsla(240, 100%, 50%, 0.15);
+    min-height: 0; 
+    padding: 0; 
+    text-indent: 0;
+}
+
+.highlight-border {
+    border: 2px dashed red;
+}
+
 .inline {
     display: inline;
 }
@@ -162,10 +196,6 @@ code.comment {
 
 .inline-block {
     display: inline-block;
-}
-
-.figure {
-    border: 1px dashed #999;
 }
 
 .flex {
