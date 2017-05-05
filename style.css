@@ -70,13 +70,12 @@ code {
     margin: 0 16px;
 }
 
-.codeblock.first {
-    padding-bottom: 0;
+.codeblock > hr {
+    border-top: 1px dashed #999;
 }
 
-.codeblock.inline {
-    display: flex;
-    flex-direction: column;
+.codeblock.relative {
+    position: relative;
 }
 
 /* Formatting code in headers. Default header padding 
@@ -109,17 +108,30 @@ code.comment {
     font-weight: normal;
 }
 
-.box {
+.box, .bar {
     font-family: 'Source Code Pro', monospace;
     display: inline-block;
-    vertical-align: middle;
-    min-height: 1.5em;
-    min-width: 1.5em;
     background-color: #aaa;
-    margin: 4px;
-    color: white;
     border-radius: 4px;
+    color: white;
+    min-height: 1.5em;
     text-align: center;
+    vertical-align: middle;
+}
+
+.bar.vertical {
+    min-height: 0;
+    min-width: 1.5em;
+}
+
+.absolute {
+    position: absolute;
+    bottom: 0;
+}
+
+.box {
+    min-width: 1.5em;
+    margin: 4px;
 }
 
 .box.placeholder {
@@ -202,10 +214,13 @@ code.comment {
     display: inline-block;
 }
 
-.flex {
-    display: flex;
+.flex, .figure.border {
     border: 1px dashed #999;
     border-radius: 4px;
+}
+
+.flex {
+    display: flex;
 }
 
 .flex.noborder {
@@ -216,7 +231,7 @@ code.comment {
     display: inline-flex;
 }
 
-.flex.valign-middle {
+.valign-middle {
     vertical-align: middle;
 }
 
@@ -247,16 +262,21 @@ code.comment {
 .flex.wrap-reverse {
     flex-wrap: wrap-reverse;
 }
-.flex.width-4 {
+
+.width-4 {
     width: 4em;
 }
 
-.flex.width-8 {
+.width-8 {
     width: 8em;
 }
 
-.flex.width-10 {
+.width-10 {
     width: 10em;
+}
+
+.height-10 {
+    height: 10em;
 }
 
 .flex.taller {
@@ -311,7 +331,7 @@ div.line:after, div.line-short:after {
     position: absolute;
     content: "";
     display: inline-block;
-    border: 1px dotted grey;
+    border-top: 2px solid grey;
     width: 7em;
     margin-left: 8px;
 }
