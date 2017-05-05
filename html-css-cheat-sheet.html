@@ -691,6 +691,12 @@
                             <code>0.5em;</code>
                         </div>
                     </div>
+                    <!-- %-widths happen to work here because div tags are 
+                    `display: block` by default, and by default and expand
+                    their width to the entire line. The codeblocks below
+                    are doing this, making %-widths of the div.bar work.
+                    This doesn't work for heights because blocks don't 
+                    expand their heights by default, only widths. -->
                     <div class="column width-10">
                         <div class="codeblock">
                             <div class="bar" style="width: 100%;"></div>
@@ -753,8 +759,9 @@
                     </div>
                     <!-- Percentage heights (and widths) are difficult because they require their immediate
                     parent element to have a height property that is a concrete value, or else set to a
-                    percentage where the parent's parent has a concrete value, all the way up. A flex auto
-                    height is not sufficient. Avoid % heights (and probably widths) and use flexbox instead. -->
+                    percentage where the parent's parent has a concrete value. Blocks expand horizontally
+                    but no vertically, so it's harder to use %-heights. A flex auto height is not sufficient.
+                     Avoid % heights and use flexbox instead. -->
                     <!-- <div class="flex noborder align-end height-12">
                         <div class="codeblock relative height-10">
                             <div class="bar vertical" style="height: 90%;"></div>
