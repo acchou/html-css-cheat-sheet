@@ -16,6 +16,25 @@ ul, ol {
     display: block;
 }
 
+/* Positioning */
+.static {
+    position: static;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+/* Snippets explain a CSS property, HTML element, 
+   or a single concept. */
 .snippet {
     display: inline-flex;
     flex-direction: column;
@@ -58,7 +77,11 @@ code, span.code {
 
 code {
     display: block;
-    font-size: 10pt;
+    font-size: 14px;
+}
+
+code.symbol {
+    font-size: 24px;
 }
 
 .codeblock {
@@ -72,10 +95,6 @@ code {
 
 .codeblock > hr {
     border-top: 1px dashed #999;
-}
-
-.codeblock.relative {
-    position: relative;
 }
 
 /* Formatting code in headers. Default header padding 
@@ -126,7 +145,7 @@ code.comment {
 
 .absolute {
     position: absolute;
-    bottom: 0;
+    left: auto;
 }
 
 .box {
@@ -273,6 +292,14 @@ code.comment {
 
 .width-10 {
     width: 10em;
+}
+
+.height-4 {
+    height: 4em;
+}
+
+.height-6 {
+    height: 6em;
 }
 
 .height-10 {
@@ -472,3 +499,6 @@ a:link, a:visited {
     text-decoration: none;
 }
 
+.nudge-top {
+    padding-top: 10px;
+}
