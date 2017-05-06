@@ -825,18 +825,24 @@
             </div>
             <div class="snippet">
                 <h2 class="code">position: absolute;</h2>
-                <!-- <h3>Requires positioned parent element</h3> -->
-                <div class="codeblock">
-                    <code>Requires Positioned parent</code>
-                    <code>      (dashed box)</code>
-                    <code class="symbol">      &darr;</code>
+                <h3>Requires positioned parent element</h3>
+                <div class="requirement">
+                    <code>(relative | absolute | fixed)</code>
+                    <code>      &#8600;</code>
+                    <!-- <code class="symbol">      &darr;</code> -->
                     <div class="relative figure border">
-                        <div class="box biggest placeholder"></div>
-                        <div class="box biggest placeholder"></div>
-                        <div class="box absolute" style="left: 30px; top: 15px; font-size: 12px;">
-                            Absolute position child
+                        <div class="box biggest placeholder wider">
+                            <code class="subtle comment">static<br>position</code>
                         </div>
-                        <div class="box biggest placeholder"></div>
+                        <div class="box biggest placeholder wider">
+                            <code class="subtle comment">static<br>position</code>
+                        </div>
+                        <div class="box absolute" style="left: 140px; top: 5px;">
+                            <code class="subtle comment" style="color: #eee; padding: 4px 10px;">Absolute<br>position</code>
+                        </div>
+                        <div class="box biggest placeholder wider">
+                            <code class="subtle comment">static<br>position</code>
+                        </div>
                         <div class="box biggest placeholder"></div>
                     </div>
                 </div>
@@ -845,95 +851,77 @@
                         <div class="codeblock">
                             <div class="relative figure border">
                                 <div class="box biggest placeholder"></div>
-                                <div class="box biggest placeholder"></div>
                                 <div class="box absolute" style="left: 0; top: 0;"></div>
                                 <div class="box biggest placeholder"></div>
                                 <div class="box biggest placeholder"></div>
                             </div>
-                            <code>left: 0;</code>
-                            <code>top: 0;</code>
+                            <code>left:0; top:0;</code>
                         </div>
                         <div class="codeblock">
                             <div class="relative figure border">
-                                <div class="box biggest placeholder"></div>
                                 <div class="box biggest placeholder"></div>
                                 <div class="box absolute" style="left: 0; bottom: 0;"></div>
                                 <div class="box biggest placeholder"></div>
                                 <div class="box biggest placeholder"></div>
                             </div>
-                            <code>left: 0;</code>
-                            <code>bottom: 0;</code>
+                            <code>left:0; bottom:0;</code>
                         </div>
                         <div class="codeblock">
                             <div class="relative figure border">
                                 <div class="box biggest placeholder"></div>
-                                <div class="box biggest placeholder"></div>
-                                <div class="box absolute" style="right: 0; bottom: 0;"></div>
+                                <div class="box absolute" style="left: auto; top: auto;"></div>
                                 <div class="box biggest placeholder"></div>
                                 <div class="box biggest placeholder"></div>
                             </div>
-                            <code>right: 0;</code>
-                            <code>bottom: 0;</code>
+                            <code>left:auto; top:auto;</code>
                         </div>
                         <div class="codeblock">
                             <div class="relative figure border">
                                 <div class="box biggest placeholder"></div>
-                                <div class="box biggest placeholder"></div>
-                                <div class="box absolute" style="right: 0; top: 0;"></div>
+                                <div class="box absolute" style="left: 0; right: 0;"></div>
                                 <div class="box biggest placeholder"></div>
                                 <div class="box biggest placeholder"></div>
                             </div>
-                            <code>right: 0;</code>
-                            <code>top: 0;</code>
+                            <code>left:0; right:0;</code>
                         </div>
                     </div>
                     <div class="column">
                         <div class="codeblock">
                             <div class="relative figure border">
                                 <div class="box biggest placeholder"></div>
-                                <div class="box biggest placeholder"></div>
-                                <div class="box absolute" style="left: auto; top: auto;"></div>
+                                <div class="box absolute" style="right: 0; top: 0;"></div>
                                 <div class="box biggest placeholder"></div>
                                 <div class="box biggest placeholder"></div>
                             </div>
-                            <code>left: auto;</code>
-                            <code>top: auto;</code>
+                            <code>right:0; top:0;</code>
                         </div>
                         <div class="codeblock">
                             <div class="relative figure border">
                                 <div class="box biggest placeholder"></div>
-                                <div class="box biggest placeholder"></div>
-                                <div class="box absolute" style="left: 0; right: 0; top: 0; bottom: 0;"></div>
-                                <div class="box biggest placeholder"></div>
-                                <div class="box biggest placeholder"></div>
-                            </div>
-                            <code>left: 0;</code>
-                            <code>right: 0;</code>
-                            <code>top: 0;</code>
-                            <code>bottom: 0;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="relative figure border">
-                                <div class="box biggest placeholder"></div>
-                                <div class="box biggest placeholder"></div>
-                                <div class="box absolute" style="left: 0; right: 0; top: 12px;"></div>
+                                <div class="box absolute" style="right: 0; bottom: 0;"></div>
                                 <div class="box biggest placeholder"></div>
                                 <div class="box biggest placeholder"></div>
                             </div>
-                            <code>left: 0;</code>
-                            <code>right: 0;</code>
-                            <code>top: 12px;</code>
+                            <code>right:0; bottom:0;</code>
                         </div>
                         <div class="codeblock">
                             <div class="relative figure border">
-                                <div class="box biggest placeholder"></div>
                                 <div class="box biggest placeholder"></div>
                                 <div class="box absolute" style="top: 0; bottom: 0;"></div>
                                 <div class="box biggest placeholder"></div>
                                 <div class="box biggest placeholder"></div>
                             </div>
-                            <code>top: 0;</code>
-                            <code>bottom: 0;</code>
+                            <code>top:0; bottom:0;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="relative figure border">
+                                <div class="box biggesst placeholder"></div>
+                                <div class="box absolute" style="left: 0; right: 0; top: 0; bottom: 0;"></div>
+                                <div class="box biggest placeholder"></div>
+                                <div class="box biggest placeholder"></div>
+                            </div>
+                            <code>left:0; right:0;</code>
+                            <code>top:0; bottom:0;</code>
                         </div>
                     </div>
                 </div>

@@ -84,7 +84,12 @@ code.symbol {
     font-size: 24px;
 }
 
-.codeblock {
+code.condensed {
+    /* letter-spacing: -0.02em; */
+    
+}
+
+.codeblock, .requirement {
     margin: 16px;
     overflow: scroll;
 }
@@ -114,6 +119,11 @@ code.symbol {
 
 code.comment {
     color: #bbb;
+}
+
+code.comment.subtle {
+    font-size: 12px;
+    padding: 4px;
 }
 
 .section {
