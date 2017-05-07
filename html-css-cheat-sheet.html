@@ -826,7 +826,7 @@
             <div class="snippet">
                 <h2 class="code">position: absolute;</h2>
                 <h3>Requires positioned parent element</h3>
-                <div class="requirement" style="margin: 15px auto;">
+                <div class="requirement">
                     <code>   (relative | absolute | fixed) </code>
                     <code>                                &#8600;</code>
                     <!-- <code class="symbol">      &darr;</code> -->
@@ -955,125 +955,130 @@
                     </div>
                 </div>
             </div>
-            <div class="snippet" style="width:40%;">
+            <div class="snippet">
                 <h2 class="code">position: fixed;</h2>
-                <h3>Position fixed relative to viewport (constant position on screen)</h3>
-                <iframe style="border: none;" src="fixed-position-example.html"></iframe>
+                <h3>Same rules as absolute positioning, but fixed relative to viewport.</h3>
+                <div class="requirement">
+                    <code>  viewport</code>
+                    <code>        &#8600;</code>
+                    <code></code>
+                    <iframe id="fixed-position-example" src="fixed-position-example.html "></iframe>
+                </div>
             </div>
         </div>
         <!-- End section Box Model -->
 
-        <div class="section">
+        <div class="section ">
             <h2>Flexbox containers</h2>
-            <div class="flex inline noborder column">
-                <div class="snippet">
-                    <h2 class="code">display:</h2>
+            <div class="flex inline noborder column ">
+                <div class="snippet ">
+                    <h2 class="code ">display:</h2>
                     <h3>Flexbox container mode</h3>
-                    <div class="codeblock" title="A block using flexbox for child elements">
-                        <div class="box placeholder"></div>
-                        <div class="flex">
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
+                    <div class="codeblock " title="A block using flexbox for child elements ">
+                        <div class="box placeholder "></div>
+                        <div class="flex ">
+                            <div class="box "></div>
+                            <div class="box "></div>
+                            <div class="box "></div>
                         </div>
-                        <div class="box placeholder"></div>
+                        <div class="box placeholder "></div>
                         <code>flex;</code>
                     </div>
-                    <div class="codeblock" title="An inline block using flexbox for child elements">
-                        <div class="box placeholder"></div>
-                        <div class="flex inline valign-middle">
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
+                    <div class="codeblock " title="An inline block using flexbox for child elements ">
+                        <div class="box placeholder "></div>
+                        <div class="flex inline valign-middle ">
+                            <div class="box "></div>
+                            <div class="box "></div>
+                            <div class="box "></div>
                         </div>
-                        <div class="box placeholder"></div>
+                        <div class="box placeholder "></div>
                         <code>inline-flex;</code>
                     </div>
                 </div>
             </div>
-            <div class="snippet">
-                <h2 class="code">flex-flow:</h2>
-                <div class="snippet container">
+            <div class="snippet ">
+                <h2 class="code ">flex-flow:</h2>
+                <div class="snippet container ">
                     <h3>Flex direction and wrap</h3>
-                    <div class="codeblock">
+                    <div class="codeblock ">
                         <code>&lt;flex-direction&gt; &lt;flex-wrap&gt;;</code>
                     </div>
-                    <div class="columns">
-                        <div class="snippet column">
-                            <h2 class="code">flex-direction: </h2>
+                    <div class="columns ">
+                        <div class="snippet column ">
+                            <h2 class="code ">flex-direction: </h2>
                             <h3>Direction of main axis</h3>
-                            <div class="codeblock">
-                                <div class="flex row">
-                                    <div class="box">1</div>
-                                    <div class="box">2</div>
-                                    <div class="box">3</div>
+                            <div class="codeblock ">
+                                <div class="flex row ">
+                                    <div class="box ">1</div>
+                                    <div class="box ">2</div>
+                                    <div class="box ">3</div>
                                 </div>
-                                <code class="center">row;</code>
+                                <code class="center ">row;</code>
                             </div>
-                            <div class="codeblock">
-                                <div class="flex column">
-                                    <div class="box">1</div>
-                                    <div class="box">2</div>
-                                    <div class="box">3</div>
+                            <div class="codeblock ">
+                                <div class="flex column ">
+                                    <div class="box ">1</div>
+                                    <div class="box ">2</div>
+                                    <div class="box ">3</div>
                                 </div>
                                 <code>column;</code>
                             </div>
-                            <div class="codeblock">
-                                <div class="flex row-reverse">
-                                    <div class="box">1</div>
-                                    <div class="box">2</div>
-                                    <div class="box">3</div>
+                            <div class="codeblock ">
+                                <div class="flex row-reverse ">
+                                    <div class="box ">1</div>
+                                    <div class="box ">2</div>
+                                    <div class="box ">3</div>
                                 </div>
                                 <code>row-reverse;</code>
                             </div>
-                            <div class="codeblock">
-                                <div class="flex column-reverse">
-                                    <div class="box">1</div>
-                                    <div class="box">2</div>
-                                    <div class="box">3</div>
+                            <div class="codeblock ">
+                                <div class="flex column-reverse ">
+                                    <div class="box ">1</div>
+                                    <div class="box ">2</div>
+                                    <div class="box ">3</div>
                                 </div>
                                 <code>column-reverse;</code>
                             </div>
                         </div>
-                        <div class="snippet column">
-                            <h2 class="code">flex-wrap:</h2>
+                        <div class="snippet column ">
+                            <h2 class="code ">flex-wrap:</h2>
                             <h3>Wrap items across lines</h3>
-                            <div class="codeblock">
-                                <div class="flex wrap width-8">
-                                    <div class="box">1</div>
-                                    <div class="box">2</div>
-                                    <div class="box">3</div>
-                                    <div class="box">4</div>
-                                    <div class="box">5</div>
-                                    <div class="box">6</div>
-                                    <div class="box">7</div>
-                                    <div class="box">8</div>
+                            <div class="codeblock ">
+                                <div class="flex wrap width-8 ">
+                                    <div class="box ">1</div>
+                                    <div class="box ">2</div>
+                                    <div class="box ">3</div>
+                                    <div class="box ">4</div>
+                                    <div class="box ">5</div>
+                                    <div class="box ">6</div>
+                                    <div class="box ">7</div>
+                                    <div class="box ">8</div>
                                 </div>
                                 <code>wrap;</code>
                             </div>
-                            <div class="codeblock">
-                                <div class="flex nowrap width-8">
-                                    <div class="box">1</div>
-                                    <div class="box">2</div>
-                                    <div class="box">3</div>
-                                    <div class="box">4</div>
-                                    <div class="box">5</div>
-                                    <div class="box">6</div>
-                                    <div class="box">7</div>
-                                    <div class="box">8</div>
+                            <div class="codeblock ">
+                                <div class="flex nowrap width-8 ">
+                                    <div class="box ">1</div>
+                                    <div class="box ">2</div>
+                                    <div class="box ">3</div>
+                                    <div class="box ">4</div>
+                                    <div class="box ">5</div>
+                                    <div class="box ">6</div>
+                                    <div class="box ">7</div>
+                                    <div class="box ">8</div>
                                 </div>
                                 <code>nowrap;</code>
                             </div>
-                            <div class="codeblock">
-                                <div class="flex wrap-reverse width-8">
-                                    <div class="box">1</div>
-                                    <div class="box">2</div>
-                                    <div class="box">3</div>
-                                    <div class="box">4</div>
-                                    <div class="box">5</div>
-                                    <div class="box">6</div>
-                                    <div class="box">7</div>
-                                    <div class="box">8</div>
+                            <div class="codeblock ">
+                                <div class="flex wrap-reverse width-8 ">
+                                    <div class="box ">1</div>
+                                    <div class="box ">2</div>
+                                    <div class="box ">3</div>
+                                    <div class="box ">4</div>
+                                    <div class="box ">5</div>
+                                    <div class="box ">6</div>
+                                    <div class="box ">7</div>
+                                    <div class="box ">8</div>
                                 </div>
                                 <code>wrap-reverse;</code>
                             </div>
@@ -1081,153 +1086,153 @@
                     </div>
                 </div>
             </div>
-            <div class="snippet">
-                <h2 class="code">justify-content:</h2>
+            <div class="snippet ">
+                <h2 class="code ">justify-content:</h2>
                 <h3>Justification of items</h3>
-                <div class="codeblock" title="Justify items at the start of the flexbox container along main axis">
-                    <div class="flex justify-start">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
+                <div class="codeblock " title="Justify items at the start of the flexbox container along main axis ">
+                    <div class="flex justify-start ">
+                        <div class="box "></div>
+                        <div class="box "></div>
+                        <div class="box "></div>
                     </div>
                     <code>flex-start;</code>
                 </div>
-                <div class="codeblock" title="Justify items at the center of the flexbox container along main axis">
-                    <div class="flex justify-center">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
+                <div class="codeblock " title="Justify items at the center of the flexbox container along main axis ">
+                    <div class="flex justify-center ">
+                        <div class="box "></div>
+                        <div class="box "></div>
+                        <div class="box "></div>
                     </div>
                     <code>center;</code>
                 </div>
-                <div class="codeblock" title="Justify items at the end of the flexbox container along main axis">
-                    <div class="flex justify-end">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
+                <div class="codeblock " title="Justify items at the end of the flexbox container along main axis ">
+                    <div class="flex justify-end ">
+                        <div class="box "></div>
+                        <div class="box "></div>
+                        <div class="box "></div>
                     </div>
                     <code>flex-end;</code>
                 </div>
-                <div class="codeblock" title="Justify items with equal space between items along main axis">
-                    <div class="flex justify-between">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
+                <div class="codeblock " title="Justify items with equal space between items along main axis ">
+                    <div class="flex justify-between ">
+                        <div class="box "></div>
+                        <div class="box "></div>
+                        <div class="box "></div>
                     </div>
                     <code>space-between;</code>
                 </div>
-                <div class="codeblock" title="Justify items with equal space on either side of each item along main axis">
-                    <div class="flex justify-around">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
+                <div class="codeblock " title="Justify items with equal space on either side of each item along main axis ">
+                    <div class="flex justify-around ">
+                        <div class="box "></div>
+                        <div class="box "></div>
+                        <div class="box "></div>
                     </div>
                     <code>space-around;</code>
                 </div>
             </div>
-            <div class="snippet">
-                <h2 class="code">align-items:</h2>
+            <div class="snippet ">
+                <h2 class="code ">align-items:</h2>
                 <h3>Alignment on cross axis</h3>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="flex align-start taller">
-                                <div class="box"></div>
-                                <div class="box"></div>
-                                <div class="box"></div>
+                <div class="columns ">
+                    <div class="column ">
+                        <div class="codeblock ">
+                            <div class="flex align-start taller ">
+                                <div class="box "></div>
+                                <div class="box "></div>
+                                <div class="box "></div>
                             </div>
                             <code>flex-start;</code>
                         </div>
-                        <div class="codeblock">
-                            <div class="flex align-center taller">
-                                <div class="box"></div>
-                                <div class="box"></div>
-                                <div class="box"></div>
+                        <div class="codeblock ">
+                            <div class="flex align-center taller ">
+                                <div class="box "></div>
+                                <div class="box "></div>
+                                <div class="box "></div>
                             </div>
                             <code>center;</code>
                         </div>
-                        <div class="codeblock">
-                            <div class="flex align-end taller">
-                                <div class="box"></div>
+                        <div class="codeblock ">
+                            <div class="flex align-end taller ">
+                                <div class="box "></div>
                                 <div class="box "></div>
                                 <div class="box "></div>
                             </div>
                             <code>flex-end;</code>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="flex align-baseline taller">
-                                <div class="line"></div>
-                                <div class="box">a</div>
-                                <div class="box bigger">b</div>
-                                <div class="box biggest">c</div>
+                    <div class="column ">
+                        <div class="codeblock ">
+                            <div class="flex align-baseline taller ">
+                                <div class="line "></div>
+                                <div class="box ">a</div>
+                                <div class="box bigger ">b</div>
+                                <div class="box biggest ">c</div>
                             </div>
                             <code>baseline;</code>
                         </div>
-                        <div class="codeblock">
-                            <div class="flex align-stretch taller">
-                                <div class="box"></div>
-                                <div class="box"></div>
-                                <div class="box"></div>
+                        <div class="codeblock ">
+                            <div class="flex align-stretch taller ">
+                                <div class="box "></div>
+                                <div class="box "></div>
+                                <div class="box "></div>
                             </div>
                             <code>stretch;</code>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="snippet">
-                <h2 class="code">align-content:</h2>
+            <div class="snippet ">
+                <h2 class="code ">align-content:</h2>
                 <h3>Alignment of wrapped lines</h3>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="flex wrap content-start taller">
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
+                <div class="columns ">
+                    <div class="column ">
+                        <div class="codeblock ">
+                            <div class="flex wrap content-start taller ">
+                                <div class="box flatter fullwidth "></div>
+                                <div class="box flatter fullwidth "></div>
+                                <div class="box flatter fullwidth "></div>
                             </div>
                             <code>flex-start;</code>
                         </div>
-                        <div class="codeblock">
-                            <div class="flex wrap content-center taller">
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
+                        <div class="codeblock ">
+                            <div class="flex wrap content-center taller ">
+                                <div class="box flatter fullwidth "></div>
+                                <div class="box flatter fullwidth "></div>
+                                <div class="box flatter fullwidth "></div>
                             </div>
                             <code>center;</code>
                         </div>
-                        <div class="codeblock">
-                            <div class="flex wrap content-end taller">
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
+                        <div class="codeblock ">
+                            <div class="flex wrap content-end taller ">
+                                <div class="box flatter fullwidth "></div>
+                                <div class="box flatter fullwidth "></div>
+                                <div class="box flatter fullwidth "></div>
                             </div>
                             <code>flex-end;</code>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="flex wrap content-between taller">
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
+                    <div class="column ">
+                        <div class="codeblock ">
+                            <div class="flex wrap content-between taller ">
+                                <div class="box flatter fullwidth "></div>
+                                <div class="box flatter fullwidth "></div>
+                                <div class="box flatter fullwidth "></div>
                             </div>
                             <code>space-between;</code>
                         </div>
-                        <div class="codeblock">
-                            <div class="flex wrap content-around taller">
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
+                        <div class="codeblock ">
+                            <div class="flex wrap content-around taller ">
+                                <div class="box flatter fullwidth "></div>
+                                <div class="box flatter fullwidth "></div>
+                                <div class="box flatter fullwidth "></div>
                             </div>
                             <code>space-around;</code>
                         </div>
-                        <div class="codeblock">
-                            <div class="flex wrap content-stretch taller">
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
+                        <div class="codeblock ">
+                            <div class="flex wrap content-stretch taller ">
+                                <div class="box flatter fullwidth "></div>
+                                <div class="box flatter fullwidth "></div>
+                                <div class="box flatter fullwidth "></div>
                             </div>
                             <code>stretch;</code>
                         </div>
@@ -1237,83 +1242,83 @@
         </div>
         <!-- section Flexbox containers -->
 
-        <div class="section">
+        <div class="section ">
             <h2>Flexbox items</h2>
-            <div class="snippet">
-                <h2 class="code">flex:</h2>
-                <div class="snippet container">
+            <div class="snippet ">
+                <h2 class="code ">flex:</h2>
+                <div class="snippet container ">
                     <h3>Combine grow, shrink, basis</h3>
-                    <div class="codeblock">
+                    <div class="codeblock ">
                         <code>&lt;flex-grow&gt; &lt;flex-shrink&gt; &lt;flex-basis&gt;;</code>
                     </div>
-                    <div class="columns">
-                        <div class="snippet column">
-                            <h2 class="code">flex-grow:</h2>
+                    <div class="columns ">
+                        <div class="snippet column ">
+                            <h2 class="code ">flex-grow:</h2>
                             <h3>Item growth multiplier</h3>
-                            <div class="codeblock">
-                                <div class="flex width-10">
-                                    <div class="box grow-0">0</div>
-                                    <div class="box grow-0">0</div>
+                            <div class="codeblock ">
+                                <div class="flex width-10 ">
+                                    <div class="box grow-0 ">0</div>
+                                    <div class="box grow-0 ">0</div>
                                 </div>
-                                <code class="comment">/* no grow */</code>
+                                <code class="comment ">/* no grow */</code>
                                 <code>0;</code>
                             </div>
-                            <div class="codeblock">
-                                <div class="flex width-10">
-                                    <div class="box grow-1">1</div>
-                                    <div class="box grow-1">1</div>
+                            <div class="codeblock ">
+                                <div class="flex width-10 ">
+                                    <div class="box grow-1 ">1</div>
+                                    <div class="box grow-1 ">1</div>
                                 </div>
                                 <code>1;</code>
                             </div>
-                            <div class="codeblock">
-                                <div class="flex width-10">
-                                    <div class="box grow-10">10</div>
-                                    <div class="box grow-20 placeholder">20</div>
+                            <div class="codeblock ">
+                                <div class="flex width-10 ">
+                                    <div class="box grow-10 ">10</div>
+                                    <div class="box grow-20 placeholder ">20</div>
                                 </div>
                                 <code>10;</code>
                             </div>
-                            <div class="codeblock">
-                                <div class="flex width-10">
-                                    <div class="box grow-99">99</div>
-                                    <div class="box grow-20 placeholder">20</div>
+                            <div class="codeblock ">
+                                <div class="flex width-10 ">
+                                    <div class="box grow-99 ">99</div>
+                                    <div class="box grow-20 placeholder ">20</div>
                                 </div>
                                 <code>99;</code>
                             </div>
                         </div>
-                        <div class="snippet column">
-                            <h2 class="code">flex-shrink:</h2>
+                        <div class="snippet column ">
+                            <h2 class="code ">flex-shrink:</h2>
                             <h3>Item shrink multiplier</h3>
-                            <div class="codeblock">
-                                <div class="flex width-10">
-                                    <div class="box flex-basis-100pct shrink-0">0</div>
-                                    <div class="box flex-basis-100pct shrink-0">0</div>
+                            <div class="codeblock ">
+                                <div class="flex width-10 ">
+                                    <div class="box flex-basis-100pct shrink-0 ">0</div>
+                                    <div class="box flex-basis-100pct shrink-0 ">0</div>
                                 </div>
-                                <code class="comment">/* no shrink */</code>
+                                <code class="comment ">/* no shrink */</code>
                                 <code>0;</code>
                             </div>
-                            <div class="codeblock">
-                                <div class="flex width-10">
-                                    <div class="box flex-basis-100pct shrink-1">1</div>
-                                    <div class="box flex-basis-100pct shrink-1">1</div>
+                            <div class="codeblock ">
+                                <div class="flex width-10 ">
+                                    <div class="box flex-basis-100pct shrink-1 ">1</div>
+                                    <div class="box flex-basis-100pct shrink-1 ">1</div>
                                 </div>
                                 <code>1;</code>
                             </div>
-                            <div class="codeblock">
-                                <div class="flex width-10">
-                                    <div class="box flex-basis-100pct shrink-10">10</div>
-                                    <div class="box flex-basis-100pct shrink-20">20</div>
+                            <div class="codeblock ">
+                                <div class="flex width-10 ">
+                                    <div class="box flex-basis-100pct shrink-10 ">10</div>
+                                    <div class="box flex-basis-100pct shrink-20 ">20</div>
                                 </div>
                                 <code>10;</code>
                             </div>
-                            <div class="codeblock">
-                                <div class="flex width-10">
-                                    <div class="box flex-basis-100pct shrink-99">99</div>
-                                    <div class="box flex-basis-100pct shrink-20">20</div>
+                            <div class="codeblock ">
+                                <div class="flex width-10 ">
+                                    <div class="box flex-basis-100pct shrink-99 ">99</div>
+                                    <div class="box flex-basis-100pct shrink-20 ">20</div>
                                 </div>
                                 <code>99;</code>
                             </div>
                         </div>
-                        <div class="snippet column" title="Flex item's initial size along main axis">
+                        <div class="snippet column " title="Flex item 's initial size along main axis">
                             <h2 class="code">flex-basis:</h2>
                             <h3>Initial size of an item</h3>
                             <div class="codeblock">

@@ -84,7 +84,19 @@ code.symbol {
     font-size: 24px;
 }
 
-.codeblock, .requirement {
+.requirement {
+    display: block;
+    margin: 16px auto;
+    padding: 0 40px;
+    overflow: scroll;
+}
+
+#fixed-position-example {
+    width: 500px;
+    border: 4px double black;
+}
+
+.codeblock {
     margin: 16px;
     overflow: scroll;
 }
