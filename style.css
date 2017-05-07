@@ -121,7 +121,8 @@ code.comment {
     color: #bbb;
 }
 
-code.comment.subtle {
+code.subtle {
+    color: #888;
     font-size: 12px;
     padding: 4px;
 }
@@ -185,7 +186,7 @@ code.comment.subtle {
     min-width: 3em;
 }
 
-.box.fullwidth {
+.fullwidth {
     min-width: 90%;
     margin-left: 5px;
 }
@@ -243,8 +244,13 @@ code.comment.subtle {
     display: inline-block;
 }
 
-.flex, .figure.border {
+.flex {
     border: 1px dashed #999;
+    border-radius: 4px;
+}
+
+.positioned {
+    border: 4px double black;
     border-radius: 4px;
 }
 

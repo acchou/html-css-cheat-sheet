@@ -826,30 +826,29 @@
             <div class="snippet">
                 <h2 class="code">position: absolute;</h2>
                 <h3>Requires positioned parent element</h3>
-                <div class="requirement">
-                    <code>(relative | absolute | fixed)</code>
-                    <code>      &#8600;</code>
+                <div class="requirement" style="margin: 15px auto;">
+                    <code>   (relative | absolute | fixed) </code>
+                    <code>                                &#8600;</code>
                     <!-- <code class="symbol">      &darr;</code> -->
-                    <div class="relative figure border">
+                    <div class="relative positioned">
                         <div class="box biggest placeholder wider">
-                            <code class="subtle comment">static<br>position</code>
+                            <code class="subtle">static<br>position</code>
                         </div>
-                        <div class="box biggest placeholder wider">
-                            <code class="subtle comment">static<br>position</code>
-                        </div>
-                        <div class="box absolute" style="left: 140px; top: 5px;">
-                            <code class="subtle comment" style="color: #eee; padding: 4px 10px;">Absolute<br>position</code>
+                        <div class="box absolute" style="background-color:hsla(0,0%,40%,0.7)">
+                            <code class="subtle" style="color: #eee; padding: 4px 10px;">Absolute<br>position</code>
                         </div>
                         <div class="box biggest placeholder wider">
-                            <code class="subtle comment">static<br>position</code>
+                            <code class="subtle">static<br>position</code>
                         </div>
-                        <div class="box biggest placeholder"></div>
+                        <div class="box biggest placeholder wider">
+                            <code class="subtle">static<br>position</code>
+                        </div>
                     </div>
                 </div>
                 <div class="columns">
                     <div class="column">
                         <div class="codeblock">
-                            <div class="relative figure border">
+                            <div class="relative positioned">
                                 <div class="box biggest placeholder"></div>
                                 <div class="box absolute" style="left: 0; top: 0;"></div>
                                 <div class="box biggest placeholder"></div>
@@ -858,7 +857,7 @@
                             <code>left:0; top:0;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="relative figure border">
+                            <div class="relative positioned">
                                 <div class="box biggest placeholder"></div>
                                 <div class="box absolute" style="left: 0; bottom: 0;"></div>
                                 <div class="box biggest placeholder"></div>
@@ -867,7 +866,7 @@
                             <code>left:0; bottom:0;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="relative figure border">
+                            <div class="relative positioned">
                                 <div class="box biggest placeholder"></div>
                                 <div class="box absolute" style="left: auto; top: auto;"></div>
                                 <div class="box biggest placeholder"></div>
@@ -876,7 +875,7 @@
                             <code>left:auto; top:auto;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="relative figure border">
+                            <div class="relative positioned">
                                 <div class="box biggest placeholder"></div>
                                 <div class="box absolute" style="left: 0; right: 0;"></div>
                                 <div class="box biggest placeholder"></div>
@@ -887,7 +886,7 @@
                     </div>
                     <div class="column">
                         <div class="codeblock">
-                            <div class="relative figure border">
+                            <div class="relative positioned">
                                 <div class="box biggest placeholder"></div>
                                 <div class="box absolute" style="right: 0; top: 0;"></div>
                                 <div class="box biggest placeholder"></div>
@@ -896,7 +895,7 @@
                             <code>right:0; top:0;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="relative figure border">
+                            <div class="relative positioned">
                                 <div class="box biggest placeholder"></div>
                                 <div class="box absolute" style="right: 0; bottom: 0;"></div>
                                 <div class="box biggest placeholder"></div>
@@ -905,7 +904,7 @@
                             <code>right:0; bottom:0;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="relative figure border">
+                            <div class="relative positioned">
                                 <div class="box biggest placeholder"></div>
                                 <div class="box absolute" style="top: 0; bottom: 0;"></div>
                                 <div class="box biggest placeholder"></div>
@@ -914,8 +913,8 @@
                             <code>top:0; bottom:0;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="relative figure border">
-                                <div class="box biggesst placeholder"></div>
+                            <div class="relative positioned">
+                                <div class="box biggest placeholder"></div>
                                 <div class="box absolute" style="left: 0; right: 0; top: 0; bottom: 0;"></div>
                                 <div class="box biggest placeholder"></div>
                                 <div class="box biggest placeholder"></div>
@@ -924,9 +923,46 @@
                             <code>top:0; bottom:0;</code>
                         </div>
                     </div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="relative positioned">
+                                <div class="box biggest placeholder"></div>
+                                <div class="box absolute" style="left: 10%; top: 10%"></div>
+                                <div class="box biggest placeholder"></div>
+                                <div class="box biggest placeholder"></div>
+                            </div>
+                            <code>left:10%; top:10%;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="relative positioned">
+                                <div class="box biggest placeholder"></div>
+                                <div class="box absolute" style="right: 10%; top: 10%"></div>
+                                <div class="box biggest placeholder"></div>
+                                <div class="box biggest placeholder"></div>
+                            </div>
+                            <code>right:10%; top:10%;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="relative positioned">
+                                <div class="box biggest placeholder"></div>
+                                <div class="box absolute" style="left: 10%; right: 10%; top: 10%; bottom: 10%"></div>
+                                <div class="box biggest placeholder"></div>
+                                <div class="box biggest placeholder"></div>
+                            </div>
+                            <code>left:10%; right:10%;</code>
+                            <code>top:10%; bottom:10%;</code>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="snippet" style="width:40%;">
+                <h2 class="code">position: fixed;</h2>
+                <h3>Position fixed relative to viewport (constant position on screen)</h3>
+                <iframe style="border: none;" src="fixed-position-example.html"></iframe>
+            </div>
         </div>
+        <!-- End section Box Model -->
+
         <div class="section">
             <h2>Flexbox containers</h2>
             <div class="flex inline noborder column">
@@ -1361,12 +1397,12 @@
             </div>
             <div class="flex inline noborder column">
                 <!-- <div class="snippet">
-                    <h2 class="code">flex:</h2>
-                    <h3>Combine grow, shrink, basis</h3>
-                    <div class="codeblock">
-                        <code>&lt;grow&gt; &lt;shrink&gt; &lt;basis&gt;;</code>
-                    </div>
-                </div> -->
+                <h2 class="code">flex:</h2>
+                <h3>Combine grow, shrink, basis</h3>
+                <div class="codeblock">
+                    <code>&lt;grow&gt; &lt;shrink&gt; &lt;basis&gt;;</code>
+                </div>
+                                </div> -->
                 <div class="snippet" title="Higher order items appear after lower order items. Samer order items appear in source order. Default 0.">
                     <h2 class="code">order:</h2>
                     <h3>Display order of an item</h3>
@@ -1977,8 +2013,7 @@
             </div>
         </div>
         <!-- Section Colors -->
-    </div>
-    <!-- CSS -->
+        <!-- CSS -->
 </body>
 
 </html>
