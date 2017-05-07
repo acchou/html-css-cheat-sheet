@@ -84,11 +84,6 @@ code.symbol {
     font-size: 24px;
 }
 
-code.condensed {
-    /* letter-spacing: -0.02em; */
-    
-}
-
 .codeblock, .requirement {
     margin: 16px;
     overflow: scroll;
