@@ -567,3 +567,20 @@ a:link, a:visited {
 .symbol {
     font-size: 22px;
 }
+
+.overflow-box {
+    width: 250px;
+    height: 80px;
+}
+
+.overflow-box.hidden {
+    overflow: hidden;
+}
+
+.overflow-box.scroll {
+    overflow: scroll;
+}
+
+.overflow-box.visible {
+    overflow: visible;
+}
