@@ -154,6 +154,11 @@ code.subtle {
     border-color: blue;
 }
 
+.infill {
+    display: inline-block;
+    background-color: white;
+}
+
 .box, .bar {
     font-family: 'Source Code Pro', monospace;
     display: inline-block;
