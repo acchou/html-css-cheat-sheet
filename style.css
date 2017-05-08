@@ -56,7 +56,6 @@ ul, ol {
     font-weight: normal;
     margin: 0;
     padding: 6px 12px;
-    /* padding: 0.25em 1em 0.25em 1em; */
 }
 
 .snippet > h3 {
@@ -82,8 +81,9 @@ code {
 
 .requirement {
     display: block;
-    margin: 16px auto;
-    padding: 0 40px;
+    margin: 16px auto; 
+    /* margin: 16px; */
+    /* padding: 0 40px; */
     overflow: scroll;
 }
 
@@ -159,12 +159,15 @@ code.subtle {
     background-color: white;
 }
 
+.box, .bar, .content-box {
+    background-color: #aaa;
+    color: white;
+}
+
 .box, .bar {
     font-family: 'Source Code Pro', monospace;
     display: inline-block;
-    background-color: #aaa;
     border-radius: 4px;
-    color: white;
     min-height: 1.5em;
     text-align: center;
     vertical-align: middle;
@@ -175,19 +178,25 @@ code.subtle {
     min-width: 1.5em;
 }
 
-.absolute {
-    position: absolute;
-    left: auto;
-}
-
 .box {
     min-width: 1.5em;
     margin: 4px;
 }
 
+.absolute {
+    position: absolute;
+    left: auto;
+    margin: 0;
+}
+
 .box.placeholder {
     background-color: white;
     color: #999;
+}
+
+.box.invisible {
+    visibility: hidden;
+    margin: 16px;
 }
 
 .box.bigger {
@@ -220,33 +229,40 @@ code.subtle {
     border-radius: 0;
 }
 
-.box.border {
+.box.border.thick {
     border: 3px solid black;
 }
 
 /* Styles for creating figures related to the Box model */
-.border-box {
-    background-color: lightgrey; 
-    display: inline-block;
-    padding: 1em; 
-    padding-top: 0; 
-    text-indent: -0.75em; 
-    vertical-align: top; 
+
+.margin-box, .border-box, .padding-box, .content-box {
+    padding: 2em; 
+    padding-top: 1em; 
 }
 
-.padding-box {
+.border-box {
+    background-color: lightgrey; 
+}
+
+.padding, .padding-box {
     background-color: hsl(120, 20%, 75%); 
-    display: block; 
-    padding: 1em; 
-    padding-top: 0;
-    text-align: left;
+}
+
+.padding {
+    margin: 0;
 }
 
 .content-box {
-    background-color: hsla(240, 100%, 50%, 0.15);
-    min-height: 0; 
-    padding: 0; 
+    padding: 1em;
     text-indent: 0;
+}
+
+.margin-box, .margin {
+    background-color: hsla(50, 100%, 50%, 0.20);
+}
+
+.margin-box {
+    text-indent: -0.75em;
 }
 
 .highlight-border {

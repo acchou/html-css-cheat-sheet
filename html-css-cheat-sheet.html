@@ -627,24 +627,30 @@
             <div class="snippet">
                 <h2 class="code">box-sizing:</h2>
                 <div class="codeblock">
-                    <div class="border-box">
-                        <code>border</code>
-                        <div class="padding-box">
-                            <code>padding</code>
-                            <div class="content-box highlight-border">
-                                <code>content</code>
+                    <div class="margin-box">
+                        <code>margin</code>
+                        <div class="border-box">
+                            <code>border</code>
+                            <div class="padding-box">
+                                <code>padding</code>
+                                <div class="content-box highlight-border">
+                                    <code>content</code>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <code>content-box;</code>
                 </div>
                 <div class="codeblock">
-                    <div class="border-box highlight-border">
-                        <code>border</code>
-                        <div class="padding-box">
-                            <code>padding</code>
-                            <div class="content-box">
-                                <code>content</code>
+                    <div class="margin-box">
+                        <code>margin</code>
+                        <div class="border-box highlight-border">
+                            <code>border</code>
+                            <div class="padding-box">
+                                <code>padding</code>
+                                <div class="content-box">
+                                    <code>content</code>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -966,50 +972,166 @@
             </div>
             <div class="snippet">
                 <h2 class="code">padding:</h2>
-                <div class="codeblock">
-                    <div class="box" style="padding: 0;"></div>
-                    <code>0;</code>
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="box padding border" style="padding: 0;">
+                                <div class="box absolute" style="top:0; left:0;"></div>
+                            </div>
+                            <code>0;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box padding border" style="padding: 4px;">
+                                <div class="box absolute" style="top:4px; left: 4px;"></div>
+                            </div>
+                            <code>4px;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box padding border" style="padding: 10px;">
+                                <div class="box absolute" style="top:10px; left: 10px;"></div>
+                            </div>
+                            <code>10px;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box padding border" style="padding: 20px;">
+                                <div class="box absolute" style="top:20px; left: 20px;"></div>
+                            </div>
+                            <code>20px;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="box padding border" style="padding: 0 0;">
+                                <div class="box absolute" style="top:0; left:0;"></div>
+                            </div>
+                            <code>0 0;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box padding border" style="padding: 4px 0;">
+                                <div class="box absolute" style="top:4px; left: 0;"></div>
+                            </div>
+                            <code>4px 0;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box padding border" style="padding: 10px 0;">
+                                <div class="box absolute" style="top:10px; left: 0px;"></div>
+                            </div>
+                            <code>10px 0;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box padding border" style="padding: 20px 0;">
+                                <div class="box absolute" style="top:20px; left: 0px;"></div>
+                            </div>
+                            <code>20px 0;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <!-- This column uses some styles and hidden divs to achieve vertical
+                             alignment with other columns. Ugly... but the goal is to use the 
+                             css property being described as much as possible, so we don't use
+                            flex here. -->
+                        <div class="codeblock" style="visibility: hidden">
+                            <div class="box padding border" style="padding: 0 0;">
+                                <div class="box absolute" style="top:0; left:0;"></div>
+                            </div>
+                            <code>0 0;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div style="margin-top: 4px; margin-bottom: 4px;">
+                                <div class="box padding border" style="padding: 0 4px;">
+                                    <div class="box absolute" style="top:0; left:4px;"></div>
+                                </div>
+                            </div>
+                            <code>0 4px;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div style="margin-top: 10px; margin-bottom: 10px;">
+                                <div class="box padding border" style="padding: 0 10px;">
+                                    <div class="box absolute" style="top:0; left: 10px;"></div>
+                                </div>
+                            </div>
+                            <code>0 10px;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div style="margin-top: 20px; margin-bottom: 20px">
+                                <div class="box padding border" style="padding: 0 20px;">
+                                    <div class="box absolute" style="top:0; left: 20px;"></div>
+                                </div>
+                            </div>
+                            <code>0 20px;</code>
+                        </div>
+                    </div>
                 </div>
-                <div class="codeblock">
-                    <div class="box" style="padding: 4px;"></div>
-                    <code>4px;</code>
+            </div>
+            <div class="snippet">
+                <h2>Other padding</h2>
+                <div class="flex noborder column align-center">
+                    <div class="codeblock">
+                        <code>padding-top: 20px;</code>
+                    </div>
+                    <div class="flex noborder column align-center">
+                        <div class="box relative padding border" style="padding-top: 20px;">
+                            <div class="box absolute" style="top:20px; left: 0;"></div>
+                        </div>
+                        <div class="flex noborder align-center">
+                            <div class="codeblock">
+                                <code>padding-left: <br>20px;</code>
+                            </div>
+                            <div class="box relative padding border" style="padding-left: 20px;">
+                                <div class="box absolute" style="top:0; left: 20px;"></div>
+                            </div>
+                            <div class="box invisible"></div>
+                            <div class="box relative padding border" style="padding-right: 20px;">
+                                <div class="box absolute" style="top: 0; right: 20px;"></div>
+                            </div>
+                            <div class="codeblock">
+                                <code>padding-right:<br>20px;</code>
+                            </div>
+                        </div>
+                        <div class="box relative padding border" style="padding-bottom: 20px;">
+                            <div class="box absolute" style="bottom:20px; left: 0;"></div>
+                        </div>
+                    </div>
+                    <div class="codeblock">
+                        <code>padding-bottom: 20px;</code>
+                    </div>
                 </div>
             </div>
             <div class="snippet">
                 <h2 class="code">margin:</h2>
                 <h3>Adjacent margins are collapsed to the larger one.</h3>
                 <div class="requirement">
-                    <div class="border blue">
+                    <div class="margin border">
                         <div class="box" style="padding: 0; margin: 10px;"></div>
                     </div>
                     <!-- Not actually using margin collapsing to implement this 
                          because we want to show the border overlap explicitly -->
-                    <div class="border red relative" style="top: 0px; left: -14px;">
+                    <div class="margin border relative" style="top: 0px; left: -14px;">
                         <div class="box" style="padding: 0; margin: 20px;"></div>
                     </div>
                 </div>
                 <div class="columns">
                     <div class="column">
                         <div class="codeblock">
-                            <div class="border">
+                            <div class="margin border">
                                 <div class="box" style="margin: 0px;"></div>
                             </div>
                             <code>0;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="border">
+                            <div class="margin border">
                                 <div class="box" style="margin: 4px;"></div>
                             </div>
                             <code>4px;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="border">
+                            <div class="margin border">
                                 <div class="box" style="margin: 10px;"></div>
                             </div>
                             <code>10px;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="border">
+                            <div class="margin border">
                                 <div class="box" style="margin: 20px;"></div>
                             </div>
                             <code>20px;</code>
@@ -1017,85 +1139,97 @@
                     </div>
                     <div class="column">
                         <div class="codeblock">
-                            <div class="border">
+                            <div class="margin border">
                                 <div class="box" style="margin: 0 0;"></div>
                             </div>
                             <code>0 0;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="border">
+                            <div class="margin border">
                                 <div class="box" style="margin: 4px 0;"></div>
                             </div>
                             <code>4px 0;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="border">
+                            <div class="margin border">
                                 <div class="box" style="margin: 10px 0;"></div>
                             </div>
                             <code>10px 0;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="border">
+                            <div class="margin border">
                                 <div class="box" style="margin: 20px 0;"></div>
                             </div>
                             <code>20px 0;</code>
                         </div>
                     </div>
                     <div class="column">
+                        <div class="codeblock" style="visibility: hidden;">
+                            <div class="margin border">
+                                <div class="box" style="margin: 0 0;"></div>
+                            </div>
+                            <code>0 0;</code>
+                        </div>
                         <div class="codeblock">
-                            <div class="border">
+                            <div class="margin border" style="margin-top: 4px; margin-bottom: 4px;">
                                 <div class="box" style="margin: 0 4px;"></div>
                             </div>
                             <code>0 4px;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="border">
+                            <div class="margin border" style="margin-top: 10px; margin-bottom: 10px;">
                                 <div class="box" style="margin: 0 10px;"></div>
                             </div>
                             <code>0 10px;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="border">
+                            <div class="margin border" style="margin-top: 20px; margin-bottom: 20px;">
                                 <div class="box" style="margin: 0 20px;"></div>
                             </div>
                             <code>0 20px;</code>
                         </div>
-                        <div class="codeblock" title="Horizontal centering for block elements">
-                            <div class="border" style="width: 80px;">
-                                <div class="float-left symbol">&harr;</div>
-                                <div class="float-right symbol">&harr;</div>
-                                <div class="box bigger" style="display: block; width: 1.5em; margin: 0 auto;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2>Other margins</h2>
+                <div class="flex noborder justify-center">
+                    <div class="codeblock" title="Horizontal centering for block elements">
+                        <div class="margin border" style="width:300px;">
+                            <div class="box bigger" style="display: block; width: 1.5em; margin: 0 auto;"></div>
+                        </div>
+                        <code>margin: 0 auto;</code>
+                    </div>
+                </div>
+                <div class="flex noborder column align-center">
+                    <div class="codeblock">
+                        <code>margin-top: 20px;</code>
+                    </div>
+                    <div class="margin border">
+                        <div class="box nomargin" style="margin-top: 20px;"></div>
+                    </div>
+                    <div class="flex noborder align-center">
+                        <div class="codeblock">
+                            <code>margin-left: <br>20px;</code>
+                        </div>
+                        <div class="margin border">
+                            <div class="box nomargin" style="margin-left: 20px;"></div>
+                        </div>
+                        <div class="box invisible"></div>
+                        <div class="margin border">
+                            <div class="box nomargin" style="margin-right: 20px;"></div>
+                        </div>
+                        <div class="codeblock">
+                            <code>margin-right:<br>20px;</code>
+                        </div>
+                    </div>
+                    <div class="margin border">
+                        <div class="box nomargin" style="margin-bottom: 20px;"></div>
+                    </div>
+                    <div class="codeblock">
+                        <code>margin-bottom: 20px;</code>
+                    </div>
 
-                            </div>
-                            <code>0 auto;</code>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="border">
-                                <div class="box" style="margin: 20px 0 0 0;"></div>
-                            </div>
-                            <code>20px 0 0 0;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="border">
-                                <div class="box" style="margin: 0 20px 0 0;"></div>
-                            </div>
-                            <code>0 20px 0 0;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="border">
-                                <div class="box" style="margin: 0 0 20px 0;"></div>
-                            </div>
-                            <code>0 0 20px 0;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="border">
-                                <div class="box" style="margin: 0 0 0 20px;"></div>
-                            </div>
-                            <code>0 0 20px 0;</code>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1657,19 +1791,19 @@
                 <div class="columns">
                     <div class="column">
                         <div class="codeblock">
-                            <div class="box border" style="border-width: 1px;"></div>
+                            <div class="box border thick" style="border-width: 1px;"></div>
                             <code>1px;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box border" style="border-width: 2px;"></div>
+                            <div class="box border thick" style="border-width: 2px;"></div>
                             <code>2px;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box border" style="border-width: 3px;"></div>
+                            <div class="box border thick" style="border-width: 3px;"></div>
                             <code>3px;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box border" style="border-width: 4px;"></div>
+                            <div class="box border thick" style="border-width: 4px;"></div>
                             <code>4px;</code>
                         </div>
                     </div>
@@ -2045,105 +2179,105 @@
                 <div class="columns">
                     <div class="column">
                         <div class="codeblock">
-                            <div class="box border" style="border-color: white; color: black;"></div>
+                            <div class="box border thick" style="border-color: white; color: black;"></div>
                             <code>white;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box placeholder border" style="border-color: black"></div>
+                            <div class="box border thick placeholder" style="border-color: black"></div>
                             <code>black;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box placeholder border" style="border-color: gray"></div>
+                            <div class="box border thick placeholder" style="border-color: gray"></div>
                             <code>gray;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box placeholder border" style="border-color: red"></div>
+                            <div class="box border thick placeholder" style="border-color: red"></div>
                             <code>red;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box placeholder border" style="border-color: green"></div>
+                            <div class="box border thick placeholder" style="border-color: green"></div>
                             <code>green;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box placeholder border" style="border-color: blue"></div>
+                            <div class="box border thick placeholder" style="border-color: blue"></div>
                             <code>blue;</code>
                         </div>
                     </div>
                     <div class="column">
                         <div class="codeblock">
-                            <div class="box border" style="border-color: #fff; color: black;"></div>
+                            <div class="box border thick" style="border-color: #fff; color: black;"></div>
                             <code>#fff;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box placeholder border" style="border-color: #000"></div>
+                            <div class="box border thick placeholder" style="border-color: #000"></div>
                             <code>#000;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box placeholder border" style="border-color: #808080"></div>
+                            <div class="box border thick placeholder" style="border-color: #808080"></div>
                             <code>#808080;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box placeholder border" style="border-color: #f00"></div>
+                            <div class="box border thick placeholder" style="border-color: #f00"></div>
                             <code>#f00;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box placeholder border" style="border-color: #008000"></div>
+                            <div class="box border thick placeholder" style="border-color: #008000"></div>
                             <code>#008000;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box placeholder border" style="border-color: #00f"></div>
+                            <div class="box border thick placeholder" style="border-color: #00f"></div>
                             <code>#00f;</code>
                         </div>
                     </div>
                     <div class="column">
                         <div class="codeblock">
-                            <div class="box border" style="border-color: rgb(255, 255, 255); color: black;"></div>
+                            <div class="box border thick" style="border-color: rgb(255, 255, 255); color: black;"></div>
                             <code>rgb(255, 255, 255);</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box placeholder border" style="border-color: rgb(0, 0, 0);"></div>
+                            <div class="box border thick placeholder" style="border-color: rgb(0, 0, 0);"></div>
                             <code>rgb(0, 0, 0);</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box placeholder border" style="border-color: rgb(128, 128, 128);"></div>
+                            <div class="box border thick placeholder" style="border-color: rgb(128, 128, 128);"></div>
                             <code>rgb(128, 128, 128);</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box placeholder border" style="border-color: rgb(255, 0, 0);"></div>
+                            <div class="box border thick placeholder" style="border-color: rgb(255, 0, 0);"></div>
                             <code>rgb(255, 0, 0);</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box placeholder border" style="border-color: rgb(0, 128, 0);"></div>
+                            <div class="box border thick placeholder" style="border-color: rgb(0, 128, 0);"></div>
                             <code>rgb(0, 128, 0);</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box placeholder border" style="border-color: rgb(0, 0, 255);"></div>
+                            <div class="box border thick placeholder" style="border-color: rgb(0, 0, 255);"></div>
                             <code>rgb(0, 0, 255);</code>
                         </div>
                     </div>
                     <div class="column">
                         <div class="codeblock">
-                            <div class="box border" style="border-color: hsl(0, 0%, 100%); color: black;"></div>
+                            <div class="box border thick" style="border-color: hsl(0, 0%, 100%); color: black;"></div>
                             <code>hsl(0, 0%, 100%);</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box placeholder border" style="border-color: hsl(0, 0%, 0%);"></div>
+                            <div class="box border thick placeholder" style="border-color: hsl(0, 0%, 0%);"></div>
                             <code>hsl(0, 0%, 0%);</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box placeholder border" style="border-color: hsl(0, 0%, 50%);"></div>
+                            <div class="box border thick placeholder" style="border-color: hsl(0, 0%, 50%);"></div>
                             <code>hsl(0, 0%, 50%);</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box placeholder border" style="border-color: hsl(0, 100%, 50%);"></div>
+                            <div class="box border thick placeholder" style="border-color: hsl(0, 100%, 50%);"></div>
                             <code>hsl(0, 0%, 50%);</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box placeholder border" style="border-color: hsl(120, 100%, 25%);"></div>
+                            <div class="box border thick placeholder" style="border-color: hsl(120, 100%, 25%);"></div>
                             <code>hsl(120, 100%, 25%);</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box placeholder border" style="border-color: hsl(240, 100%, 50%);"></div>
+                            <div class="box border thick placeholder" style="border-color: hsl(240, 100%, 50%);"></div>
                             <code>hsl(240, 100%, 50%);</code>
                         </div>
                     </div>
