@@ -80,10 +80,6 @@ code {
     font-size: 14px;
 }
 
-code.symbol {
-    font-size: 24px;
-}
-
 .requirement {
     display: block;
     margin: 16px auto;
@@ -143,6 +139,19 @@ code.subtle {
 .section > h2 {
     font-size: 12pt;
     font-weight: normal;
+}
+
+.border {
+    display: inline-block;
+    border: 1px dashed black;
+}
+
+.border.red {
+    border-color: red;
+}
+
+.border.blue {
+    border-color: blue;
 }
 
 .box, .bar {
@@ -524,4 +533,16 @@ a:link, a:visited {
 
 .nudge-top {
     padding-top: 10px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.symbol {
+    font-size: 22px;
 }
