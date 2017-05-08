@@ -236,8 +236,8 @@ code.subtle {
 /* Styles for creating figures related to the Box model */
 
 .margin-box, .border-box, .padding-box, .content-box {
-    padding: 2em; 
-    padding-top: 1em; 
+    padding: 1em; 
+    padding-top: 0em; 
 }
 
 .border-box {
@@ -253,7 +253,7 @@ code.subtle {
 }
 
 .content-box {
-    padding: 1em;
+    padding: 0.5em;
     text-indent: 0;
 }
 

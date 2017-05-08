@@ -789,211 +789,29 @@
                 </div>
             </div>
             <div class="snippet">
-                <h2 class="code">position: static;</h2>
-                <div class="codeblock">
-                    <div class="box placeholder"></div>
-                    <div class="box static"></div>
-                    <div class="box placeholder"></div>
-                </div>
-            </div>
-            <div class="snippet">
-                <h2 class="code">position: relative;</h2>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="box placeholder"></div>
-                            <div class="box relative" style="top: 10px;"></div>
-                            <div class="box placeholder"></div>
-                            <code class="nudge-top">top: 10px;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box placeholder"></div>
-                            <div class="box relative" style="left: 10px;"></div>
-                            <div class="box placeholder"></div>
-                            <code>left: 10px;</code>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="codeblock nudge-top">
-                            <div class="box placeholder"></div>
-                            <div class="box relative" style="bottom: 10px;"></div>
-                            <div class="box placeholder"></div>
-                            <code>bottom: 10px;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box placeholder"></div>
-                            <div class="box relative" style="right: 10px;"></div>
-                            <div class="box placeholder"></div>
-                            <code>right: 10px;</code>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="snippet">
-                <h2 class="code">position: absolute;</h2>
-                <h3>Requires positioned parent element</h3>
-                <div class="requirement">
-                    <code>   (relative | absolute | fixed) </code>
-                    <code>                                &#8600;</code>
-                    <div class="relative positioned">
-                        <div class="box biggest placeholder wider">
-                            <code class="subtle">static<br>position</code>
-                        </div>
-                        <div class="box absolute" style="background-color:hsla(0,0%,40%,0.7)">
-                            <code class="subtle" style="color: #eee; padding: 4px 10px;">Absolute<br>position</code>
-                        </div>
-                        <div class="box biggest placeholder wider">
-                            <code class="subtle">static<br>position</code>
-                        </div>
-                        <div class="box biggest placeholder wider">
-                            <code class="subtle">static<br>position</code>
-                        </div>
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="relative positioned">
-                                <div class="box biggest placeholder"></div>
-                                <div class="box absolute" style="left: 0; top: 0;"></div>
-                                <div class="box biggest placeholder"></div>
-                                <div class="box biggest placeholder"></div>
-                            </div>
-                            <code>left:0; top:0;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="relative positioned">
-                                <div class="box biggest placeholder"></div>
-                                <div class="box absolute" style="left: 0; bottom: 0;"></div>
-                                <div class="box biggest placeholder"></div>
-                                <div class="box biggest placeholder"></div>
-                            </div>
-                            <code>left:0; bottom:0;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="relative positioned">
-                                <div class="box biggest placeholder"></div>
-                                <div class="box absolute" style="left: auto; top: auto;"></div>
-                                <div class="box biggest placeholder"></div>
-                                <div class="box biggest placeholder"></div>
-                            </div>
-                            <code>left:auto; top:auto;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="relative positioned">
-                                <div class="box biggest placeholder"></div>
-                                <div class="box absolute" style="left: 0; right: 0;"></div>
-                                <div class="box biggest placeholder"></div>
-                                <div class="box biggest placeholder"></div>
-                            </div>
-                            <code>left:0; right:0;</code>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="relative positioned">
-                                <div class="box biggest placeholder"></div>
-                                <div class="box absolute" style="right: 0; top: 0;"></div>
-                                <div class="box biggest placeholder"></div>
-                                <div class="box biggest placeholder"></div>
-                            </div>
-                            <code>right:0; top:0;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="relative positioned">
-                                <div class="box biggest placeholder"></div>
-                                <div class="box absolute" style="right: 0; bottom: 0;"></div>
-                                <div class="box biggest placeholder"></div>
-                                <div class="box biggest placeholder"></div>
-                            </div>
-                            <code>right:0; bottom:0;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="relative positioned">
-                                <div class="box biggest placeholder"></div>
-                                <div class="box absolute" style="top: 0; bottom: 0;"></div>
-                                <div class="box biggest placeholder"></div>
-                                <div class="box biggest placeholder"></div>
-                            </div>
-                            <code>top:0; bottom:0;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="relative positioned">
-                                <div class="box biggest placeholder"></div>
-                                <div class="box absolute" style="left: 0; right: 0; top: 0; bottom: 0;"></div>
-                                <div class="box biggest placeholder"></div>
-                                <div class="box biggest placeholder"></div>
-                            </div>
-                            <code>left:0; right:0;</code>
-                            <code>top:0; bottom:0;</code>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="relative positioned">
-                                <div class="box biggest placeholder"></div>
-                                <div class="box absolute" style="left: 10%; top: 10%"></div>
-                                <div class="box biggest placeholder"></div>
-                                <div class="box biggest placeholder"></div>
-                            </div>
-                            <code>left:10%; top:10%;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="relative positioned">
-                                <div class="box biggest placeholder"></div>
-                                <div class="box absolute" style="right: 10%; top: 10%"></div>
-                                <div class="box biggest placeholder"></div>
-                                <div class="box biggest placeholder"></div>
-                            </div>
-                            <code>right:10%; top:10%;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="relative positioned">
-                                <div class="box biggest placeholder"></div>
-                                <div class="box absolute" style="left: 10%; right: 10%; top: 10%; bottom: 10%"></div>
-                                <div class="box biggest placeholder"></div>
-                                <div class="box biggest placeholder"></div>
-                            </div>
-                            <code>left:10%; right:10%;</code>
-                            <code>top:10%; bottom:10%;</code>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="snippet">
-                <h2 class="code">position: fixed;</h2>
-                <h3>Same rules as absolute positioning, but fixed relative to viewport.</h3>
-                <div class="requirement">
-                    <code>  viewport</code>
-                    <code>        &#8600;</code>
-                    <code></code>
-                    <iframe id="fixed-position-example" src="fixed-position-example.html "></iframe>
-                </div>
-            </div>
-            <div class="snippet">
                 <h2 class="code">padding:</h2>
                 <div class="columns">
                     <div class="column">
                         <div class="codeblock">
-                            <div class="box padding border" style="padding: 0;">
+                            <div class="box relative padding border" style="padding: 0;">
                                 <div class="box absolute" style="top:0; left:0;"></div>
                             </div>
                             <code>0;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box padding border" style="padding: 4px;">
+                            <div class="box relative padding border" style="padding: 4px;">
                                 <div class="box absolute" style="top:4px; left: 4px;"></div>
                             </div>
                             <code>4px;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box padding border" style="padding: 10px;">
+                            <div class="box relative padding border" style="padding: 10px;">
                                 <div class="box absolute" style="top:10px; left: 10px;"></div>
                             </div>
                             <code>10px;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box padding border" style="padding: 20px;">
+                            <div class="box relative padding border" style="padding: 20px;">
                                 <div class="box absolute" style="top:20px; left: 20px;"></div>
                             </div>
                             <code>20px;</code>
@@ -1001,25 +819,25 @@
                     </div>
                     <div class="column">
                         <div class="codeblock">
-                            <div class="box padding border" style="padding: 0 0;">
+                            <div class="box relative padding border" style="padding: 0 0;">
                                 <div class="box absolute" style="top:0; left:0;"></div>
                             </div>
                             <code>0 0;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box padding border" style="padding: 4px 0;">
+                            <div class="box relative padding border" style="padding: 4px 0;">
                                 <div class="box absolute" style="top:4px; left: 0;"></div>
                             </div>
                             <code>4px 0;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box padding border" style="padding: 10px 0;">
+                            <div class="box relative padding border" style="padding: 10px 0;">
                                 <div class="box absolute" style="top:10px; left: 0px;"></div>
                             </div>
                             <code>10px 0;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="box padding border" style="padding: 20px 0;">
+                            <div class="box relative padding border" style="padding: 20px 0;">
                                 <div class="box absolute" style="top:20px; left: 0px;"></div>
                             </div>
                             <code>20px 0;</code>
@@ -1031,14 +849,14 @@
                              css property being described as much as possible, so we don't use
                             flex here. -->
                         <div class="codeblock" style="visibility: hidden">
-                            <div class="box padding border" style="padding: 0 0;">
+                            <div class="box relative padding border" style="padding: 0 0;">
                                 <div class="box absolute" style="top:0; left:0;"></div>
                             </div>
                             <code>0 0;</code>
                         </div>
                         <div class="codeblock">
                             <div style="margin-top: 4px; margin-bottom: 4px;">
-                                <div class="box padding border" style="padding: 0 4px;">
+                                <div class="box relative padding border" style="padding: 0 4px;">
                                     <div class="box absolute" style="top:0; left:4px;"></div>
                                 </div>
                             </div>
@@ -1046,7 +864,7 @@
                         </div>
                         <div class="codeblock">
                             <div style="margin-top: 10px; margin-bottom: 10px;">
-                                <div class="box padding border" style="padding: 0 10px;">
+                                <div class="box relative padding border" style="padding: 0 10px;">
                                     <div class="box absolute" style="top:0; left: 10px;"></div>
                                 </div>
                             </div>
@@ -1054,7 +872,7 @@
                         </div>
                         <div class="codeblock">
                             <div style="margin-top: 20px; margin-bottom: 20px">
-                                <div class="box padding border" style="padding: 0 20px;">
+                                <div class="box relative padding border" style="padding: 0 20px;">
                                     <div class="box absolute" style="top:0; left: 20px;"></div>
                                 </div>
                             </div>
@@ -1234,7 +1052,193 @@
             </div>
         </div>
         <!-- End section Box Model -->
-
+        <div class="section">
+            <h2>Positioning</h2>
+            <div class="flex inline noborder column align-start">
+                <div class="snippet">
+                    <h2 class="code">position: static;</h2>
+                    <div class="codeblock">
+                        <div class="box placeholder"></div>
+                        <div class="box static"></div>
+                        <div class="box placeholder"></div>
+                    </div>
+                </div>
+                <div class="snippet">
+                    <h2 class="code">position: relative;</h2>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="codeblock">
+                                <div class="box placeholder"></div>
+                                <div class="box relative" style="top: 10px;"></div>
+                                <div class="box placeholder"></div>
+                                <code class="nudge-top">top: 10px;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder"></div>
+                                <div class="box relative" style="left: 10px;"></div>
+                                <div class="box placeholder"></div>
+                                <code>left: 10px;</code>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="codeblock nudge-top">
+                                <div class="box placeholder"></div>
+                                <div class="box relative" style="bottom: 10px;"></div>
+                                <div class="box placeholder"></div>
+                                <code>bottom: 10px;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder"></div>
+                                <div class="box relative" style="right: 10px;"></div>
+                                <div class="box placeholder"></div>
+                                <code>right: 10px;</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2 class="code">position: absolute;</h2>
+                <h3>Requires positioned parent element</h3>
+                <div class="requirement">
+                    <code>   (relative | absolute | fixed) </code>
+                    <code>                                &#8600;</code>
+                    <div class="relative positioned">
+                        <div class="box biggest placeholder wider">
+                            <code class="subtle">static<br>position</code>
+                        </div>
+                        <div class="box absolute" style="background-color:hsla(0,0%,40%,0.7)">
+                            <code class="subtle" style="color: #eee; padding: 4px 10px;">Absolute<br>position</code>
+                        </div>
+                        <div class="box biggest placeholder wider">
+                            <code class="subtle">static<br>position</code>
+                        </div>
+                        <div class="box biggest placeholder wider">
+                            <code class="subtle">static<br>position</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="relative positioned">
+                                <div class="box biggest placeholder"></div>
+                                <div class="box absolute" style="left: 0; top: 0;"></div>
+                                <div class="box biggest placeholder"></div>
+                                <div class="box biggest placeholder"></div>
+                            </div>
+                            <code>left:0; top:0;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="relative positioned">
+                                <div class="box biggest placeholder"></div>
+                                <div class="box absolute" style="left: 0; bottom: 0;"></div>
+                                <div class="box biggest placeholder"></div>
+                                <div class="box biggest placeholder"></div>
+                            </div>
+                            <code>left:0; bottom:0;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="relative positioned">
+                                <div class="box biggest placeholder"></div>
+                                <div class="box absolute" style="left: auto; top: auto;"></div>
+                                <div class="box biggest placeholder"></div>
+                                <div class="box biggest placeholder"></div>
+                            </div>
+                            <code>left:auto; top:auto;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="relative positioned">
+                                <div class="box biggest placeholder"></div>
+                                <div class="box absolute" style="left: 0; right: 0;"></div>
+                                <div class="box biggest placeholder"></div>
+                                <div class="box biggest placeholder"></div>
+                            </div>
+                            <code>left:0; right:0;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="relative positioned">
+                                <div class="box biggest placeholder"></div>
+                                <div class="box absolute" style="right: 0; top: 0;"></div>
+                                <div class="box biggest placeholder"></div>
+                                <div class="box biggest placeholder"></div>
+                            </div>
+                            <code>right:0; top:0;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="relative positioned">
+                                <div class="box biggest placeholder"></div>
+                                <div class="box absolute" style="right: 0; bottom: 0;"></div>
+                                <div class="box biggest placeholder"></div>
+                                <div class="box biggest placeholder"></div>
+                            </div>
+                            <code>right:0; bottom:0;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="relative positioned">
+                                <div class="box biggest placeholder"></div>
+                                <div class="box absolute" style="top: 0; bottom: 0;"></div>
+                                <div class="box biggest placeholder"></div>
+                                <div class="box biggest placeholder"></div>
+                            </div>
+                            <code>top:0; bottom:0;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="relative positioned">
+                                <div class="box biggest placeholder"></div>
+                                <div class="box absolute" style="left: 0; right: 0; top: 0; bottom: 0;"></div>
+                                <div class="box biggest placeholder"></div>
+                                <div class="box biggest placeholder"></div>
+                            </div>
+                            <code>left:0; right:0;</code>
+                            <code>top:0; bottom:0;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="relative positioned">
+                                <div class="box biggest placeholder"></div>
+                                <div class="box absolute" style="left: 10%; top: 10%"></div>
+                                <div class="box biggest placeholder"></div>
+                                <div class="box biggest placeholder"></div>
+                            </div>
+                            <code>left:10%; top:10%;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="relative positioned">
+                                <div class="box biggest placeholder"></div>
+                                <div class="box absolute" style="right: 10%; top: 10%"></div>
+                                <div class="box biggest placeholder"></div>
+                                <div class="box biggest placeholder"></div>
+                            </div>
+                            <code>right:10%; top:10%;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="relative positioned">
+                                <div class="box biggest placeholder"></div>
+                                <div class="box absolute" style="left: 10%; right: 10%; top: 10%; bottom: 10%"></div>
+                                <div class="box biggest placeholder"></div>
+                                <div class="box biggest placeholder"></div>
+                            </div>
+                            <code>left:10%; right:10%;</code>
+                            <code>top:10%; bottom:10%;</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2 class="code">position: fixed;</h2>
+                <h3>Same rules as absolute positioning, but fixed relative to viewport.</h3>
+                <div class="requirement">
+                    <code>  viewport</code>
+                    <code>        &#8600;</code>
+                    <code></code>
+                    <iframe id="fixed-position-example" src="fixed-position-example.html "></iframe>
+                </div>
+            </div>
+        </div>
         <div class="section ">
             <h2>Flexbox containers</h2>
             <div class="flex inline noborder column ">
