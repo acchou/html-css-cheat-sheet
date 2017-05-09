@@ -143,7 +143,7 @@ code.subtle {
 
 .border {
     display: inline-block;
-    border: 1px dashed black;
+    border: 1px dashed #999;
 }
 
 .infill {
@@ -173,6 +173,10 @@ code.subtle {
 .box {
     min-width: 1.5em;
     margin: 4px;
+}
+
+.box.padding {
+    padding: 4px;
 }
 
 .absolute {
@@ -236,11 +240,16 @@ code.subtle {
     background-color: lightgrey; 
 }
 
-.padding, .padding-box {
+.ex-padding {
+    position: relative;
+    border: 1px dashed #999;
+}
+
+.ex-padding, .padding-box {
     background-color: hsl(120, 20%, 75%); 
 }
 
-.padding {
+.padding-color {
     margin: 0;
 }
 
@@ -575,4 +584,37 @@ a:link, a:visited {
 
 .overflow-box.visible {
     overflow: visible;
+}
+
+.text-example {
+    border-bottom: 1px dashed #999;
+}
+
+.ex-border-width {
+    border-color: black;
+    border-style: solid;
+}
+
+.ex-float, .ex-clear {
+    width: 14em;
+    border: 1px dashed #999;
+    padding: 4px;
+    /* margin: 4px; */
+}
+
+.ex-border.dark, .ex-border.light {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 4px;
+    background-color: white;
+    border: 3px solid black;
+}
+
+.ex-border-side {
+    border: 3px solid black;
+    border-radius: 0;
+}
+
+.ex-border-side.single {
+    border-width: 0;
 }
