@@ -779,14 +779,8 @@
             </div>
             <div class="snippet">
                 <h2 class="code">padding:</h2>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="box ex-padding" style="padding: 0;">
-                                <div class="box absolute" style="top:0; left:0;"></div>
-                            </div>
-                            <code>0;</code>
-                        </div>
+                <div class="table">
+                    <div class="row">
                         <div class="codeblock">
                             <div class="box ex-padding" style="padding: 4px;">
                                 <div class="box absolute" style="top:4px; left: 4px;"></div>
@@ -806,13 +800,7 @@
                             <code>20px;</code>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="box ex-padding" style="padding: 0 0;">
-                                <div class="box absolute" style="top:0; left:0;"></div>
-                            </div>
-                            <code>0 0;</code>
-                        </div>
+                    <div class="row">
                         <div class="codeblock">
                             <div class="box ex-padding" style="padding: 4px 0;">
                                 <div class="box absolute" style="top:4px; left: 0;"></div>
@@ -832,17 +820,7 @@
                             <code>20px 0;</code>
                         </div>
                     </div>
-                    <div class="column">
-                        <!-- This column uses some styles and hidden divs to achieve vertical
-                             alignment with other columns. Ugly... but the goal is to use the 
-                             css property being described as much as possible, so we don't use
-                            flex here. -->
-                        <div class="codeblock" style="visibility: hidden">
-                            <div class="box ex-padding" style="padding: 0 0;">
-                                <div class="box absolute" style="top:0; left:0;"></div>
-                            </div>
-                            <code>0 0;</code>
-                        </div>
+                    <div class="row">
                         <div class="codeblock">
                             <div style="margin-top: 4px; margin-bottom: 4px;">
                                 <div class="box ex-padding" style="padding: 0 4px;">
@@ -906,7 +884,7 @@
             </div>
             <div class="snippet">
                 <h2 class="code">margin:</h2>
-                <h3>Adjacent margins are collapsed to the larger one.</h3>
+                <h3>Adjacent margins are collapsed.</h3>
                 <div class="requirement">
                     <div class="margin border">
                         <div class="box" style="padding: 0; margin: 10px;"></div>
@@ -917,14 +895,8 @@
                         <div class="box" style="padding: 0; margin: 20px;"></div>
                     </div>
                 </div>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="margin border">
-                                <div class="box" style="margin: 0px;"></div>
-                            </div>
-                            <code>0;</code>
-                        </div>
+                <div class="table">
+                    <div class="row">
                         <div class="codeblock">
                             <div class="margin border">
                                 <div class="box" style="margin: 4px;"></div>
@@ -944,13 +916,7 @@
                             <code>20px;</code>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="margin border">
-                                <div class="box" style="margin: 0 0;"></div>
-                            </div>
-                            <code>0 0;</code>
-                        </div>
+                    <div class="row">
                         <div class="codeblock">
                             <div class="margin border">
                                 <div class="box" style="margin: 4px 0;"></div>
@@ -970,27 +936,21 @@
                             <code>20px 0;</code>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="codeblock" style="visibility: hidden;">
-                            <div class="margin border">
-                                <div class="box" style="margin: 0 0;"></div>
-                            </div>
-                            <code>0 0;</code>
-                        </div>
+                    <div class="row">
                         <div class="codeblock">
-                            <div class="margin border" style="margin-top: 4px; margin-bottom: 4px;">
+                            <div class="margin border">
                                 <div class="box" style="margin: 0 4px;"></div>
                             </div>
                             <code>0 4px;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="margin border" style="margin-top: 10px; margin-bottom: 10px;">
+                            <div class="margin border">
                                 <div class="box" style="margin: 0 10px;"></div>
                             </div>
                             <code>0 10px;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="margin border" style="margin-top: 20px; margin-bottom: 20px;">
+                            <div class="margin border">
                                 <div class="box" style="margin: 0 20px;"></div>
                             </div>
                             <code>0 20px;</code>
@@ -1299,38 +1259,53 @@
                 <h2 class="code">clear:</h2>
                 <h3>Allow an element to avoid being adjacent<br>to a floated element on one or both sides.</h3>
                 <div class="codeblock">
-                    <div class="ex-clear">
-                        <div class="box padding" style="float: right;">float:<br>right</div>
-                        <p style="clear:right;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam leo fringilla hendrerit efficitur.
-                        </p>
-                    </div>
-                    <code>clear: right;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="ex-clear">
-                        <div class="box padding" style="float: left;">float:<br>left</div>
-                        <p style="clear:left;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam leo fringilla hendrerit efficitur.
-                        </p>
+                    <div class="ex-clear-row">
+                        <div class="ex-clear">
+                            <div class="box to-clear" style="float: left;">float:<br>left</div>
+                            <p style="clear:left;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam leo fringilla hendrerit efficitur.
+                            </p>
+                        </div>
+                        <div class="ex-clear">
+                            <div class="box to-clear" style="float: right;">float:<br>right</div>
+                            <p style="clear:left;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam leo fringilla hendrerit efficitur.
+                            </p>
+                        </div>
                     </div>
                     <code>clear: left;</code>
                 </div>
                 <div class="codeblock">
-                    <div class="ex-clear">
-                        <div class="box padding" style="float: left;">float:<br>left</div>
-                        <p style="clear:both;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam leo fringilla hendrerit efficitur.
-                        </p>
+                    <div class="ex-clear-row">
+                        <div class="ex-clear">
+                            <div class="box to-clear" style="float: left;">float:<br>left</div>
+                            <p style="clear:right;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam leo fringilla hendrerit efficitur.
+                            </p>
+                        </div>
+                        <div class="ex-clear">
+                            <div class="box to-clear" style="float: right;">float:<br>right</div>
+                            <p style="clear:right;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam leo fringilla hendrerit efficitur.
+                            </p>
+                        </div>
                     </div>
-                    <code>clear: both;</code>
+                    <code>clear: right;</code>
                 </div>
                 <div class="codeblock">
-                    <div class="ex-clear">
-                        <div class="box padding" style="float: right;">float:<br>right</div>
-                        <p style="clear:both;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam leo fringilla hendrerit efficitur.
-                        </p>
+                    <div class="ex-clear-row">
+                        <div class="ex-clear">
+                            <div class="box to-clear" style="float: left;">float:<br>left</div>
+                            <p style="clear:both;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam leo fringilla hendrerit efficitur.
+                            </p>
+                        </div>
+                        <div class="ex-clear">
+                            <div class="box to-clear" style="float: right;">float:<br>right</div>
+                            <p style="clear:both;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam leo fringilla hendrerit efficitur.
+                            </p>
+                        </div>
                     </div>
                     <code>clear: both;</code>
                 </div>
@@ -1798,6 +1773,26 @@
             </div>
         </div>
         <!-- section Flexbox items -->
+
+        <div class="section">
+            <h2>Table display</h2>
+            <div class="snippet">
+                <h2 class="code">display:</h2>
+                <div class="codeblock">
+                    <div class="table">
+                        <div class="row">
+                            <div class="cell">A1</div>
+                            <div class="cell">A2</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">B1</div>
+                            <div class="cell">B2</div>
+                        </div>
+                    </div>
+                    <code>table;</code>
+                </div>
+            </div>
+        </div>
 
         <div class="section">
             <h2>Borders</h2>

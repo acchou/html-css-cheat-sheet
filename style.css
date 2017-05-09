@@ -165,6 +165,10 @@ code.subtle {
     vertical-align: middle;
 }
 
+.box.to-clear {
+    padding: 8px;
+}
+
 .bar.vertical {
     min-height: 0;
     min-width: 1.5em;
@@ -599,7 +603,13 @@ a:link, a:visited {
     width: 14em;
     border: 1px dashed #999;
     padding: 4px;
-    /* margin: 4px; */
+    display: inline-block;
+    margin: 4px;
+}
+
+.ex-clear-row {
+    display: flex;
+    align-items: stretch;
 }
 
 .ex-border.dark, .ex-border.light {
@@ -617,4 +627,22 @@ a:link, a:visited {
 
 .ex-border-side.single {
     border-width: 0;
+}
+
+.table {
+    display: table;
+}
+
+.row {
+    display: table-row;
+}
+
+.data {
+    display: table-cell;
+}
+
+.row > .codeblock {
+    display: table-cell;
+    padding: 14px;
+    text-align: center;
 }
