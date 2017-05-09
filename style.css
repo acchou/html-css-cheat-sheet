@@ -146,14 +146,6 @@ code.subtle {
     border: 1px dashed black;
 }
 
-.border.red {
-    border-color: red;
-}
-
-.border.blue {
-    border-color: blue;
-}
-
 .infill {
     display: inline-block;
     background-color: white;
