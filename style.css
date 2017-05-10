@@ -661,6 +661,10 @@ a:link, a:visited {
     border-top: 2px solid black;
 }
 
+.table.all-borders .cell {
+    border: 2px solid black;
+}
+
 .caption {
     display: table-caption;
 }
