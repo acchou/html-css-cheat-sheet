@@ -309,6 +309,9 @@ code.subtle {
 }
 
 .flex.row {
+    /* override table .row */
+    display: flex;
+    flex-direction: row;
 }
 
 .flex.column {
@@ -336,6 +339,10 @@ code.subtle {
     flex-wrap: wrap-reverse;
 }
 
+.width-1 {
+    width: 1em;
+}
+
 .width-4 {
     width: 4em;
 }
@@ -346,6 +353,10 @@ code.subtle {
 
 .width-10 {
     width: 10em;
+}
+
+.height-1 {
+    height: 1em;
 }
 
 .height-4 {
@@ -642,6 +653,11 @@ a:link, a:visited {
 .cell {
     display: table-cell;
     padding: 8px;
+}
+
+.cell.empty {
+    height: 1em;
+    width: 1em;
 }
 
 .row > .codeblock {
