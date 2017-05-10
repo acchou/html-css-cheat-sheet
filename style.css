@@ -93,7 +93,7 @@ code {
 }
 
 .codeblock {
-    margin: 16px;
+    padding: 16px 24px;
     overflow: scroll;
 }
 
@@ -217,8 +217,7 @@ code.subtle {
 }
 
 .fullwidth {
-    min-width: 90%;
-    margin-left: 5px;
+    min-width: 96%;
 }
 
 .box.nomargin {
@@ -245,8 +244,9 @@ code.subtle {
 }
 
 .ex-padding {
-    position: relative;
     border: 1px dashed #999;
+    margin: 0;
+    position: relative;
 }
 
 .ex-padding, .padding-box {
@@ -268,10 +268,6 @@ code.subtle {
 
 .margin-box {
     text-indent: -0.75em;
-}
-
-.highlight-border {
-    border: 2px dashed red;
 }
 
 .inline {
@@ -629,20 +625,50 @@ a:link, a:visited {
     border-width: 0;
 }
 
+.l-table {
+    display: table;
+}
+
 .table {
     display: table;
+    border-collapse: collapse;
+    background-color: white;
 }
 
 .row {
     display: table-row;
 }
 
-.data {
+.cell {
     display: table-cell;
+    padding: 8px;
 }
 
 .row > .codeblock {
     display: table-cell;
-    padding: 14px;
-    text-align: center;
+    /* text-align: center; */
+}
+
+.table.border, .row.border, .cell.border {
+    border: 2px solid black;
+}
+
+.table.column-borders .cell + .cell {
+    border-left: 2px solid black;
+}
+
+.table.row-borders .row + .row {
+    border-top: 2px solid black;
+}
+
+.caption {
+    display: table-caption;
+}
+
+.highlight-border {
+    border: 2px solid red;
+}
+
+.highlight {
+    background-color: #aaa;
 }

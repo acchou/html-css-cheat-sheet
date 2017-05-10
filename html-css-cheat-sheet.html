@@ -779,7 +779,7 @@
             </div>
             <div class="snippet">
                 <h2 class="code">padding:</h2>
-                <div class="table">
+                <div class="l-table">
                     <div class="row">
                         <div class="codeblock">
                             <div class="box ex-padding" style="padding: 4px;">
@@ -822,26 +822,20 @@
                     </div>
                     <div class="row">
                         <div class="codeblock">
-                            <div style="margin-top: 4px; margin-bottom: 4px;">
-                                <div class="box ex-padding" style="padding: 0 4px;">
-                                    <div class="box absolute" style="top:0; left:4px;"></div>
-                                </div>
+                            <div class="box ex-padding" style="padding: 0 4px;">
+                                <div class="box absolute" style="top:0; left:4px;"></div>
                             </div>
                             <code>0 4px;</code>
                         </div>
                         <div class="codeblock">
-                            <div style="margin-top: 10px; margin-bottom: 10px;">
-                                <div class="box ex-padding" style="padding: 0 10px;">
-                                    <div class="box absolute" style="top:0; left: 10px;"></div>
-                                </div>
+                            <div class="box ex-padding" style="padding: 0 10px;">
+                                <div class="box absolute" style="top:0; left: 10px;"></div>
                             </div>
                             <code>0 10px;</code>
                         </div>
                         <div class="codeblock">
-                            <div style="margin-top: 20px; margin-bottom: 20px">
-                                <div class="box ex-padding" style="padding: 0 20px;">
-                                    <div class="box absolute" style="top:0; left: 20px;"></div>
-                                </div>
+                            <div class="box ex-padding" style="padding: 0 20px;">
+                                <div class="box absolute" style="top:0; left: 20px;"></div>
                             </div>
                             <code>0 20px;</code>
                         </div>
@@ -895,7 +889,7 @@
                         <div class="box" style="padding: 0; margin: 20px;"></div>
                     </div>
                 </div>
-                <div class="table">
+                <div class="l-table">
                     <div class="row">
                         <div class="codeblock">
                             <div class="margin border">
@@ -1779,17 +1773,257 @@
             <div class="snippet">
                 <h2 class="code">display:</h2>
                 <div class="codeblock">
-                    <div class="table">
+                    <div class="table highlight">
                         <div class="row">
                             <div class="cell">A1</div>
-                            <div class="cell">A2</div>
+                            <div class="cell">B1</div>
                         </div>
                         <div class="row">
-                            <div class="cell">B1</div>
+                            <div class="cell">A2</div>
                             <div class="cell">B2</div>
                         </div>
                     </div>
                     <code>table;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="table">
+                        <div class="row highlight">
+                            <div class="cell">A1</div>
+                            <div class="cell">B1</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">A2</div>
+                            <div class="cell">B2</div>
+                        </div>
+                    </div>
+                    <code>table-row;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="table">
+                        <div class="row">
+                            <div class="cell highlight">A1</div>
+                            <div class="cell">B1</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">A2</div>
+                            <div class="cell">B2</div>
+                        </div>
+                    </div>
+                    <code>table-cell;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="table">
+                        <div class="row">
+                            <div class="cell">A1</div>
+                            <div class="cell">B1</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">A2</div>
+                            <div class="cell">B2</div>
+                        </div>
+                        <div class="caption highlight">A caption</div>
+                    </div>
+                    <code>table-caption;</code>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2>Table borders</h2>
+                <div class="codeblock">
+                    <div class="table border">
+                        <div class="row">
+                            <div class="cell">A1</div>
+                            <div class="cell">B1</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">A2</div>
+                            <div class="cell">B2</div>
+                        </div>
+                    </div>
+                    <code>.table {</code>
+                    <code>  border: 2px solid black;</code>
+                    <code>}</code>
+                </div>
+                <div class="codeblock">
+                    <div class="table">
+                        <div class="row border">
+                            <div class="cell">A1</div>
+                            <div class="cell">B1</div>
+                        </div>
+                        <div class="row border">
+                            <div class="cell">A2</div>
+                            <div class="cell">B2</div>
+                        </div>
+                    </div>
+                    <code>.row {</code>
+                    <code>  border: 2px solid black;</code>
+                    <code>}</code>
+                </div>
+                <div class="codeblock">
+                    <div class="table">
+                        <div class="row">
+                            <div class="cell border">A1</div>
+                            <div class="cell border">B1</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell border">A2</div>
+                            <div class="cell border">B2</div>
+                        </div>
+                    </div>
+                    <code>.cell {</code>
+                    <code>  border: 2px solid black;</code>
+                    <code>}</code>
+                </div>
+                <div class="codeblock">
+                    <div class="table column-borders">
+                        <div class="row">
+                            <div class="cell">A1</div>
+                            <div class="cell">B1</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">A2</div>
+                            <div class="cell">B2</div>
+                        </div>
+                    </div>
+                    <code>.table .cell + .cell {</code>
+                    <code>  border-left: 2px solid black;</code>
+                    <code>}</code>
+                </div>
+                <div class="codeblock">
+                    <div class="table row-borders">
+                        <div class="row">
+                            <div class="cell">A1</div>
+                            <div class="cell">B1</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">A2</div>
+                            <div class="cell">B2</div>
+                        </div>
+                    </div>
+                    <code>.table .row + .row {</code>
+                    <code>  border-top: 2px solid black;</code>
+                    <code>}</code>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2 class="code">border-collapse:</h2>
+                <div class="codeblock">
+                    <div class="table" style="border-collapse: collapse;">
+                        <div class="row">
+                            <div class="cell border">A1</div>
+                            <div class="cell border">B1</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell border">A2</div>
+                            <div class="cell border">B2</div>
+                        </div>
+                    </div>
+                    <code>collapse;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="table" style="border-collapse: separate; border-spacing: 4px;">
+                        <div class="row">
+                            <div class="cell border">A1</div>
+                            <div class="cell border">B1</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell border">A2</div>
+                            <div class="cell border">B2</div>
+                        </div>
+                    </div>
+                    <code>separate;</code>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2 class="code">border-spacing:</h2>
+                <h3>Requires border-collapse to be separate</h3>
+                <div class="l-table">
+                    <div class="row">
+                        <div class="codeblock">
+                            <div class="table" style="border-collapse: separate; border-spacing: 0px;">
+                                <div class="row">
+                                    <div class="cell border">A1</div>
+                                    <div class="cell border">B1</div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell border">A2</div>
+                                    <div class="cell border">B2</div>
+                                </div>
+                            </div>
+                            <code>0;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="table" style="border-collapse: separate; border-spacing: 2px;">
+                                <div class="row">
+                                    <div class="cell border">A1</div>
+                                    <div class="cell border">B1</div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell border">A2</div>
+                                    <div class="cell border">B2</div>
+                                </div>
+                            </div>
+                            <code>2;</code>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="codeblock">
+                            <div class="table" style="border-collapse: separate; border-spacing: 4px;">
+                                <div class="row">
+                                    <div class="cell border">A1</div>
+                                    <div class="cell border">B1</div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell border">A2</div>
+                                    <div class="cell border">B2</div>
+                                </div>
+                            </div>
+                            <code>4;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="table" style="border-collapse: separate; border-spacing: 8px;">
+                                <div class="row">
+                                    <div class="cell border">A1</div>
+                                    <div class="cell border">B1</div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell border">A2</div>
+                                    <div class="cell border">B2</div>
+                                </div>
+                            </div>
+                            <code>8;</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2 class="code">caption-side:</h2>
+                <div class="codeblock">
+                    <div class="table">
+                        <div class="row">
+                            <div class="cell">A1</div>
+                            <div class="cell">B1</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">A2</div>
+                            <div class="cell">B2</div>
+                        </div>
+                        <div class="caption" style="caption-side: top;">A caption</div>
+                    </div>
+                    <code>top;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="table">
+                        <div class="row">
+                            <div class="cell">A1</div>
+                            <div class="cell">B1</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">A2</div>
+                            <div class="cell">B2</div>
+                        </div>
+                        <div class="caption" style="caption-side: bottom; margin-bottom: 8px;">A caption</div>
+                    </div>
+                    <code>bottom;</code>
                 </div>
             </div>
         </div>
