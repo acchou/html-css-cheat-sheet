@@ -665,6 +665,10 @@ a:link, a:visited {
     display: table-caption;
 }
 
+.ex-caption {
+    padding: 12px 36px;
+}
+
 .highlight-border {
     border: 2px solid red;
 }

@@ -1935,7 +1935,7 @@
             </div>
             <div class="snippet">
                 <h2 class="code">border-spacing:</h2>
-                <h3>Requires border-collapse to be separate</h3>
+                <h3>Requires border-collapse: separate</h3>
                 <div class="l-table">
                     <div class="row">
                         <div class="codeblock">
@@ -1997,31 +1997,36 @@
             </div>
             <div class="snippet">
                 <h2 class="code">caption-side:</h2>
+                <h3>Requires display: table-caption</h3>
                 <div class="codeblock">
-                    <div class="table">
-                        <div class="row">
-                            <div class="cell">A1</div>
-                            <div class="cell">B1</div>
+                    <div class="ex-caption">
+                        <div class="table">
+                            <div class="row">
+                                <div class="cell">A1</div>
+                                <div class="cell">B1</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell">A2</div>
+                                <div class="cell">B2</div>
+                            </div>
+                            <div class="caption" style="caption-side: top;">A caption</div>
                         </div>
-                        <div class="row">
-                            <div class="cell">A2</div>
-                            <div class="cell">B2</div>
-                        </div>
-                        <div class="caption" style="caption-side: top;">A caption</div>
                     </div>
                     <code>top;</code>
                 </div>
                 <div class="codeblock">
-                    <div class="table">
-                        <div class="row">
-                            <div class="cell">A1</div>
-                            <div class="cell">B1</div>
+                    <div class="ex-caption">
+                        <div class="table">
+                            <div class="row">
+                                <div class="cell">A1</div>
+                                <div class="cell">B1</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell">A2</div>
+                                <div class="cell">B2</div>
+                            </div>
+                            <div class="caption" style="caption-side: bottom; margin-bottom: 8px;">A caption</div>
                         </div>
-                        <div class="row">
-                            <div class="cell">A2</div>
-                            <div class="cell">B2</div>
-                        </div>
-                        <div class="caption" style="caption-side: bottom; margin-bottom: 8px;">A caption</div>
                     </div>
                     <code>bottom;</code>
                 </div>
