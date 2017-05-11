@@ -36,8 +36,8 @@ ul, ol {
 /* Snippets explain a CSS property, HTML element, 
    or a single concept. */
 .snippet {
-    display: inline-flex;
-    flex-direction: column;
+    display: inline-block;
+    vertical-align: top;
     margin: 16px;
     background-color: #eee;
 }
@@ -49,16 +49,19 @@ ul, ol {
     border-top: none;
 }
 
-h2, h3 {
-    background-color: cornflowerblue;
-    color: white;
-    font-size: 12pt;
-    font-weight: normal;
+h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 6px 12px;
 }
 
-h3 {
+.section > h2, .snippet > h2 {
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+.section > h3, .snippet > h3, .requirement > h3 {
     font-size: 11pt;
     font-weight: normal;
     color: #777;
@@ -80,10 +83,10 @@ code {
 }
 
 .requirement {
-    align-self: center;
-    margin: 16px auto; 
-    overflow: scroll;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px 0;
 }
 
 #fixed-position-example {
@@ -96,8 +99,9 @@ code {
     overflow: scroll;
 }
 
-.codeblock.noverticalmargin {
-    margin: 0 16px;
+.codeblock.ex-header {
+    margin: 8px;
+    padding: 0;
 }
 
 .codeblock > hr {
@@ -133,11 +137,6 @@ code.subtle {
     display: block;
     padding: 0 0;
     margin: 0 0 0 10px;
-}
-
-.section > h2 {
-    font-size: 12pt;
-    font-weight: normal;
 }
 
 .border {

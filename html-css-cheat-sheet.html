@@ -34,12 +34,22 @@
             <h2>Elements</h2>
             <div class="snippet">
                 <h2>Headers</h2>
-                <div class="codeblock noverticalmargin">
+                <div class="codeblock ex-header">
                     <code><h1>&lt;h1&gt;</h1></code>
+                </div>
+                <div class="codeblock ex-header">
                     <code><h2>&lt;h2&gt;</h2></code>
+                </div>
+                <div class="codeblock ex-header">
                     <code><h3>&lt;h3&gt;</h3></code>
+                </div>
+                <div class="codeblock ex-header">
                     <code><h4>&lt;h4&gt;</h4></code>
+                </div>
+                <div class="codeblock ex-header">
                     <code><h5>&lt;h5&gt;</h5></code>
+                </div>
+                <div class="codeblock ex-header">
                     <code><h6>&lt;h6&gt;</h6></code>
                 </div>
             </div>
@@ -507,8 +517,10 @@
                 <h3 class="width-20">Inline elements only. See <a href="http://christopheraue.net/2014/03/05/vertical-align/">this</a>. To align
                     block elements, use flex.</h3>
                 <div class="requirement">
-                    <span class="ex-align-text base">base</span>
-                    <div class="ex-align-box"></div>
+                    <div class="ex-vertical-align-text">
+                        <span class="ex-align-text base">base</span>
+                        <div class="ex-align-box"></div>
+                    </div>
                     <h3 class="width-12">Inline block without text aligns baseline to bottom.</h3>
                 </div>
                 <div class="columns">
@@ -951,14 +963,16 @@
             </div>
             <div class="snippet">
                 <h2 class="code">margin:</h2>
-                <h3>Adjacent margins are collapsed.</h3>
+                <h3>Adjacent top and bottom margins may
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">collapse.</a>
+                </h3>
                 <div class="requirement">
-                    <div class="margin border">
+                    <div class="margin border relative" style="top: 12px">
                         <div class="box" style="padding: 0; margin: 10px;"></div>
                     </div>
                     <!-- Not actually using margin collapsing to implement this 
                          because we want to show the border overlap explicitly -->
-                    <div class="margin border relative" style="top: 0px; left: -14px;">
+                    <div class="margin border">
                         <div class="box" style="padding: 0; margin: 20px;"></div>
                     </div>
                 </div>
