@@ -650,15 +650,14 @@ a:link, a:visited {
     border-width: 0;
 }
 
-.l-table {
-    display: table;
-    text-align: center;
-}
-
 .table {
     display: table;
     border-collapse: collapse;
     background-color: white;
+}
+
+.center {
+    text-align: center;
 }
 
 .row {
@@ -670,14 +669,8 @@ a:link, a:visited {
     padding: 8px;
 }
 
-.cell.empty {
-    height: 1em;
-    width: 1em;
-}
-
 .row > .codeblock {
     display: table-cell;
-    /* text-align: center; */
 }
 
 .table.border, .row.border, .cell.border {
