@@ -447,7 +447,7 @@
         <!-- Section Fonts -->
 
         <div class="section">
-            <h2>Text and lines</h2>
+            <h2>Text and inline elements</h2>
             <div class="snippet width-10">
                 <h2 class="code">text-align:</h2>
                 <div class="codeblock">
@@ -500,6 +500,62 @@
                         abc abc abc abc<br> abc abc abc abc<br> abc abc abc abc<br>
                     </div>
                     <code>2em;</code>
+                </div>
+            </div>
+            <div class="snippet">
+                <!-- XXX In progress... -->
+                <h2 class="code">vertical-align:</h2>
+                <h3>Inline elements only. See <a href="http://christopheraue.net/2014/03/05/vertical-align/">this</a>.</h3>
+                <div class="codeblock" style="font-size: 24px;">
+                    <div class="ex-vertical-align-text">
+                        <span class="bottom">bottom</span>
+                        <span class="top">top</span>
+                        <span class="base">base</span>
+                        <!-- <div class="box vertical" style="vertical-align: top;"></div> -->
+                        <span style="font-size: 72px;">Big</span>
+                        <span class="text-top" style="font-size: 72px;">Big:text-top</span>
+                        <span class="top" style="font-size: 72px;">Big:top</span>
+                        <span class="middle">middle</span>
+                        <span class="text-top">Text-top</span>
+                        <span class="text-bottom">Text-bottom</span>
+                        <span class="sub">sub</span>
+                        <span class="super">super</span>
+                        <span style="vertical-align: 16px;">16px</span>
+                        <span style="vertical-align: -16px;">-16px</span>
+                    </div>
+                    <code>top;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-vertical-align-text">
+                        <span class="base">base</span>
+                        <div class="box vertical" style="vertical-align: baseline;">box</div>
+                        <span class="top">top</span>
+                    </div>
+                    <code>baseline;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-vertical-align-text">
+                        <span class="base">base</span>
+                        <div class="box vertical" style="vertical-align: middle;"></div>
+                        <span class="top">top</span>
+                    </div>
+                    <code>middle;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-vertical-align-text">
+                        <span class="base">base</span>
+                        <div class="box vertical" style="vertical-align: bottom;"></div>
+                        <span class="top">top</span>
+                    </div>
+                    <code>bottom;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-vertical-align-text">
+                        <span class="base">base</span>
+                        <div class="box vertical" style="vertical-align: text-top;">box</div>
+                        <span class="top">top</span>
+                    </div>
+                    <code>text-top;</code>
                 </div>
             </div>
             <div class="snippet">
@@ -586,7 +642,7 @@
         </div>
         <div class="section">
             <h2>Box model</h2>
-            <div class="snippet">
+            <div class="snippet" id="display:">
                 <h2 class="code">display:</h2>
                 <h3>Basic display modes</h3>
                 <div class="codeblock">
@@ -1769,8 +1825,7 @@
         </div>
         <!-- section Flexbox items -->
 
-        <div class="section">
-            <a name="display:table"></a>
+        <div class="section" id="display:table">
             <h2>Table display</h2>
             <div class="snippet">
                 <h2 class="code">display:</h2>
@@ -1800,8 +1855,7 @@
                     </div>
                     <code>table-row;</code>
                 </div>
-                <div class="codeblock">
-                    <a name="display:table-cell"></a>
+                <div class="codeblock" id="display:table-cell">
                     <div class="table">
                         <div class="row">
                             <div class="cell highlight">A1</div>
@@ -1814,8 +1868,7 @@
                     </div>
                     <code>table-cell;</code>
                 </div>
-                <div class="codeblock">
-                    <a name="display:table-caption"></a>
+                <div class="codeblock" id="display:table-caption">
                     <div class="table">
                         <div class="row">
                             <div class="cell">A1</div>
@@ -2044,61 +2097,40 @@
             </div>
             <div class="snippet">
                 <h2 class="code">vertical-align:</h2>
-                <h3>Works in <a href="#display:table-cell">display: table-cell</a></h3>
+                <h3>Works in <a href="#display:table-cell">display: table-cell</a>.</h3>
+                <h3>Also see vertical-align for <a href="#vertical-align-inline">inline elements</a>.</h3>
                 <div class="codeblock">
-                    <div class="table all-borders height-6">
+                    <div class="ex-vertical-align-cell">
                         <div class="row">
                             <div class="cell empty" style="vertical-align: top;">abc</div>
-                            <div class="cell empty" style="vertical-align: top;">def</div>
                         </div>
                     </div>
                     <code>top;</code>
                 </div>
                 <div class="codeblock">
-                    <div class="table all-borders height-6">
+                    <div class="ex-vertical-align-cell">
                         <div class="row">
                             <div class="cell empty" style="vertical-align: middle;">abc</div>
-                            <div class="cell empty" style="vertical-align: middle;">def</div>
                         </div>
                     </div>
                     <code>middle;</code>
                 </div>
                 <div class="codeblock">
-                    <div class="table all-borders height-6">
+                    <div class="ex-vertical-align-cell">
                         <div class="row">
                             <div class="cell empty" style="vertical-align: bottom;">abc</div>
-                            <div class="cell empty" style="vertical-align: bottom;">def</div>
                         </div>
                     </div>
                     <code>bottom;</code>
                 </div>
                 <div class="codeblock">
-                    <div class="table all-borders height-6">
+                    <div class="ex-vertical-align-cell">
                         <div class="row">
                             <div class="cell empty" style="vertical-align: baseline;">abc</div>
                             <div class="cell empty" style="font-size: 36px; vertical-align: baseline;">def</div>
                         </div>
                     </div>
                     <code>baseline;</code>
-                </div>
-            </div>
-            <div class="snippet">
-                <h2 class="code">vertical-align:</h2>
-                <h3>Works in <a href="#display:table-cell">display: table-cell</a></h3>
-                <div class="codeblock">
-                    <div class="table all-borders" style="height: 150px;">
-                        <div class="row">
-                            <div class="cell" style="vertical-align: top;">
-                                <div class="codeblock"><code>top;</code></div>
-                            </div>
-                            <div class="cell" style="vertical-align: middle;">
-                                <div class="codeblock"><code>middle;</code></div>
-                            </div>
-                            <div class="cell" style="vertical-align: bottom">
-                                <div class="codeblock"><code>bottom;</code></div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

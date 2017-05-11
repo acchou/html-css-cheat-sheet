@@ -343,6 +343,10 @@ code.subtle {
     width: 1em;
 }
 
+.width-2 {
+    width: 2em;
+}
+
 .width-4 {
     width: 4em;
 }
@@ -357,6 +361,10 @@ code.subtle {
 
 .height-1 {
     height: 1em;
+}
+
+.height-2 {
+    height: 2em;
 }
 
 .height-4 {
@@ -696,3 +704,71 @@ a:link, a:visited {
 .highlight {
     background-color: #aaa;
 }
+
+.ex-vertical-align-cell {
+    background-color: white;
+    border-collapse: collapse;
+    display: table;
+    height: 5.5em;
+}
+
+.ex-vertical-align-cell .cell {
+    border: 2px solid black;
+}
+
+.ex-vertical-align-text {
+    display: inline-block;
+    padding: 1em;
+    /* border: 1px dashed #999; */
+    background-color: white;
+}
+
+/* .ex-vertical-align-text:after, .ex-vertical-align-text:before {
+    content: "";
+    border: 1px solid red;
+    position: absolute;
+    width: 6em;
+} */
+
+.box.vertical {
+    height: 4em;
+    padding: 8px;
+    margin: 0 8px;
+}
+
+span {
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+}
+
+span.base {
+    vertical-align: baseline;
+}
+
+span.top {
+    vertical-align: top;
+}
+
+span.middle {
+    vertical-align: middle;
+}
+
+span.bottom {
+    vertical-align: bottom;
+}
+span.text-top {
+    vertical-align: text-top;
+}
+
+span.text-bottom {
+    vertical-align: text-bottom;
+}
+
+span.sub {
+    vertical-align: sub;
+}
+
+span.super {
+    vertical-align: super;
+}
+
