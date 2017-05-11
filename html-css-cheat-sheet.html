@@ -503,59 +503,75 @@
                 </div>
             </div>
             <div class="snippet">
-                <!-- XXX In progress... -->
                 <h2 class="code">vertical-align:</h2>
-                <h3>Inline elements only. See <a href="http://christopheraue.net/2014/03/05/vertical-align/">this</a>.</h3>
-                <div class="codeblock" style="font-size: 24px;">
-                    <div class="ex-vertical-align-text">
-                        <span class="bottom">bottom</span>
-                        <span class="top">top</span>
-                        <span class="base">base</span>
-                        <!-- <div class="box vertical" style="vertical-align: top;"></div> -->
-                        <span style="font-size: 72px;">Big</span>
-                        <span class="text-top" style="font-size: 72px;">Big:text-top</span>
-                        <span class="top" style="font-size: 72px;">Big:top</span>
-                        <span class="middle">middle</span>
-                        <span class="text-top">Text-top</span>
-                        <span class="text-bottom">Text-bottom</span>
-                        <span class="sub">sub</span>
-                        <span class="super">super</span>
-                        <span style="vertical-align: 16px;">16px</span>
-                        <span style="vertical-align: -16px;">-16px</span>
-                    </div>
-                    <code>top;</code>
+                <h3 class="width-20">Inline elements only. See <a href="http://christopheraue.net/2014/03/05/vertical-align/">this</a>. To align
+                    block elements, use flex.</h3>
+                <div class="requirement">
+                    <span class="ex-align-text base">base</span>
+                    <div class="ex-align-box"></div>
+                    <h3 class="width-12">Inline block without text aligns baseline to bottom.</h3>
                 </div>
-                <div class="codeblock">
-                    <div class="ex-vertical-align-text">
-                        <span class="base">base</span>
-                        <div class="box vertical" style="vertical-align: baseline;">box</div>
-                        <span class="top">top</span>
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-vertical-align-text">
+                                <div class="ex-align-box">content</div>
+                                <span class="ex-align-text base">base</span>
+                            </div>
+                            <code>baseline;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-vertical-align-text">
+                                <div class="ex-align-box">content</div>
+                                <span class="ex-align-text top">top</span>
+                            </div>
+                            <code>top;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-vertical-align-text">
+                                <div class="ex-align-box">content</div>
+                                <span class="ex-align-text middle">middle</span>
+                            </div>
+                            <code>middle;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-vertical-align-text">
+                                <div class="ex-align-box">content</div>
+                                <span class="ex-align-text bottom">bottom</span>
+                            </div>
+                            <code>bottom;</code>
+                        </div>
                     </div>
-                    <code>baseline;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="ex-vertical-align-text">
-                        <span class="base">base</span>
-                        <div class="box vertical" style="vertical-align: middle;"></div>
-                        <span class="top">top</span>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-vertical-align-text">
+                                <span class="ex-align-text base">base</span>
+                                <span class="ex-align-text super">super</span>
+                            </div>
+                            <code>super;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-vertical-align-text">
+                                <span class="ex-align-text base">base</span>
+                                <span class="ex-align-text sub">sub</span>
+                            </div>
+                            <code>sub;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-vertical-align-text">
+                                <span class="ex-align-text base">base</span>
+                                <span class="ex-align-text" style="vertical-align: 50%;">50%</span>
+                            </div>
+                            <code>50%;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-vertical-align-text">
+                                <span class="ex-align-text base">base</span>
+                                <span class="ex-align-text" style="vertical-align: -50%;">-50%</span>
+                            </div>
+                            <code>-50%;</code>
+                        </div>
                     </div>
-                    <code>middle;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="ex-vertical-align-text">
-                        <span class="base">base</span>
-                        <div class="box vertical" style="vertical-align: bottom;"></div>
-                        <span class="top">top</span>
-                    </div>
-                    <code>bottom;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="ex-vertical-align-text">
-                        <span class="base">base</span>
-                        <div class="box vertical" style="vertical-align: text-top;">box</div>
-                        <span class="top">top</span>
-                    </div>
-                    <code>text-top;</code>
                 </div>
             </div>
             <div class="snippet">
