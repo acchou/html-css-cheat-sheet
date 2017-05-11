@@ -669,6 +669,11 @@ a:link, a:visited {
     padding: 8px;
 }
 
+.cell.empty {
+    height: 1em;
+    width: 1em;
+}
+
 .row > .codeblock {
     display: table-cell;
 }
