@@ -767,13 +767,13 @@ span.super {
 .ex-align-box {
     display: inline-flex;
     align-items: center;
-    min-width: 3.3em;
-    min-height: 4em;
+    min-width: 3em;
+    min-height: 3em;
     background-color: #999;
     border-radius: 4px;
     margin: 4px;
     justify-content: center;
     text-align: center;
-    padding: 0 8px;
+    /* padding: 0 8px; */
     color: white;
 }
