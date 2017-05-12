@@ -656,6 +656,12 @@ a:link, a:visited {
     background-color: white;
 }
 
+.ex-table {
+    border-bottom: 1px dashed #aaa;
+    padding-left: 8px;
+    padding-bottom: 8px;
+}
+
 .center {
     text-align: center;
 }
@@ -699,7 +705,9 @@ a:link, a:visited {
 }
 
 .ex-caption {
-    padding: 12px 36px;
+    /* padding: 12px 36px; */
+    padding: 8px;
+    border-bottom: 1px dashed #aaa;
 }
 
 .highlight-border {
@@ -711,22 +719,20 @@ a:link, a:visited {
 }
 
 .ex-vertical-align-table {
+    display: table;
     margin: 16px 24px;
     margin-bottom: 0;
     text-align: center;
     border-collapse: collapse;
 }
 
-.ex-vertical-align-table-row {
-    height: 90px;
-}
-
 .ex-vertical-align-cell {
     background-color: white;
-    /* border-collapse: collapse; */
-    display: table-cell;
-    height: 2.5em;
     border: 2px solid black;
+    display: table-cell;
+    width: 4em;
+    height: 5em;
+    text-align: center;
 }
 
 .cell > .codeblock {
