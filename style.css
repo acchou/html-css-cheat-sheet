@@ -786,3 +786,30 @@ span.super {
     /* padding: 0 8px; */
     color: white;
 }
+
+.ex-zindex {
+    position: relative;
+}
+
+.box-ex-zindex {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 3em;
+    width: 3em;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+}
+
+.box-ex-zindex-placeholder {
+    font-size: 16px;
+    height: 3em;
+    width: 3em;
+    text-align: left;
+    vertical-align: top;
+    padding: 4px;
+    z-index: 1;
+}
