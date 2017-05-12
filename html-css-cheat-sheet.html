@@ -147,14 +147,174 @@
         <div class="section">
             <h2>Tables</h2>
             <div class="snippet">
-                <h2>Table</h2>
+                <h2>Basic table</h2>
                 <h3>Also see <a href="#display:table">display: table</a></h3>
                 <div class="codeblock">
+                    <div class="ex-table">
+                        <table>
+                            <tr>
+                                <td>data</td>
+                            </tr>
+                        </table>
+                    </div>
                     <code>&lt;table&gt;&#10;    &lt;tr&gt;&#10;        &lt;td&gt;data&lt;/td&gt;&#10;    &lt;/tr&gt;&#10;&lt;/table&gt;</code>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2>Full Table</h2>
+                <div class="codeblock">
+                    <div class="ex-full-table-elements">
+                        <code>&lt;table&gt;&#10;    &lt;caption&gt;caption&lt;/caption&gt;&#10;    &lt;thead&gt;&#10;        &lt;tr&gt;&#10;            &lt;th&gt;col-header&lt;/th&gt;&#10;            &lt;th&gt;col-header&lt;/th&gt;&#10;        &lt;/tr&gt;&#10;    &lt;/thead&gt;&#10;    &lt;tfoot&gt;&#10;        &lt;tr&gt;&#10;            &lt;td&gt;footer&lt;/td&gt;&#10;            &lt;td&gt;footer&lt;/td&gt;&#10;        &lt;/tr&gt;&#10;    &lt;/tfoot&gt;&#10;    &lt;tbody&gt;&#10;        &lt;tr&gt;&#10;            &lt;th&gt;row-header&lt;/th&gt;&#10;            &lt;td&gt;data&lt;/td&gt;&#10;        &lt;/tr&gt;&#10;    &lt;/tbody&gt;&#10;&lt;/table&gt;&#10;</code>
+                        <table class="ex-full-table">
+                            <caption>caption</caption>
+                            <thead>
+                                <tr>
+                                    <th>name</th>
+                                    <th>number</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <td>Footer</td>
+                                    <td>Total</td>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <th>Andy</th>
+                                    <td>42</td>
+                                </tr>
+                                <tr>
+                                    <th>Kevin</th>
+                                    <td>1024</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="stack">
+                <div class="snippet">
+                    <h2>Span columns</h2>
+                    <div class="codeblock">
+                        <div class="ex-table">
+                            <table class="ex-full-table">
+                                <thead>
+                                    <tr>
+                                        <th>name</th>
+                                        <th>number</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Andy</td>
+                                        <td>42</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Kevin</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <code>&lt;td colspan=&quot;2&quot;&gt;Kevin&lt;/td&gt;</code>
+                    </div>
+                </div>
+                <div class="snippet">
+                    <h2>Span rows</h2>
+                    <div class="codeblock">
+                        <div class="ex-table">
+                            <table class="ex-full-table">
+                                <thead>
+                                    <tr>
+                                        <th>name</th>
+                                        <th>number</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="2">Andy</td>
+                                        <td>42</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1024</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <code>&lt;td rowspan=&quot;2&quot;&gt;Andy&lt;/td&gt;</code>
+                    </div>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2>Column groups</h2>
+                <h3>Operate on an entire column</h3>
+                <div class="codeblock">
+                    <div class="ex-table">
+                        <table class="ex-full-table">
+                            <colgroup>
+                                <col style="background-color: #bbb"></col>
+                            </colgroup>
+                            <tr>
+                                <td>Andy</td>
+                                <td>42</td>
+                            </tr>
+                            <tr>
+                                <td>Kevin</td>
+                                <td>1024</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <code>&lt;colgroup&gt;&#10;    &lt;col style=&quot;...&quot;&gt;&lt;/col&gt;&#10;&lt;/colgroup&gt;&#10;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-table">
+                        <table class="ex-full-table">
+                            <colgroup>
+                                <col span="2" style="background-color: #bbb"></col>
+                            </colgroup>
+                            <tr>
+                                <td>Andy</td>
+                                <td>42</td>
+                            </tr>
+                            <tr>
+                                <td>Kevin</td>
+                                <td>1024</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <code>&lt;colgroup&gt;&#10;    &lt;col span=&quot;2&quot; style=&quot;...&quot;&gt;&lt;/col&gt;&#10;&lt;/colgroup&gt;&#10;</code>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2>Footers</h2>
+                <div class="codeblock">
+                    <div class="ex-table">
+                        <table class="ex-full-table">
+                            <thead></thead>
+                            <tfoot style="background-color: #bbb;">
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Total</td>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td>Andy</td>
+                                    <td>42</td>
+                                </tr>
+                                <tr>
+                                    <td>Kevin</td>
+                                    <td>1024</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <code>&lt;tfoot&gt;&#10;    &lt;tr&gt;&#10;        &lt;td&gt;Name&lt;/td&gt;&#10;        &lt;td&gt;Total&lt;/td&gt;&#10;    &lt;/tr&gt;&#10;&lt;/tfoot&gt;</code>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- HTML -->
     <div class="section">
         <h1>CSS</h1>
@@ -424,25 +584,21 @@
 
             <div class="snippet">
                 <h2>Misc font properties</h2>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="font-example" style='font-style: italic;'>Aa Bb Cc</div>
-                            <code>font-style: italic;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="font-example" style='font-variant: small-caps;'>Aa Bb Cc</div>
-                            <code>font-variant: small-caps;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="font-example" style='font-kerning: none; font-size: 14pt;'>AVAVAV|AVAVAV|AVAVAV|AVAVAV</div>
-                            <code>font-kerning: none;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="font-example" style='font-kerning: normal; font-size: 14pt;'>AVAVAV|AVAVAV|AVAVAV|AVAVAV</div>
-                            <code>font-kerning: normal;</code>
-                        </div>
-                    </div>
+                <div class="codeblock">
+                    <div class="font-example" style='font-style: italic;'>Aa Bb Cc</div>
+                    <code>font-style: italic;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="font-example" style='font-variant: small-caps;'>Aa Bb Cc</div>
+                    <code>font-variant: small-caps;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="font-example" style='font-kerning: none; font-size: 14pt;'>AVAVAV|AVAVAV|AVAVAV|AVAVAV</div>
+                    <code>font-kerning: none;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="font-example" style='font-kerning: normal; font-size: 14pt;'>AVAVAV|AVAVAV|AVAVAV|AVAVAV</div>
+                    <code>font-kerning: normal;</code>
                 </div>
             </div>
 
@@ -861,64 +1017,66 @@
             </div>
             <div class="snippet">
                 <h2 class="code">padding:</h2>
-                <div class="row center">
-                    <div class="codeblock">
-                        <div class="box ex-padding" style="padding: 4px;">
-                            <div class="box absolute" style="top:4px; left: 4px;"></div>
+                <div class="table">
+                    <div class="row center">
+                        <div class="codeblock">
+                            <div class="box ex-padding" style="padding: 4px;">
+                                <div class="box absolute" style="top:4px; left: 4px;"></div>
+                            </div>
+                            <code>4px;</code>
                         </div>
-                        <code>4px;</code>
+                        <div class="codeblock">
+                            <div class="box ex-padding" style="padding: 10px;">
+                                <div class="box absolute" style="top:10px; left: 10px;"></div>
+                            </div>
+                            <code>10px;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box ex-padding" style="padding: 20px;">
+                                <div class="box absolute" style="top:20px; left: 20px;"></div>
+                            </div>
+                            <code>20px;</code>
+                        </div>
                     </div>
-                    <div class="codeblock">
-                        <div class="box ex-padding" style="padding: 10px;">
-                            <div class="box absolute" style="top:10px; left: 10px;"></div>
+                    <div class="row center">
+                        <div class="codeblock">
+                            <div class="box ex-padding" style="padding: 4px 0;">
+                                <div class="box absolute" style="top:4px; left: 0;"></div>
+                            </div>
+                            <code>4px 0;</code>
                         </div>
-                        <code>10px;</code>
+                        <div class="codeblock">
+                            <div class="box ex-padding" style="padding: 10px 0;">
+                                <div class="box absolute" style="top:10px; left: 0px;"></div>
+                            </div>
+                            <code>10px 0;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box ex-padding" style="padding: 20px 0;">
+                                <div class="box absolute" style="top:20px; left: 0px;"></div>
+                            </div>
+                            <code>20px 0;</code>
+                        </div>
                     </div>
-                    <div class="codeblock">
-                        <div class="box ex-padding" style="padding: 20px;">
-                            <div class="box absolute" style="top:20px; left: 20px;"></div>
+                    <div class="row center">
+                        <div class="codeblock">
+                            <div class="box ex-padding" style="padding: 0 4px;">
+                                <div class="box absolute" style="top:0; left:4px;"></div>
+                            </div>
+                            <code>0 4px;</code>
                         </div>
-                        <code>20px;</code>
-                    </div>
-                </div>
-                <div class="row center">
-                    <div class="codeblock">
-                        <div class="box ex-padding" style="padding: 4px 0;">
-                            <div class="box absolute" style="top:4px; left: 0;"></div>
+                        <div class="codeblock">
+                            <div class="box ex-padding" style="padding: 0 10px;">
+                                <div class="box absolute" style="top:0; left: 10px;"></div>
+                            </div>
+                            <code>0 10px;</code>
                         </div>
-                        <code>4px 0;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="box ex-padding" style="padding: 10px 0;">
-                            <div class="box absolute" style="top:10px; left: 0px;"></div>
+                        <div class="codeblock">
+                            <div class="box ex-padding" style="padding: 0 20px;">
+                                <div class="box absolute" style="top:0; left: 20px;"></div>
+                            </div>
+                            <code>0 20px;</code>
                         </div>
-                        <code>10px 0;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="box ex-padding" style="padding: 20px 0;">
-                            <div class="box absolute" style="top:20px; left: 0px;"></div>
-                        </div>
-                        <code>20px 0;</code>
-                    </div>
-                </div>
-                <div class="row center">
-                    <div class="codeblock">
-                        <div class="box ex-padding" style="padding: 0 4px;">
-                            <div class="box absolute" style="top:0; left:4px;"></div>
-                        </div>
-                        <code>0 4px;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="box ex-padding" style="padding: 0 10px;">
-                            <div class="box absolute" style="top:0; left: 10px;"></div>
-                        </div>
-                        <code>0 10px;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="box ex-padding" style="padding: 0 20px;">
-                            <div class="box absolute" style="top:0; left: 20px;"></div>
-                        </div>
-                        <code>0 20px;</code>
                     </div>
                 </div>
             </div>
@@ -962,30 +1120,30 @@
                     <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">collapse.</a>
                 </h3>
                 <div class="requirement">
-                    <div class="margin border relative" style="top: 12px">
+                    <div class="ex-margin relative" style="top: 12px">
                         <div class="box" style="padding: 0; margin: 10px;"></div>
                     </div>
                     <!-- Not actually using margin collapsing to implement this 
                          because we want to show the border overlap explicitly -->
-                    <div class="margin border">
+                    <div class="ex-margin">
                         <div class="box" style="padding: 0; margin: 20px;"></div>
                     </div>
                 </div>
                 <div class="row center">
                     <div class="codeblock">
-                        <div class="margin border">
+                        <div class="ex-margin">
                             <div class="box" style="margin: 4px;"></div>
                         </div>
                         <code>4px;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="margin border">
+                        <div class="ex-margin">
                             <div class="box" style="margin: 10px;"></div>
                         </div>
                         <code>10px;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="margin border">
+                        <div class="ex-margin">
                             <div class="box" style="margin: 20px;"></div>
                         </div>
                         <code>20px;</code>
@@ -993,19 +1151,19 @@
                 </div>
                 <div class="row center">
                     <div class="codeblock">
-                        <div class="margin border">
+                        <div class="ex-margin">
                             <div class="box" style="margin: 4px 0;"></div>
                         </div>
                         <code>4px 0;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="margin border">
+                        <div class="ex-margin">
                             <div class="box" style="margin: 10px 0;"></div>
                         </div>
                         <code>10px 0;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="margin border">
+                        <div class="ex-margin">
                             <div class="box" style="margin: 20px 0;"></div>
                         </div>
                         <code>20px 0;</code>
@@ -1013,19 +1171,19 @@
                 </div>
                 <div class="row center">
                     <div class="codeblock">
-                        <div class="margin border">
+                        <div class="ex-margin">
                             <div class="box" style="margin: 0 4px;"></div>
                         </div>
                         <code>0 4px;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="margin border">
+                        <div class="ex-margin">
                             <div class="box" style="margin: 0 10px;"></div>
                         </div>
                         <code>0 10px;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="margin border">
+                        <div class="ex-margin">
                             <div class="box" style="margin: 0 20px;"></div>
                         </div>
                         <code>0 20px;</code>
@@ -1036,7 +1194,7 @@
                 <h2>Other margins</h2>
                 <div class="flex noborder justify-center">
                     <div class="codeblock" title="Horizontal centering for block elements">
-                        <div class="margin border" style="width:300px;">
+                        <div class="ex-margin" style="width:300px;">
                             <div class="box bigger" style="display: block; width: 1.5em; margin: 0 auto;"></div>
                         </div>
                         <code class="comment">/* center block elements */</code>
@@ -1047,25 +1205,25 @@
                     <div class="codeblock">
                         <code>margin-top: 20px;</code>
                     </div>
-                    <div class="margin border">
+                    <div class="ex-margin">
                         <div class="box nomargin" style="margin-top: 20px;"></div>
                     </div>
                     <div class="flex noborder align-center">
                         <div class="codeblock">
                             <code>margin-left: <br>20px;</code>
                         </div>
-                        <div class="margin border">
+                        <div class="ex-margin">
                             <div class="box nomargin" style="margin-left: 20px;"></div>
                         </div>
                         <div class="box invisible"></div>
-                        <div class="margin border">
+                        <div class="ex-margin">
                             <div class="box nomargin" style="margin-right: 20px;"></div>
                         </div>
                         <div class="codeblock">
                             <code>margin-right:<br>20px;</code>
                         </div>
                     </div>
-                    <div class="margin border">
+                    <div class="ex-margin">
                         <div class="box nomargin" style="margin-bottom: 20px;"></div>
                     </div>
                     <div class="codeblock">
@@ -1079,7 +1237,7 @@
                 <div class="columns">
                     <div class="column">
                         <div class="codeblock">
-                            <div class="overflow-box scroll border">
+                            <div class="ex-overflow-box scroll">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam leo fringilla hendrerit efficitur. Maecenas bibendum
                                 iaculis purus eget placerat. Nunc aliquet tristique mauris, elementum suscipit ante congue
                                 sit amet.
@@ -1087,7 +1245,7 @@
                             <code>scroll;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="overflow-box hidden border">
+                            <div class="ex-overflow-box hidden">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam leo fringilla hendrerit efficitur. Maecenas bibendum
                                 iaculis purus eget placerat. Nunc aliquet tristique mauris, elementum suscipit ante congue
                                 sit amet.
@@ -1097,7 +1255,7 @@
                     </div>
                     <div class="column">
                         <div class="codeblock">
-                            <div class="overflow-box visible border">
+                            <div class="ex-overflow-box visible">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam leo fringilla hendrerit efficitur. Maecenas bibendum
                                 iaculis purus eget placerat. Nunc aliquet tristique mauris, elementum suscipit ante congue
                                 sit amet.
@@ -1111,7 +1269,7 @@
         <!-- End section Box Model -->
         <div class="section">
             <h2>Positioning</h2>
-            <div class="flex inline noborder column align-start">
+            <div class="stack">
                 <div class="snippet">
                     <h2 class="code">position: static;</h2>
                     <div class="codeblock">
@@ -1289,7 +1447,7 @@
                 <code>      viewport</code>
                 <code>            &#8600;</code>
                 <code></code>
-                <iframe style="height:300px;" id="fixed-position-example" src="fixed-position-example.html"></iframe>
+                <iframe style="height:200px;" id="fixed-position-example" src="fixed-position-example.html"></iframe>
             </div>
             <div class="snippet">
                 <h2 class="code">float:</h2>
@@ -1876,66 +2034,89 @@
             <h2>Table display</h2>
             <div class="snippet">
                 <h2 class="code">display:</h2>
-                <div class="codeblock">
-                    <div class="ex-table">
-                        <div class="table highlight">
-                            <div class="row">
-                                <div class="cell">A1</div>
-                                <div class="cell">B1</div>
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-table">
+                                <table class="highlight">
+                                    <tr>
+                                        <td>A</td>
+                                        <td>B</td>
+                                    </tr>
+                                    <tr>
+                                        <td>C</td>
+                                        <td>D</td>
+                                    </tr>
+                                </table>
                             </div>
-                            <div class="row">
-                                <div class="cell">A2</div>
-                                <div class="cell">B2</div>
+                            <code>table;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-table">
+                                <table>
+                                    <tr class="highlight">
+                                        <td>A1</td>
+                                        <td>B1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A2</td>
+                                        <td>B2</td>
+                                    </tr>
+                                </table>
                             </div>
+                            <code>table-row;</code>
+                        </div>
+                        <div class="codeblock" id="display:table-cell">
+                            <div class="ex-table">
+                                <table>
+                                    <tr>
+                                        <td class="cell highlight">A1</td>
+                                        <td>B1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A2</td>
+                                        <td>B2</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <code>table-cell;</code>
                         </div>
                     </div>
-                    <code>table;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="ex-table">
-                        <div class="table">
-                            <div class="row highlight">
-                                <div class="cell">A1</div>
-                                <div class="cell">B1</div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-table">
+                                abc
+                                <table class="highlight" style="display: inline-table;">
+                                    <tr>
+                                        <td>A1</td>
+                                        <td>B1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A2</td>
+                                        <td>B2</td>
+                                    </tr>
+                                </table>
+                                def
                             </div>
-                            <div class="row">
-                                <div class="cell">A2</div>
-                                <div class="cell">B2</div>
+                            <code>inline-table;</code>
+                        </div>
+                        <div class="codeblock" id="display:table-caption">
+                            <div class="ex-table">
+                                <table>
+                                    <tr>
+                                        <td>A1</td>
+                                        <td>B1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A2</td>
+                                        <td>B2</td>
+                                    </tr>
+                                    <caption class="caption highlight">A caption</caption>
+                                </table>
                             </div>
+                            <code>table-caption;</code>
                         </div>
                     </div>
-                    <code>table-row;</code>
-                </div>
-                <div class="codeblock" id="display:table-cell">
-                    <div class="ex-table">
-                        <div class="table">
-                            <div class="row">
-                                <div class="cell highlight">A1</div>
-                                <div class="cell">B1</div>
-                            </div>
-                            <div class="row">
-                                <div class="cell">A2</div>
-                                <div class="cell">B2</div>
-                            </div>
-                        </div>
-                    </div>
-                    <code>table-cell;</code>
-                </div>
-                <div class="codeblock" id="display:table-caption">
-                    <div class="ex-table">
-                        <div class="table">
-                            <div class="row">
-                                <div class="cell">A1</div>
-                                <div class="cell">B1</div>
-                            </div>
-                            <div class="row">
-                                <div class="cell">A2</div>
-                                <div class="cell">B2</div>
-                            </div>
-                            <div class="caption highlight">A caption</div>
-                        </div>
-                    </div>
-                    <code>table-caption;</code>
                 </div>
             </div>
             <div class="snippet">
@@ -1944,52 +2125,52 @@
                     <div class="column">
                         <div class="codeblock">
                             <div class="ex-table">
-                                <div class="table border">
-                                    <div class="row">
-                                        <div class="cell">A1</div>
-                                        <div class="cell">B1</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="cell">A2</div>
-                                        <div class="cell">B2</div>
-                                    </div>
-                                </div>
+                                <table>
+                                    <tr>
+                                        <td class="border">A1</td>
+                                        <td class="border">B1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border">A2</td>
+                                        <td class="border">B2</td>
+                                    </tr>
+                                </table>
                             </div>
-                            <code>.table {</code>
+                            <code>td {</code>
                             <code>  border: 2px solid black;</code>
                             <code>}</code>
                         </div>
                         <div class="codeblock">
                             <div class="ex-table">
-                                <div class="table">
-                                    <div class="row border">
-                                        <div class="cell">A1</div>
-                                        <div class="cell">B1</div>
-                                    </div>
-                                    <div class="row border">
-                                        <div class="cell">A2</div>
-                                        <div class="cell">B2</div>
-                                    </div>
-                                </div>
+                                <table class="border">
+                                    <tr>
+                                        <td>A1</td>
+                                        <td>B1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A2</td>
+                                        <td>B2</td>
+                                    </tr>
+                                </table>
                             </div>
-                            <code>.row {</code>
+                            <code>table {</code>
                             <code>  border: 2px solid black;</code>
                             <code>}</code>
                         </div>
                         <div class="codeblock">
                             <div class="ex-table">
-                                <div class="table">
-                                    <div class="row">
-                                        <div class="cell border">A1</div>
-                                        <div class="cell border">B1</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="cell border">A2</div>
-                                        <div class="cell border">B2</div>
-                                    </div>
-                                </div>
+                                <table>
+                                    <tr class="border">
+                                        <td>A1</td>
+                                        <td>B1</td>
+                                    </tr>
+                                    <tr class="border">
+                                        <td>A2</td>
+                                        <td>B2</td>
+                                    </tr>
+                                </table>
                             </div>
-                            <code>.cell {</code>
+                            <code>tr {</code>
                             <code>  border: 2px solid black;</code>
                             <code>}</code>
                         </div>
@@ -1997,35 +2178,35 @@
                     <div class="column">
                         <div class="codeblock">
                             <div class="ex-table">
-                                <div class="table column-borders">
-                                    <div class="row">
-                                        <div class="cell">A1</div>
-                                        <div class="cell">B1</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="cell">A2</div>
-                                        <div class="cell">B2</div>
-                                    </div>
-                                </div>
+                                <table class="column-borders">
+                                    <tr>
+                                        <td>A1</td>
+                                        <td>B1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A2</td>
+                                        <td>B2</td>
+                                    </tr>
+                                </table>
                             </div>
-                            <code>.table .cell + .cell {</code>
+                            <code>table td + td {</code>
                             <code>  border-left: 2px solid black;</code>
                             <code>}</code>
                         </div>
                         <div class="codeblock">
                             <div class="ex-table">
-                                <div class="table row-borders">
-                                    <div class="row">
-                                        <div class="cell">A1</div>
-                                        <div class="cell">B1</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="cell">A2</div>
-                                        <div class="cell">B2</div>
-                                    </div>
-                                </div>
+                                <table class="row-borders">
+                                    <tr>
+                                        <td>A1</td>
+                                        <td>B1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A2</td>
+                                        <td>B2</td>
+                                    </tr>
+                                </table>
                             </div>
-                            <code>.table .row + .row {</code>
+                            <code>table tr + tr {</code>
                             <code>  border-top: 2px solid black;</code>
                             <code>}</code>
                         </div>
@@ -2036,31 +2217,31 @@
                 <h2 class="code">border-collapse:</h2>
                 <div class="codeblock">
                     <div class="ex-table">
-                        <div class="table all-borders" style="border-collapse: collapse;">
-                            <div class="row">
-                                <div class="cell empty"></div>
-                                <div class="cell empty"></div>
-                            </div>
-                            <div class="row">
-                                <div class="cell empty"></div>
-                                <div class="cell empty"></div>
-                            </div>
-                        </div>
+                        <table class="all-borders" style="border-collapse: collapse;">
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
                     </div>
                     <code>collapse;</code>
                 </div>
                 <div class="codeblock">
                     <div class="ex-table">
-                        <div class="table all-borders" style="border-collapse: separate; border-spacing: 4px;">
-                            <div class="row">
-                                <div class="cell empty"></div>
-                                <div class="cell empty"></div>
-                            </div>
-                            <div class="row">
-                                <div class="cell empty"></div>
-                                <div class="cell empty"></div>
-                            </div>
-                        </div>
+                        <table class="all-borders" style="border-collapse: separate; border-spacing: 4px;">
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
                     </div>
                     <code>separate;</code>
                 </div>
@@ -2072,31 +2253,31 @@
                     <div class="row">
                         <div class="codeblock">
                             <div class="ex-table">
-                                <div class="table all-borders" style="border-collapse: separate; border-spacing: 0px;">
-                                    <div class="row">
-                                        <div class="cell empty"></div>
-                                        <div class="cell empty"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="cell empty"></div>
-                                        <div class="cell empty"></div>
-                                    </div>
-                                </div>
+                                <table class="all-borders" style="border-collapse: separate; border-spacing: 0px;">
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
                             </div>
                             <code>0;</code>
                         </div>
                         <div class="codeblock">
                             <div class="ex-table">
-                                <div class="table all-borders" style="border-collapse: separate; border-spacing: 2px;">
-                                    <div class="row">
-                                        <div class="cell empty"></div>
-                                        <div class="cell empty"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="cell empty"></div>
-                                        <div class="cell empty"></div>
-                                    </div>
-                                </div>
+                                <table class="all-borders" style="border-collapse: separate; border-spacing: 2px;">
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
                             </div>
                             <code>2;</code>
                         </div>
@@ -2104,31 +2285,31 @@
                     <div class="row">
                         <div class="codeblock">
                             <div class="ex-table">
-                                <div class="table all-borders" style="border-collapse: separate; border-spacing: 4px;">
-                                    <div class="row">
-                                        <div class="cell empty"></div>
-                                        <div class="cell empty"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="cell empty"></div>
-                                        <div class="cell empty"></div>
-                                    </div>
-                                </div>
+                                <table class="all-borders" style="border-collapse: separate; border-spacing: 4px;">
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
                             </div>
                             <code>4;</code>
                         </div>
                         <div class="codeblock">
                             <div class="ex-table">
-                                <div class="table all-borders" style="border-collapse: separate; border-spacing: 8px;">
-                                    <div class="row">
-                                        <div class="cell empty"></div>
-                                        <div class="cell empty"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="cell empty"></div>
-                                        <div class="cell empty"></div>
-                                    </div>
-                                </div>
+                                <table class="all-borders" style="border-collapse: separate; border-spacing: 8px;">
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
                             </div>
                             <code>8;</code>
                         </div>
@@ -2139,37 +2320,40 @@
                 <h2 class="code">caption-side:</h2>
                 <h3>Requires
                     <a href="#display:table-caption">display: table-caption</a></h3>
-                <div class=" codeblock">
-                    <div class="ex-caption">
-                        <div class="table all-borders">
-                            <div class="row">
-                                <div class="cell empty"></div>
-                                <div class="cell empty"></div>
-                            </div>
-                            <div class="row">
-                                <div class="cell empty"></div>
-                                <div class="cell empty"></div>
-                            </div>
-                            <div class="caption" style="caption-side: top;">A caption</div>
+                <div class="row">
+                    <div class=" codeblock">
+                        <div class="ex-caption">
+                            <table class="all-borders">
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <caption style="caption-side: top;">A caption</caption>
+                                <caption style="caption-side: bottom; visibility:hidden;">empty</caption>
+                            </table>
                         </div>
+                        <code>top;</code>
                     </div>
-                    <code>top;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="ex-caption">
-                        <div class="table all-borders">
-                            <div class="row">
-                                <div class="cell empty"></div>
-                                <div class="cell empty"></div>
-                            </div>
-                            <div class="row">
-                                <div class="cell empty"></div>
-                                <div class="cell empty"></div>
-                            </div>
-                            <div class="caption" style="caption-side: bottom; margin-bottom: 8px;">A caption</div>
+                    <div class="codeblock">
+                        <div class="ex-caption">
+                            <table class="all-borders">
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <caption style="caption-side: bottom;">A caption</caption>
+                            </table>
                         </div>
+                        <code>bottom;</code>
                     </div>
-                    <code>bottom;</code>
                 </div>
             </div>
             <div class="snippet" id="vertical-align-cells">
@@ -2178,27 +2362,35 @@
                 <div class="flex noborder">
                     <div class="codeblock">
                         <div class="ex-table">
-                            <div class="ex-vertical-align-cell" style="vertical-align: top;">abc</div>
+                            <table>
+                                <td class="ex-vertical-align-cell" style="vertical-align: top;">abc</td>
+                            </table>
                         </div>
                         <code>top;</code>
                     </div>
                     <div class="codeblock">
                         <div class="ex-table">
-                            <div class="ex-vertical-align-cell" style="vertical-align: middle;">abc</div>
+                            <table>
+                                <td class="ex-vertical-align-cell" style="vertical-align: middle;">abc</td>
+                            </table>
                         </div>
                         <code>middle;</code>
                     </div>
                     <div class="codeblock">
                         <div class="ex-table">
-                            <div class="ex-vertical-align-cell" style="vertical-align: bottom;">bottom</div>
+                            <table>
+                                <td class="ex-vertical-align-cell" style="vertical-align: bottom;">bottom</td>
+                            </table>
                         </div>
                         <code>bottom;</code>
                     </div>
                     <div class="codeblock">
                         <div class="ex-table">
-                            <div class="ex-vertical-align-cell" style="vertical-align: baseline;">
-                                ab <span style="font-size: 36px">cd</span>
-                            </div>
+                            <table>
+                                <td class="ex-vertical-align-cell" style="vertical-align: baseline;">
+                                    ab <span style="font-size: 36px">cd</span>
+                                </td>
+                            </table>
                         </div>
                         <code>baseline;</code>
                     </div>
@@ -2297,504 +2489,501 @@
             </div>
             <div class="snippet">
                 <h2 class="code">border-width:</h2>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="box ex-border-width" style="border-width: 1px;"></div>
-                            <code>1px;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box ex-border-width" style="border-width: 2px;"></div>
-                            <code>2px;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box ex-border-width" style="border-width: 3px;"></div>
-                            <code>3px;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box ex-border-width" style="border-width: 4px;"></div>
-                            <code>4px;</code>
-                        </div>
+                <div class="ex-border-width-items">
+                    <div class="codeblock">
+                        <div class="box ex-border-width" style="border-width: 1px;"></div>
+                        <code>1px;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="box ex-border-width" style="border-width: 2px;"></div>
+                        <code>2px;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="box ex-border-width" style="border-width: 3px;"></div>
+                        <code>3px;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="box ex-border-width" style="border-width: 4px;"></div>
+                        <code>4px;</code>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Section Borders -->
+            <!-- Section Borders -->
 
-        <div class="section">
-            <h2>Colors</h2>
-            <div class="snippet">
-                <h2 class="code">color:</h2>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="box" style="color: white;">A</div>
-                            <code>white;</code>
+            <div class="section">
+                <h2>Colors</h2>
+                <div class="snippet">
+                    <h2 class="code">color:</h2>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="codeblock">
+                                <div class="box" style="color: white;">A</div>
+                                <code>white;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: black">A</div>
+                                <code>black;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: gray">A</div>
+                                <code>gray;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: red">A</div>
+                                <code>red;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: green">A</div>
+                                <code>green;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: blue">A</div>
+                                <code>blue;</code>
+                            </div>
                         </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: black">A</div>
-                            <code>black;</code>
+                        <div class="column">
+                            <div class="codeblock">
+                                <div class="box" style="color: #fff">A</div>
+                                <code>#fff;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: #000">A</div>
+                                <code>#000;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: #808080">A</div>
+                                <code>#808080;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: #f00">A</div>
+                                <code>#f00;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: #008000">A</div>
+                                <code>#008000;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: #00f">A</div>
+                                <code>#00f;</code>
+                            </div>
                         </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: gray">A</div>
-                            <code>gray;</code>
+                        <div class="column">
+                            <div class="codeblock">
+                                <div class="box" style="color: rgb(255, 255, 255);">A</div>
+                                <code>rgb(255, 255, 255);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: rgb(0, 0, 0);">A</div>
+                                <code>rgb(0, 0, 0);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: rgb(128, 128, 128);">A</div>
+                                <code>rgb(128, 128, 128);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: rgb(255, 0, 0);">A</div>
+                                <code>rgb(255, 0, 0);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: rgb(0, 128, 0);">A</div>
+                                <code>rgb(0, 128, 0);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: rgb(0, 0, 255);">A</div>
+                                <code>rgb(0, 0, 255);</code>
+                            </div>
                         </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: red">A</div>
-                            <code>red;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: green">A</div>
-                            <code>green;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: blue">A</div>
-                            <code>blue;</code>
+                        <div class="column">
+                            <div class="codeblock">
+                                <div class="box" style="color: hsl(0, 0%, 100%);">A</div>
+                                <code>hsl(0, 0%, 100%);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: hsl(0, 0%, 0%);">A</div>
+                                <code>hsl(0, 0%, 0%);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: hsl(0, 0%, 50%);">A</div>
+                                <code>hsl(0, 0%, 50%);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: hsl(0, 100%, 50%);">A</div>
+                                <code>hsl(0, 100%, 50%);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: hsl(120, 100%, 25%);">A</div>
+                                <code>hsl(120, 100%, 25%);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: hsl(240, 100%, 50%);">A</div>
+                                <code>hsl(240, 100%, 50%);</code>
+                            </div>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="box" style="color: #fff">A</div>
-                            <code>#fff;</code>
+                </div>
+                <div class="snippet">
+                    <h2 class="code">color:</h2>
+                    <h3>Grayscale</h3>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: #000">A</div>
+                                <code>#000;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: #222">A</div>
+                                <code>#222;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: #555">A</div>
+                                <code>#555;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: #777">A</div>
+                                <code>#777;</code>
+                            </div>
                         </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: #000">A</div>
-                            <code>#000;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: #808080">A</div>
-                            <code>#808080;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: #f00">A</div>
-                            <code>#f00;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: #008000">A</div>
-                            <code>#008000;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: #00f">A</div>
-                            <code>#00f;</code>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="box" style="color: rgb(255, 255, 255);">A</div>
-                            <code>rgb(255, 255, 255);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: rgb(0, 0, 0);">A</div>
-                            <code>rgb(0, 0, 0);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: rgb(128, 128, 128);">A</div>
-                            <code>rgb(128, 128, 128);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: rgb(255, 0, 0);">A</div>
-                            <code>rgb(255, 0, 0);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: rgb(0, 128, 0);">A</div>
-                            <code>rgb(0, 128, 0);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: rgb(0, 0, 255);">A</div>
-                            <code>rgb(0, 0, 255);</code>
+                        <div class="column">
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: #999">A</div>
+                                <code>#999;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: #bbb">A</div>
+                                <code>#bbb;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: #ccc">A</div>
+                                <code>#ccc;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box placeholder" style="color: #eee">A</div>
+                                <code>#eee;</code>
+                            </div>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="box" style="color: hsl(0, 0%, 100%);">A</div>
-                            <code>hsl(0, 0%, 100%);</code>
+                </div>
+                <div class="snippet">
+                    <h2 class="code">background-color:</h2>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="codeblock">
+                                <div class="box" style="background-color: white; color: black;"></div>
+                                <code>white;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: black"></div>
+                                <code>black;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: gray"></div>
+                                <code>gray;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: red"></div>
+                                <code>red;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: green"></div>
+                                <code>green;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: blue"></div>
+                                <code>blue;</code>
+                            </div>
                         </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: hsl(0, 0%, 0%);">A</div>
-                            <code>hsl(0, 0%, 0%);</code>
+                        <div class="column">
+                            <div class="codeblock">
+                                <div class="box" style="background-color: #fff; color: black;"></div>
+                                <code>#fff;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: #000"></div>
+                                <code>#000;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: #808080"></div>
+                                <code>#808080;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: #f00"></div>
+                                <code>#f00;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: #008000"></div>
+                                <code>#008000;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: #00f"></div>
+                                <code>#00f;</code>
+                            </div>
                         </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: hsl(0, 0%, 50%);">A</div>
-                            <code>hsl(0, 0%, 50%);</code>
+                        <div class="column">
+                            <div class="codeblock">
+                                <div class="box" style="background-color: rgb(255, 255, 255); color: black;"></div>
+                                <code>rgb(255, 255, 255);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: rgb(0, 0, 0);"></div>
+                                <code>rgb(0, 0, 0);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: rgb(128, 128, 128);"></div>
+                                <code>rgb(128, 128, 128);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: rgb(255, 0, 0);"></div>
+                                <code>rgb(255, 0, 0);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: rgb(0, 128, 0);"></div>
+                                <code>rgb(0, 128, 0);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: rgb(0, 0, 255);"></div>
+                                <code>rgb(0, 0, 255);</code>
+                            </div>
                         </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: hsl(0, 100%, 50%);">A</div>
-                            <code>hsl(0, 100%, 50%);</code>
+                        <div class="column">
+                            <div class="codeblock">
+                                <div class="box" style="background-color: hsl(0, 0%, 100%); color: black;"></div>
+                                <code>hsl(0, 0%, 100%);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: hsl(0, 0%, 0%);"></div>
+                                <code>hsl(0, 0%, 0%);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: hsl(0, 0%, 50%);"></div>
+                                <code>hsl(0, 0%, 50%);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: hsl(0, 100%, 50%);"></div>
+                                <code>hsl(0, 0%, 50%);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: hsl(120, 100%, 25%);"></div>
+                                <code>hsl(120, 100%, 25%);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: hsl(240, 100%, 50%);"></div>
+                                <code>hsl(240, 100%, 50%);</code>
+                            </div>
                         </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: hsl(120, 100%, 25%);">A</div>
-                            <code>hsl(120, 100%, 25%);</code>
+                    </div>
+                </div>
+                <div class="snippet">
+                    <h2 class="code">background-color:</h2>
+                    <h3>Grayscale</h3>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="codeblock">
+                                <div class="box" style="background-color: #000"></div>
+                                <code>#000;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: #222"></div>
+                                <code>#222;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: #555"></div>
+                                <code>#555;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: #777"></div>
+                                <code>#777;</code>
+                            </div>
                         </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: hsl(240, 100%, 50%);">A</div>
-                            <code>hsl(240, 100%, 50%);</code>
+                        <div class="column">
+                            <div class="codeblock">
+                                <div class="box" style="background-color: #999"></div>
+                                <code>#999;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: #bbb"></div>
+                                <code>#bbb;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: #ccc"></div>
+                                <code>#ccc;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: #eee"></div>
+                                <code>#eee;</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="snippet">
+                    <h2 class="code">background-color:</h2>
+                    <h3>Transparent colors</h3>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="codeblock">
+                                <div class="box" style="background-color: rgba(255, 0, 0, 0.1);"></div>
+                                <code>rgba(255, 0, 0, 0.1);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: rgba(255, 0, 0, 0.2);"></div>
+                                <code>rgba(255, 0, 0, 0.2);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: rgba(255, 0, 0, 0.3);"></div>
+                                <code>rgba(255, 0, 0, 0.3);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: rgba(255, 0, 0, 0.5);"></div>
+                                <code>rgba(255, 0, 0, 0.5);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: rgba(255, 0, 0, 0.7);"></div>
+                                <code>rgba(255, 0, 0, 0.7);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: rgba(255, 0, 0, 0.9);"></div>
+                                <code>rgba(255, 0, 0, 0.9);</code>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="codeblock">
+                                <div class="box" style="background-color: hsla(0, 100%, 50%, 0.1);"></div>
+                                <code>hsla(0, 100%, 50%, 0.1);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: hsla(0, 100%, 50%, 0.2);"></div>
+                                <code>hsla(0, 100%, 50%, 0.1);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: hsla(0, 100%, 50%, 0.3);"></div>
+                                <code>hsla(0, 100%, 50%, 0.1);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: hsla(0, 100%, 50%, 0.5);"></div>
+                                <code>hsla(0, 100%, 50%, 0.1);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: hsla(0, 100%, 50%, 0.7);"></div>
+                                <code>hsla(0, 100%, 50%, 0.1);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="box" style="background-color: hsla(0, 100%, 50%, 0.9);"></div>
+                                <code>hsla(0, 100%, 50%, 0.1);</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="snippet">
+                    <h2 class="code">border-color:</h2>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="codeblock">
+                                <div class="ex-border light" style="border-color: white; color: black;"></div>
+                                <code>white;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="ex-border dark" style="border-color: black"></div>
+                                <code>black;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="ex-border dark" style="border-color: gray"></div>
+                                <code>gray;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="ex-border dark" style="border-color: red"></div>
+                                <code>red;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="ex-border dark" style="border-color: green"></div>
+                                <code>green;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="ex-border dark" style="border-color: blue"></div>
+                                <code>blue;</code>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="codeblock">
+                                <div class="ex-border light" style="border-color: #fff; color: black;"></div>
+                                <code>#fff;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="ex-border dark" style="border-color: #000"></div>
+                                <code>#000;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="ex-border dark" style="border-color: #808080"></div>
+                                <code>#808080;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="ex-border dark" style="border-color: #f00"></div>
+                                <code>#f00;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="ex-border dark" style="border-color: #008000"></div>
+                                <code>#008000;</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="ex-border dark" style="border-color: #00f"></div>
+                                <code>#00f;</code>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="codeblock">
+                                <div class="ex-border light" style="border-color: rgb(255, 255, 255); color: black;"></div>
+                                <code>rgb(255, 255, 255);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="ex-border dark" style="border-color: rgb(0, 0, 0);"></div>
+                                <code>rgb(0, 0, 0);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="ex-border dark" style="border-color: rgb(128, 128, 128);"></div>
+                                <code>rgb(128, 128, 128);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="ex-border dark" style="border-color: rgb(255, 0, 0);"></div>
+                                <code>rgb(255, 0, 0);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="ex-border dark" style="border-color: rgb(0, 128, 0);"></div>
+                                <code>rgb(0, 128, 0);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="ex-border dark" style="border-color: rgb(0, 0, 255);"></div>
+                                <code>rgb(0, 0, 255);</code>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="codeblock">
+                                <div class="ex-border light" style="border-color: hsl(0, 0%, 100%); color: black;"></div>
+                                <code>hsl(0, 0%, 100%);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="ex-border dark" style="border-color: hsl(0, 0%, 0%);"></div>
+                                <code>hsl(0, 0%, 0%);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="ex-border dark" style="border-color: hsl(0, 0%, 50%);"></div>
+                                <code>hsl(0, 0%, 50%);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="ex-border dark" style="border-color: hsl(0, 100%, 50%);"></div>
+                                <code>hsl(0, 0%, 50%);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="ex-border dark" style="border-color: hsl(120, 100%, 25%);"></div>
+                                <code>hsl(120, 100%, 25%);</code>
+                            </div>
+                            <div class="codeblock">
+                                <div class="ex-border dark" style="border-color: hsl(240, 100%, 50%);"></div>
+                                <code>hsl(240, 100%, 50%);</code>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="snippet">
-                <h2 class="code">color:</h2>
-                <h3>Grayscale</h3>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: #000">A</div>
-                            <code>#000;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: #222">A</div>
-                            <code>#222;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: #555">A</div>
-                            <code>#555;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: #777">A</div>
-                            <code>#777;</code>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: #999">A</div>
-                            <code>#999;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: #bbb">A</div>
-                            <code>#bbb;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: #ccc">A</div>
-                            <code>#ccc;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box placeholder" style="color: #eee">A</div>
-                            <code>#eee;</code>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="snippet">
-                <h2 class="code">background-color:</h2>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="box" style="background-color: white; color: black;"></div>
-                            <code>white;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: black"></div>
-                            <code>black;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: gray"></div>
-                            <code>gray;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: red"></div>
-                            <code>red;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: green"></div>
-                            <code>green;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: blue"></div>
-                            <code>blue;</code>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="box" style="background-color: #fff; color: black;"></div>
-                            <code>#fff;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: #000"></div>
-                            <code>#000;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: #808080"></div>
-                            <code>#808080;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: #f00"></div>
-                            <code>#f00;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: #008000"></div>
-                            <code>#008000;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: #00f"></div>
-                            <code>#00f;</code>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="box" style="background-color: rgb(255, 255, 255); color: black;"></div>
-                            <code>rgb(255, 255, 255);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: rgb(0, 0, 0);"></div>
-                            <code>rgb(0, 0, 0);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: rgb(128, 128, 128);"></div>
-                            <code>rgb(128, 128, 128);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: rgb(255, 0, 0);"></div>
-                            <code>rgb(255, 0, 0);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: rgb(0, 128, 0);"></div>
-                            <code>rgb(0, 128, 0);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: rgb(0, 0, 255);"></div>
-                            <code>rgb(0, 0, 255);</code>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="box" style="background-color: hsl(0, 0%, 100%); color: black;"></div>
-                            <code>hsl(0, 0%, 100%);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: hsl(0, 0%, 0%);"></div>
-                            <code>hsl(0, 0%, 0%);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: hsl(0, 0%, 50%);"></div>
-                            <code>hsl(0, 0%, 50%);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: hsl(0, 100%, 50%);"></div>
-                            <code>hsl(0, 0%, 50%);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: hsl(120, 100%, 25%);"></div>
-                            <code>hsl(120, 100%, 25%);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: hsl(240, 100%, 50%);"></div>
-                            <code>hsl(240, 100%, 50%);</code>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="snippet">
-                <h2 class="code">background-color:</h2>
-                <h3>Grayscale</h3>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="box" style="background-color: #000"></div>
-                            <code>#000;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: #222"></div>
-                            <code>#222;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: #555"></div>
-                            <code>#555;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: #777"></div>
-                            <code>#777;</code>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="box" style="background-color: #999"></div>
-                            <code>#999;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: #bbb"></div>
-                            <code>#bbb;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: #ccc"></div>
-                            <code>#ccc;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: #eee"></div>
-                            <code>#eee;</code>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="snippet">
-                <h2 class="code">background-color:</h2>
-                <h3>Transparent colors</h3>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="box" style="background-color: rgba(255, 0, 0, 0.1);"></div>
-                            <code>rgba(255, 0, 0, 0.1);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: rgba(255, 0, 0, 0.2);"></div>
-                            <code>rgba(255, 0, 0, 0.2);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: rgba(255, 0, 0, 0.3);"></div>
-                            <code>rgba(255, 0, 0, 0.3);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: rgba(255, 0, 0, 0.5);"></div>
-                            <code>rgba(255, 0, 0, 0.5);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: rgba(255, 0, 0, 0.7);"></div>
-                            <code>rgba(255, 0, 0, 0.7);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: rgba(255, 0, 0, 0.9);"></div>
-                            <code>rgba(255, 0, 0, 0.9);</code>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="box" style="background-color: hsla(0, 100%, 50%, 0.1);"></div>
-                            <code>hsla(0, 100%, 50%, 0.1);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: hsla(0, 100%, 50%, 0.2);"></div>
-                            <code>hsla(0, 100%, 50%, 0.1);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: hsla(0, 100%, 50%, 0.3);"></div>
-                            <code>hsla(0, 100%, 50%, 0.1);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: hsla(0, 100%, 50%, 0.5);"></div>
-                            <code>hsla(0, 100%, 50%, 0.1);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: hsla(0, 100%, 50%, 0.7);"></div>
-                            <code>hsla(0, 100%, 50%, 0.1);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box" style="background-color: hsla(0, 100%, 50%, 0.9);"></div>
-                            <code>hsla(0, 100%, 50%, 0.1);</code>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="snippet">
-                <h2 class="code">border-color:</h2>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="ex-border light" style="border-color: white; color: black;"></div>
-                            <code>white;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-border dark" style="border-color: black"></div>
-                            <code>black;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-border dark" style="border-color: gray"></div>
-                            <code>gray;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-border dark" style="border-color: red"></div>
-                            <code>red;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-border dark" style="border-color: green"></div>
-                            <code>green;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-border dark" style="border-color: blue"></div>
-                            <code>blue;</code>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="ex-border light" style="border-color: #fff; color: black;"></div>
-                            <code>#fff;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-border dark" style="border-color: #000"></div>
-                            <code>#000;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-border dark" style="border-color: #808080"></div>
-                            <code>#808080;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-border dark" style="border-color: #f00"></div>
-                            <code>#f00;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-border dark" style="border-color: #008000"></div>
-                            <code>#008000;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-border dark" style="border-color: #00f"></div>
-                            <code>#00f;</code>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="ex-border light" style="border-color: rgb(255, 255, 255); color: black;"></div>
-                            <code>rgb(255, 255, 255);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-border dark" style="border-color: rgb(0, 0, 0);"></div>
-                            <code>rgb(0, 0, 0);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-border dark" style="border-color: rgb(128, 128, 128);"></div>
-                            <code>rgb(128, 128, 128);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-border dark" style="border-color: rgb(255, 0, 0);"></div>
-                            <code>rgb(255, 0, 0);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-border dark" style="border-color: rgb(0, 128, 0);"></div>
-                            <code>rgb(0, 128, 0);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-border dark" style="border-color: rgb(0, 0, 255);"></div>
-                            <code>rgb(0, 0, 255);</code>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="ex-border light" style="border-color: hsl(0, 0%, 100%); color: black;"></div>
-                            <code>hsl(0, 0%, 100%);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-border dark" style="border-color: hsl(0, 0%, 0%);"></div>
-                            <code>hsl(0, 0%, 0%);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-border dark" style="border-color: hsl(0, 0%, 50%);"></div>
-                            <code>hsl(0, 0%, 50%);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-border dark" style="border-color: hsl(0, 100%, 50%);"></div>
-                            <code>hsl(0, 0%, 50%);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-border dark" style="border-color: hsl(120, 100%, 25%);"></div>
-                            <code>hsl(120, 100%, 25%);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-border dark" style="border-color: hsl(240, 100%, 50%);"></div>
-                            <code>hsl(240, 100%, 50%);</code>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Section Colors -->
-        <!-- CSS -->
+            <!-- Section Colors -->
+            <!-- CSS -->
 </body>
 
 </html>

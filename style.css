@@ -139,11 +139,6 @@ code.subtle {
     margin: 0 0 0 10px;
 }
 
-.border {
-    display: inline-block;
-    border: 1px dashed #999;
-}
-
 .infill {
     display: inline-block;
     background-color: white;
@@ -241,6 +236,11 @@ code.subtle {
     background-color: lightgrey; 
 }
 
+.ex-margin {
+    display: inline-block;
+    border: 1px dashed #999;
+}
+
 .ex-padding {
     border: 1px dashed #999;
     margin: 0;
@@ -260,7 +260,7 @@ code.subtle {
     text-indent: 0;
 }
 
-.margin-box, .margin {
+.margin-box, .ex-margin {
     background-color: hsla(50, 100%, 50%, 0.20);
 }
 
@@ -475,7 +475,7 @@ div.columns {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 div.column {
@@ -594,20 +594,22 @@ a:link, a:visited {
     font-size: 22px;
 }
 
-.overflow-box {
+.ex-overflow-box {
+    display: inline-block;
+    border: 1px dashed #999;
     width: 250px;
     height: 80px;
 }
 
-.overflow-box.hidden {
+.ex-overflow-box.hidden {
     overflow: hidden;
 }
 
-.overflow-box.scroll {
+.ex-overflow-box.scroll {
     overflow: scroll;
 }
 
-.overflow-box.visible {
+.ex-overflow-box.visible {
     overflow: visible;
 }
 
@@ -652,8 +654,11 @@ a:link, a:visited {
 
 .table {
     display: table;
+}
+
+table {
     border-collapse: collapse;
-    background-color: white;
+    border-spacing: 0;
 }
 
 .ex-table {
@@ -662,46 +667,51 @@ a:link, a:visited {
     padding-bottom: 8px;
 }
 
-.center {
-    text-align: center;
+.ex-full-table {
+    background-color: initial;
+}
+
+.ex-full-table td {
+    border: 2px solid black;
+}
+
+.ex-full-table th {
+    width: 40%;
 }
 
 .row {
     display: table-row;
 }
 
-.cell {
-    display: table-cell;
-    padding: 8px;
+.center {
+    text-align: center;
 }
 
-.cell.empty {
+td {
+    padding: 8px;
     height: 1em;
     width: 1em;
+    text-align: center;
 }
 
 .row > .codeblock {
     display: table-cell;
 }
 
-.table.border, .row.border, .cell.border {
+table.border, tr.border, td.border {
     border: 2px solid black;
 }
 
-.table.column-borders .cell + .cell {
+table.column-borders td + td {
     border-left: 2px solid black;
 }
 
-.table.row-borders .row + .row {
+table.row-borders tr + tr {
     border-top: 2px solid black;
 }
 
-.table.all-borders .cell {
+table.all-borders td {
     border: 2px solid black;
-}
-
-.caption {
-    display: table-caption;
 }
 
 .ex-caption {
@@ -718,18 +728,8 @@ a:link, a:visited {
     background-color: #aaa;
 }
 
-.ex-vertical-align-table {
-    display: table;
-    margin: 16px 24px;
-    margin-bottom: 0;
-    text-align: center;
-    border-collapse: collapse;
-}
-
 .ex-vertical-align-cell {
-    background-color: white;
     border: 2px solid black;
-    display: table-cell;
     width: 4em;
     height: 5em;
     text-align: center;
@@ -748,11 +748,6 @@ a:link, a:visited {
     height: 4em;
     padding: 8px;
     margin: 0 8px;
-}
-
-span.ex-align-text {
-    /* border-top: 1px solid red; */
-    /* border-bottom: 1px solid red; */
 }
 
 span.base {
@@ -818,4 +813,22 @@ span.super {
     left: 0;
     justify-content: flex-start;
     top: 0;
+}
+
+.stack {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ex-full-table-elements {
+    display: flex;
+}
+
+.ex-full-table-elements > code {
+    padding-right: 36px;
+}
+
+.ex-full-table-elements th {
+    border: 2px solid black;
 }
