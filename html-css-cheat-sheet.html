@@ -1122,34 +1122,32 @@
                 </div>
                 <div class="snippet">
                     <h2 class="code">position: relative;</h2>
-                    <div class="columns">
-                        <div class="column">
-                            <div class="codeblock">
-                                <div class="box placeholder"></div>
-                                <div class="box relative" style="top: 10px;"></div>
-                                <div class="box placeholder"></div>
-                                <code class="nudge-top">top: 10px;</code>
-                            </div>
-                            <div class="codeblock">
-                                <div class="box placeholder"></div>
-                                <div class="box relative" style="left: 10px;"></div>
-                                <div class="box placeholder"></div>
-                                <code>left: 10px;</code>
-                            </div>
+                    <div class="row">
+                        <div class="codeblock">
+                            <div class="box placeholder"></div>
+                            <div class="box relative" style="top: 10px;"></div>
+                            <div class="box placeholder"></div>
+                            <code class="nudge-top">top: 10px;</code>
                         </div>
-                        <div class="column">
-                            <div class="codeblock nudge-top">
-                                <div class="box placeholder"></div>
-                                <div class="box relative" style="bottom: 10px;"></div>
-                                <div class="box placeholder"></div>
-                                <code>bottom: 10px;</code>
-                            </div>
-                            <div class="codeblock">
-                                <div class="box placeholder"></div>
-                                <div class="box relative" style="right: 10px;"></div>
-                                <div class="box placeholder"></div>
-                                <code>right: 10px;</code>
-                            </div>
+                        <div class="codeblock nudge-top">
+                            <div class="box placeholder"></div>
+                            <div class="box relative" style="bottom: 10px;"></div>
+                            <div class="box placeholder"></div>
+                            <code>bottom: 10px;</code>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="codeblock">
+                            <div class="box placeholder"></div>
+                            <div class="box relative" style="left: 10px;"></div>
+                            <div class="box placeholder"></div>
+                            <code>left: 10px;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box placeholder"></div>
+                            <div class="box relative" style="right: 10px;"></div>
+                            <div class="box placeholder"></div>
+                            <code>right: 10px;</code>
                         </div>
                     </div>
                 </div>
@@ -1288,12 +1286,10 @@
             <div class="snippet">
                 <h2 class="code">position: fixed;</h2>
                 <h3>Same rules as absolute positioning, but fixed relative to viewport.</h3>
-                <div class="requirement">
-                    <code>  viewport</code>
-                    <code>        &#8600;</code>
-                    <code></code>
-                    <iframe id="fixed-position-example" src="fixed-position-example.html"></iframe>
-                </div>
+                <code>      viewport</code>
+                <code>            &#8600;</code>
+                <code></code>
+                <iframe style="height:300px;" id="fixed-position-example" src="fixed-position-example.html"></iframe>
             </div>
             <div class="snippet">
                 <h2 class="code">float:</h2>
@@ -2133,7 +2129,7 @@
                         </td>
                     </tr>
                     <tr style="background-color: #eee;">
-                        <td class="cell" style="width: 24%">
+                        <td class="cell" style="width: 23%">
                             <div class="codeblock"><code>top;</code></div>
                         </td>
                         <td class="cell">

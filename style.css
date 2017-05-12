@@ -730,8 +730,7 @@ a:link, a:visited {
 }
 
 .cell > .codeblock {
-    padding-top: 0;
-    padding-bottom: 8px;
+    padding: 0 0 8px 0;
 }
 
 .ex-vertical-align-text {
