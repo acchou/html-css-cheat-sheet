@@ -2121,41 +2121,31 @@
             </div>
             <div class="snippet" id="vertical-align-cells">
                 <h2 class="code">vertical-align:</h2>
-                <h3>Works in <a href="#display:table-cell">display: table-cell</a>.</h3>
-                <h3>Also see vertical-align for <a href="#vertical-align-inline">inline elements</a>.</h3>
-                <div class="codeblock">
-                    <div class="ex-vertical-align-cell">
-                        <div class="row">
-                            <div class="cell" style="vertical-align: top;">abc</div>
-                        </div>
-                    </div>
-                    <code>top;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="ex-vertical-align-cell">
-                        <div class="row">
-                            <div class="cell" style="vertical-align: middle;">abc</div>
-                        </div>
-                    </div>
-                    <code>middle;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="ex-vertical-align-cell">
-                        <div class="row">
-                            <div class="cell" style="vertical-align: bottom;">abc</div>
-                        </div>
-                    </div>
-                    <code>bottom;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="ex-vertical-align-cell">
-                        <div class="row">
-                            <div class="cell" style="vertical-align: baseline;">abc</div>
-                            <div class="cell" style="font-size: 36px; vertical-align: baseline;">def</div>
-                        </div>
-                    </div>
-                    <code>baseline;</code>
-                </div>
+                <h3>Works in <a href="#display:table-cell">table cells</a>.</h3>
+                <h3>Also works for <a href="#vertical-align-inline">inline elements</a>.</h3>
+                <table class="ex-vertical-align-table" style="text-align: center;">
+                    <tr class="row" style="height: 4em; border-collapse: collapse;">
+                        <td class="ex-vertical-align-cell" style="vertical-align: top;">abc</td>
+                        <td class="ex-vertical-align-cell" style="vertical-align: middle;">abc</td>
+                        <td class="ex-vertical-align-cell" style="vertical-align: bottom;">abc</td>
+                        <td class="ex-vertical-align-cell" style="vertical-align: baseline; border-right: 0;">abc</td>
+                        <td class="ex-vertical-align-cell" style="font-size: 36px; vertical-align: baseline; border-left: 0;">def</td>
+                    </tr>
+                    <tr style="background-color: #eee;">
+                        <td class="cell">
+                            <div class="codeblock"><code>top;</code></div>
+                        </td>
+                        <td class="cell">
+                            <div class="codeblock"><code>middle;</code></div>
+                        </td>
+                        <td class="cell">
+                            <div class="codeblock"><code>bottom;</code></div>
+                        </td>
+                        <td class="cell" colspan="2">
+                            <div class="codeblock"><code>baseline;</code></div>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
 

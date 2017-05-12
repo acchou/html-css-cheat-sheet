@@ -710,15 +710,20 @@ a:link, a:visited {
     background-color: #aaa;
 }
 
+.ex-vertical-align-table {
+    padding: 16px 16px 0 16px;
+}
+
 .ex-vertical-align-cell {
     background-color: white;
     border-collapse: collapse;
-    display: table;
-    height: 5.5em;
+    display: table-cell;
+    height: 2.5em;
+    border: 2px solid black;
 }
 
-.ex-vertical-align-cell .cell {
-    border: 2px solid black;
+.cell > .codeblock {
+    padding-top: 0;
 }
 
 .ex-vertical-align-text {
