@@ -783,33 +783,33 @@ span.super {
     margin: 4px;
     justify-content: center;
     text-align: center;
-    /* padding: 0 8px; */
     color: white;
 }
 
 .ex-zindex {
     position: relative;
+    height: 6em;
+    border-bottom: 1px dashed #aaa;
 }
 
-.box-ex-zindex {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    height: 3em;
-    width: 3em;
-    background-color: red;
+.box-zindex {
+    align-items: flex-end;
+    background-color: #aaa;
+    bottom: 30px;
+    color: white;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 3em;
+    justify-content: flex-end;
+    left: 30px;
     padding: 4px;
+    position: relative;
+    width: 3em;
 }
 
-.box-ex-zindex-placeholder {
+.box-zindex.placeholder {
+    align-items: flex-start;
     font-size: 16px;
-    height: 3em;
-    width: 3em;
-    text-align: left;
-    vertical-align: top;
-    padding: 4px;
-    z-index: 1;
+    left: 0;
+    justify-content: flex-start;
+    top: 0;
 }

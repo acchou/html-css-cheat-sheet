@@ -1383,12 +1383,27 @@
             </div>
             <div class="snippet">
                 <h2 class="code">z-index:</h2>
+                <h3>For positioned elements only</h3>
                 <div class="codeblock">
                     <div class="ex-zindex">
-                        <div class="box box-ex-zindex-placeholder">0</div>
-                        <div class="box box-ex-zindex" style="z-index: 0;">0</div>
+                        <div class="box box-zindex placeholder" style="z-index: 20;">20</div>
+                        <div class="box box-zindex" style="z-index: 0;">0</div>
                     </div>
                     <code>0;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-zindex">
+                        <div class="box box-zindex placeholder" style="z-index: 20;">20</div>
+                        <div class="box box-zindex" style="z-index: 20;">20</div>
+                    </div>
+                    <code>20;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-zindex">
+                        <div class="box box-zindex placeholder" style="z-index: 20;">20</div>
+                        <div class="box box-zindex" style="z-index: 100;">100</div>
+                    </div>
+                    <code>100;</code>
                 </div>
             </div>
         </div>
