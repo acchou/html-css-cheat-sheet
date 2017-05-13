@@ -832,3 +832,21 @@ span.super {
 .ex-full-table-elements th {
     border: 2px solid black;
 }
+
+.ex-css-element > code {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.ex-css-element {
+    border-bottom: 1px dashed #999;
+    padding: 0 0 8px 8px;
+}
+
+.ex-css {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    justify-content: space-between;
+}
