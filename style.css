@@ -850,3 +850,12 @@ span.super {
     max-width: 500px;
     justify-content: space-between;
 }
+
+.ps-active:active {
+    color:red;
+}
+
+.ex-pseudo {
+    border-bottom: 1px dashed #999;
+    padding-bottom: 8px;
+}
