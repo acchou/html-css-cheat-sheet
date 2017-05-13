@@ -328,8 +328,8 @@
                         <code>element</code>
                     </div>
                     <div class="codeblock">
-                        <div class="ex-css-element"><code>&lt;element class="apple"&gt;</code></div>
-                        <code>.apple</code>
+                        <div class="ex-css-element"><code>&lt;element class="a"&gt;</code></div>
+                        <code>.a</code>
                     </div>
                     <div class="codeblock">
                         <div class="ex-css-element"><code>&lt;element id="id"&gt;</code></div>
@@ -383,16 +383,64 @@
             </div>
             <div class="snippet">
                 <h2>Attribute selectors</h2>
-                <div class="ex-css">
-                    <div class="codeblock">
-                        <div class="ex-css-element">
-                            <code>&lt;element attr=&quot;value&quot;&gt;</code>
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-css-element">
+                                <code>&lt;div attr=*&gt;</code>
+                            </div>
+                            <code>div[attr]</code>
                         </div>
-                        <code>element[attr="value"]</code>
+                        <div class="codeblock">
+                            <div class="ex-css-element">
+                                <code>&lt;div attr="value"&gt;</code>
+                            </div>
+                            <code>div[attr="value"]</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-css-element">
+                                <code>&lt;div attr="v1 v2"&gt;</code>
+                            </div>
+                            <code>div[attr~="v1"]</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-css-element">
+                                <code>&lt;div attr="value"&gt;</code>
+                                <code>&lt;div attr="value-*"&gt;</code>
+                            </div>
+                            <code>div[attr|="value"]</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-css-element">
+                                <code>&lt;div attr="value*"&gt;</code>
+                            </div>
+                            <code>div[attr^="value"]</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-css-element">
+                                <code>&lt;div attr="*value"&gt;</code>
+                            </div>
+                            <code>div[attr$="value"]</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-css-element">
+                                <code>&lt;div attr="*value*"&gt;</code>
+                            </div>
+                            <code>div[attr*="value"]</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-css-element">
+                                <code>&lt;div attr="VaLuE"&gt;</code>
+                            </div>
+                            <code>div[attr="value" i]</code>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- End section CSS basic structure -->
         <div class="section">
             <h2>Fonts</h2>
             <div class="snippet">

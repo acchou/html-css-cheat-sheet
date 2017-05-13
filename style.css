@@ -845,7 +845,7 @@ span.super {
 }
 
 .ex-css {
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     max-width: 500px;
     justify-content: space-between;
