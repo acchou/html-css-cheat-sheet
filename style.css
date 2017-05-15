@@ -852,7 +852,7 @@ span.super {
 }
 
 .ps-active:active {
-    color:red;
+    background-color:red;
 }
 
 .ex-pseudo {
