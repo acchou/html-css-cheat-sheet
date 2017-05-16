@@ -321,7 +321,7 @@
     <div class="section">
         <h1>CSS</h1>
         <div class="section">
-            <h2>Basic structure</h2>
+            <h2>Basic structure (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">reference</a>)</h2>
             <div class="snippet">
                 <h2>Selectors</h2>
                 <div class="ex-css">
@@ -446,13 +446,35 @@
 
         <div class="section">
             <h2>Pseudo</h2>
-            <div class="snippet" id="ps-active">
+            <div class="snippet">
                 <h2>Pseudo classes</h2>
                 <div class="codeblock">
                     <div class="ex-pseudo">
-                        <a class="ps-active" href="#ps-active">I'm red when clicked</a>
+                        <a class="ps-active">I'm red when clicked</a>
                     </div>
                     <code>a:active { background-color: red }</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-pseudo">
+                        <a class="ps-hover">I'm red when hovered</a>
+                    </div>
+                    <code>a:hover { background-color: red }</code>
+                </div>
+                <div class="codeblock" id="ps-link" id="ps-link2" id="ps-link3" id="ps-link4" id="ps-link5">
+                    <div class="ex-pseudo">
+                        <a class="ps-link" href="#ps-link">I'm red before clicking, gray after.</a><br>
+                        <a class="ps-link" href="#ps-link2">I'm red before clicking, gray after.</a><br>
+                        <a class="ps-link" href="#ps-link3">I'm red before clicking, gray after.</a><br>
+                    </div>
+                    <code>a:link { background-color: red }</code>
+                    <code>a:visited { background-color: #ccc }</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-pseudo">
+                        <a href="#other">Click here to jump to target</a><br>
+                        <a class="ps-target" id="other">I'm red because I'm a target</a>
+                    </div>
+                    <code>a:target { background-color: red }</code>
                 </div>
             </div>
         </div>

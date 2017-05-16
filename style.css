@@ -855,6 +855,22 @@ span.super {
     background-color:red;
 }
 
+.ps-hover:hover {
+    background-color: red;
+}
+
+.ps-link:link {
+    background-color: red;
+}
+
+.ps-link:visited {
+    background-color: #ccc;
+}
+
+.ps-target:target {
+    background-color: red;
+}
+
 .ex-pseudo {
     border-bottom: 1px dashed #999;
     padding-bottom: 8px;
