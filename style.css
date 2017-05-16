@@ -851,19 +851,31 @@ span.super {
     justify-content: space-between;
 }
 
-.ps-active:active {
-    background-color:red;
-}
-
-.ps-hover:hover {
-    background-color: red;
-}
-
 .ps-link:link {
-    background-color: red;
+    background-color: yellow;
 }
 
 .ps-link:visited {
+    background-color: #ccc;
+}
+
+.ps-link:hover {
+    background-color: green;
+}
+
+.ps-link:active {
+    background-color:red;
+}
+
+.ps-active:active {
+    background-color: red;
+}
+
+.ps-hover:hover {
+    background-color: green;
+}
+
+.ps-target, .ps-active, .ps-hover, .ps-plain {
     background-color: #ccc;
 }
 
@@ -874,4 +886,43 @@ span.super {
 .ex-pseudo {
     border-bottom: 1px dashed #999;
     padding-bottom: 8px;
+}
+
+.ex-pseudo > a {
+    display: block;
+    padding: 8px;
+}
+
+.ps-after::after {
+    content: " The added content.";
+    color: green;
+}
+
+.ps-before::before {
+    content: " The added content.";
+    color: green;
+}
+
+.underline {
+    position: relative;
+}
+
+.underline::after {
+    position: absolute;
+    content: "";
+    display: block;
+    border-top: 1px solid green;
+    width: 70%;
+}
+
+.overline {
+    position: relative;
+}
+
+.overline::before {
+    position: absolute;
+    content: "";
+    display: block;
+    border-bottom: 1px solid green;
+    width: 70%;
 }

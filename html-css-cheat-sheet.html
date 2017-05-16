@@ -448,6 +448,18 @@
             <h2>Pseudo</h2>
             <div class="snippet">
                 <h2>Pseudo classes</h2>
+                <h3>Ordering matters for link, visited, hover, active.</h3>
+                <div class="codeblock">
+                    <div class="ex-pseudo">
+                        <a class="ps-link" id="self-link1" href="#self-link1">link one</a>
+                        <a class="ps-link" id="self-link2" href="#self-link2">link two</a>
+                        <a class="ps-link" id="self-link3" href="#self-link3">link three</a>
+                    </div>
+                    <code>a:link { background-color: yellow }</code>
+                    <code>a:visited { background-color: #ccc }</code>
+                    <code>a:hover { background-color: green }</code>
+                    <code>a:active { background-color: red }</code>
+                </div>
                 <div class="codeblock">
                     <div class="ex-pseudo">
                         <a class="ps-active">I'm red when clicked</a>
@@ -456,25 +468,74 @@
                 </div>
                 <div class="codeblock">
                     <div class="ex-pseudo">
-                        <a class="ps-hover">I'm red when hovered</a>
+                        <a class="ps-hover">I'm green when hovering</a>
                     </div>
-                    <code>a:hover { background-color: red }</code>
-                </div>
-                <div class="codeblock" id="ps-link" id="ps-link2" id="ps-link3" id="ps-link4" id="ps-link5">
-                    <div class="ex-pseudo">
-                        <a class="ps-link" href="#ps-link">I'm red before clicking, gray after.</a><br>
-                        <a class="ps-link" href="#ps-link2">I'm red before clicking, gray after.</a><br>
-                        <a class="ps-link" href="#ps-link3">I'm red before clicking, gray after.</a><br>
-                    </div>
-                    <code>a:link { background-color: red }</code>
-                    <code>a:visited { background-color: #ccc }</code>
+                    <code>a:hover { background-color: green }</code>
                 </div>
                 <div class="codeblock">
                     <div class="ex-pseudo">
-                        <a href="#other">Click here to jump to target</a><br>
-                        <a class="ps-target" id="other">I'm red because I'm a target</a>
+                        <a class="ps-target" id="other">I'm red when I'm the active target.</a>
+                        <a class="ps-plain" href="#other">This links to the target above.</a>
+                        <a class="ps-plain" href="#nonexistent">This links to a nonexistent target.</a>
                     </div>
                     <code>a:target { background-color: red }</code>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2>Pseudo elements</h2>
+                <div class="row">
+                    <div class="codeblock">
+                        <div class="ex-pseudo">
+                            <a class="ps-after">The element content.</a>
+                        </div>
+                        <code>a::after { </code>
+                        <code>  content: " The added content.";</code>
+                        <code>  color: green;</code>
+                        <code>}</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-pseudo">
+                            <a class="ps-before">The element content.</a>
+                        </div>
+                        <code>a::before { </code>
+                        <code>  content: " The added content.";</code>
+                        <code>  color: green;</code>
+                        <code>}</code>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="codeblock">
+                        <div class="ex-pseudo">
+                            <a class="underline">The element content.</a>
+                        </div>
+                        <code>.underline {</code>
+                        <code>    position: relative;</code>
+                        <code>}</code>
+                        <code></code>
+                        <code>.underline::after {</code>
+                        <code>    position: absolute;</code>
+                        <code>    content: "";</code>
+                        <code>    display: block;</code>
+                        <code>    border-top: 1px solid green;</code>
+                        <code>    width: 70%;</code>
+                        <code>}</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-pseudo">
+                            <a class="overline">The element content.</a>
+                        </div>
+                        <code>.overline {</code>
+                        <code>    position: relative;</code>
+                        <code>}</code>
+                        <code></code>
+                        <code>.overline::before {</code>
+                        <code>    position: absolute;</code>
+                        <code>    content: "";</code>
+                        <code>    display: block;</code>
+                        <code>    border-bottom: 1px solid green;</code>
+                        <code>    width: 70%;</code>
+                        <code>}</code>
+                    </div>
                 </div>
             </div>
         </div>
