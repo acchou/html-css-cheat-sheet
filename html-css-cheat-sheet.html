@@ -69,6 +69,7 @@
             </div>
             <div class="snippet">
                 <h2>Division</h2>
+                <h3>Block-level generic grouping element</h3>
                 <div class="codeblock">
                     <code>&lt;div class=&quot;kind&quot;&gt;</code>
                     <code>    content</code>
@@ -76,7 +77,17 @@
                 </div>
             </div>
             <div class="snippet">
+                <h2>Span</h2>
+                <h3>Inline generic grouping element</h3>
+                <div class="codeblock">
+                    <code>&lt;span class=&quot;kind&quot;&gt;</code>
+                    <code>    content</code>
+                    <code>&lt;/span&gt;</code>
+                </div>
+            </div>
+            <div class="snippet">
                 <h2>Article</h2>
+                <h3>Self-contained unit of content</h3>
                 <div class="codeblock">
                     <code>&lt;article&gt;</code>
                     <code>  &lt;h2&gt;Header&lt;/h2&gt;</code>
@@ -85,18 +96,108 @@
                 </div>
             </div>
             <div class="snippet">
-                <h2>Common elements</h2>
+                <h2>Horizontal rule</h2>
                 <div class="codeblock">
                     <div class="ex-element">
-                        This is <strong>strong</strong>.
+                        <hr>
                     </div>
-                    <code>&lt;strong&gt;strong&lt;/strong&gt;</code>
+                    <code>&lt;hr&gt;</code>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2>Text</h2>
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <strong>strong</strong>
+                            </div>
+                            <code>&lt;strong&gt;strong&lt;/strong&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <em>emphasized</em>
+                            </div>
+                            <code>&lt;em&gt;emphasized&lt;/em&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <s>strikethrough</s>
+                            </div>
+                            <code>&lt;s&gt;strikethrough&lt;/s&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <time datetime="2017-05-18T15:31">May 18</time>
+                            </div>
+                            <code>&lt;time datetime=&quot;2017-05-18T13:30&quot;&gt;<br>&nbsp;&nbsp;May 18<br>&lt;/time&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <abbr title="abbreviation">abbr</abbr>
+                            </div>
+                            <code>&lt;abbr title=&quot;abbreviation&quot;&gt;abbr&lt;/abbr&gt;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                x<sup>sup</sup>
+                            </div>
+                            <code>&lt;sup&gt;sup&lt;/sup&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                x<sub>sub</sub>
+                            </div>
+                            <code>&lt;sub&gt;sub&lt;/sub&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <q>inline quote</q>
+                            </div>
+                            <code>&lt;q&gt;inline quote&lt;/q&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <blockquote>block quote</blockquote>
+                            </div>
+                            <code>&lt;blockquote&gt;block quote&lt;/blockquote&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <dfn>term</dfn> definition
+                            </div>
+                            <code>&lt;dfn&gt;term&lt;/dfn&gt;</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2>Code</h2>
+                <div class="codeblock">
+                    <div class="ex-element">
+                        <code>code()</code>
+                    </div>
+                    <code>&lt;code&gt;code()&lt;/code&gt;</code>
                 </div>
                 <div class="codeblock">
                     <div class="ex-element">
-                        This is <em>emphasized</em>.
+                        <samp>sample output</samp>
                     </div>
-                    <code>&lt;em&gt;emphasized&lt;/em&gt;</code>
+                    <code>&lt;samp&gt;sample output&lt;/samp&gt;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-element">
+                        Press <kbd>Ctrl</kbd>+<kbd>S</kbd>
+                    </div>
+                    <code>&lt;kbd&gt;Ctrl&lt;/kbd&gt;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-element">
+                        <var>variable</var>
+                    </div>
+                    <code>&lt;var&gt;variable&lt;/var&gt;</code>
                 </div>
             </div>
             <div class="snippet">
@@ -118,6 +219,115 @@
                     <code>        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Third&lt;/a&gt;&lt;/li&gt;</code>
                     <code>    &lt;/ul&gt;</code>
                     <code>&lt;/nav&gt;</code>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2>Input types</h2>
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <button>button</button>
+                            </div>
+                            <code>&lt;button&gt;button&lt;/button&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <input type="button" value="ok">
+                            </div>
+                            <code>&lt;input type=&quot;button&quot; value=&quot;ok&quot;&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="checkbox" checked></div>
+                            <code>&lt;input type=&quot;checkbox&quot;&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="color"></div>
+                            <code>&lt;input type=&quot;color&quot;&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="date"></div>
+                            <code>&lt;input type=&quot;date&quot;&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="datetime-local"></div>
+                            <code>&lt;input type=&quot;datetime-local&quot;&gt;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="email" placeholder="andy@example.com"></div>
+                            <code>&lt;input type=&quot;email&quot;&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="file"></div>
+                            <code>&lt;input type=&quot;file&quot;&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="month"></div>
+                            <code>&lt;input type=&quot;month&quot;&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="number" placeholder="123"></div>
+                            <code>&lt;input type=&quot;number&quot;&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="password" value="password"></div>
+                            <code>&lt;input type=&quot;password&quot;&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="hidden"></div>
+                            <code>&lt;input type=&quot;hidden&quot;&gt;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="radio" checked></div>
+                            <code>&lt;input type=&quot;radio&quot;&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="range" value="75"></div>
+                            <code>&lt;input type=&quot;range&quot;&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="reset"></div>
+                            <code>&lt;input type=&quot;reset&quot;&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="search" placeholder="search term"></div>
+                            <code>&lt;input type=&quot;search&quot;&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="submit"></div>
+                            <code>&lt;input type=&quot;submit&quot;&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="tel" placeholder="415-123-4567"></div>
+                            <code>&lt;input type=&quot;tel&quot;&gt;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="text" placeholder="input"></div>
+                            <code>&lt;input type=&quot;text&quot;&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="time"></div>
+                            <code>&lt;input type=&quot;time&quot;&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="url" placeholder="https://www.google.com"></div>
+                            <code>&lt;input type=&quot;url&quot;&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="week"></div>
+                            <code>&lt;input type=&quot;week&quot;&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="image" src="https://www.w3schools.com/html/html5.gif" width="50px"></div>
+                            <code>&lt;input type=&quot;image&quot;&gt;</code>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -179,6 +389,21 @@
                     <code>    &lt;li&gt;Item 1&lt;/li&gt;</code>
                     <code>    &lt;li&gt;Item 2&lt;/li&gt;</code>
                     <code>&lt;/ol&gt;</code>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2>
+                    <dl>
+                        <dt>Term</dt>
+                        <dd>Description</dd>
+                    </dl>
+                </h2>
+                <h3>Description list</h3>
+                <div class="codeblock">
+                    <code>&lt;dl&gt;</code>
+                    <code>    &lt;dt&gt;Term&lt;/dt&gt;</code>
+                    <code>    &lt;dd&gt;Definition&lt;/dd&gt;</code>
+                    <code>&lt;/dl&gt;</code>
                 </div>
             </div>
         </div>
