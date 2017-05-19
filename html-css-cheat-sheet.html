@@ -175,6 +175,12 @@
                             </div>
                             <code>&lt;mark&gt;mark&lt;/mark&gt;</code>
                         </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <u>underline</u>
+                            </div>
+                            <code>&lt;u&gt;underline&lt;/u&gt;</code>
+                        </div>
                     </div>
                     <div class="column">
                         <div class="codeblock">
@@ -319,13 +325,19 @@
                         </div>
                         <div class="codeblock">
                             <div class="ex-element">
-                                <select name="select">
-                            <option value="value1">Value 1</option> 
-                            <option value="value2">Value 2</option>
-                            <option value="value3">Value 3</option>
-                        </select>
+                                <meter value="0.6">
                             </div>
-                            <code>&lt;select name=&quot;select&quot;&gt;</code>
+                            <code>&lt;meter value="0.6"&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <select>
+                                    <option>Value 1</option> 
+                                    <option>Value 2</option>
+                                    <option>Value 3</option>
+                                </select>
+                            </div>
+                            <code>&lt;select&gt;</code>
                             <code>  &lt;option&gt;Value 1&lt;/option&gt; </code>
                             <code>  &lt;option&gt;Value 2&lt;/option&gt;</code>
                             <code>  &lt;option&gt;Value 3&lt;/option&gt;</code>
@@ -333,23 +345,53 @@
                         </div>
                         <div class="codeblock">
                             <div class="ex-element">
-                                <meter value="0.6">
+                                <select>
+                                    <optgroup label="Group 1">
+                                        <option>Value 1</option>
+                                        <option>Value 2</option>
+                                    </optgroup>
+                                    <optgroup label="Group 2">
+                                        <option>Value 3</option>
+                                        <option>Value 4</option>
+                                    </optgroup>
+                                </select>
                             </div>
-                            <code>&lt;meter value="0.6"&gt;</code>
+                            <code>&lt;select&gt;</code>
+                            <code>  &lt;optgroup label=&quot;Group 1&quot;&gt;</code>
+                            <code>    &lt;option&gt;Value 1&lt;/option&gt;</code>
+                            <code>    &lt;option&gt;Value 2&lt;/option&gt;</code>
+                            <code>  &lt;/optgroup&gt;</code>
+                            <code>  &lt;optgroup label=&quot;Group 2&quot;&gt;</code>
+                            <code>    &lt;option&gt;Value 3&lt;/option&gt;</code>
+                            <code>    &lt;option&gt;Value 4&lt;/option&gt;</code>
+                            <code>  &lt;/optgroup&gt;</code>
+                            <code>&lt;/select&gt;</code>
                         </div>
+                    </div>
+                    <div class="column">
                         <div class="codeblock">
                             <div class="ex-element">
                                 <progress value="0.6">
                             </div>
                             <code>&lt;progress value="0.6"&gt;</code>
                         </div>
-                    </div>
-                    <div class="column">
                         <div class="codeblock">
                             <div class="ex-element">
                                 <textarea rows="3" cols="30">content</textarea>
                             </div>
                             <code>&lt;textarea&gt;content&lt;/textarea&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <details>
+                                    <summary>Summary</summary>
+                                    <p>The gory details.</p>
+                                </details>
+                            </div>
+                            <code>&lt;details&gt;</code>
+                            <code>  &lt;summary&gt;Summary&lt;/summary&gt;</code>
+                            <code>  &lt;p&gt;The gory details.&lt;/p&gt;</code>
+                            <code>&lt;/details&gt;</code>
                         </div>
                         <div class="codeblock">
                             <div class="ex-element">
@@ -362,8 +404,8 @@
                         <div class="codeblock">
                             <div class="ex-element">
                                 <label>label
-                            <input placeholder="labelled ui element">
-                        </label>
+                                <input placeholder="labelled ui element">
+                                </label>
                             </div>
                             <code>&lt;label for="name"&gt;label&lt;/label&gt;</code>
                             <code>&lt;input id="name"&gt;</code>
@@ -3045,23 +3087,40 @@
             </div>
             <div class="snippet">
                 <h2 class="code">border-width:</h2>
-                <div class="ex-border-width-items">
-                    <div class="codeblock">
-                        <div class="box ex-border-width" style="border-width: 1px;"></div>
-                        <code>1px;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="box ex-border-width" style="border-width: 2px;"></div>
-                        <code>2px;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="box ex-border-width" style="border-width: 3px;"></div>
-                        <code>3px;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="box ex-border-width" style="border-width: 4px;"></div>
-                        <code>4px;</code>
-                    </div>
+                <div class="codeblock">
+                    <div class="box bigger ex-border-width" style="border-width: 1px;"></div>
+                    <code>1px;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="box bigger ex-border-width" style="border-width: 2px;"></div>
+                    <code>2px;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="box bigger ex-border-width" style="border-width: 3px;"></div>
+                    <code>3px;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="box bigger ex-border-width" style="border-width: 4px;"></div>
+                    <code>4px;</code>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2 class="code">border-radius:</h2>
+                <div class="codeblock">
+                    <div class="box bigger ex-border-radius" style="border-radius: 4px;"></div>
+                    <code>4px;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="box bigger ex-border-radius" style="border-radius: 8px;"></div>
+                    <code>8px;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="box bigger ex-border-radius" style="border-radius: 0px 16px;"></div>
+                    <code>0px 16px;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="box bigger ex-border-radius" style="border-radius: 100%;"></div>
+                    <code>100%;</code>
                 </div>
             </div>
         </section>
