@@ -54,14 +54,14 @@ h1, h2, h3, h4, h5, h6 {
     padding: 6px 12px;
 }
 
-.section > h2, .snippet > h2 {
+section > h2, .snippet > h2 {
     background-color: cornflowerblue;
     color: white;
     font-size: 12pt;
     font-weight: normal;
 }
 
-.section > h3, .snippet > h3, .requirement > h3 {
+section > h3, .snippet > h3, .requirement > h3 {
     font-size: 11pt;
     font-weight: normal;
     color: #777;
@@ -89,7 +89,7 @@ code {
     margin: 16px 0;
 }
 
-#fixed-position-example {
+#css-positioning-fixed {
     width: 500px;
     border: 4px double black;
 }
@@ -133,7 +133,7 @@ code.subtle {
     padding: 4px;
 }
 
-.section {
+section {
     display: block;
     padding: 0 0;
     margin: 0 0 0 10px;
@@ -818,7 +818,7 @@ span.super {
 .stack {
     display: inline-flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 .ex-full-table-elements {
