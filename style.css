@@ -926,3 +926,16 @@ span.super {
     border-bottom: 1px solid green;
     width: 70%;
 }
+
+/* Rules to show only hovered code blocks
+
+.codeblock > code {
+    display: none;
+}
+.codeblock > .ex-element {
+    border-bottom: none;
+}
+
+.codeblock:hover > code {
+    display: block;
+} */

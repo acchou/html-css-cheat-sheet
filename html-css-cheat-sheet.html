@@ -282,7 +282,7 @@
                     </div>
                     <code>&lt;form action=&quot;&quot; method=&quot;get&quot;&gt;</code>
                     <code>  &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;</code>
-                    <code>  &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot;&gt;</code>
+                    <code>  &lt;input id=&quot;name&quot; name=&quot;name&quot;&gt;</code>
                     <code>  &lt;input type=&quot;submit&quot; value=&quot;Save&quot;&gt;</code>
                     <code>&lt;/form&gt;</code>
                 </div>
@@ -291,71 +291,84 @@
                         <form action="" method="post">
                             <fieldset>
                                 <legend>Title</legend>
-                                <input type="radio" id="radio">
-                                <label for="radio">Click me</label>
+                                <label for="fid">Label:</label>
+                                <input type="text" id="fid" name="field">
+                                <input type="submit" value="Save">
                             </fieldset>
                         </form>
                     </div>
+                    <code>&lt;form action=&quot;&quot; method=&quot;post&quot;&gt;</code>
+                    <code>  &lt;fieldset&gt;</code>
+                    <code>    &lt;legend&gt;Title&lt;/legend&gt;</code>
+                    <code>    &lt;label for=&quot;fid&quot;&gt;Label:&lt;/label&gt;</code>
+                    <code>    &lt;input id=&quot;fid&quot; name=&quot;field&quot;&gt;</code>
+                    <code>    &lt;input type=&quot;submit&quot; value=&quot;Save&quot;&gt;</code>
+                    <code>  &lt;/fieldset&gt;</code>
+                    <code>&lt;/form&gt;</code>
                 </div>
             </div>
             <div class="snippet">
                 <h2>UI elements</h2>
-                <div class="codeblock">
-                    <div class="ex-element">
-                        <button>button</button>
-                    </div>
-                    <code>&lt;button&gt;button&lt;/button&gt;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="ex-element">
-                        <select name="select">
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <button>button</button>
+                            </div>
+                            <code>&lt;button&gt;button&lt;/button&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <select name="select">
                             <option value="value1">Value 1</option> 
                             <option value="value2">Value 2</option>
                             <option value="value3">Value 3</option>
                         </select>
+                            </div>
+                            <code>&lt;select name=&quot;select&quot;&gt;</code>
+                            <code>  &lt;option&gt;Value 1&lt;/option&gt; </code>
+                            <code>  &lt;option&gt;Value 2&lt;/option&gt;</code>
+                            <code>  &lt;option&gt;Value 3&lt;/option&gt;</code>
+                            <code>&lt;/select&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <meter value="0.6">
+                            </div>
+                            <code>&lt;meter value="0.6"&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <progress value="0.6">
+                            </div>
+                            <code>&lt;progress value="0.6"&gt;</code>
+                        </div>
                     </div>
-                    <code>&lt;select name=&quot;select&quot;&gt;</code>
-                    <code>  &lt;option value=&quot;1&quot;&gt;Value 1&lt;/option&gt; </code>
-                    <code>  &lt;option value=&quot;2&quot;&gt;Value 2&lt;/option&gt;</code>
-                    <code>  &lt;option value=&quot;3&quot;&gt;Value 3&lt;/option&gt;</code>
-                    <code>&lt;/select&gt;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="ex-element">
-                        <meter value="0.6">
-                    </div>
-                    <code>&lt;meter value="0.6"&gt;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="ex-element">
-                        <progress value="0.6">
-                    </div>
-                    <code>&lt;progress value="0.6"&gt;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="ex-element">
-                        <textarea>content</textarea>
-                    </div>
-                    <code>&lt;textarea&gt;content&lt;/textarea&gt;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="ex-element">
-                        <label>label
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <textarea rows="3" cols="30">content</textarea>
+                            </div>
+                            <code>&lt;textarea&gt;content&lt;/textarea&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <label>label
                             <input placeholder="labelled ui element">
                         </label>
-                    </div>
-                    <code>&lt;label&gt;label</code>
-                    <code>  &lt;input&gt;</code>
-                    <code>&lt;/label&gt;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="ex-element">
-                        <label>label
+                            </div>
+                            <code>&lt;label&gt;label &lt;input&gt;&lt;/label&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <label>label
                             <input placeholder="labelled ui element">
                         </label>
+                            </div>
+                            <code>&lt;label for="name"&gt;label&lt;/label&gt;</code>
+                            <code>&lt;input id="name"&gt;</code>
+                        </div>
                     </div>
-                    <code>&lt;label for="name"&gt;label&lt;/label&gt;</code>
-                    <code>&lt;input id="name"&gt;</code>
                 </div>
             </div>
             <div class="snippet">
