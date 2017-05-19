@@ -98,14 +98,35 @@
                     </div>
                 </div>
             </div>
+            <div class="stack">
+                <div class="snippet">
+                    <h2>Article</h2>
+                    <h3>A self-contained unit of content</h3>
+                    <div class="codeblock">
+                        <code>&lt;article&gt;</code>
+                        <code>  &lt;h2&gt;Header&lt;/h2&gt;</code>
+                        <code>  content</code>
+                        <code>&lt;/article&gt;</code>
+                    </div>
+                </div>
+                <div class="snippet">
+                    <h2>Section</h2>
+                    <h3>A unit of content</h3>
+                    <div class="codeblock">
+                        <code>&lt;section&gt;</code>
+                        <code>  &lt;h2&gt;Header&lt;/h2&gt;</code>
+                        <code>  content</code>
+                        <code>&lt;/section&gt;</code>
+                    </div>
+                </div>
+            </div>
             <div class="snippet">
-                <h2>Article</h2>
-                <h3>Self-contained unit of content</h3>
+                <h2>Figure</h2>
                 <div class="codeblock">
-                    <code>&lt;article&gt;</code>
-                    <code>  &lt;h2&gt;Header&lt;/h2&gt;</code>
+                    <code>&lt;figure&gt;</code>
                     <code>  content</code>
-                    <code>&lt;/article&gt;</code>
+                    <code>  &lt;figcaption&gt;Caption&lt;/figcaption&gt;</code>
+                    <code>&lt;/figure&gt;</code>
                 </div>
             </div>
             <div class="snippet">
@@ -126,6 +147,12 @@
                         </div>
                         <div class="codeblock">
                             <div class="ex-element">
+                                <i>semantic</i>
+                            </div>
+                            <code>&lt;i&gt;semantic&lt;/i&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
                                 <s>strikethrough</s>
                             </div>
                             <code>&lt;s&gt;strikethrough&lt;/s&gt;</code>
@@ -141,6 +168,12 @@
                                 <abbr title="abbreviation">abbr</abbr>
                             </div>
                             <code>&lt;abbr title=&quot;abbreviation&quot;&gt;abbr&lt;/abbr&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <mark>mark</mark>
+                            </div>
+                            <code>&lt;mark&gt;mark&lt;/mark&gt;</code>
                         </div>
                     </div>
                     <div class="column">
@@ -173,6 +206,18 @@
                                 <dfn>term</dfn> definition
                             </div>
                             <code>&lt;dfn&gt;term&lt;/dfn&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <cite>citation</cite>
+                            </div>
+                            <code>&lt;cite&gt;citation&lt;/cite&gt;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-element">
+                                <data value="42">data</data>
+                            </div>
+                            <code>&lt;data value="42"&gt;data&lt;/data&gt;</code>
                         </div>
                     </div>
                 </div>
@@ -226,15 +271,65 @@
                 </div>
             </div>
             <div class="snippet">
+                <h2>Forms</h2>
+                <div class="codeblock">
+                    <div class="ex-form">
+                        <form action="" method="get">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name">
+                            <input type="submit" value="Save">
+                        </form>
+                    </div>
+                    <code>&lt;form action=&quot;&quot; method=&quot;get&quot;&gt;</code>
+                    <code>  &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;</code>
+                    <code>  &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot;&gt;</code>
+                    <code>  &lt;input type=&quot;submit&quot; value=&quot;Save&quot;&gt;</code>
+                    <code>&lt;/form&gt;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-form">
+                        <form action="" method="post">
+                            <fieldset>
+                                <legend>Title</legend>
+                                <input type="radio" id="radio">
+                                <label for="radio">Click me</label>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2>UI elements</h2>
+                <div class="codeblock">
+                    <div class="ex-element">
+                        <button>button</button>
+                    </div>
+                    <code>&lt;button&gt;button&lt;/button&gt;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-element">
+                        <label>label
+                            <input placeholder="labelled ui element">
+                        </label>
+                    </div>
+                    <code>&lt;label&gt;label</code>
+                    <code>  &lt;input&gt;</code>
+                    <code>&lt;/label&gt;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-element">
+                        <label>label
+                            <input placeholder="labelled ui element">
+                        </label>
+                    </div>
+                    <code>&lt;label for="name"&gt;label&lt;/label&gt;</code>
+                    <code>&lt;input id="name"&gt;</code>
+                </div>
+            </div>
+            <div class="snippet">
                 <h2>Input types</h2>
                 <div class="columns">
                     <div class="column">
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <button>button</button>
-                            </div>
-                            <code>&lt;button&gt;button&lt;/button&gt;</code>
-                        </div>
                         <div class="codeblock">
                             <div class="ex-element">
                                 <input type="button" value="ok">
@@ -257,12 +352,12 @@
                             <div class="ex-element"><input type="datetime-local"></div>
                             <code>&lt;input type=&quot;datetime-local&quot;&gt;</code>
                         </div>
-                    </div>
-                    <div class="column">
                         <div class="codeblock">
                             <div class="ex-element"><input type="email" placeholder="andy@example.com"></div>
                             <code>&lt;input type=&quot;email&quot;&gt;</code>
                         </div>
+                    </div>
+                    <div class="column">
                         <div class="codeblock">
                             <div class="ex-element"><input type="file"></div>
                             <code>&lt;input type=&quot;file&quot;&gt;</code>
@@ -280,12 +375,6 @@
                             <code>&lt;input type=&quot;password&quot;&gt;</code>
                         </div>
                         <div class="codeblock">
-                            <div class="ex-element"><input type="hidden"></div>
-                            <code>&lt;input type=&quot;hidden&quot;&gt;</code>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="codeblock">
                             <div class="ex-element"><input type="radio" checked></div>
                             <code>&lt;input type=&quot;radio&quot;&gt;</code>
                         </div>
@@ -293,6 +382,8 @@
                             <div class="ex-element"><input type="range" value="75"></div>
                             <code>&lt;input type=&quot;range&quot;&gt;</code>
                         </div>
+                    </div>
+                    <div class="column">
                         <div class="codeblock">
                             <div class="ex-element"><input type="reset"></div>
                             <code>&lt;input type=&quot;reset&quot;&gt;</code>
@@ -309,12 +400,16 @@
                             <div class="ex-element"><input type="tel" placeholder="415-123-4567"></div>
                             <code>&lt;input type=&quot;tel&quot;&gt;</code>
                         </div>
-                    </div>
-                    <div class="column">
                         <div class="codeblock">
                             <div class="ex-element"><input type="text" placeholder="input"></div>
                             <code>&lt;input type=&quot;text&quot;&gt;</code>
                         </div>
+                        <div class="codeblock">
+                            <div class="ex-element"><input type="hidden"></div>
+                            <code>&lt;input type=&quot;hidden&quot;&gt;</code>
+                        </div>
+                    </div>
+                    <div class="column">
                         <div class="codeblock">
                             <div class="ex-element"><input type="time"></div>
                             <code>&lt;input type=&quot;time&quot;&gt;</code>

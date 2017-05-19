@@ -661,7 +661,7 @@ table {
     border-spacing: 0;
 }
 
-.ex-table, .ex-element {
+.ex-table, .ex-element, .ex-form {
     border-bottom: 1px dashed #aaa;
     padding-left: 8px;
     padding-bottom: 8px;
