@@ -11,7 +11,14 @@
 <!-- div.section>h2+div.snippet>h2+div.codeblock>div.ex+code -->
 
 <body>
-    <h1 class="title">HTML5 and CSS cheat sheet</h1>
+    <nav>
+        <ul>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#css">CSS</a></li>
+            <li><a href="animation.html">Animation</a></li>
+            <li class="right">HTML CSS Cheat Sheet</li>
+        </ul>
+    </nav>
     <section id="html">
         <h1>HTML</h1>
         <section id="html-templates">
@@ -259,13 +266,7 @@
                 <h2>Navigation</h2>
                 <div class="codeblock" id="html-elements-nav">
                     <div class="ex-element">
-                        <nav>
-                            <ul>
-                                <li><a href="#html-elements-nav">First</a></li>
-                                <li><a href="#html-elements-nav">Second</a></li>
-                                <li><a href="#html-elements-nav">Third</a></li>
-                            </ul>
-                        </nav>
+                        See navigation bar at the top.
                     </div>
                     <code>&lt;nav&gt;</code>
                     <code>    &lt;ul&gt;</code>
@@ -1419,6 +1420,130 @@
                 </div>
             </div>
         </section>
+        <section id="css-list">
+            <h2>Lists</h2>
+            <div class="snippet">
+                <h2 class="code">list-style:</h2>
+                <h3>Adjust list style type, position, and image.</h3>
+                <div class="row">
+                    <div class="codeblock">
+                        <div class="ex-list">
+                            <ul style="list-style: none;">
+                                <li>first</li>
+                                <li>second</li>
+                                <li>third</li>
+                            </ul>
+                        </div>
+                        <code>none;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-list">
+                            <ul style="list-style: circle;">
+                                <li>first</li>
+                                <li>second</li>
+                                <li>third</li>
+                            </ul>
+                        </div>
+                        <code>circle;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-list">
+                            <ul style="list-style: decimal;">
+                                <li>first</li>
+                                <li>second</li>
+                                <li>third</li>
+                            </ul>
+                        </div>
+                        <code>decimal;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-list">
+                            <ul style="list-style: disc;">
+                                <li>first</li>
+                                <li>second</li>
+                                <li>third</li>
+                            </ul>
+                        </div>
+                        <code>disc;</code>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="codeblock">
+                        <div class="ex-list">
+                            <ul style="list-style: lower-alpha;">
+                                <li>first</li>
+                                <li>second</li>
+                                <li>third</li>
+                            </ul>
+                        </div>
+                        <code>lower-alpha;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-list">
+                            <ul style="list-style: lower-roman;">
+                                <li>first</li>
+                                <li>second</li>
+                                <li>third</li>
+                            </ul>
+                        </div>
+                        <code>lower-roman;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-list">
+                            <ul style="list-style: upper-alpha;">
+                                <li>first</li>
+                                <li>second</li>
+                                <li>third</li>
+                            </ul>
+                        </div>
+                        <code>upper-alpha;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-list">
+                            <ul style="list-style: upper-roman;">
+                                <li>first</li>
+                                <li>second</li>
+                                <li>third</li>
+                            </ul>
+                        </div>
+                        <code>upper-roman;</code>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="codeblock">
+                        <div class="ex-list">
+                            <ul style="list-style: inside lower-roman;">
+                                <li>first</li>
+                                <li>second</li>
+                                <li>third</li>
+                            </ul>
+                        </div>
+                        <code>inside lower-roman;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-list">
+                            <ul style="list-style: outside lower-roman;">
+                                <li>first</li>
+                                <li>second</li>
+                                <li>third</li>
+                            </ul>
+                        </div>
+                        <code>outside lower-roman;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-list">
+                            <ul style="list-style: url('https://mdn.mozillademos.org/files/11981/starsolid.gif');">
+                                <li>first</li>
+                                <li>second</li>
+                                <li>third</li>
+                            </ul>
+                        </div>
+                        <code>url('...');</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="css-box">
             <h2>Box model</h2>
             <div class="snippet" id="css-box-display">
@@ -1428,6 +1553,8 @@
                     <div class="text-example">
                         <div class="box placeholder"></div>
                         <div class="box block">x</div>
+                        <div class="box block">y</div>
+                        <div class="box block">z</div>
                         <div class="box placeholder"></div>
                     </div>
                     <code>block;</code>
@@ -1436,6 +1563,8 @@
                     <div class="text-example">
                         <div class="box placeholder"></div>
                         <div class="box inline-block">x</div>
+                        <div class="box inline-block">y</div>
+                        <div class="box inline-block">z</div>
                         <div class="box placeholder"></div>
                     </div>
                     <code>inline-block;</code>
@@ -1444,6 +1573,8 @@
                     <div class="text-example">
                         <div class="box placeholder"></div>
                         <div class="box inline">x</div>
+                        <div class="box inline">y</div>
+                        <div class="box inline">z</div>
                         <div class="box placeholder"></div>
                     </div>
                     <code>inline;</code>
@@ -2446,7 +2577,7 @@
                 <div class="snippet container">
                     <h3>Combine grow, shrink, basis</h3>
                     <div class="codeblock">
-                        <code>&lt;flex-grow&gt; &lt;flex-shrink&gt; &lt;flex-basis&gt;;</code>
+                        <code>&lt;flex-grow&gt; &lt;flex-shrink&gt;? || &lt;flex-basis&gt;;</code>
                     </div>
                     <div class="columns">
                         <div class="snippet column">
@@ -2630,7 +2761,7 @@
 
         <section id="css-table">
             <h2>Table display</h2>
-            <div class="snippet">
+            <div class="snippet" id="css-table-display">
                 <h2 class="code">display:</h2>
                 <div class="columns">
                     <div class="column">
@@ -2664,7 +2795,7 @@
                             </div>
                             <code>table-row;</code>
                         </div>
-                        <div class="codeblock" id="css-table-cell">
+                        <div class="codeblock">
                             <div class="ex-table">
                                 <table>
                                     <tr>
@@ -2698,7 +2829,7 @@
                             </div>
                             <code>inline-table;</code>
                         </div>
-                        <div class="codeblock" id="css-table-caption">
+                        <div class="codeblock">
                             <div class="ex-table">
                                 <table>
                                     <tr>
@@ -2917,7 +3048,7 @@
             <div class="snippet">
                 <h2 class="code">caption-side:</h2>
                 <h3>Requires
-                    <a href="#css-table-caption">display: table-caption</a></h3>
+                    <a href="#css-table-display">display: table-caption</a></h3>
                 <div class="row">
                     <div class=" codeblock">
                         <div class="ex-caption">
@@ -2956,7 +3087,7 @@
             </div>
             <div class="snippet" id="css-table-vertical-align">
                 <h2 class="code">vertical-align:</h2>
-                <h3>Works in <a href="#css-table-cell">table cells</a>. Also works for <a href="#css-text-vertical-align">inline elements</a>.</h3>
+                <h3>Works in <a href="#css-table-display">table cells</a>. Also works for <a href="#css-text-vertical-align">inline elements</a>.</h3>
                 <div class="flex noborder">
                     <div class="codeblock">
                         <div class="ex-table">
@@ -3599,19 +3730,6 @@
             </div>
         </section>
         <!-- Section Colors -->
-        <section>
-            <h2>Animation</h2>
-            <div class="snippet">
-                <h2 class="code">animations:</h2>
-                <div class="snippet">
-                    <div class="ex-animation">
-                        <p>hello slidein</p>
-                        <div class="box"></div>
-                    </div>
-                    <code>animation: xxx</code>
-                </div>
-            </div>
-        </section>
     </section>
     <!-- CSS -->
 </body>

@@ -1,7 +1,8 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: normal;
-    padding: 0px 20px;
+    padding: 0;
+    margin: 0;
 }
 
 ul, ol {
@@ -270,6 +271,8 @@ section {
 
 .inline {
     display: inline;
+    padding: 0;
+    margin: 0;
 }
 
 .block {
@@ -278,6 +281,8 @@ section {
 
 .inline-block {
     display: inline-block;
+    padding: 0;
+    margin: 0;
 }
 
 .flex {
@@ -661,7 +666,7 @@ table {
     border-spacing: 0;
 }
 
-.ex-table, .ex-element, .ex-form {
+.ex-table, .ex-element, .ex-form, .ex-list {
     border-bottom: 1px dashed #aaa;
     padding-left: 8px;
     padding-bottom: 8px;
@@ -941,6 +946,44 @@ span.super {
         margin-left: 0%;
         width: 100%;
     }
+}
+
+nav > ul {
+    position: fixed;
+    list-style: none;
+    min-width: 100px;
+    background-color: hsla(250, 79%, 66%, 1);
+    padding: 16px;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav > ul > li {
+    display: inline-block;
+    margin: 0px 20px;
+    color: white;
+}
+
+nav > ul > li.right {
+    float: right;
+    margin: 0 60px;
+}
+
+nav {
+    padding-bottom: 75px;
+    width: 100%;
+}
+
+nav a:link, nav a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+:target:before {
+    content: "";
+    display: block;
+    height: 60px;
+    margin: -60px 0 0;
 }
 
 /* Rules to show only hovered code blocks
