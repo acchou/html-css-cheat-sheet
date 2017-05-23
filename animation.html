@@ -20,16 +20,69 @@
     </nav>
     <section>
         <h2>Basic Animation</h2>
-        <h3>See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">MDN on CSS animations</a>.</h3>
-        <h3>Also check out <a href="https://greensock.com/">GreenSock</a>.</h3>
+        <h3>See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">MDN on CSS animations</a>.
+            Also check out <a href="https://greensock.com/">GreenSock</a>.</h3>
         <div class="snippet">
-            <h2 class="code">animations:</h2>
-            <div class="snippet">
+            <h2 class="code">animation-duration:</h2>
+            <div class="codeblock">
                 <div class="ex-animation">
-                    <p>hello slidein</p>
-                    <div class="box"></div>
+                    <p style="animation-duration: 1s;">slidein</p>
                 </div>
-                <code>animation: xxx</code>
+                <code>1s;</code>
+            </div>
+            <div class="codeblock">
+                <div class="ex-animation">
+                    <p style="animation-duration: 2s;">slidein</p>
+                </div>
+                <code>2s;</code>
+            </div>
+            <div class="codeblock">
+                <div class="ex-animation">
+                    <p style="animation-duration: 4s;">slidein</p>
+                </div>
+                <code>4s;</code>
+            </div>
+        </div>
+        <div class="snippet">
+            <h2 class="code">animation-direction:</h2>
+            <div class="codeblock">
+                <div class="ex-animation">
+                    <p style="animation-direction: normal;">slidein</p>
+                </div>
+                <code>normal;</code>
+            </div>
+            <div class="codeblock">
+                <div class="ex-animation">
+                    <p style="animation-direction: reverse;">slidein</p>
+                </div>
+                <code>reverse;</code>
+            </div>
+            <div class="codeblock">
+                <div class="ex-animation">
+                    <p style="animation-direction: alternate;">slidein</p>
+                </div>
+                <code>alternate;</code>
+            </div>
+            <div class="codeblock">
+                <div class="ex-animation">
+                    <p style="animation-direction: alternate-reverse;">slidein</p>
+                </div>
+                <code>alternate-reverse;</code>
+            </div>
+        </div>
+        <div class="snippet">
+            <h2 class="code">animation-iteration-count:</h2>
+            <div class="codeblock">
+                <div class="ex-animation">
+                    <p style="animation-iteration-count: infinite;">slidein</p>
+                </div>
+                <code>infinite;</code>
+            </div>
+            <div class="codeblock">
+                <div class="ex-animation">
+                    <p style="animation-iteration-count: 3;">slidein</p>
+                </div>
+                <code>3;</code>
             </div>
         </div>
     </section>

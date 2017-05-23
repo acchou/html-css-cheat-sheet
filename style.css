@@ -666,7 +666,7 @@ table {
     border-spacing: 0;
 }
 
-.ex-table, .ex-element, .ex-form, .ex-list {
+.ex-table, .ex-element, .ex-form, .ex-list, .ex-animation {
     border-bottom: 1px dashed #aaa;
     padding-left: 8px;
     padding-bottom: 8px;
@@ -932,18 +932,22 @@ span.super {
     width: 70%;
 }
 
-.ex-animation {
-    animation-duration: 3s;
+.ex-animation > p {
+    width: 400px;
+    animation-duration: 2s;
     animation-name: slidein;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes slidein {
     from {
-        margin-left: 100%;
-        width: 300%;
+        margin-left: 0%;
+        width: 100%;
     }
     to {
-        margin-left: 0%;
+        margin-left: 100%;
         width: 100%;
     }
 }
