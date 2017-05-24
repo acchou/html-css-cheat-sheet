@@ -993,6 +993,29 @@ nav a:link, nav a:visited {
     margin: -60px 0 0;
 }
 
+/* Example cursor animation */
+.cursor {
+    animation: shrink 6s infinite ease,
+               cursor 0.8s infinite step-start;
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes shrink {
+    0% {
+        height: 1em;
+        width: 0;
+        border-right-width: 1px;  
+    }
+    100% {
+        width: 1000px;
+    }
+}
+
 /* Rules to show only hovered code blocks
 
 .codeblock > code {
