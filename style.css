@@ -1035,7 +1035,7 @@ nav > ul {
     position: fixed;
     list-style: none;
     min-width: 100px;
-    background-color: hsla(250, 79%, 66%, 1);
+    background-color: hsla(0, 0%, 30%, 0.85);
     padding: 16px;
     width: 100%;
     z-index: 1000;
