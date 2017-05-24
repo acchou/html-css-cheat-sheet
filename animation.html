@@ -22,67 +22,142 @@
         <h2>Basic Animation</h2>
         <h3>See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">MDN on CSS animations</a>.
             Also check out <a href="https://greensock.com/">GreenSock</a>.</h3>
-        <div class="snippet">
+        <div class="snippet animation">
             <h2 class="code">animation-duration:</h2>
             <div class="codeblock">
-                <div class="ex-animation">
-                    <p style="animation-duration: 1s;">slidein</p>
+                <div class="ex-animation" style="animation-duration: 0.7s;">
+                    <div class="box"></div>
+                </div>
+                <code>0.7s;</code>
+            </div>
+            <div class="codeblock">
+                <div class="ex-animation" style="animation-duration: 1s;">
+                    <div class="box"></div>
                 </div>
                 <code>1s;</code>
             </div>
             <div class="codeblock">
-                <div class="ex-animation">
-                    <p style="animation-duration: 2s;">slidein</p>
+                <div class="ex-animation" style="animation-duration: 2s;">
+                    <div class="box"></div>
                 </div>
                 <code>2s;</code>
             </div>
             <div class="codeblock">
-                <div class="ex-animation">
-                    <p style="animation-duration: 4s;">slidein</p>
+                <div class="ex-animation" style="animation-duration: 3s;">
+                    <div class="box"></div>
                 </div>
-                <code>4s;</code>
+                <code>3s;</code>
             </div>
         </div>
-        <div class="snippet">
+        <div class="snippet animation repeat">
             <h2 class="code">animation-direction:</h2>
             <div class="codeblock">
-                <div class="ex-animation">
-                    <p style="animation-direction: normal;">slidein</p>
+                <div class="ex-animation" style="animation-direction: normal;">
+                    <div class="box"></div>
                 </div>
                 <code>normal;</code>
             </div>
             <div class="codeblock">
-                <div class="ex-animation">
-                    <p style="animation-direction: reverse;">slidein</p>
-                </div>
-                <code>reverse;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <p style="animation-direction: alternate;">slidein</p>
+                <div class="ex-animation" style="animation-direction: alternate;">
+                    <div class="box"></div>
                 </div>
                 <code>alternate;</code>
             </div>
             <div class="codeblock">
-                <div class="ex-animation">
-                    <p style="animation-direction: alternate-reverse;">slidein</p>
+                <div class="ex-animation" style="animation-direction: reverse;">
+                    <div class="box"></div>
+                </div>
+                <code>reverse;</code>
+            </div>
+            <div class="codeblock">
+                <div class="ex-animation" style="animation-direction: alternate-reverse;">
+                    <div class="box"></div>
                 </div>
                 <code>alternate-reverse;</code>
             </div>
         </div>
-        <div class="snippet">
+        <div class="snippet animation">
             <h2 class="code">animation-iteration-count:</h2>
             <div class="codeblock">
-                <div class="ex-animation">
-                    <p style="animation-iteration-count: infinite;">slidein</p>
+                <div class="ex-animation" style="animation-iteration-count: 1;">
+                    <div class="box"></div>
+                </div>
+                <code>1;</code>
+            </div>
+            <div class="codeblock">
+                <div class="ex-animation" style="animation-iteration-count: 2;">
+                    <div class="box"></div>
+                </div>
+                <code>2;</code>
+            </div>
+            <div class="codeblock">
+                <div class="ex-animation" style="animation-iteration-count: infinite;">
+                    <div class="box"></div>
                 </div>
                 <code>infinite;</code>
             </div>
+        </div>
+        <div class="snippet animation repeat">
+            <h2 class="code">animation-timing-function:</h2>
             <div class="codeblock">
-                <div class="ex-animation">
-                    <p style="animation-iteration-count: 3;">slidein</p>
+                <div class="ex-animation" style="animation-timing-function: linear;">
+                    <div class="box"></div>
                 </div>
-                <code>3;</code>
+                <code>linear;</code>
+            </div>
+            <div class="codeblock">
+                <div class="ex-animation" style="animation-timing-function: ease;">
+                    <div class="box"></div>
+                </div>
+                <code>ease;</code>
+            </div>
+            <div class="codeblock">
+                <div class="ex-animation" style="animation-timing-function: ease-in;">
+                    <div class="box"></div>
+                </div>
+                <code>ease-in;</code>
+            </div>
+            <div class="codeblock">
+                <div class="ex-animation" style="animation-timing-function: ease-out;">
+                    <div class="box"></div>
+                </div>
+                <code>ease-out;</code>
+            </div>
+            <div class="codeblock">
+                <div class="ex-animation" style="animation-timing-function: ease-in-out;">
+                    <div class="box"></div>
+                </div>
+                <code>ease-in-out;</code>
+            </div>
+            <div class="codeblock">
+                <div class="ex-animation" style="animation-timing-function: steps(4);">
+                    <div class="box"></div>
+                </div>
+                <code>steps(4);</code>
+            </div>
+            <div class="codeblock">
+                <div class="ex-animation" style="animation-timing-function: steps(10);">
+                    <div class="box"></div>
+                </div>
+                <code>steps(10);</code>
+            </div>
+            <div class="codeblock">
+                <div class="ex-animation" style="animation-timing-function: step-start;">
+                    <div class="box"></div>
+                </div>
+                <code>step-start;</code>
+            </div>
+            <div class="codeblock">
+                <div class="ex-animation" style="animation-timing-function: steps(2, end);">
+                    <div class="box"></div>
+                </div>
+                <code>step(2,end);</code>
+            </div>
+            <div class="codeblock">
+                <div class="ex-animation" style="animation-timing-function: steps(2, start);">
+                    <div class="box"></div>
+                </div>
+                <code>step(2,start);</code>
             </div>
         </div>
     </section>
