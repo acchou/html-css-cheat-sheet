@@ -105,6 +105,10 @@ code {
     padding: 0;
 }
 
+.ex-header h1 {
+    font-size: 2em;
+}
+
 .codeblock > hr {
     border-top: 1px dashed #999;
 }
