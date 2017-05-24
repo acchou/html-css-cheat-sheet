@@ -18,761 +18,765 @@
             <li class="right">HTML CSS Cheat Sheet</li>
         </ul>
     </nav>
-    <section>
-        <h2>Basic Animation</h2>
-        <h3>See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">MDN on CSS animations</a>.
-            Also check out <a href="https://greensock.com/">GreenSock</a>.</h3>
-        <div class="snippet animation">
-            <h2 class="code">animation-duration:</h2>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <div class="box" style="animation-duration: 0.7s;"></div>
-                </div>
-                <code>0.7s;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <div class="box" style="animation-duration: 1s;"></div>
-                </div>
-                <code>1s;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <div class="box" style="animation-duration: 2s;"></div>
-                </div>
-                <code>2s;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <div class="box" style="animation-duration: 3s;"></div>
-                </div>
-                <code>3s;</code>
-            </div>
-        </div>
-        <div class="snippet animation">
-            <h2 class="code">animation-direction:</h2>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <div class="box" style="animation-direction: normal;"></div>
-                </div>
-                <code>normal;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <div class="box" style="animation-direction: alternate;"></div>
-                </div>
-                <code>alternate;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <div class="box" style="animation-direction: reverse;"></div>
-                </div>
-                <code>reverse;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <div class="box" style="animation-direction: alternate-reverse;"></div>
-                </div>
-                <code>alternate-reverse;</code>
-            </div>
-        </div>
-        <div class="snippet animation">
-            <h2 class="code">animation-iteration-count:</h2>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <div class="box" style="animation-iteration-count: 1;"></div>
-                </div>
-                <code>1;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <div class="box" style="animation-iteration-count: 2;"></div>
-                </div>
-                <code>2;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <div class="box" style="animation-iteration-count: infinite;"></div>
-                </div>
-                <code>infinite;</code>
-            </div>
-        </div>
-        <div class="snippet animation alternate">
-            <h2 class="code">animation-timing-function:</h2>
-            <div class="columns">
-                <div class="column width-12">
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <div class="box" style="animation-timing-function: linear;"></div>
-                        </div>
-                        <code>linear;</code>
+    <section id="animation">
+        <h1>Animation</h1>
+        <section id="animation-css">
+            <h2>CSS animation</h2>
+            <h3>See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">MDN on CSS animations</a>.
+                Also check out <a href="https://greensock.com/">GreenSock</a>.</h3>
+            <div class="snippet animation">
+                <h2 class="code">animation-duration:</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <div class="box" style="animation-duration: 0.7s;"></div>
                     </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <div class="box" style="animation-timing-function: ease;"></div>
-                        </div>
-                        <code>ease;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <div class="box" style="animation-timing-function: ease-in;"></div>
-                        </div>
-                        <code>ease-in;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <div class="box" style="animation-timing-function: ease-out;"></div>
-                        </div>
-                        <code>ease-out;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <div class="box" style="animation-timing-function: ease-in-out;"></div>
-                        </div>
-                        <code>ease-in-out;</code>
-                    </div>
+                    <code>0.7s;</code>
                 </div>
-                <div class="column width-12">
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <div class="box" style="animation-timing-function: steps(4);"></div>
-                        </div>
-                        <code>steps(4);</code>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <div class="box" style="animation-duration: 1s;"></div>
                     </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <div class="box" style="animation-timing-function: steps(10);"></div>
-                        </div>
-                        <code>steps(10);</code>
+                    <code>1s;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <div class="box" style="animation-duration: 2s;"></div>
                     </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <div class="box" style="animation-timing-function: step-start;"></div>
-                        </div>
-                        <code>step-start;</code>
+                    <code>2s;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <div class="box" style="animation-duration: 3s;"></div>
                     </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <div class="box" style="animation-timing-function: step-end;"></div>
+                    <code>3s;</code>
+                </div>
+            </div>
+            <div class="snippet animation">
+                <h2 class="code">animation-direction:</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <div class="box" style="animation-direction: normal;"></div>
+                    </div>
+                    <code>normal;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <div class="box" style="animation-direction: alternate;"></div>
+                    </div>
+                    <code>alternate;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <div class="box" style="animation-direction: reverse;"></div>
+                    </div>
+                    <code>reverse;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <div class="box" style="animation-direction: alternate-reverse;"></div>
+                    </div>
+                    <code>alternate-reverse;</code>
+                </div>
+            </div>
+            <div class="snippet animation">
+                <h2 class="code">animation-iteration-count:</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <div class="box" style="animation-iteration-count: 1;"></div>
+                    </div>
+                    <code>1;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <div class="box" style="animation-iteration-count: 2;"></div>
+                    </div>
+                    <code>2;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <div class="box" style="animation-iteration-count: infinite;"></div>
+                    </div>
+                    <code>infinite;</code>
+                </div>
+            </div>
+            <div class="snippet animation alternate">
+                <h2 class="code">animation-timing-function:</h2>
+                <div class="columns">
+                    <div class="column width-12">
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <div class="box" style="animation-timing-function: linear;"></div>
+                            </div>
+                            <code>linear;</code>
                         </div>
-                        <code>step-end;</code>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <div class="box" style="animation-timing-function: ease;"></div>
+                            </div>
+                            <code>ease;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <div class="box" style="animation-timing-function: ease-in;"></div>
+                            </div>
+                            <code>ease-in;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <div class="box" style="animation-timing-function: ease-out;"></div>
+                            </div>
+                            <code>ease-out;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <div class="box" style="animation-timing-function: ease-in-out;"></div>
+                            </div>
+                            <code>ease-in-out;</code>
+                        </div>
+                    </div>
+                    <div class="column width-12">
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <div class="box" style="animation-timing-function: steps(4);"></div>
+                            </div>
+                            <code>steps(4);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <div class="box" style="animation-timing-function: steps(10);"></div>
+                            </div>
+                            <code>steps(10);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <div class="box" style="animation-timing-function: step-start;"></div>
+                            </div>
+                            <code>step-start;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <div class="box" style="animation-timing-function: step-end;"></div>
+                            </div>
+                            <code>step-end;</code>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="snippet animation ex-animation-fill-mode">
-            <h2 class="code">animation-fill-mode:</h2>
-            <h3><span class="initial">Initial state</span><span class="delay">Delay state 1s</span><span class="animate">Animate 1s</span>
-                <span class="end">End state</span>
-            </h3>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <div class="box" style="animation-fill-mode: none;">A</div>
+            <div class="snippet animation ex-animation-fill-mode">
+                <h2 class="code">animation-fill-mode:</h2>
+                <h3><span class="initial">Initial state</span><span class="delay">Delay state 1s</span><span class="animate">Animate 1s</span>
+                    <span class="end">End state</span>
+                </h3>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <div class="box" style="animation-fill-mode: none;">A</div>
+                    </div>
+                    <code>none;</code>
                 </div>
-                <code>none;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <div class="box" style="animation-fill-mode: forwards;">A</div>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <div class="box" style="animation-fill-mode: forwards;">A</div>
+                    </div>
+                    <code>forwards;</code>
                 </div>
-                <code>forwards;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <div class="box" style="animation-fill-mode: backwards;">A</div>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <div class="box" style="animation-fill-mode: backwards;">A</div>
+                    </div>
+                    <code>backwards;</code>
                 </div>
-                <code>backwards;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <div class="box" style="animation-fill-mode: both;">A</div>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <div class="box" style="animation-fill-mode: both;">A</div>
+                    </div>
+                    <code>both;</code>
                 </div>
-                <code>both;</code>
             </div>
-        </div>
-        <div class="snippet">
-            <h2>Cursor example</h2>
-            <div class="codeblock">
-                <div class="ex-cursor">
-                    <div class="cursor" style="height: 80px; border-left: 8px solid black;"></div>
+            <div class="snippet">
+                <h2>Cursor example</h2>
+                <div class="codeblock">
+                    <div class="ex-cursor">
+                        <div class="cursor" style="height: 80px; border-left: 8px solid black;"></div>
+                    </div>
+                    <code></code>
                 </div>
-                <code></code>
             </div>
-        </div>
-    </section>
+        </section>
+        <!-- End section animation-css -->
 
-    <section>
-        <h2>Keyframes</h2>
-        <div class="snippet animation">
-            <h2>Slide right</h2>
-            <div class="codeblock">
-                <div class="ex-keyframe">
-                    <div class="box"></div>
+        <section id="animation-keyframes">
+            <h2>Keyframes</h2>
+            <div class="snippet animation">
+                <h2>Slide right</h2>
+                <div class="codeblock">
+                    <div class="ex-keyframe">
+                        <div class="box"></div>
+                    </div>
+                    <code>@keyframes slideright {</code>
+                    <code>    from {</code>
+                    <code>        margin-left: 0%;</code>
+                    <code>    }</code>
+                    <code>    to {</code>
+                    <code>        margin-left: 80%;</code>
+                    <code>    }</code>
+                    <code>}</code>
                 </div>
-                <code>@keyframes slideright {</code>
-                <code>    from {</code>
-                <code>        margin-left: 0%;</code>
-                <code>    }</code>
-                <code>    to {</code>
-                <code>        margin-left: 80%;</code>
-                <code>    }</code>
-                <code>}</code>
             </div>
-        </div>
-        <div class="snippet animation">
-            <h2>Set background color</h2>
-            <div class="codeblock">
-                <div class="ex-keyframe">
-                    <div class="box backgroundcolor"></div>
+            <div class="snippet animation">
+                <h2>Set background color</h2>
+                <div class="codeblock">
+                    <div class="ex-keyframe">
+                        <div class="box backgroundcolor"></div>
+                    </div>
+                    <code>@keyframes showbackground {</code>
+                    <code>    from {</code>
+                    <code>        background-color: blue;</code>
+                    <code>    }</code>
+                    <code>    to {</code>
+                    <code>        background-color: red;</code>
+                    <code>    }</code>
+                    <code>}</code>
                 </div>
-                <code>@keyframes showbackground {</code>
-                <code>    from {</code>
-                <code>        background-color: blue;</code>
-                <code>    }</code>
-                <code>    to {</code>
-                <code>        background-color: red;</code>
-                <code>    }</code>
-                <code>}</code>
             </div>
-        </div>
-        <div class="snippet animation">
-            <h2>Grow size</h2>
-            <div class="codeblock">
-                <div class="ex-keyframe">
-                    <div class="box size"></div>
+            <div class="snippet animation">
+                <h2>Grow size</h2>
+                <div class="codeblock">
+                    <div class="ex-keyframe">
+                        <div class="box size"></div>
+                    </div>
+                    <code>@keyframes growsize {</code>
+                    <code>    from {</code>
+                    <code>        height: 1em;</code>
+                    <code>        width: 1em;</code>
+                    <code>    }</code>
+                    <code>    to {</code>
+                    <code>        height: 4em;</code>
+                    <code>        width: 4em;</code>
+                    <code>    }</code>
+                    <code>}</code>
                 </div>
-                <code>@keyframes growsize {</code>
-                <code>    from {</code>
-                <code>        height: 1em;</code>
-                <code>        width: 1em;</code>
-                <code>    }</code>
-                <code>    to {</code>
-                <code>        height: 4em;</code>
-                <code>        width: 4em;</code>
-                <code>    }</code>
-                <code>}</code>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <h2>Using animate.css</h2>
-        <div class="snippet animation">
-            <h2>Attention</h2>
-            <div class="columns">
-                <div class="column">
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated bounce">bounce</h2>
+        <section id="animation-animate-css">
+            <h2>Using animate.css</h2>
+            <div class="snippet animation">
+                <h2>Attention</h2>
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated bounce">bounce</h2>
+                            </div>
+                            <code>class=&quot;animated bounce&quot;</code>
                         </div>
-                        <code>class=&quot;animated bounce&quot;</code>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated flash">flash</h2>
+                            </div>
+                            <code>class=&quot;animated flash&quot;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated pulse">pulse</h2>
+                            </div>
+                            <code>class=&quot;animated pulse&quot;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated rubberBand">rubberBand</h2>
+                            </div>
+                            <code>class=&quot;animated rubberBand&quot;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated shake">shake</h2>
+                            </div>
+                            <code>class=&quot;animated shake&quot;</code>
+                        </div>
                     </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated flash">flash</h2>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated headShake">headShake</h2>
+                            </div>
+                            <code>class=&quot;animated headShake&quot;</code>
                         </div>
-                        <code>class=&quot;animated flash&quot;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated pulse">pulse</h2>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated swing">swing</h2>
+                            </div>
+                            <code>class=&quot;animated swing&quot;</code>
                         </div>
-                        <code>class=&quot;animated pulse&quot;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated rubberBand">rubberBand</h2>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated tada">tada</h2>
+                            </div>
+                            <code>class=&quot;animated tada&quot;</code>
                         </div>
-                        <code>class=&quot;animated rubberBand&quot;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated shake">shake</h2>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated wobble">wobble</h2>
+                            </div>
+                            <code>class=&quot;animated wobble&quot;</code>
                         </div>
-                        <code>class=&quot;animated shake&quot;</code>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated headShake">headShake</h2>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated jello">jello</h2>
+                            </div>
+                            <code>class=&quot;animated jello&quot;</code>
                         </div>
-                        <code>class=&quot;animated headShake&quot;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated swing">swing</h2>
-                        </div>
-                        <code>class=&quot;animated swing&quot;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated tada">tada</h2>
-                        </div>
-                        <code>class=&quot;animated tada&quot;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated wobble">wobble</h2>
-                        </div>
-                        <code>class=&quot;animated wobble&quot;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated jello">jello</h2>
-                        </div>
-                        <code>class=&quot;animated jello&quot;</code>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="snippet animation">
-            <h2>Bouncing entrances</h2>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated bounceIn">bounceIn</h2>
-                </div>
-                <code>class=&quot;animated bounceIn&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated bounceInDown">bounceInDown</h2>
-                </div>
-                <code>class=&quot;animated bounceInDown&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated bounceInLeft">bounceInLeft</h2>
-                </div>
-                <code>class=&quot;animated bounceInLeft&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated bounceInRight">bounceInRight</h2>
-                </div>
-                <code>class=&quot;animated bounceInRight&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated bounceInUp">bounceInUp</h2>
-                </div>
-                <code>class=&quot;animated bounceInUp&quot;</code>
-            </div>
-        </div>
-        <div class="snippet animation">
-            <h2>Bouncing exits</h2>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated bounceOut">bounceOut</h2>
-                </div>
-                <code>class=&quot;animated bounceOut&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated bounceOutDown">bounceOutDown</h2>
-                </div>
-                <code>class=&quot;animated bounceOutDown&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated bounceOutLeft">bounceOutLeft</h2>
-                </div>
-                <code>class=&quot;animated bounceOutLeft&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated bounceOutRight">bounceOutRight</h2>
-                </div>
-                <code>class=&quot;animated bounceOutRight&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated bounceOutUp">bounceOutUp</h2>
-                </div>
-                <code>class=&quot;animated bounceOutUp&quot;</code>
-            </div>
-        </div>
-        <div class="snippet animation">
-            <h2>Fading entrances</h2>
-            <div class="columns">
-                <div class="column">
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated fadeIn">fadeIn</h2>
-                        </div>
-                        <code>class=&quot;animated fadeIn&quot;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated fadeInDown">fadeInDown</h2>
-                        </div>
-                        <code>class=&quot;animated fadeInDown&quot;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated fadeInDownBig">fadeInDownBig</h2>
-                        </div>
-                        <code>class=&quot;animated fadeInDownBig&quot;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated fadeInLeft">fadeInLeft</h2>
-                        </div>
-                        <code>class=&quot;animated fadeInLeft&quot;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated fadeInLeftBig">fadeInLeftBig</h2>
-                        </div>
-                        <code>class=&quot;animated fadeInLeftBig&quot;</code>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated fadeInRight">fadeInRight</h2>
-                        </div>
-                        <code>class=&quot;animated fadeInRight&quot;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated fadeInRightBig">fadeInRightBig</h2>
-                        </div>
-                        <code>class=&quot;animated fadeInRightBig&quot;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated fadeInUp">fadeInUp</h2>
-                        </div>
-                        <code>class=&quot;animated fadeInUp&quot;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated fadeInUpBig">fadeInUpBig</h2>
-                        </div>
-                        <code>class=&quot;animated fadeInUpBig&quot;</code>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="snippet animation">
-            <h2>Fading exits</h2>
-            <div class="columns">
-                <div class="column">
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated fadeOut">fadeOut</h2>
-                        </div>
-                        <code>class=&quot;animated fadeOut&quot;</code>
+            <div class="snippet animation">
+                <h2>Bouncing entrances</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated bounceIn">bounceIn</h2>
                     </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated fadeOutDown">fadeOutDown</h2>
-                        </div>
-                        <code>class=&quot;animated fadeOutDown&quot;</code>
+                    <code>class=&quot;animated bounceIn&quot;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated bounceInDown">bounceInDown</h2>
                     </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated fadeOutDownBig">fadeOutDownBig</h2>
-                        </div>
-                        <code>class=&quot;animated fadeOutDownBig&quot;</code>
+                    <code>class=&quot;animated bounceInDown&quot;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated bounceInLeft">bounceInLeft</h2>
                     </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated fadeOutLeft">fadeOutLeft</h2>
-                        </div>
-                        <code>class=&quot;animated fadeOutLeft&quot;</code>
+                    <code>class=&quot;animated bounceInLeft&quot;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated bounceInRight">bounceInRight</h2>
                     </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated fadeOutLeftBig">fadeOutLeftBig</h2>
+                    <code>class=&quot;animated bounceInRight&quot;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated bounceInUp">bounceInUp</h2>
+                    </div>
+                    <code>class=&quot;animated bounceInUp&quot;</code>
+                </div>
+            </div>
+            <div class="snippet animation">
+                <h2>Bouncing exits</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated bounceOut">bounceOut</h2>
+                    </div>
+                    <code>class=&quot;animated bounceOut&quot;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated bounceOutDown">bounceOutDown</h2>
+                    </div>
+                    <code>class=&quot;animated bounceOutDown&quot;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated bounceOutLeft">bounceOutLeft</h2>
+                    </div>
+                    <code>class=&quot;animated bounceOutLeft&quot;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated bounceOutRight">bounceOutRight</h2>
+                    </div>
+                    <code>class=&quot;animated bounceOutRight&quot;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated bounceOutUp">bounceOutUp</h2>
+                    </div>
+                    <code>class=&quot;animated bounceOutUp&quot;</code>
+                </div>
+            </div>
+            <div class="snippet animation">
+                <h2>Fading entrances</h2>
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated fadeIn">fadeIn</h2>
+                            </div>
+                            <code>class=&quot;animated fadeIn&quot;</code>
                         </div>
-                        <code>class=&quot;animated fadeOutLeftBig&quot;</code>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated fadeInDown">fadeInDown</h2>
+                            </div>
+                            <code>class=&quot;animated fadeInDown&quot;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated fadeInDownBig">fadeInDownBig</h2>
+                            </div>
+                            <code>class=&quot;animated fadeInDownBig&quot;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated fadeInLeft">fadeInLeft</h2>
+                            </div>
+                            <code>class=&quot;animated fadeInLeft&quot;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated fadeInLeftBig">fadeInLeftBig</h2>
+                            </div>
+                            <code>class=&quot;animated fadeInLeftBig&quot;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated fadeInRight">fadeInRight</h2>
+                            </div>
+                            <code>class=&quot;animated fadeInRight&quot;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated fadeInRightBig">fadeInRightBig</h2>
+                            </div>
+                            <code>class=&quot;animated fadeInRightBig&quot;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated fadeInUp">fadeInUp</h2>
+                            </div>
+                            <code>class=&quot;animated fadeInUp&quot;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated fadeInUpBig">fadeInUpBig</h2>
+                            </div>
+                            <code>class=&quot;animated fadeInUpBig&quot;</code>
+                        </div>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated fadeOutRight">fadeOutRight</h2>
+            </div>
+            <div class="snippet animation">
+                <h2>Fading exits</h2>
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated fadeOut">fadeOut</h2>
+                            </div>
+                            <code>class=&quot;animated fadeOut&quot;</code>
                         </div>
-                        <code>class=&quot;animated fadeOutRight&quot;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated fadeOutRightBig">fadeOutRightBig</h2>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated fadeOutDown">fadeOutDown</h2>
+                            </div>
+                            <code>class=&quot;animated fadeOutDown&quot;</code>
                         </div>
-                        <code>class=&quot;animated fadeOutRightBig&quot;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated fadeOutUp">fadeOutUp</h2>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated fadeOutDownBig">fadeOutDownBig</h2>
+                            </div>
+                            <code>class=&quot;animated fadeOutDownBig&quot;</code>
                         </div>
-                        <code>class=&quot;animated fadeOutUp&quot;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-animation">
-                            <h2 class="animated fadeOutUpBig">fadeOutUpBig</h2>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated fadeOutLeft">fadeOutLeft</h2>
+                            </div>
+                            <code>class=&quot;animated fadeOutLeft&quot;</code>
                         </div>
-                        <code>class=&quot;animated fadeOutUpBig&quot;</code>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated fadeOutLeftBig">fadeOutLeftBig</h2>
+                            </div>
+                            <code>class=&quot;animated fadeOutLeftBig&quot;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated fadeOutRight">fadeOutRight</h2>
+                            </div>
+                            <code>class=&quot;animated fadeOutRight&quot;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated fadeOutRightBig">fadeOutRightBig</h2>
+                            </div>
+                            <code>class=&quot;animated fadeOutRightBig&quot;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated fadeOutUp">fadeOutUp</h2>
+                            </div>
+                            <code>class=&quot;animated fadeOutUp&quot;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-animation">
+                                <h2 class="animated fadeOutUpBig">fadeOutUpBig</h2>
+                            </div>
+                            <code>class=&quot;animated fadeOutUpBig&quot;</code>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="snippet animation">
-            <h2>Flips</h2>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated flipInX">flipInX</h2>
+            <div class="snippet animation">
+                <h2>Flips</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated flipInX">flipInX</h2>
+                    </div>
+                    <code>class=&quot;animated flipInX&quot;</code>
                 </div>
-                <code>class=&quot;animated flipInX&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated flipInY">flipInY</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated flipInY">flipInY</h2>
+                    </div>
+                    <code>class=&quot;animated flipInY&quot;</code>
                 </div>
-                <code>class=&quot;animated flipInY&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated flipOutX">flipOutX</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated flipOutX">flipOutX</h2>
+                    </div>
+                    <code>class=&quot;animated flipOutX&quot;</code>
                 </div>
-                <code>class=&quot;animated flipOutX&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated flipOutY">flipOutY</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated flipOutY">flipOutY</h2>
+                    </div>
+                    <code>class=&quot;animated flipOutY&quot;</code>
                 </div>
-                <code>class=&quot;animated flipOutY&quot;</code>
             </div>
-        </div>
-        <div class="snippet animation">
-            <h2>Lightspeed</h2>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated lightSpeedIn">lightSpeedIn</h2>
+            <div class="snippet animation">
+                <h2>Lightspeed</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated lightSpeedIn">lightSpeedIn</h2>
+                    </div>
+                    <code>class=&quot;animated lightSpeedIn&quot;</code>
                 </div>
-                <code>class=&quot;animated lightSpeedIn&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated lightSpeedOut">lightSpeedOut</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated lightSpeedOut">lightSpeedOut</h2>
+                    </div>
+                    <code>class=&quot;animated lightSpeedOut&quot;</code>
                 </div>
-                <code>class=&quot;animated lightSpeedOut&quot;</code>
             </div>
-        </div>
-        <div class="snippet animation">
-            <h2>Rotating entrances</h2>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated rotateIn">rotateIn</h2>
+            <div class="snippet animation">
+                <h2>Rotating entrances</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated rotateIn">rotateIn</h2>
+                    </div>
+                    <code>class=&quot;animated rotateIn&quot;</code>
                 </div>
-                <code>class=&quot;animated rotateIn&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated rotateInDownLeft">rotateInDownLeft</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated rotateInDownLeft">rotateInDownLeft</h2>
+                    </div>
+                    <code>class=&quot;animated rotateInDownLeft&quot;</code>
                 </div>
-                <code>class=&quot;animated rotateInDownLeft&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated rotateInDownRight">rotateInDownRight</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated rotateInDownRight">rotateInDownRight</h2>
+                    </div>
+                    <code>class=&quot;animated rotateInDownRight&quot;</code>
                 </div>
-                <code>class=&quot;animated rotateInDownRight&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated rotateInUpLeft">rotateInUpLeft</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated rotateInUpLeft">rotateInUpLeft</h2>
+                    </div>
+                    <code>class=&quot;animated rotateInUpLeft&quot;</code>
                 </div>
-                <code>class=&quot;animated rotateInUpLeft&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated rotateInUpRight">rotateInUpRight</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated rotateInUpRight">rotateInUpRight</h2>
+                    </div>
+                    <code>class=&quot;animated rotateInUpRight&quot;</code>
                 </div>
-                <code>class=&quot;animated rotateInUpRight&quot;</code>
             </div>
-        </div>
-        <div class="snippet animation">
-            <h2>Rotating exits</h2>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated rotateOut">rotateOut</h2>
+            <div class="snippet animation">
+                <h2>Rotating exits</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated rotateOut">rotateOut</h2>
+                    </div>
+                    <code>class=&quot;animated rotateOut&quot;</code>
                 </div>
-                <code>class=&quot;animated rotateOut&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated rotateOutDownLeft">rotateOutDownLeft</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated rotateOutDownLeft">rotateOutDownLeft</h2>
+                    </div>
+                    <code>class=&quot;animated rotateOutDownLeft&quot;</code>
                 </div>
-                <code>class=&quot;animated rotateOutDownLeft&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated rotateOutDownRight">rotateOutDownRight</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated rotateOutDownRight">rotateOutDownRight</h2>
+                    </div>
+                    <code>class=&quot;animated rotateOutDownRight&quot;</code>
                 </div>
-                <code>class=&quot;animated rotateOutDownRight&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated rotateOutUpLeft">rotateOutUpLeft</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated rotateOutUpLeft">rotateOutUpLeft</h2>
+                    </div>
+                    <code>class=&quot;animated rotateOutUpLeft&quot;</code>
                 </div>
-                <code>class=&quot;animated rotateOutUpLeft&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated rotateOutUpRight">rotateOutUpRight</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated rotateOutUpRight">rotateOutUpRight</h2>
+                    </div>
+                    <code>class=&quot;animated rotateOutUpRight&quot;</code>
                 </div>
-                <code>class=&quot;animated rotateOutUpRight&quot;</code>
             </div>
-        </div>
-        <div class="snippet animation">
-            <h2>Zoom entrances</h2>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated zoomIn">zoomIn</h2>
+            <div class="snippet animation">
+                <h2>Zoom entrances</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated zoomIn">zoomIn</h2>
+                    </div>
+                    <code>class=&quot;animated zoomIn&quot;</code>
                 </div>
-                <code>class=&quot;animated zoomIn&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated zoomInDown">zoomInDown</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated zoomInDown">zoomInDown</h2>
+                    </div>
+                    <code>class=&quot;animated zoomInDown&quot;</code>
                 </div>
-                <code>class=&quot;animated zoomInDown&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated zoomInLeft">zoomInLeft</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated zoomInLeft">zoomInLeft</h2>
+                    </div>
+                    <code>class=&quot;animated zoomInLeft&quot;</code>
                 </div>
-                <code>class=&quot;animated zoomInLeft&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated zoomInRight">zoomInRight</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated zoomInRight">zoomInRight</h2>
+                    </div>
+                    <code>class=&quot;animated zoomInRight&quot;</code>
                 </div>
-                <code>class=&quot;animated zoomInRight&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated zoomInUp">zoomInUp</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated zoomInUp">zoomInUp</h2>
+                    </div>
+                    <code>class=&quot;animated zoomInUp&quot;</code>
                 </div>
-                <code>class=&quot;animated zoomInUp&quot;</code>
             </div>
-        </div>
-        <div class="snippet animation">
-            <h2>Zoom exits</h2>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated zoomOut">zoomOut</h2>
+            <div class="snippet animation">
+                <h2>Zoom exits</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated zoomOut">zoomOut</h2>
+                    </div>
+                    <code>class=&quot;animated zoomOut&quot;</code>
                 </div>
-                <code>class=&quot;animated zoomOut&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated zoomOutDown">zoomOutDown</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated zoomOutDown">zoomOutDown</h2>
+                    </div>
+                    <code>class=&quot;animated zoomOutDown&quot;</code>
                 </div>
-                <code>class=&quot;animated zoomOutDown&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated zoomOutLeft">zoomOutLeft</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated zoomOutLeft">zoomOutLeft</h2>
+                    </div>
+                    <code>class=&quot;animated zoomOutLeft&quot;</code>
                 </div>
-                <code>class=&quot;animated zoomOutLeft&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated zoomOutRight">zoomOutRight</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated zoomOutRight">zoomOutRight</h2>
+                    </div>
+                    <code>class=&quot;animated zoomOutRight&quot;</code>
                 </div>
-                <code>class=&quot;animated zoomOutRight&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated zoomOutUp">zoomOutUp</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated zoomOutUp">zoomOutUp</h2>
+                    </div>
+                    <code>class=&quot;animated zoomOutUp&quot;</code>
                 </div>
-                <code>class=&quot;animated zoomOutUp&quot;</code>
             </div>
-        </div>
-        <div class="snippet animation">
-            <h2>Slide entrances</h2>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated slideInDown">slideInDown</h2>
+            <div class="snippet animation">
+                <h2>Slide entrances</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated slideInDown">slideInDown</h2>
+                    </div>
+                    <code>class=&quot;animated slideInDown&quot;</code>
                 </div>
-                <code>class=&quot;animated slideInDown&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated slideInLeft">slideInLeft</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated slideInLeft">slideInLeft</h2>
+                    </div>
+                    <code>class=&quot;animated slideInLeft&quot;</code>
                 </div>
-                <code>class=&quot;animated slideInLeft&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated slideInRight">slideInRight</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated slideInRight">slideInRight</h2>
+                    </div>
+                    <code>class=&quot;animated slideInRight&quot;</code>
                 </div>
-                <code>class=&quot;animated slideInRight&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated slideInUp">slideInUp</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated slideInUp">slideInUp</h2>
+                    </div>
+                    <code>class=&quot;animated slideInUp&quot;</code>
                 </div>
-                <code>class=&quot;animated slideInUp&quot;</code>
             </div>
-        </div>
-        <div class="snippet animation">
-            <h2>Slide exits</h2>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated slideOutDown">slideOutDown</h2>
+            <div class="snippet animation">
+                <h2>Slide exits</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated slideOutDown">slideOutDown</h2>
+                    </div>
+                    <code>class=&quot;animated slideOutDown&quot;</code>
                 </div>
-                <code>class=&quot;animated slideOutDown&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated slideOutLeft">slideOutLeft</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated slideOutLeft">slideOutLeft</h2>
+                    </div>
+                    <code>class=&quot;animated slideOutLeft&quot;</code>
                 </div>
-                <code>class=&quot;animated slideOutLeft&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated slideOutRight">slideOutRight</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated slideOutRight">slideOutRight</h2>
+                    </div>
+                    <code>class=&quot;animated slideOutRight&quot;</code>
                 </div>
-                <code>class=&quot;animated slideOutRight&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated slideOutUp">slideOutUp</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated slideOutUp">slideOutUp</h2>
+                    </div>
+                    <code>class=&quot;animated slideOutUp&quot;</code>
                 </div>
-                <code>class=&quot;animated slideOutUp&quot;</code>
             </div>
-        </div>
-        <div class="snippet animation">
-            <h2>Specials</h2>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated hinge">hinge</h2>
+            <div class="snippet animation">
+                <h2>Specials</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated hinge">hinge</h2>
+                    </div>
+                    <code>class=&quot;animated hinge&quot;</code>
                 </div>
-                <code>class=&quot;animated hinge&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated jackInTheBox">jackInTheBox</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated jackInTheBox">jackInTheBox</h2>
+                    </div>
+                    <code>class=&quot;animated jackInTheBox&quot;</code>
                 </div>
-                <code>class=&quot;animated jackInTheBox&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated rollIn">rollIn</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated rollIn">rollIn</h2>
+                    </div>
+                    <code>class=&quot;animated rollIn&quot;</code>
                 </div>
-                <code>class=&quot;animated rollIn&quot;</code>
-            </div>
-            <div class="codeblock">
-                <div class="ex-animation">
-                    <h2 class="animated rollOut">rollOut</h2>
+                <div class="codeblock">
+                    <div class="ex-animation">
+                        <h2 class="animated rollOut">rollOut</h2>
+                    </div>
+                    <code>class=&quot;animated rollOut&quot;</code>
                 </div>
-                <code>class=&quot;animated rollOut&quot;</code>
             </div>
-        </div>
+        </section>
     </section>
 </body>
 
