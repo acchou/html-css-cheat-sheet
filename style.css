@@ -154,6 +154,10 @@ section {
     color: white;
 }
 
+.box.transform {
+    background-image: linear-gradient(to right bottom, black, #888);
+}
+
 .box, .bar {
     font-family: 'Source Code Pro', monospace;
     display: inline-block;
@@ -281,6 +285,10 @@ section {
 
 .block {
     display: block;
+}
+
+.none {
+    display: none;
 }
 
 .inline-block {
@@ -1051,6 +1059,13 @@ nav > ul > li.right {
     float: right;
     margin: 0 60px;
 }
+
+@media(max-width: 600px) {
+    nav > ul > li.right {
+        display: none;
+    }
+}
+
 
 nav {
     padding-bottom: 75px;

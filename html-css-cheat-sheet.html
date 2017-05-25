@@ -6,6 +6,7 @@
     <link href="style.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <!-- div.section>h2+div.snippet>h2+div.codeblock>div.ex+code -->
@@ -31,6 +32,7 @@
                     <code>&lt;head&gt;</code>
                     <code>  &lt;title&gt;Title&lt;/title&gt;</code>
                     <code>  &lt;link href="style.css" type="text/css" rel="stylesheet"&gt;</code>
+                    <code>  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code>
                     <code>&lt;/head&gt;</code>
                     <code>&lt;body&gt;</code>
                     <code>  ...</code>
@@ -1547,6 +1549,16 @@
             <div class="snippet" id="css-box-display">
                 <h2 class="code">display:</h2>
                 <h3>Basic display modes</h3>
+                <div class="codeblock">
+                    <div class="text-example">
+                        <div class="box placeholder"></div>
+                        <div class="box none">x</div>
+                        <div class="box none">y</div>
+                        <div class="box none">z</div>
+                        <div class="box placeholder"></div>
+                    </div>
+                    <code>none;</code>
+                </div>
                 <div class="codeblock">
                     <div class="text-example">
                         <div class="box placeholder"></div>
@@ -3618,6 +3630,47 @@
                 </div>
             </div>
             <div class="snippet">
+                <h2 class="code">background-image:</h2>
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="box biggest ex-background-image" style="background-image: url(flower.png);"></div>
+                            <code>url(...);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box biggest ex-background-image" style="background-image: linear-gradient(to bottom, black, #ccc);"></div>
+                            <code>linear-gradient(to bottom, black, #ccc);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box biggest ex-background-image" style="background-image: linear-gradient(to top, black, #ccc);"></div>
+                            <code>linear-gradient(to top, black, #ccc);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box biggest ex-background-image" style="background-image: linear-gradient(to bottom, blue, black);"></div>
+                            <code>linear-gradient(to bottom, blue, black);</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="box biggest ex-background-image" style="background-image: linear-gradient(to bottom, green, black);"></div>
+                            <code>linear-gradient(to bottom, green, black);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box biggest ex-background-image" style="background-image: linear-gradient(to bottom, red, black);"></div>
+                            <code>linear-gradient(to bottom, red, black);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box biggest ex-background-image" style="background-image: linear-gradient(to right bottom, red, black);"></div>
+                            <code>linear-gradient(to right bottom, red, black);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box biggest ex-background-image" style="background-image: linear-gradient(to left bottom, red, black);"></div>
+                            <code>linear-gradient(to left bottom, red, black);</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="snippet">
                 <h2 class="code">border-color:</h2>
                 <div class="columns">
                     <div class="column">
@@ -3728,6 +3781,62 @@
             </div>
         </section>
         <!-- Section Colors -->
+
+        <section>
+            <h2>Transforms</h2>
+            <div class="snippet">
+                <h2 class="code">rotate:</h2>
+                <div class="codeblock">
+                    <div class="ex-transform">
+                        <div class="box transform" style="transform: rotate(0.5turn);"></div>
+                        <div class="box transform" style="transform: rotateX(60deg);"></div>
+                        <div class="box transform" style="transform: rotateY(60deg);"></div>
+                        <div class="box transform" style="transform: rotateZ(20deg);"></div>
+                        <div class="box transform" style="transform: rotate3d(1, 2.0, 3.0, 10deg);"></div>
+                    </div>
+                    <code></code>
+                </div>
+            </div>
+
+            <code>transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);</code>
+            <code>transform: translate(12px, 50%);</code>
+            <code>transform: translateX(2em);</code>
+            <code>transform: translateY(3in);</code>
+            <code>transform: scale(2, 0.5);</code>
+            <code>transform: scaleX(2);</code>
+            <code>transform: scaleY(0.5);</code>
+            <code>transform: skew(30deg, 20deg);</code>
+            <code>transform: skewX(30deg);</code>
+            <code>transform: skewY(1.07rad);</code>
+            <code>transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);</code>
+            <code>transform: translate3d(12px, 50%, 3em);</code>
+            <code>transform: translateZ(2px);</code>
+            <code>transform: scale3d(2.5, 1.2, 0.3);</code>
+            <code>transform: scaleZ(0.3);</code>
+            <code>transform: rotate3d(1, 2.0, 3.0, 10deg);</code>
+            <code>transform: rotateX(10deg);</code>
+            <code>transform: rotateY(10deg);</code>
+            <code>transform: rotateZ(10deg);</code>
+            <code>transform: perspective(17px);</code>
+        </section>
+
+        <section>
+            <h2>Responsive design</h2>
+            <h3>See <a href="https://developers.google.com/web/fundamentals/design-and-ui/responsive/">MDN on responsive design</a></h3>
+            <div class="snippet">
+                <h2>Media queries</h2>
+                <div class="codeblock">
+                    <div class="ex-css-element">
+                        Observe nav bar when reducing screen width
+                    </div>
+                    <code>@media(max-width: 600px) {</code>
+                    <code>    element {</code>
+                    <code>        display: none;</code>
+                    <code>    }</code>
+                    <code>}</code>
+                </div>
+            </div>
+        </section>
     </section>
     <!-- CSS -->
 </body>
