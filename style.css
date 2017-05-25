@@ -155,7 +155,7 @@ section {
 }
 
 .box.transform {
-    background-image: linear-gradient(to right bottom, black, #888);
+    background-image: url(icons8-cool.png);
 }
 
 .box, .bar {
