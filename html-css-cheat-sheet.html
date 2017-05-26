@@ -3784,39 +3784,148 @@
         <section>
             <h2>Transforms</h2>
             <div class="snippet">
-                <h2 class="code">rotate:</h2>
-                <div class="codeblock">
-                    <div class="ex-transform">
-                        <div class="box biggest transform" style="transform: rotate(0.5turn);"></div>
-                        <div class="box biggest transform" style="transform: rotateX(45deg);"></div>
-                        <div class="box biggest transform" style="transform: rotateY(45deg);"></div>
-                        <div class="box biggest transform" style="transform: rotateZ(45deg);"></div>
-                        <div class="box biggest transform" style="transform: rotate3d(1, 2, -1, 60deg);"></div>
+                <h2 class="code">transform:</h2>
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-transform">
+                                <div class="box biggest transform" style="transform: rotate(0.25turn);"></div>
+                            </div>
+                            <code>rotate(0.25turn);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-transform">
+                                <div class="box biggest transform" style="transform: rotate(0.5turn);"></div>
+                            </div>
+                            <code>rotate(0.5turn);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-transform">
+                                <div class="box biggest transform" style="transform: rotate(0.75turn);"></div>
+                            </div>
+                            <code>rotate(0.75turn);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-transform">
+                                <div class="box biggest transform" style="transform: rotateX(45deg);"></div>
+                            </div>
+                            <code>rotateX(45deg);</code>
+                        </div>
                     </div>
-                    <code></code>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-transform">
+                                <div class="box biggest transform" style="transform: rotateY(45deg);"></div>
+                            </div>
+                            <code>rotateY(45deg);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-transform">
+                                <div class="box biggest transform" style="transform: rotateZ(45deg);"></div>
+                            </div>
+                            <code>rotateZ(45deg);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-transform">
+                                <div class="box biggest transform" style="transform: rotate3d(1, 2, -1, 45deg);"></div>
+                            </div>
+                            <code>rotate3d(1, 2, -1, 45deg);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-transform">
+                                <div class="box biggest transform" style="transform: scale(2, 0.5);"></div>
+                            </div>
+                            <code>scale(2, 0.5);</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-transform">
+                                <div class="box biggest transform" style="transform: scaleX(2);"></div>
+                            </div>
+                            <code>scaleX(2);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-transform">
+                                <div class="box biggest transform" style="transform: scaleY(0.5);"></div>
+                            </div>
+                            <code>scaleY(0.5);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-transform">
+                                <div class="box biggest transform" style="transform: skew(30deg, 20deg);"></div>
+                            </div>
+                            <code>skew(30deg, 20deg);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-transform">
+                                <div class="box biggest transform" style="transform: skewX(30deg);"></div>
+                            </div>
+                            <code>skewX(30deg);</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-transform">
+                                <div class="box biggest transform" style="transform: skewY(1.07rad);"></div>
+                            </div>
+                            <code>skewY(1.07rad);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-transform">
+                                <div class="box biggest transform" style="transform: scale3d(2.5, 1.2, 0.3);"></div>
+                            </div>
+                            <code>scale3d(2.5, 1.2, 0.3);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-transform">
+                                <div class="box biggest transform" style="transform: scaleZ(0.3);"></div>
+                            </div>
+                            <code>scaleZ(0.3);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-transform">
+                                <div class="box biggest transform" style="transform: perspective();"></div>
+                            </div>
+                            <code>perspective(60px);</code>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <code>transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);</code>
-            <code>transform: translate(12px, 50%);</code>
-            <code>transform: translateX(2em);</code>
-            <code>transform: translateY(3in);</code>
-            <code>transform: scale(2, 0.5);</code>
-            <code>transform: scaleX(2);</code>
-            <code>transform: scaleY(0.5);</code>
-            <code>transform: skew(30deg, 20deg);</code>
-            <code>transform: skewX(30deg);</code>
-            <code>transform: skewY(1.07rad);</code>
-            <code>transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);</code>
-            <code>transform: translate3d(12px, 50%, 3em);</code>
-            <code>transform: translateZ(2px);</code>
-            <code>transform: scale3d(2.5, 1.2, 0.3);</code>
-            <code>transform: scaleZ(0.3);</code>
-            <code>transform: rotate3d(1, 2.0, 3.0, 10deg);</code>
-            <code>transform: rotateX(10deg);</code>
-            <code>transform: rotateY(10deg);</code>
-            <code>transform: rotateZ(10deg);</code>
-            <code>transform: perspective(17px);</code>
+            <div class="snippet">
+                <h2 class="code">transform:</h2>
+                <h3>Translations</h3>
+                <div class="codeblock">
+                    <div class="ex-transform">
+                        <div class="box biggest transform" style="transform: translate(12px, 50%);"></div>
+                    </div>
+                    <code>translate(12px, 50%);</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-transform">
+                        <div class="box biggest transform" style="transform: translateX(2em);"></div>
+                    </div>
+                    <code>translateX(2em);</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-transform">
+                        <div class="box biggest transform" style="transform: translateY(3in);"></div>
+                    </div>
+                    <code>translateY(3in);</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-transform">
+                        <div class="box biggest transform" style="transform: translate3d(12px, 50%, 3em);"></div>
+                    </div>
+                    <code>translate3d(12px, 50%, 3em);</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-transform">
+                        <div class="box biggest transform" style="transform: translateZ(2px);"></div>
+                    </div>
+                    <code>translateZ(2px);</code>
+                </div>
+            </div>
         </section>
 
         <section>
