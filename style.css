@@ -412,6 +412,10 @@ section {
     height: 10em;
 }
 
+.height-15 {
+    height: 15em;
+}
+
 .height-20 {
     height: 20em;
 }
@@ -1146,3 +1150,11 @@ nav a:link, nav a:visited {
 .codeblock:hover > code {
     display: block;
 } */
+
+.boxes-3d {
+    perspective-origin: 50% 50%;
+}
+
+.boxes-3d > .box {
+    transform: rotateY(45deg);
+}
