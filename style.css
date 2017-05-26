@@ -100,6 +100,12 @@ code {
     overflow: scroll;
 }
 
+.codeblock.ex-translate {
+    /* margin: 0; */
+    text-align: left;
+    /* padding: 0; */
+}
+
 .codeblock.ex-header {
     margin: 8px;
     padding: 0;
@@ -382,6 +388,10 @@ section {
     width: 20em;
 }
 
+.width-30 {
+    width: 30em;
+}
+
 .height-1 {
     height: 1em;
 }
@@ -400,6 +410,14 @@ section {
 
 .height-10 {
     height: 10em;
+}
+
+.height-20 {
+    height: 20em;
+}
+
+.height-30 {
+    height: 30em;
 }
 
 .flex.taller {
@@ -1098,6 +1116,22 @@ nav a:link, nav a:visited {
 .animation:hover .animated {
     animation-iteration-count: infinite;
     animation-duration: 1s;
+}
+
+.ex-transform {
+    display: inline-block;
+}
+
+.ex-transform.lr-border {
+    border: dashed black;
+    border-width: 0 1px;
+    border-radius: 0;
+}
+
+.ex-transform.tb-border {
+    border: dashed black;
+    border-width: 1px 0;
+    border-radius: 0;
 }
 
 /* Rules to show only hovered code blocks
