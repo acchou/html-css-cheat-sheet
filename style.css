@@ -1150,31 +1150,30 @@ table.perspective .codeblock {
 
 .ex-perspective.right-bottom {
     perspective-origin: 300% 200%;
-    margin: 30px;
-    margin-bottom: 0;
+    margin: 30px 0 -20px 30px;
 }
 
 .ex-perspective.left-bottom {
     perspective-origin: -300% 200%;
-    margin: 40px;
-    margin-bottom: 0;
+    margin: 20px;
+    margin-top: 30px;
+    margin-bottom: -20px;
 }
 
 .ex-perspective.center {
     perspective-origin: 50% 50%;
-    margin: 10px auto;
-    margin-bottom: -10px;
+    margin: 10px 0 -30px 25px;
 }
 
 .ex-perspective.right-top {
     perspective-origin: 300% -200%;
-    margin: 25px 0 20px 40px;
+    margin: 25px 0 0 30px;
 }
 
 .ex-perspective.left-top {
     perspective-origin: -300% -200%;
-    margin: 30px;
-    margin-bottom: 20px; 
+    margin: 20px;
+    margin-bottom: 0; 
 }
 
 .cube {
@@ -1185,40 +1184,40 @@ table.perspective .codeblock {
 
 .face {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     color: white;
-    line-height: 50px;
+    line-height: 40px;
     font-size: 2em;
 }
 
 .face.front {
-    transform: translateZ(25px);
+    transform: translateZ(20px);
     background-color: rgba(100%, 0%, 0%, 0.7);
 }
 
 .face.top {
-    transform: rotateX(90deg) translateZ(25px);
+    transform: rotateX(90deg) translateZ(20px);
     background-color: rgba(0%, 100%, 0%, 0.7);;
 }
 
 .face.right {
-    transform: rotateY(90deg) translateZ(25px);
+    transform: rotateY(90deg) translateZ(20px);
     background-color: rgba(0%, 0%, 100%, 0.7);;
 }
 
 .face.left {
-    transform: rotateY(-90deg) translateZ(25px);
+    transform: rotateY(-90deg) translateZ(20px);
     background-color: rgba(50%, 50%, 50%, 0.7);
 }
 
 .face.bottom {
-    transform: rotateX(-90deg) translateZ(25px);
+    transform: rotateX(-90deg) translateZ(20px);
     background-color: rgba(100%, 0%, 100%, 0.7);
 }
 
 .face.back {
-    transform: rotateY(180deg) translateZ(25px);
+    transform: rotateY(180deg) translateZ(20px);
     background-color: rgba(25%, 50%, 75%, 0.7);
 }
 
