@@ -1232,6 +1232,10 @@ table.perspective {
     margin: 16px;
 }
 
+table.perspective .codeblock {
+    overflow: hidden;
+}
+
 table.perspective td {
   border: 1px solid black;
 }
