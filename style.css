@@ -1138,23 +1138,100 @@ nav a:link, nav a:visited {
     border-radius: 0;
 }
 
-/* Rules to show only hovered code blocks
-
-.codeblock > code {
-    display: none;
-}
-.codeblock > .ex-element {
-    border-bottom: none;
+.ex-perspective {
+    height: 80px;
+    width: 50px;
+    position: relative;
 }
 
-.codeblock:hover > code {
-    display: block;
-} */
+table.perspective .codeblock {
+    padding: 0;
+}
 
-.boxes-3d {
+.ex-perspective.right-bottom {
+    perspective-origin: 300% 200%;
+    margin: 30px;
+    margin-bottom: 0;
+}
+
+.ex-perspective.left-bottom {
+    perspective-origin: -300% 200%;
+    margin: 40px;
+    margin-bottom: 0;
+}
+
+.ex-perspective.center {
     perspective-origin: 50% 50%;
+    margin: 10px auto;
+    margin-bottom: -10px;
 }
 
-.boxes-3d > .box {
-    transform: rotateY(45deg);
+.ex-perspective.right-top {
+    perspective-origin: 300% -200%;
+    margin: 25px 0 20px 40px;
+}
+
+.ex-perspective.left-top {
+    perspective-origin: -300% -200%;
+    margin: 30px;
+    margin-bottom: 20px; 
+}
+
+.cube {
+    perspective: 400px;
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+}
+
+.face {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    color: white;
+    line-height: 50px;
+    font-size: 2em;
+}
+
+.face.front {
+    transform: translateZ(25px);
+    background-color: rgba(100%, 0%, 0%, 0.7);
+}
+
+.face.top {
+    transform: rotateX(90deg) translateZ(25px);
+    background-color: rgba(0%, 100%, 0%, 0.7);;
+}
+
+.face.right {
+    transform: rotateY(90deg) translateZ(25px);
+    background-color: rgba(0%, 0%, 100%, 0.7);;
+}
+
+.face.left {
+    transform: rotateY(-90deg) translateZ(25px);
+    background-color: rgba(50%, 50%, 50%, 0.7);
+}
+
+.face.bottom {
+    transform: rotateX(-90deg) translateZ(25px);
+    background-color: rgba(100%, 0%, 100%, 0.7);
+}
+
+.face.back {
+    transform: rotateY(180deg) translateZ(25px);
+    background-color: rgba(25%, 50%, 75%, 0.7);
+}
+
+table.perspective th {
+    vertical-align: center;
+    padding: 8px;
+}
+
+table.perspective {
+    margin-top: 20px;
+    margin: 16px;
+}
+
+table.perspective td {
+  border: 1px solid black;
 }
