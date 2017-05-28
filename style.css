@@ -1196,6 +1196,10 @@ table.perspective .codeblock {
     background-color: rgba(100%, 0%, 0%, 0.7);
 }
 
+.cube.center > .face.front {
+    background-color: rgba(100%, 0%, 0%, 0.5);
+}
+
 .face.top {
     transform: rotateX(90deg) translateZ(20px);
     background-color: rgba(0%, 100%, 0%, 0.7);;
@@ -1231,10 +1235,40 @@ table.perspective {
     margin: 16px;
 }
 
+table.transform-origin {
+    margin: 16px 0 16px 16px;
+}
+
 table.perspective .codeblock {
     overflow: hidden;
 }
 
 table.perspective td {
   border: 1px solid black;
+}
+
+.ex-transform-origin {
+    border: 1px solid gray;
+    display: inline-block;
+    perspective: 100px;
+}
+
+.transform-origin .codeblock {
+    padding: 16px 16px 0 12px;
+}
+
+.door {
+    height: 40px;
+    width: 40px;
+    background-color: goldenrod;
+}
+
+.door.rotate-y  { transform: rotateY(60deg); }
+.door.rotate-y2 { transform: rotateY(-60deg); }
+.door.rotate-x  { transform: rotateX(60deg); }
+.door.rotate-x2 { transform: rotateX(-60deg); }
+.door.rotate-z  { transform: rotateZ(45deg); }
+
+.transform-origin td {
+    text-align: left;
 }
