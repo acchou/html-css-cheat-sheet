@@ -1257,6 +1257,10 @@ table.perspective td {
     padding: 16px 16px 0 12px;
 }
 
+table.transform-origin > caption {
+    margin-left: 15%;
+}
+
 .door {
     height: 40px;
     width: 40px;
