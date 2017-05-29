@@ -161,7 +161,6 @@ section {
 }
 
 .box.transform {
-    background-image: url(icons8-cool.png);
 }
 
 .box, .bar {
@@ -682,6 +681,10 @@ a:link, a:visited {
     border: 3px solid black;
 }
 
+.ex-border.light {
+    background-color: transparent;
+}
+
 .ex-border-side {
     border: 3px solid black;
     border-radius: 0;
@@ -1124,6 +1127,8 @@ nav a:link, nav a:visited {
 
 .ex-transform {
     display: inline-block;
+    position: relative;
+    perspective: 100px;
 }
 
 .ex-transform.lr-border {
@@ -1193,11 +1198,7 @@ table.perspective .codeblock {
 
 .face.front {
     transform: translateZ(20px);
-    background-color: rgba(100%, 0%, 0%, 0.7);
-}
-
-.cube.center > .face.front {
-    background-color: rgba(100%, 0%, 0%, 0.5);
+    background-color: rgba(30%, 30%, 30%, 0.5);
 }
 
 .face.top {
@@ -1212,7 +1213,7 @@ table.perspective .codeblock {
 
 .face.left {
     transform: rotateY(-90deg) translateZ(20px);
-    background-color: rgba(50%, 50%, 50%, 0.7);
+    background-color: rgba(100%, 0%, 0%, 0.7);
 }
 
 .face.bottom {
@@ -1275,4 +1276,10 @@ table.transform-origin > caption {
 
 .transform-origin td {
     text-align: left;
+}
+
+.vector {
+    width: 0px;
+    height: 60px;
+    border-left: 2px solid red;
 }

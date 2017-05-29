@@ -3631,41 +3631,40 @@
             </div>
             <div class="snippet">
                 <h2 class="code">background-image:</h2>
+                <div class="codeblock">
+                    <div class="box biggest ex-background-image" style="background-image: url(flower.png);"></div>
+                    <code>url(...);</code>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2 class="code">background-image: linear-gradient</h2>
                 <div class="columns">
                     <div class="column">
                         <div class="codeblock">
-                            <div class="box biggest ex-background-image" style="background-image: url(flower.png);"></div>
-                            <code>url(...);</code>
-                        </div>
-                        <div class="codeblock">
                             <div class="box biggest ex-background-image" style="background-image: linear-gradient(to bottom, black, #ccc);"></div>
-                            <code>linear-gradient(to bottom, black, #ccc);</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box biggest ex-background-image" style="background-image: linear-gradient(to top, black, #ccc);"></div>
-                            <code>linear-gradient(to top, black, #ccc);</code>
+                            <code>(to bottom, black, #ccc);</code>
                         </div>
                         <div class="codeblock">
                             <div class="box biggest ex-background-image" style="background-image: linear-gradient(to bottom, blue, black);"></div>
-                            <code>linear-gradient(to bottom, blue, black);</code>
+                            <code>(to bottom, blue, black);</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="box biggest ex-background-image" style="background-image: linear-gradient(to bottom, green, black);"></div>
+                            <code>(to bottom, green, black);</code>
                         </div>
                     </div>
                     <div class="column">
                         <div class="codeblock">
-                            <div class="box biggest ex-background-image" style="background-image: linear-gradient(to bottom, green, black);"></div>
-                            <code>linear-gradient(to bottom, green, black);</code>
-                        </div>
-                        <div class="codeblock">
                             <div class="box biggest ex-background-image" style="background-image: linear-gradient(to bottom, red, black);"></div>
-                            <code>linear-gradient(to bottom, red, black);</code>
+                            <code>(to bottom, red, black);</code>
                         </div>
                         <div class="codeblock">
                             <div class="box biggest ex-background-image" style="background-image: linear-gradient(to right bottom, red, black);"></div>
-                            <code>linear-gradient(to right bottom, red, black);</code>
+                            <code>(to right bottom, red, black);</code>
                         </div>
                         <div class="codeblock">
                             <div class="box biggest ex-background-image" style="background-image: linear-gradient(to left bottom, red, black);"></div>
-                            <code>linear-gradient(to left bottom, red, black);</code>
+                            <code>(to left bottom, red, black);</code>
                         </div>
                     </div>
                 </div>
@@ -3787,25 +3786,25 @@
                 <h2 class="code">transform: rotate</h2>
                 <div class="codeblock">
                     <div class="ex-transform">
-                        <div class="box biggest transform" style="transform: rotate(0);"></div>
+                        <div class="box biggest transform" style="transform: rotate(0);">1</div>
                     </div>
                     <code>(0);</code>
                 </div>
                 <div class="codeblock">
                     <div class="ex-transform">
-                        <div class="box biggest transform" style="transform: rotate(0.25turn);"></div>
+                        <div class="box biggest transform" style="transform: rotate(0.25turn);">1</div>
                     </div>
                     <code>(0.25turn);</code>
                 </div>
                 <div class="codeblock">
                     <div class="ex-transform">
-                        <div class="box biggest transform" style="transform: rotate(0.5turn);"></div>
+                        <div class="box biggest transform" style="transform: rotate(0.5turn);">1</div>
                     </div>
                     <code>(0.5turn);</code>
                 </div>
                 <div class="codeblock">
                     <div class="ex-transform">
-                        <div class="box biggest transform" style="transform: rotate(0.75turn);"></div>
+                        <div class="box biggest transform" style="transform: rotate(0.75turn);">1</div>
                     </div>
                     <code>(0.75turn);</code>
                 </div>
@@ -3813,24 +3812,31 @@
             <div class="snippet">
                 <h2 class="code">transform:</h2>
                 <h3>Rotation in 3D</h3>
+                <h3><code>perspective: 100px;</code></h3>
                 <div class="column">
                     <div class="codeblock">
                         <div class="ex-transform">
-                            <div class="box biggest transform" style="transform: rotateX(45deg);"></div>
+                            <div class="box biggest transform" style="transform: rotateX(45deg);">1</div>
                         </div>
                         <code>rotateX(45deg);</code>
                     </div>
                     <div class="codeblock">
                         <div class="ex-transform">
-                            <div class="box biggest transform" style="transform: rotateY(45deg);"></div>
+                            <div class="box biggest transform" style="transform: rotateY(45deg);">1</div>
                         </div>
                         <code>rotateY(45deg);</code>
                     </div>
                     <div class="codeblock">
                         <div class="ex-transform">
-                            <div class="box biggest transform" style="transform: rotateZ(45deg);"></div>
+                            <div class="box biggest transform" style="transform: rotateZ(45deg);">1</div>
                         </div>
                         <code>rotateZ(45deg);</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-transform">
+                            <div class="box biggest transform" style="transform: rotate3d(1, 1, 1, 45deg);">1</div>
+                        </div>
+                        <code>rotate3d(1, 1, 1, 45deg);</code>
                     </div>
                 </div>
             </div>
@@ -3838,25 +3844,25 @@
                 <h2 class="code">transform: scale</h2>
                 <div class="codeblock">
                     <div class="ex-transform">
-                        <div class="box biggest transform" style="transform: scale(1.2, 1.2);"></div>
+                        <div class="box biggest transform" style="transform: scale(1.2, 1.2);">1</div>
                     </div>
                     <code>(1.2, 1.2);</code>
                 </div>
                 <div class="codeblock">
                     <div class="ex-transform">
-                        <div class="box biggest transform" style="transform: scale(0.5, 0.5);"></div>
+                        <div class="box biggest transform" style="transform: scale(0.5, 0.5);">1</div>
                     </div>
                     <code>(0.5, 0.5);</code>
                 </div>
                 <div class="codeblock">
                     <div class="ex-transform">
-                        <div class="box biggest transform" style="transform: scale(0.5, 1);"></div>
+                        <div class="box biggest transform" style="transform: scale(0.5, 1);">1</div>
                     </div>
                     <code>(0.5, 1);</code>
                 </div>
                 <div class="codeblock">
                     <div class="ex-transform">
-                        <div class="box biggest transform" style="transform: scale(1, 0.5);"></div>
+                        <div class="box biggest transform" style="transform: scale(1, 0.5);">1</div>
                     </div>
                     <code>(1, 0.5);</code>
                 </div>
@@ -3865,25 +3871,25 @@
                 <h2 class="code">transform: skew</h2>
                 <div class="codeblock">
                     <div class="ex-transform tb-border">
-                        <div class="box biggest transform" style="transform: skew(10deg, 0deg);"></div>
+                        <div class="box biggest transform" style="transform: skew(10deg, 0deg);">1</div>
                     </div>
                     <code>(10deg, 0deg);</code>
                 </div>
                 <div class="codeblock">
                     <div class="ex-transform tb-border">
-                        <div class="box biggest transform" style="transform: skew(-10deg, 0deg);"></div>
+                        <div class="box biggest transform" style="transform: skew(-10deg, 0deg);">1</div>
                     </div>
                     <code>(-10deg, 0deg);</code>
                 </div>
                 <div class="codeblock">
                     <div class="ex-transform lr-border">
-                        <div class="box biggest transform" style="transform: skew(0deg, 10deg);"></div>
+                        <div class="box biggest transform" style="transform: skew(0deg, 10deg);">1</div>
                     </div>
                     <code>(0deg, 10deg);</code>
                 </div>
                 <div class="codeblock">
                     <div class="ex-transform lr-border">
-                        <div class="box biggest transform" style="transform: skew(0deg, -10deg);"></div>
+                        <div class="box biggest transform" style="transform: skew(0deg, -10deg);">1</div>
                     </div>
                     <code>(0deg, -10deg);</code>
                 </div>
@@ -3929,48 +3935,48 @@
                             <td>
                                 <div class="codeblock">
                                     <div class="ex-perspective cube right-bottom" style="perspective: 400px;">
-                                        <div class="face front">1</div>
-                                        <div class="face top">2</div>
-                                        <div class="face right">3</div>
-                                        <div class="face left">4</div>
-                                        <div class="face bottom">5</div>
-                                        <div class="face back">6</div>
+                                        <div class="face front">F</div>
+                                        <div class="face top">T</div>
+                                        <div class="face right">R</div>
+                                        <div class="face left">L</div>
+                                        <div class="face bottom">O</div>
+                                        <div class="face back">B</div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="codeblock">
                                     <div class="ex-perspective cube right-bottom" style="perspective: 300px;">
-                                        <div class="face front">1</div>
-                                        <div class="face top">2</div>
-                                        <div class="face right">3</div>
-                                        <div class="face left">4</div>
-                                        <div class="face bottom">5</div>
-                                        <div class="face back">6</div>
+                                        <div class="face front">F</div>
+                                        <div class="face top">T</div>
+                                        <div class="face right">R</div>
+                                        <div class="face left">L</div>
+                                        <div class="face bottom">O</div>
+                                        <div class="face back">B</div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="codeblock">
                                     <div class="ex-perspective cube right-bottom" style="perspective: 200px;">
-                                        <div class="face front">1</div>
-                                        <div class="face top">2</div>
-                                        <div class="face right">3</div>
-                                        <div class="face left">4</div>
-                                        <div class="face bottom">5</div>
-                                        <div class="face back">6</div>
+                                        <div class="face front">F</div>
+                                        <div class="face top">T</div>
+                                        <div class="face right">R</div>
+                                        <div class="face left">L</div>
+                                        <div class="face bottom">O</div>
+                                        <div class="face back">B</div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="codeblock">
                                     <div class="ex-perspective cube right-bottom" style="perspective: 150px;">
-                                        <div class="face front">1</div>
-                                        <div class="face top">2</div>
-                                        <div class="face right">3</div>
-                                        <div class="face left">4</div>
-                                        <div class="face bottom">5</div>
-                                        <div class="face back">6</div>
+                                        <div class="face front">F</div>
+                                        <div class="face top">T</div>
+                                        <div class="face right">R</div>
+                                        <div class="face left">L</div>
+                                        <div class="face bottom">O</div>
+                                        <div class="face back">B</div>
                                     </div>
                                 </div>
                             </td>
@@ -3982,48 +3988,48 @@
                             <td>
                                 <div class="codeblock">
                                     <div class="ex-perspective cube left-bottom" style="perspective: 400px;">
-                                        <div class="face front">1</div>
-                                        <div class="face top">2</div>
-                                        <div class="face right">3</div>
-                                        <div class="face left">4</div>
-                                        <div class="face bottom">5</div>
-                                        <div class="face back">6</div>
+                                        <div class="face front">F</div>
+                                        <div class="face top">T</div>
+                                        <div class="face right">R</div>
+                                        <div class="face left">L</div>
+                                        <div class="face bottom">O</div>
+                                        <div class="face back">B</div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="codeblock">
                                     <div class="ex-perspective cube left-bottom" style="perspective: 300px;">
-                                        <div class="face front">1</div>
-                                        <div class="face top">2</div>
-                                        <div class="face right">3</div>
-                                        <div class="face left">4</div>
-                                        <div class="face bottom">5</div>
-                                        <div class="face back">6</div>
+                                        <div class="face front">F</div>
+                                        <div class="face top">T</div>
+                                        <div class="face right">R</div>
+                                        <div class="face left">L</div>
+                                        <div class="face bottom">O</div>
+                                        <div class="face back">B</div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="codeblock">
                                     <div class="ex-perspective cube left-bottom" style="perspective: 200px;">
-                                        <div class="face front">1</div>
-                                        <div class="face top">2</div>
-                                        <div class="face right">3</div>
-                                        <div class="face left">4</div>
-                                        <div class="face bottom">5</div>
-                                        <div class="face back">6</div>
+                                        <div class="face front">F</div>
+                                        <div class="face top">T</div>
+                                        <div class="face right">R</div>
+                                        <div class="face left">L</div>
+                                        <div class="face bottom">O</div>
+                                        <div class="face back">B</div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="codeblock">
                                     <div class="ex-perspective cube left-bottom" style="perspective: 150px;">
-                                        <div class="face front">1</div>
-                                        <div class="face top">2</div>
-                                        <div class="face right">3</div>
-                                        <div class="face left">4</div>
-                                        <div class="face bottom">5</div>
-                                        <div class="face back">6</div>
+                                        <div class="face front">F</div>
+                                        <div class="face top">T</div>
+                                        <div class="face right">R</div>
+                                        <div class="face left">L</div>
+                                        <div class="face bottom">O</div>
+                                        <div class="face back">B</div>
                                     </div>
                                 </div>
                             </td>
@@ -4035,48 +4041,48 @@
                             <td>
                                 <div class="codeblock">
                                     <div class="ex-perspective cube right-top" style="perspective: 400px;">
-                                        <div class="face front">1</div>
-                                        <div class="face top">2</div>
-                                        <div class="face right">3</div>
-                                        <div class="face left">4</div>
-                                        <div class="face bottom">5</div>
-                                        <div class="face back">6</div>
+                                        <div class="face front">F</div>
+                                        <div class="face top">T</div>
+                                        <div class="face right">R</div>
+                                        <div class="face left">L</div>
+                                        <div class="face bottom">O</div>
+                                        <div class="face back">B</div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="codeblock">
                                     <div class="ex-perspective cube right-top" style="perspective: 300px;">
-                                        <div class="face front">1</div>
-                                        <div class="face top">2</div>
-                                        <div class="face right">3</div>
-                                        <div class="face left">4</div>
-                                        <div class="face bottom">5</div>
-                                        <div class="face back">6</div>
+                                        <div class="face front">F</div>
+                                        <div class="face top">T</div>
+                                        <div class="face right">R</div>
+                                        <div class="face left">L</div>
+                                        <div class="face bottom">O</div>
+                                        <div class="face back">B</div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="codeblock">
                                     <div class="ex-perspective cube right-top" style="perspective: 200px;">
-                                        <div class="face front">1</div>
-                                        <div class="face top">2</div>
-                                        <div class="face right">3</div>
-                                        <div class="face left">4</div>
-                                        <div class="face bottom">5</div>
-                                        <div class="face back">6</div>
+                                        <div class="face front">F</div>
+                                        <div class="face top">T</div>
+                                        <div class="face right">R</div>
+                                        <div class="face left">L</div>
+                                        <div class="face bottom">O</div>
+                                        <div class="face back">B</div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="codeblock">
                                     <div class="ex-perspective cube right-top" style="perspective: 150px;">
-                                        <div class="face front">1</div>
-                                        <div class="face top">2</div>
-                                        <div class="face right">3</div>
-                                        <div class="face left">4</div>
-                                        <div class="face bottom">5</div>
-                                        <div class="face back">6</div>
+                                        <div class="face front">F</div>
+                                        <div class="face top">T</div>
+                                        <div class="face right">R</div>
+                                        <div class="face left">L</div>
+                                        <div class="face bottom">O</div>
+                                        <div class="face back">B</div>
                                     </div>
                                 </div>
                             </td>
@@ -4088,48 +4094,48 @@
                             <td>
                                 <div class="codeblock">
                                     <div class="ex-perspective cube left-top" style="perspective: 400px;">
-                                        <div class="face front">1</div>
-                                        <div class="face top">2</div>
-                                        <div class="face right">3</div>
-                                        <div class="face left">4</div>
-                                        <div class="face bottom">5</div>
-                                        <div class="face back">6</div>
+                                        <div class="face front">F</div>
+                                        <div class="face top">T</div>
+                                        <div class="face right">R</div>
+                                        <div class="face left">L</div>
+                                        <div class="face bottom">O</div>
+                                        <div class="face back">B</div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="codeblock">
                                     <div class="ex-perspective cube left-top" style="perspective: 300px;">
-                                        <div class="face front">1</div>
-                                        <div class="face top">2</div>
-                                        <div class="face right">3</div>
-                                        <div class="face left">4</div>
-                                        <div class="face bottom">5</div>
-                                        <div class="face back">6</div>
+                                        <div class="face front">F</div>
+                                        <div class="face top">T</div>
+                                        <div class="face right">R</div>
+                                        <div class="face left">L</div>
+                                        <div class="face bottom">O</div>
+                                        <div class="face back">B</div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="codeblock">
                                     <div class="ex-perspective cube left-top" style="perspective: 200px;">
-                                        <div class="face front">1</div>
-                                        <div class="face top">2</div>
-                                        <div class="face right">3</div>
-                                        <div class="face left">4</div>
-                                        <div class="face bottom">5</div>
-                                        <div class="face back">6</div>
+                                        <div class="face front">F</div>
+                                        <div class="face top">T</div>
+                                        <div class="face right">R</div>
+                                        <div class="face left">L</div>
+                                        <div class="face bottom">O</div>
+                                        <div class="face back">B</div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="codeblock">
                                     <div class="ex-perspective cube left-top" style="perspective: 150px;">
-                                        <div class="face front">1</div>
-                                        <div class="face top">2</div>
-                                        <div class="face right">3</div>
-                                        <div class="face left">4</div>
-                                        <div class="face bottom">5</div>
-                                        <div class="face back">6</div>
+                                        <div class="face front">F</div>
+                                        <div class="face top">T</div>
+                                        <div class="face right">R</div>
+                                        <div class="face left">L</div>
+                                        <div class="face bottom">O</div>
+                                        <div class="face back">B</div>
                                     </div>
                                 </div>
                             </td>
@@ -4141,48 +4147,48 @@
                             <td>
                                 <div class="codeblock">
                                     <div class="ex-perspective cube center" style="perspective: 400px;">
-                                        <div class="face front">1</div>
-                                        <div class="face top">2</div>
-                                        <div class="face right">3</div>
-                                        <div class="face left">4</div>
-                                        <div class="face bottom">5</div>
-                                        <div class="face back">6</div>
+                                        <div class="face front">F</div>
+                                        <div class="face top">T</div>
+                                        <div class="face right">R</div>
+                                        <div class="face left">L</div>
+                                        <div class="face bottom">O</div>
+                                        <div class="face back">B</div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="codeblock">
                                     <div class="ex-perspective cube center" style="perspective: 300px;">
-                                        <div class="face front">1</div>
-                                        <div class="face top">2</div>
-                                        <div class="face right">3</div>
-                                        <div class="face left">4</div>
-                                        <div class="face bottom">5</div>
-                                        <div class="face back">6</div>
+                                        <div class="face front">F</div>
+                                        <div class="face top">T</div>
+                                        <div class="face right">R</div>
+                                        <div class="face left">L</div>
+                                        <div class="face bottom">O</div>
+                                        <div class="face back">B</div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="codeblock">
                                     <div class="ex-perspective cube center" style="perspective: 200px;">
-                                        <div class="face front">1</div>
-                                        <div class="face top">2</div>
-                                        <div class="face right">3</div>
-                                        <div class="face left">4</div>
-                                        <div class="face bottom">5</div>
-                                        <div class="face back">6</div>
+                                        <div class="face front">F</div>
+                                        <div class="face top">T</div>
+                                        <div class="face right">R</div>
+                                        <div class="face left">L</div>
+                                        <div class="face bottom">O</div>
+                                        <div class="face back">B</div>
                                     </div>
                                 </div>
                             </td>
                             <td>
                                 <div class="codeblock">
                                     <div class="ex-perspective cube center" style="perspective: 150px;">
-                                        <div class="face front">1</div>
-                                        <div class="face top">2</div>
-                                        <div class="face right">3</div>
-                                        <div class="face left">4</div>
-                                        <div class="face bottom">5</div>
-                                        <div class="face back">6</div>
+                                        <div class="face front">F</div>
+                                        <div class="face top">T</div>
+                                        <div class="face right">R</div>
+                                        <div class="face left">L</div>
+                                        <div class="face bottom">O</div>
+                                        <div class="face back">B</div>
                                     </div>
                                 </div>
                             </td>
@@ -4333,6 +4339,38 @@
                         </td>
                     </tr>
                 </table>
+            </div>
+            <div class="snippet">
+                <h2 class="code">transform: rotate3d</h2>
+                <div class="codeblock">
+                    <div class="ex-transform">
+                        <div class="box biggest transform" style="transform: rotate3d(1, 0, 0, 60deg);">1</div>
+                        <div class="box biggest transform" style="transform: rotate3d(1, 0, 0, 45deg);">1</div>
+                        <div class="box biggest transform" style="transform: rotate3d(1, 0, 0, 0deg);">1</div>
+                        <div class="box biggest transform" style="transform: rotate3d(1, 0, 0, -45deg);">1</div>
+                        <div class="box biggest transform" style="transform: rotate3d(1, 0, 0, -60deg);">1</div>
+
+                        <!--                         <div class="box biggest transform" style="transform: rotate3d(0, 1, 0, 60deg);">1</div>
+<div class="box biggest transform" style="transform: rotate3d(0, 1, 0, 45deg);">1</div>
+<div class="box biggest transform" style="transform: rotate3d(0, 1, 0, 0deg);">1</div>
+<div class="box biggest transform" style="transform: rotate3d(0, 1, 0, -45deg);">1</div>
+<div class="box biggest transform" style="transform: rotate3d(0, 1, 0, -60deg);">1</div>
+
+<div class="box biggest transform" style="transform: rotate3d(0, 0, 1, 60deg);">1</div>
+<div class="box biggest transform" style="transform: rotate3d(0, 0, 1, 45deg);">1</div>
+<div class="box biggest transform" style="transform: rotate3d(0, 0, 1, 0deg);">1</div>
+<div class="box biggest transform" style="transform: rotate3d(0, 0, 1, -45deg);">1</div>
+<div class="box biggest transform" style="transform: rotate3d(0, 0, 1, -60deg);">1</div>
+
+<div class="box biggest transform" style="transform: rotate3d(1, 1.5, 0, 60deg);">1</div>
+<div class="box biggest transform" style="transform: rotate3d(1, 1.5, 0, 45deg);">1</div>
+<div class="box biggest transform" style="transform: rotate3d(1, 1.5, 0, 0deg);">1</div>
+<div class="box biggest transform" style="transform: rotate3d(1, 1.5, 0, -45deg);">1</div>
+<div class="box biggest transform" style="transform: rotate3d(1, 1.5, 0, -60deg);">1</div>
+ -->
+                    </div>
+                    <code>(1, 2, -1, 45deg);</code>
+                </div>
             </div>
             <div class="snippet">
                 <h2>3D transforms</h2>
