@@ -1279,3 +1279,44 @@ table.transform-origin > caption {
 .transform-origin td {
     text-align: left;
 }
+
+.ex-card:hover .card {
+    transform: rotateY(180deg) translate(100%);
+}
+
+.ex-card {
+    perspective: 300px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #aaa;
+    color: white;
+    line-height: 100px;
+    transform: rotateY(0) translate(0);
+    transition: all 0.7s;
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 2em;
+}
+
+.card {
+    transform-style: preserve-3d;
+    transform-origin: right;
+    position: relative;
+}
+
+.card-front, .card-back {
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.card-back {
+    transform: rotateY(180deg) translateZ(1px);
+    background-color: purple;
+}
