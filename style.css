@@ -976,23 +976,23 @@ span.super {
     animation: slideright 1s 1 1s, colorshift 1s 1 1s;
 }
 
-.animation:hover .delay {
+.animation:hover .fillmode-delay {
     animation: showblue 1s step-start;
 }
 
-.animation:hover .animate {
+.animation:hover .fillmode-animate {
     animation: showred 1s step-start 1s;    
 }
 
-.animation:hover .end {
+.animation:hover .fillmode-end {
     animation: showblack 0.1s step-start 2s forwards;
 }
 
-.animation .delay, .animation .animate, .animation .end {
+.animation .fillmode-delay, .animation .fillmode-animate, .animation .fillmode-end {
     color: transparent;
 }
 
-.animation:hover .initial {
+.animation:hover .fillmode-initial {
     color: transparent;
 }
 
@@ -1105,8 +1105,13 @@ nav a:link, nav a:visited {
 }
 
 /* Example cursor animation */
-.ex-cursor:hover > .cursor {
+.animation:hover .cursor {
     animation: cursor 0.8s infinite step-end;
+}
+
+.cursor {
+    height: 80px; 
+    border-left: 8px solid black;
 }
 
 @keyframes cursor {
@@ -1117,7 +1122,7 @@ nav a:link, nav a:visited {
 
 .animation:hover .animated {
     animation-iteration-count: infinite;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
 }
 
 .ex-transform {
@@ -1273,10 +1278,4 @@ table.transform-origin > caption {
 
 .transform-origin td {
     text-align: left;
-}
-
-.vector {
-    width: 0px;
-    height: 60px;
-    border-left: 2px solid red;
 }
