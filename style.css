@@ -161,6 +161,7 @@ section {
 }
 
 .box.transform {
+    line-height: 1.5em;
 }
 
 .box, .bar {
@@ -1149,36 +1150,37 @@ nav a:link, nav a:visited {
     position: relative;
 }
 
-table.perspective .codeblock {
-    padding: 0;
+.ex-perspective {
+    margin: 10px 0 -25px 10px;
 }
 
 .ex-perspective.right-bottom {
     perspective-origin: 300% 200%;
-    margin: 30px 0 -20px 30px;
+    /* margin: 30px 0 -20px 30px; */
 }
 
 .ex-perspective.left-bottom {
     perspective-origin: -300% 200%;
-    margin: 20px;
-    margin-top: 30px;
-    margin-bottom: -20px;
+    /* margin: 20px; */
+    /* margin-top: 30px; */
+    /* margin-bottom: -20px; */
 }
 
 .ex-perspective.center {
     perspective-origin: 50% 50%;
-    margin: 10px 0 -30px 25px;
+    /* margin: 10px 0 -30px 25px; */
+    margin: 0 0 -30px 0;
 }
 
 .ex-perspective.right-top {
     perspective-origin: 300% -200%;
-    margin: 25px 0 0 30px;
+    /* margin: 25px 15px 0px 30px; */
 }
 
 .ex-perspective.left-top {
     perspective-origin: -300% -200%;
-    margin: 20px;
-    margin-bottom: 0; 
+    /* margin: 20px; */
+    /* margin-bottom: 0; */ 
 }
 
 .cube {
@@ -1194,11 +1196,12 @@ table.perspective .codeblock {
     color: white;
     line-height: 40px;
     font-size: 2em;
+    text-align: center;
 }
 
 .face.front {
     transform: translateZ(20px);
-    background-color: rgba(30%, 30%, 30%, 0.5);
+    background-color: rgba(30%, 30%, 30%, 0.7);
 }
 
 .face.top {
@@ -1226,32 +1229,20 @@ table.perspective .codeblock {
     background-color: rgba(25%, 50%, 75%, 0.7);
 }
 
-table.perspective th {
-    vertical-align: center;
-    padding: 8px;
-}
-
-table.perspective {
-    margin-top: 20px;
-    margin: 16px;
-}
-
 table.transform-origin {
     margin: 16px 0 16px 16px;
 }
 
 table.perspective .codeblock {
     overflow: hidden;
-}
-
-table.perspective td {
-  border: 1px solid black;
+    padding: 8px 16px;
 }
 
 .ex-transform-origin {
     border: 1px solid gray;
     display: inline-block;
     perspective: 100px;
+    margin-bottom: 10px;
 }
 
 .transform-origin .codeblock {
@@ -1265,7 +1256,11 @@ table.transform-origin > caption {
 .door {
     height: 40px;
     width: 40px;
-    background-color: goldenrod;
+    background-color: #aaa;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    font-size: 2em;
 }
 
 .door.rotate-y  { transform: rotateY(60deg); }
