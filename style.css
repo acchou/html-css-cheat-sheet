@@ -62,7 +62,7 @@ section > h2, .snippet > h2 {
     font-weight: normal;
 }
 
-section > h3, .snippet > h3, .requirement > h3 {
+section > h3, .snippet > h3, .callout > h3 {
     font-size: 11pt;
     font-weight: normal;
     color: #777;
