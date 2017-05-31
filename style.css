@@ -1348,3 +1348,7 @@ table.transform-origin > caption {
 .card-back {
     background-color: purple;
 }
+
+#transform-rotate .codeblock {
+    padding: 8px;
+}
