@@ -1096,13 +1096,13 @@ nav > ul > li {
     color: white;
 }
 
-nav > ul > li.right {
+nav > ul > li.nav-right {
     float: right;
     margin: 0 60px;
 }
 
 @media(max-width: 600px) {
-    nav > ul > li.right {
+    nav > ul > li.nav-right {
         display: none;
     }
 }
