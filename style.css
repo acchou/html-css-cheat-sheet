@@ -90,6 +90,11 @@ code {
     margin: 16px 0;
 }
 
+.callouts {
+    display: flex;
+    justify-content: space-around;
+}
+
 #css-positioning-fixed {
     width: 500px;
     border: 4px double black;
