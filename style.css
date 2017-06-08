@@ -41,6 +41,8 @@ ul, ol {
     vertical-align: top;
     margin: 16px;
     background-color: #eee;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
 .snippet.container {
@@ -48,6 +50,8 @@ ul, ol {
     background-color: white;
     border: 2px solid #ccc;
     border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -55,11 +59,23 @@ h1, h2, h3, h4, h5, h6 {
     padding: 6px 12px;
 }
 
-section > h2, .snippet > h2 {
+.snippet > h2 {
     background-color: cornflowerblue;
     color: white;
     font-size: 12pt;
     font-weight: normal;
+}
+
+section > h2 {
+    border: 2px solid gray;
+    border-radius: 8px;
+    color: black;
+    display: block;
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 40px;
+    padding: 20px 30px;
+    width: 85%;
 }
 
 section > h3, .snippet > h3, .callout > h3 {
@@ -1356,4 +1372,25 @@ table.transform-origin > caption {
 
 #transform-rotate .codeblock {
     padding: 8px;
+}
+
+iframe {
+    background-color: white;
+    margin: 20px;
+    margin-top: 0;
+}
+
+.ex-grid {
+    display: grid;
+    grid-gap: 2px;
+}
+
+.ex-grid.rows {
+    grid-template-columns: 1fr 1fr;
+}
+
+.ex-grid > .box {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
 }
