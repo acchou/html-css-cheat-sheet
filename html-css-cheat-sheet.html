@@ -2811,8 +2811,6 @@
                     <div class="ex-grid" style="grid-template-columns: 1fr 1fr;">
                         <div class="box"></div>
                         <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
                     </div>
                     <code>1fr 1fr;</code>
                 </div>
@@ -2820,16 +2818,11 @@
                     <div class="ex-grid" style="grid-template-columns: 1fr 2fr;">
                         <div class="box"></div>
                         <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
                     </div>
                     <code>1fr 2fr;</code>
                 </div>
                 <div class="codeblock">
                     <div class="ex-grid" style="grid-template-columns: 50% 1fr 2fr;">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
@@ -2841,26 +2834,8 @@
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
                     </div>
                     <code>1fr 2fr 1fr;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="ex-grid" style="grid-template-columns: repeat(5, 1fr);">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                    </div>
-                    <code>repeat(5, 1fr);</code>
                 </div>
                 <div class="codeblock">
                     <div class="ex-grid" style="grid-template-columns: repeat(2, 1fr 2fr);">
@@ -2868,57 +2843,100 @@
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
+                    </div>
+                    <code>repeat(2, 1fr 2fr);</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-grid" style="grid-template-columns: repeat(12, 1fr);">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
                     </div>
-                    <code>repeat(2, 1fr 2fr);</code>
+                    <code>repeat(12, 1fr);</code>
                 </div>
             </div>
             <div class="snippet" id="css-grid-template-rows">
                 <h2 class="code">grid-template-rows:</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr;">
+                    <div class="codeblock">
+                        <div class="ex-grid rows" style="grid-template-rows: 1fr 1fr;">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                        <code>1fr 1fr;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-grid rows" style="grid-template-rows: 1fr 2fr;">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                        <code>1fr 2fr;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-grid rows" style="grid-template-rows: 1fr 2fr 3fr;">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                        <code>1fr 2fr 3fr;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-grid rows" style="grid-template-rows: repeat(2, 1fr 2fr);">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                        <code>repeat(2, 1fr 2fr);</code>
+                    </div>
+                </div>
+            </div>
+            <div class="snippet" id="css-grid-gap">
+                <h2 class="code">grid-gap:</h2>
                 <div class="codeblock">
-                    <div class="ex-grid rows" style="grid-template-rows: 1fr 1fr;">
+                    <div class="ex-grid" style="grid-template-columns: 1fr 1fr; grid-gap: 0;">
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
                     </div>
-                    <code>1fr 1fr;</code>
+                    <code>0;</code>
                 </div>
                 <div class="codeblock">
-                    <div class="ex-grid rows" style="grid-template-rows: 1fr 2fr;">
+                    <div class="ex-grid" style="grid-template-columns: 1fr 1fr; grid-gap: 2px;">
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
                     </div>
-                    <code>1fr 2fr;</code>
+                    <code>2px;</code>
                 </div>
                 <div class="codeblock">
-                    <div class="ex-grid rows" style="grid-template-rows: 1fr 2fr 3fr;">
-                        <div class="box"></div>
-                        <div class="box"></div>
+                    <div class="ex-grid" style="grid-template-columns: 1fr 1fr; grid-gap: 4px;">
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
                     </div>
-                    <code>1fr 2fr 3fr;</code>
+                    <code>4px;</code>
                 </div>
                 <div class="codeblock">
-                    <div class="ex-grid rows" style="grid-template-rows: repeat(2, 1fr 2fr);">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
+                    <div class="ex-grid" style="grid-template-columns: 1fr 1fr; grid-gap: 8px;">
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
                     </div>
-                    <code>repeat(2, 1fr 2fr);</code>
+                    <code>8px;</code>
                 </div>
             </div>
         </section>
