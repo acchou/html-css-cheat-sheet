@@ -1395,3 +1395,7 @@ iframe {
     border-radius: 0;
     min-width: 0;
 }
+
+.ex-box-shadow {
+    margin-bottom: 20px;
+}
