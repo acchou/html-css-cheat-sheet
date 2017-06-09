@@ -1385,8 +1385,24 @@ iframe {
     grid-gap: 4px;
 }
 
-.ex-grid.rows {
+.ex-grid.inline {
+    display: inline-grid;
+}
+
+.ex-grid.template-rows {
     grid-template-columns: 1fr;
+}
+
+.grid-template-rows-container {
+    display: grid; 
+    grid-template-columns: auto auto; 
+    align-items: flex-end;
+}
+
+.grid-column-container, .grid-row-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .ex-grid > .box {
@@ -1404,15 +1420,23 @@ iframe {
 }
 
 .ex-grid.grid-column {
+    display: inline-grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 .ex-grid.grid-row {
+    display: inline-grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
 }
 
 .ex-grid.grid-area {
+    display: inline-grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-area-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
 }
