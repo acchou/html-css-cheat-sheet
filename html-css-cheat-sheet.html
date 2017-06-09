@@ -2939,6 +2939,322 @@
                     <code>8px;</code>
                 </div>
             </div>
+            <div class="snippet" id="css-grid-auto">
+                <h2>Implicit row and column sizes</h2>
+                <h3>Size implicit rows and columns</h3>
+                <div class="codeblock">
+                    <div class="ex-grid" style="display: inline-grid; grid-template-columns: 1fr 1fr 1fr; grid-auto-rows: 100px;">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <code>grid-auto-rows: 100px;</code>
+                </div>
+                <div class="codeblock">
+                    <div class="ex-grid" style="grid-auto-columns: 100px;">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <code>grid-auto-columns: 100px;</code>
+                </div>
+            </div>
+            <div class="snippet" id="css-grid-column">
+                <h2 class="code">grid-column:</h2>
+                <h3>With <span class="code">grid-template-columns: 1fr 1fr 1fr;</span></h3>
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-grid grid-column">
+                                <div class="box highlight" style="grid-column: 1/2;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>1/2;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-column">
+                                <div class="box highlight" style="grid-column: 1/3;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>1/3;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-column">
+                                <div class="box highlight" style="grid-column: 1/4;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>1/4;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div></div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-column">
+                                <div class="box"></div>
+                                <div class="box highlight" style="grid-column: 2/3;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>2/3;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-column">
+                                <div class="box"></div>
+                                <div class="box highlight" style="grid-column: 2/4;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>2/4;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-column">
+                                <div class="box highlight" style="grid-column: 1/-1;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>1/-1;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div></div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-column">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box highlight" style="grid-column: -1/-2;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>-1/-2;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-column">
+                                <div class="box"></div>
+                                <div class="box highlight" style="grid-column: -1/-3;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>-1/-3;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-column">
+                                <div class="box highlight" style="grid-column: -1/1;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>-1/1;</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="snippet" id="css-grid-rows">
+                <h2 class="code">grid-row:</h2>
+                <h3>With <span class="code">grid-template-rows: 1fr 1fr 1fr;</span></h3>
+                <h3>With <span class="code">grid-template-columns: 1fr 1fr;</span></h3>
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-grid grid-row">
+                                <div class="box highlight" style="grid-row: 1/2;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>1/2;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-row">
+                                <div class="box highlight" style="grid-row: 1/3;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>1/3;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-row">
+                                <div class="box highlight" style="grid-row: 1/4;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>1/4;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div></div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-row">
+                                <div class="box"></div>
+                                <div class="box highlight" style="grid-row: 2/3;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>2/3;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-row">
+                                <div class="box"></div>
+                                <div class="box highlight" style="grid-row: 2/4;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>2/4;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-row">
+                                <div class="box highlight" style="grid-row: 1/-1;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>1/-1;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div></div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-row">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box highlight" style="grid-row: -1/-2;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>-1/-2;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-row">
+                                <div class="box"></div>
+                                <div class="box highlight" style="grid-row: -1/-3;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>-1/-3;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-row">
+                                <div class="box highlight" style="grid-row: -1/1;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>-1/1;</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="snippet" id="css-grid-area">
+                <h2 class="code">grid-area:</h2>
+                <h3>With <span class="code">grid-template-rows: 1fr 1fr 1fr;</span></h3>
+                <h3>With <span class="code">grid-template-columns: 1fr 1fr 1fr;</span></h3>
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-grid grid-area">
+                                <div class="box highlight" style="grid-area: 1/1/2/2;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>1/1/2/2;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-area">
+                                <div class="box highlight" style="grid-area: 1/1/3/3;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>1/1/3/3;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-area">
+                                <div class="box highlight" style="grid-area: 1/1/4/3;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+
+                            </div>
+                            <code>1/1/4/3;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-area">
+                                <div class="box highlight" style="grid-area: 1/1/3/4;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+
+                            </div>
+                            <code>1/1/3/4;</code>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div></div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-area">
+                                <div class="box placeholder"></div>
+                                <div class="box" style="grid-row: 2/3;"></div>
+                                <div class="box placeholder"></div>
+                                <div class="box placeholder"></div>
+                                <div class="box placeholder"></div>
+                                <div class="box placeholder"></div>
+                            </div>
+                            <code>2/3;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-area">
+                                <div class="box"></div>
+                                <div class="box highlight" style="grid-row: 2/4;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>2/4;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-area">
+                                <div class="box highlight" style="grid-row: 1/-1;"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <code>1/-1;</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- section Grid containers -->
 
