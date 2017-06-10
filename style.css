@@ -1401,8 +1401,7 @@ iframe {
 
 .grid-column-container, .grid-row-container {
     display: grid;
-    grid-auto-flow: column;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .ex-grid > .box {
