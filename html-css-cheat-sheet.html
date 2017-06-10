@@ -2855,9 +2855,9 @@
                     <code>repeat(12, 1fr);</code>
                 </div>
                 <div class="codeblock">
-                    <div class="ex-grid inline" style="grid-template-columns: auto auto;">
+                    <div class="ex-grid" style="grid-template-columns: auto auto;">
                         <div class="box">fit</div>
-                        <div class="box">content</div>
+                        <div class="box">long content</div>
                     </div>
                     <code>auto auto;</code>
                 </div>
@@ -2880,61 +2880,119 @@
                         <code>1fr 2fr;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="ex-grid inline" style="grid-template-rows: 1fr 2fr 3fr;">
+                        <div class="ex-grid inline" style="grid-template-rows: 1fr 2fr 1fr;">
                             <div class="box"></div>
                             <div class="box"></div>
                             <div class="box"></div>
                         </div>
-                        <code>1fr 2fr 3fr;</code>
+                        <code>1fr 2fr 1fr;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="ex-grid inline" style="grid-template-rows: repeat(2, 1fr 2fr);">
+                        <div class="ex-grid inline" style="grid-template-rows: repeat(4, 1fr);">
                             <div class="box"></div>
                             <div class="box"></div>
                             <div class="box"></div>
                             <div class="box"></div>
                         </div>
-                        <code>repeat(2, 1fr 2fr);</code>
+                        <code>repeat(4, 1fr);</code>
                     </div>
                 </div>
             </div>
             <div class="snippet" id="css-grid-gap">
                 <h2 class="code">grid-gap:</h2>
-                <div class="codeblock">
-                    <div class="ex-grid inline" style="grid-template-columns: 1fr 1fr; grid-gap: 0;">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
+                <div class="callout">
+                    <div class="codeblock">
+                        <div class="ex-grid grid-gap" style="grid-gap: 0;">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                        <code>0;</code>
                     </div>
-                    <code>0;</code>
                 </div>
-                <div class="codeblock">
-                    <div class="ex-grid inline" style="grid-template-columns: 1fr 1fr; grid-gap: 2px;">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
+                <div class="grid-gap-container">
+                    <div class="codeblock">
+                        <div class="ex-grid grid-gap" style="grid-gap: 2px;">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                        <code>2px;</code>
                     </div>
-                    <code>2px;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="ex-grid inline" style="grid-template-columns: 1fr 1fr; grid-gap: 4px;">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
+                    <div class="codeblock">
+                        <div class="ex-grid grid-gap" style="grid-gap: 4px;">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                        <code>4px;</code>
                     </div>
-                    <code>4px;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="ex-grid inline" style="grid-template-columns: 1fr 1fr; grid-gap: 8px;">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
+                    <div class="codeblock">
+                        <div class="ex-grid grid-gap" style="grid-gap: 8px;">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                        <code>8px;</code>
                     </div>
-                    <code>8px;</code>
+                    <div class="codeblock">
+                        <div class="ex-grid grid-gap" style="grid-gap: 0 2px;">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                        <code>0 2px;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-grid grid-gap" style="grid-gap: 0 4px;">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                        <code>0 4px;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-grid grid-gap" style="grid-gap: 0 8px;">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                        <code>0 8px;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-grid grid-gap" style="grid-gap: 2px 0;">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                        <code>2px 0;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-grid grid-gap" style="grid-gap: 4px 0;">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                        <code>4px 0;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-grid grid-gap" style="grid-gap: 8px 0;">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                        <code>8px 0;</code>
+                    </div>
                 </div>
             </div>
             <div class="snippet" id="css-grid-auto">
@@ -2959,7 +3017,7 @@
             </div>
             <div class="snippet" id="css-grid-column">
                 <h2 class="code">grid-column:</h2>
-                <h3>Negative numbers start from opposing side</h3>
+                <h3>Negative starts from opposing side (explicit grid only)</h3>
                 <h3><code>grid-column: left / right</code></h3>
                 <div class="grid-column-container">
                     <div class="codeblock">
@@ -3043,20 +3101,11 @@
                         </div>
                         <code>-1/-3;</code>
                     </div>
-                    <div class="codeblock">
-                        <div class="ex-grid grid-column">
-                            <div class="box" style="grid-column: -1/1;"></div>
-                            <div class="box placeholder"></div>
-                            <div class="box placeholder"></div>
-                            <div class="box placeholder"></div>
-                        </div>
-                        <code>-1/1;</code>
-                    </div>
                 </div>
             </div>
             <div class="snippet" id="css-grid-rows">
                 <h2 class="code">grid-row:</h2>
-                <h3>Negative numbers start from opposing side</h3>
+                <h3>Negative starts from opposing side (explicit grid only)</h3>
                 <h3><code>grid-row: top / bottom</code></h3>
                 <div class="grid-row-container">
                     <div class="codeblock">
@@ -3123,12 +3172,12 @@
                         <div class="ex-grid grid-row">
                             <div class="box placeholder"></div>
                             <div class="box placeholder"></div>
-                            <div class="box" style="grid-row: -1/-2;"></div>
+                            <div class="box" style="grid-row: 3/span 1;"></div>
                             <div class="box placeholder"></div>
                             <div class="box placeholder"></div>
                             <div class="box placeholder"></div>
                         </div>
-                        <code>-1/-2;</code>
+                        <code>3/span 1;</code>
                     </div>
                     <div class="codeblock">
                         <div class="ex-grid grid-row">
@@ -3140,20 +3189,11 @@
                         </div>
                         <code>-1/-3;</code>
                     </div>
-                    <div class="codeblock">
-                        <div class="ex-grid grid-row">
-                            <div class="box" style="grid-row: -1/1;"></div>
-                            <div class="box placeholder"></div>
-                            <div class="box placeholder"></div>
-                            <div class="box placeholder"></div>
-                        </div>
-                        <code>-1/1;</code>
-                    </div>
                 </div>
             </div>
             <div class="snippet" id="css-grid-area">
                 <h2 class="code">grid-area:</h2>
-                <h3>Negative numbers start from opposing side</h3>
+                <h3>Negative starts from opposing side (explicit grid only)</h3>
                 <h3><code>grid-area: top / left / bottom / right;</code></h3>
                 <div class="grid-area-container">
                     <div class="codeblock">
@@ -3199,6 +3239,93 @@
                             <div class="box placeholder"></div>
                         </div>
                         <code>2/2/span 2/span 2;</code>
+                    </div>
+                </div>
+            </div>
+            <div class="snippet" id="css-grid-area">
+                <h2 class="code">grid-auto-flow:</h2>
+                <h3>Highlighted grid cell has grid position explicitly set.</h3>
+                <div class="grid-auto-flow-container">
+                    <div class="grid-heading"></div>
+                    <div class="grid-heading">sparse</div>
+                    <div class="grid-heading">dense</div>
+                    <div class="codeblock">
+                        <div class="ex-grid grid-auto-flow" style="grid-auto-flow: row;">
+                            <div class="box">1</div>
+                            <div class="box">2</div>
+                            <div class="box">3</div>
+                            <div class="box">4</div>
+                            <div class="box">5</div>
+                            <div class="box">6</div>
+                            <div class="box">7</div>
+                            <div class="box">8</div>
+                        </div>
+                        <code>row;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-grid grid-auto-flow" style="grid-auto-flow: row;">
+                            <div class="box highlight" style="grid-column: 2/span 1;">1</div>
+                            <div class="box">2</div>
+                            <div class="box">3</div>
+                            <div class="box">4</div>
+                            <div class="box">5</div>
+                            <div class="box">6</div>
+                            <div class="box">7</div>
+                            <div class="box">8</div>
+                        </div>
+                        <code>row;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-grid grid-auto-flow" style="grid-auto-flow: row dense;">
+                            <div class="box highlight" style="grid-column: 2/span 1;">1</div>
+                            <div class="box">2</div>
+                            <div class="box">3</div>
+                            <div class="box">4</div>
+                            <div class="box">5</div>
+                            <div class="box">6</div>
+                            <div class="box">7</div>
+                            <div class="box">8</div>
+                        </div>
+                        <code>row dense;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-grid grid-auto-flow" style="grid-auto-flow: column;">
+                            <div class="box">1</div>
+                            <div class="box">2</div>
+                            <div class="box">3</div>
+                            <div class="box">4</div>
+                            <div class="box">5</div>
+                            <div class="box">6</div>
+                            <div class="box">7</div>
+                            <div class="box">8</div>
+                        </div>
+                        <code>column;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-grid grid-auto-flow" style="grid-auto-flow: column;">
+                            <div class="box highlight" style="grid-row: 2/span 1;">1</div>
+                            <div class="box">2</div>
+                            <div class="box">3</div>
+                            <div class="box">4</div>
+                            <div class="box">5</div>
+                            <div class="box">6</div>
+                            <div class="box">7</div>
+                            <div class="box">8</div>
+                        </div>
+                        <code>column;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-grid grid-auto-flow" style="grid-auto-flow: column dense;">
+                            <div class="box highlight" style="grid-row: 2/span 1;">1</div>
+                            <div class="box">2</div>
+                            <div class="box">3</div>
+                            <div class="box">4</div>
+                            <div class="box">5</div>
+                            <div class="box">6</div>
+                            <div class="box">7</div>
+                            <div class="box">8</div>
+                        </div>
+                        <code>column dense;</code>
                     </div>
                 </div>
             </div>

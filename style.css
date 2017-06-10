@@ -1440,3 +1440,31 @@ iframe {
     display: grid;
     grid-template-columns: repeat(2, auto);
 }
+
+.ex-grid.grid-auto-flow {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.grid-auto-flow-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: flex-end;
+    grid-gap: 8px;
+}
+
+.grid-heading {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.ex-grid.grid-gap {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-gap-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
