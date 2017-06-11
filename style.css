@@ -1435,6 +1435,10 @@ iframe {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.ex-grid.grid-template-area {
+    display: grid;
+}
+
 .grid-area-container {
     display: grid;
     grid-template-columns: repeat(2, auto);
