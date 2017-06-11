@@ -3019,26 +3019,44 @@
             <div class="snippet" id="css-grid-template">
                 <h2 class="code">grid-template:</h2>
                 <h3>Use <a href="#css-grid-area">grid-area</a> to refer to named areas.</h3>
-                <div class="codeblock">
-                    <div class="ex-grid grid-template-area" style="grid-template: 
+                <div class="columns">
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-grid grid-template-area" style="grid-template: 
                              'nav  nav  nav'   1fr
                              'left body right' 3fr
                              'foot foot foot'  1fr
                             / 1fr  2fr  1fr;
                             ">
-                        <div class="box" style="grid-area: nav;">nav</div>
-                        <div class="box" style="grid-area: left;">left</div>
-                        <div class="box" style="grid-area: body;">body</div>
-                        <div class="box" style="grid-area: right;">right</div>
-                        <div class="box" style="grid-area: foot;">foot</div>
+                                <div class="box" style="grid-area: nav;">nav</div>
+                                <div class="box" style="grid-area: left;">left</div>
+                                <div class="box" style="grid-area: body;">body</div>
+                                <div class="box" style="grid-area: right;">right</div>
+                                <div class="box" style="grid-area: foot;">foot</div>
+                            </div>
+                            <code> "nav  nav  nav"   1fr</code>
+                            <code> "left body right" 3fr</code>
+                            <code> "foot foot foot"  1fr</code>
+                            <code>/ 1fr  2fr  1fr;</code>
+                        </div>
+                        <div class="codeblock">
+                            <div class="ex-grid grid-template-area" style="grid-template: 
+                             'nav  nav ' 1fr
+                             'side body' 3fr
+                            / 1fr  2fr;
+                            ">
+                                <div class="box" style="grid-area: nav;">nav</div>
+                                <div class="box" style="grid-area: side;">side</div>
+                                <div class="box" style="grid-area: body;">body</div>
+                            </div>
+                            <code> 'nav  nav ' 1fr</code>
+                            <code> 'side body' 3fr</code>
+                            <code>/ 1fr  2fr;</code>
+                        </div>
                     </div>
-                    <code> "nav  nav  nav"   1fr</code>
-                    <code> "left body right" 3fr</code>
-                    <code> "foot foot foot"  1fr</code>
-                    <code>/ 1fr  2fr  1fr;</code>
-                </div>
-                <div class="codeblock">
-                    <div class="ex-grid grid-template-area" style="grid-template: 
+                    <div class="column">
+                        <div class="codeblock">
+                            <div class="ex-grid grid-template-area" style="grid-template: 
                              'd1   d2   d3' 1fr
                              'd4   d5   d6' 1fr
                              'd7   d8   d9' 1fr
@@ -3046,22 +3064,24 @@
                             / 1fr  1fr  1fr;
                             line-height: 2em;
                             ">
-                        <div class="box" style="grid-area: d1;">1</div>
-                        <div class="box" style="grid-area: d2;">2</div>
-                        <div class="box" style="grid-area: d3;">3</div>
-                        <div class="box" style="grid-area: d4;">4</div>
-                        <div class="box" style="grid-area: d5;">5</div>
-                        <div class="box" style="grid-area: d6;">6</div>
-                        <div class="box" style="grid-area: d7;">7</div>
-                        <div class="box" style="grid-area: d8;">8</div>
-                        <div class="box" style="grid-area: d9;">9</div>
-                        <div class="box" style="grid-area: d0;">0</div>
+                                <div class="box" style="grid-area: d1;">1</div>
+                                <div class="box" style="grid-area: d2;">2</div>
+                                <div class="box" style="grid-area: d3;">3</div>
+                                <div class="box" style="grid-area: d4;">4</div>
+                                <div class="box" style="grid-area: d5;">5</div>
+                                <div class="box" style="grid-area: d6;">6</div>
+                                <div class="box" style="grid-area: d7;">7</div>
+                                <div class="box" style="grid-area: d8;">8</div>
+                                <div class="box" style="grid-area: d9;">9</div>
+                                <div class="box" style="grid-area: d0;">0</div>
+                            </div>
+                            <code> "d1   d2   d3" 1fr</code>
+                            <code> "d4   d5   d6" 1fr</code>
+                            <code> "d7   d8   d9" 1fr</code>
+                            <code> ".    d0    ." 1fr</code>
+                            <code>/ 1fr  1fr  1fr;</code>
+                        </div>
                     </div>
-                    <code> "d1   d2   d3" 1fr</code>
-                    <code> "d4   d5   d6" 1fr</code>
-                    <code> "d7   d8   d9" 1fr</code>
-                    <code> ".    d0    ." 1fr</code>
-                    <code>/ 1fr  1fr  1fr;</code>
                 </div>
             </div>
             <div class="snippet" id="css-grid-auto-flow">
