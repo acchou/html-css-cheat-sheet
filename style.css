@@ -3,15 +3,57 @@ body {
     font-weight: normal;
     padding: 0;
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
     width: 100%;
+    max-width: 2400px;
 }
 
 @media(min-width: 800px) {
     body {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
+
+.size-boxes {
+    display: none;
+}
+
+.size-box {
+    position: fixed;
+    height: 100px;
+    width: 100px;
+    top: 52px;
+    right: 100px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+}
+
+.size-box.box-1  { left:     0; background-color: rgba(0%, 0%, 100%, 0.7); }
+.size-box.box-2  { left: 100px; background-color: rgba(20%, 0%, 80%, 0.7); }
+.size-box.box-3  { left: 200px; background-color: rgba(40%, 0%, 60%, 0.7); }
+.size-box.box-4  { left: 300px; background-color: rgba(60%, 0%, 40%, 0.7); }
+.size-box.box-5  { left: 400px; background-color: rgba(80%, 0%, 20%, 0.7); }
+.size-box.box-6  { left: 500px; background-color: rgba(0%, 0%, 100%, 0.7); }
+.size-box.box-7  { left: 600px; background-color: rgba(20%, 0%, 80%, 0.7); }
+.size-box.box-8  { left: 700px; background-color: rgba(40%, 0%, 60%, 0.7); }
+.size-box.box-9  { left: 800px; background-color: rgba(60%, 0%, 40%, 0.7); }
+.size-box.box-10 { left: 900px; background-color: rgba(80%, 0%, 20%, 0.7); }
+.size-box.box-11 { left: 1000px; background-color: rgba(0%, 0%, 100%, 0.7); }
+.size-box.box-12 { left: 1100px; background-color: rgba(20%, 0%, 80%, 0.7); }
+.size-box.box-13 { left: 1200px; background-color: rgba(40%, 0%, 60%, 0.7); }
+.size-box.box-14 { left: 1300px; background-color: rgba(60%, 0%, 40%, 0.7); }
+.size-box.box-15 { left: 1400px; background-color: rgba(80%, 0%, 20%, 0.7); }
+.size-box.box-16 { left: 1500px; background-color: rgba(0%, 0%, 100%, 0.7); }
+.size-box.box-17 { left: 1600px; background-color: rgba(20%, 0%, 80%, 0.7); }
+.size-box.box-18 { left: 1700px; background-color: rgba(40%, 0%, 60%, 0.7); }
+.size-box.box-19 { left: 1800px; background-color: rgba(60%, 0%, 40%, 0.7); }
+.size-box.box-20 { left: 1900px; background-color: rgba(80%, 0%, 20%, 0.7); }
+.size-box.box-21 { left: 2000px; background-color: rgba(0%, 0%, 100%, 0.7); }
+.size-box.box-22 { left: 2100px; background-color: rgba(20%, 0%, 80%, 0.7); }
+.size-box.box-23 { left: 2200px; background-color: rgba(40%, 0%, 60%, 0.7); }
+.size-box.box-24 { left: 2300px; background-color: rgba(60%, 0%, 40%, 0.7); }
 
 ul, ol {
     margin: 0;
@@ -1147,6 +1189,10 @@ nav > ul > li.nav-right {
     margin: 0 60px;
 }
 
+nav > ul > li.nav-right:hover > .size-boxes {
+    display: block;
+}
+
 @media(min-width: 600px) {
     nav > ul > li.nav-right {
         display: block;
@@ -1522,69 +1568,196 @@ iframe {
     .grid.col-2 { grid-template-columns: repeat(2, 1fr); }
 }
 
-section {
-    grid-column: 1/-1;
+section { 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-column: 1/-1;  /* Sections are nested. */
 }
 
-@media(min-width: 600px) {
-     section {
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
+/* We choose sizes of 100px large column format because it has many divisors: 
 
-@media(min-width: 1000px) {
-     section {
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
+    Similarly the other breakpoints have the most divisors of smaller numbers:
+      4 -- 1,2,4
+      6 -- 1,2,3,6
+      12 -- 1,2,3,4,6,12
+      18 -- 1,2,3,6,9,18
+      24 -- 1,2,3,4,6,8,12,24
+
+    There is also 10% overhead for padding.
+*/
+@media(max-width: 440px)  { section { grid-template-columns: repeat(1, 1fr); } }
+@media(min-width: 440px)  { section { grid-template-columns: repeat(4, 1fr); } }
+@media(min-width: 660px)  { section { grid-template-columns: repeat(6, 1fr); } }
+@media(min-width: 1320px) { section { grid-template-columns: repeat(12, 1fr); } }
+@media(min-width: 1980px) { section { grid-template-columns: repeat(18, 1fr); } }
+@media(min-width: 2640px) { section { grid-template-columns: repeat(24, 1fr); } }
 
 /* Grid layout - columns */
-.snippet { grid-column: span 3; }
-.span-1 { grid-column: span 3; }
-.span-2 { grid-column: span 3; }
-.span-3 { grid-column: span 3; }
-.span-4 { grid-column: span 3; }
-.span-5 { grid-column: span 3; }
-.span-6 { grid-column: span 3; }
-.span-7 { grid-column: span 3; }
-.span-8 { grid-column: span 3; }
-.span-9 { grid-column: span 3; }
-.span-10 { grid-column: span 3; }
-.span-11 { grid-column: span 3; }
-.span-12 { grid-column: span 3; }
+@media(max-width: 440px) {
+    .snippet { grid-column: span 1; }
+    .span-1  { grid-column: span 1; }
+    .span-2  { grid-column: span 1; }
+    .span-3  { grid-column: span 1; }
+    .span-4  { grid-column: span 1; }
+    .span-5  { grid-column: span 1; }
+    .span-6  { grid-column: span 1; }
+    .span-7  { grid-column: span 1; }
+    .span-8  { grid-column: span 1; }
+    .span-9  { grid-column: span 1; }
+    .span-10 { grid-column: span 1; }
+    .span-11 { grid-column: span 1; }
+    .span-12 { grid-column: span 1; }
+    .span-13 { grid-column: span 1; }
+    .span-14 { grid-column: span 1; }
+    .span-15 { grid-column: span 1; }
+    .span-16 { grid-column: span 1; }
+    .span-17 { grid-column: span 1; }
+    .span-18 { grid-column: span 1; }
+    .span-19 { grid-column: span 1; }
+    .span-20 { grid-column: span 1; }
+    .span-21 { grid-column: span 1; }
+    .span-22 { grid-column: span 1; }
+    .span-23 { grid-column: span 1; }
+    .span-24 { grid-column: span 1; }
+}
 
-@media(min-width: 600px) {
-    .snippet { grid-column: span 3; }
-    .span-1 { grid-column: span 1; }
-    .span-2 { grid-column: span 2; }
-    .span-3 { grid-column: span 3; }
-    .span-4 { grid-column: span 3; }
-    .span-5 { grid-column: span 4; }
-    .span-6 { grid-column: span 5; }
-    .span-7 { grid-column: span 6; }
-    .span-8 { grid-column: span 6; }
-    .span-9 { grid-column: span 6; }
+@media(min-width: 440px) {
+    .snippet { grid-column: span 2; }
+    .span-1  { grid-column: span 1; }
+    .span-2  { grid-column: span 2; }
+    .span-3  { grid-column: span 3; }
+    .span-4  { grid-column: span 4; }
+    .span-5  { grid-column: span 4; }
+    .span-6  { grid-column: span 4; }
+    .span-7  { grid-column: span 4; }
+    .span-8  { grid-column: span 4; }
+    .span-9  { grid-column: span 4; }
+    .span-10 { grid-column: span 4; }
+    .span-11 { grid-column: span 4; }
+    .span-12 { grid-column: span 4; }
+    .span-13 { grid-column: span 4; }
+    .span-14 { grid-column: span 4; }
+    .span-15 { grid-column: span 4; }
+    .span-16 { grid-column: span 4; }
+    .span-17 { grid-column: span 4; }
+    .span-18 { grid-column: span 4; }
+    .span-19 { grid-column: span 4; }
+    .span-20 { grid-column: span 4; }
+    .span-21 { grid-column: span 4; }
+    .span-22 { grid-column: span 4; }
+    .span-23 { grid-column: span 4; }
+    .span-24 { grid-column: span 4; }
+}
+
+@media(min-width: 660px) {
+    .snippet { grid-column: span 6; }
+    .span-1  { grid-column: span 1; }
+    .span-2  { grid-column: span 2; }
+    .span-3  { grid-column: span 3; }
+    .span-4  { grid-column: span 4; }
+    .span-5  { grid-column: span 5; }
+    .span-6  { grid-column: span 6; }
+    .span-7  { grid-column: span 6; }
+    .span-8  { grid-column: span 6; }
+    .span-9  { grid-column: span 6; }
     .span-10 { grid-column: span 6; }
     .span-11 { grid-column: span 6; }
     .span-12 { grid-column: span 6; }
+    .span-13 { grid-column: span 6; }
+    .span-14 { grid-column: span 6; }
+    .span-15 { grid-column: span 6; }
+    .span-16 { grid-column: span 6; }
+    .span-17 { grid-column: span 6; }
+    .span-18 { grid-column: span 6; }
+    .span-19 { grid-column: span 6; }
+    .span-20 { grid-column: span 6; }
+    .span-21 { grid-column: span 6; }
+    .span-22 { grid-column: span 6; }
+    .span-23 { grid-column: span 6; }
+    .span-24 { grid-column: span 6; }
 }
 
-@media(min-width: 1000px) {
-    .snippet { grid-column: span 3; }
-    .span-1 { grid-column: span 1; }
-    .span-2 { grid-column: span 2; }
-    .span-3 { grid-column: span 3; }
-    .span-4 { grid-column: span 4; }
-    .span-5 { grid-column: span 5; }
-    .span-6 { grid-column: span 6; }
-    .span-7 { grid-column: span 7; }
-    .span-8 { grid-column: span 8; }
-    .span-9 { grid-column: span 9; }
+@media(min-width: 1320px) {
+    .snippet { grid-column: span 6; }
+    .span-1  { grid-column: span 1; }
+    .span-2  { grid-column: span 2; }
+    .span-3  { grid-column: span 3; }
+    .span-4  { grid-column: span 4; }
+    .span-5  { grid-column: span 5; }
+    .span-6  { grid-column: span 6; }
+    .span-7  { grid-column: span 7; }
+    .span-8  { grid-column: span 8; }
+    .span-9  { grid-column: span 9; }
     .span-10 { grid-column: span 10; }
     .span-11 { grid-column: span 11; }
     .span-12 { grid-column: span 12; }
+    .span-13 { grid-column: span 12; }
+    .span-14 { grid-column: span 12; }
+    .span-15 { grid-column: span 12; }
+    .span-16 { grid-column: span 12; }
+    .span-17 { grid-column: span 12; }
+    .span-18 { grid-column: span 12; }
+    .span-19 { grid-column: span 12; }
+    .span-20 { grid-column: span 12; }
+    .span-21 { grid-column: span 12; }
+    .span-22 { grid-column: span 12; }
+    .span-23 { grid-column: span 12; }
+    .span-24 { grid-column: span 12; }
+}
+
+@media(min-width: 1980px) {
+    .snippet { grid-column: span 6; }
+    .span-1  { grid-column: span 1; }
+    .span-2  { grid-column: span 2; }
+    .span-3  { grid-column: span 3; }
+    .span-4  { grid-column: span 4; }
+    .span-5  { grid-column: span 5; }
+    .span-6  { grid-column: span 6; }
+    .span-7  { grid-column: span 7; }
+    .span-8  { grid-column: span 8; }
+    .span-9  { grid-column: span 9; }
+    .span-10 { grid-column: span 10; }
+    .span-11 { grid-column: span 11; }
+    .span-12 { grid-column: span 12; }
+    .span-13 { grid-column: span 13; }
+    .span-14 { grid-column: span 14; }
+    .span-15 { grid-column: span 15; }
+    .span-16 { grid-column: span 16; }
+    .span-17 { grid-column: span 17; }
+    .span-18 { grid-column: span 18; }
+    .span-19 { grid-column: span 18; }
+    .span-20 { grid-column: span 18; }
+    .span-21 { grid-column: span 18; }
+    .span-22 { grid-column: span 18; }
+    .span-23 { grid-column: span 18; }
+    .span-24 { grid-column: span 18; }
+}
+
+@media(min-width: 2640px) {
+    .snippet { grid-column: span 6; }
+    .span-1  { grid-column: span 1; }
+    .span-2  { grid-column: span 2; }
+    .span-3  { grid-column: span 3; }
+    .span-4  { grid-column: span 4; }
+    .span-5  { grid-column: span 5; }
+    .span-6  { grid-column: span 6; }
+    .span-7  { grid-column: span 7; }
+    .span-8  { grid-column: span 8; }
+    .span-9  { grid-column: span 9; }
+    .span-10 { grid-column: span 10; }
+    .span-11 { grid-column: span 11; }
+    .span-12 { grid-column: span 12; }
+    .span-13 { grid-column: span 13; }
+    .span-14 { grid-column: span 14; }
+    .span-15 { grid-column: span 15; }
+    .span-16 { grid-column: span 16; }
+    .span-17 { grid-column: span 17; }
+    .span-18 { grid-column: span 18; }
+    .span-19 { grid-column: span 19; }
+    .span-20 { grid-column: span 20; }
+    .span-21 { grid-column: span 21; }
+    .span-22 { grid-column: span 22; }
+    .span-23 { grid-column: span 23; }
+    .span-24 { grid-column: span 24; }
 }
 
 /* Grid layout - rows */
