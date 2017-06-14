@@ -3,6 +3,8 @@ body {
     font-weight: normal;
     padding: 0;
     margin: 0;
+    font-size: 1 vmin;
+    width: 100%;
 }
 
 ul, ol {
@@ -37,12 +39,19 @@ ul, ol {
 /* Snippets explain a CSS property, HTML element, 
    or a single concept. */
 .snippet {
+    grid-column: span 3;
     display: inline-block;
     vertical-align: top;
-    margin: 16px;
+    margin: 1vmin;
     background-color: #eee;
     border-radius: 6px;
     overflow: hidden;
+}
+
+@media(min-width:800px) {
+    .snippet {
+        margin: 8px;
+    }
 }
 
 .snippet.container {
@@ -62,20 +71,24 @@ h1, h2, h3, h4, h5, h6 {
 .snippet > h2 {
     background-color: cornflowerblue;
     color: white;
-    font-size: 12pt;
+    font-size: 1em;
     font-weight: normal;
 }
 
+section > h1 {
+    grid-column: 1/-1;
+}
+
 section > h2 {
+    grid-column: 1/-1;
     border: 2px solid gray;
     border-radius: 8px;
     color: black;
     display: block;
-    font-size: 24px;
+    font-size: 2em;
     font-weight: normal;
-    margin-top: 40px;
-    padding: 20px 30px;
-    width: 85%;
+    margin-top: 1em;
+    padding: 0.5em 0.75em;
 }
 
 section > h3, .snippet > h3, .callout > h3 {
@@ -96,7 +109,7 @@ code, span.code {
 
 code {
     display: block;
-    font-size: 14px;
+    font-size: 0.85em;
 }
 
 .callout {
@@ -160,9 +173,8 @@ code.subtle {
 }
 
 section {
-    display: block;
     padding: 0 0;
-    margin: 0 0 0 10px;
+    margin: 0 1em;
 }
 
 .infill {
@@ -874,6 +886,7 @@ span.super {
 }
 
 .stack {
+    grid-column: 1/-1;
     display: inline-flex;
     flex-direction: column;
     align-items: stretch;
@@ -1118,13 +1131,14 @@ nav > ul > li {
 }
 
 nav > ul > li.nav-right {
+    display: none;
     float: right;
     margin: 0 60px;
 }
 
-@media(max-width: 600px) {
+@media(min-width: 600px) {
     nav > ul > li.nav-right {
-        display: none;
+        display: block;
     }
 }
 
@@ -1139,6 +1153,8 @@ nav a:link, nav a:visited {
     text-decoration: none;
 }
 
+/* This adds space before the target of a link, to put the target below the navbar. */
+/* XXX Broken by grid layout? */
 :target:before {
     content: "";
     display: block;
@@ -1471,3 +1487,95 @@ iframe {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
+/* Grids for laying out the cheat sheet itself */
+
+.component-grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.component-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.component-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.component-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+section {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media(min-width: 500px) {
+     section {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media(min-width: 800px) {
+     section {
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+/* Grid layout - columns */
+.col-1 { grid-column: span 1; }
+.col-2 { grid-column: span 2; }
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 3; }
+.col-5 { grid-column: span 3; }
+.col-6 { grid-column: span 3; }
+.col-7 { grid-column: span 3; }
+.col-8 { grid-column: span 3; }
+.col-9 { grid-column: span 3; }
+.col-10 { grid-column: span 3; }
+.col-11 { grid-column: span 3; }
+.col-12 { grid-column: span 3; }
+
+@media(min-width: 500px) {
+    .col-1 { grid-column: span 1; }
+    .col-2 { grid-column: span 2; }
+    .col-3 { grid-column: span 3; }
+    .col-4 { grid-column: span 4; }
+    .col-5 { grid-column: span 5; }
+    .col-6 { grid-column: span 6; }
+    .col-7 { grid-column: span 6; }
+    .col-8 { grid-column: span 6; }
+    .col-9 { grid-column: span 6; }
+    .col-10 { grid-column: span 6; }
+    .col-11 { grid-column: span 6; }
+    .col-12 { grid-column: span 6; }
+}
+
+@media(min-width: 800px) {
+    .col-1 { grid-column: span 1; }
+    .col-2 { grid-column: span 2; }
+    .col-3 { grid-column: span 3; }
+    .col-4 { grid-column: span 4; }
+    .col-5 { grid-column: span 5; }
+    .col-6 { grid-column: span 6; }
+    .col-7 { grid-column: span 7; }
+    .col-8 { grid-column: span 8; }
+    .col-9 { grid-column: span 9; }
+    .col-10 { grid-column: span 10; }
+    .col-11 { grid-column: span 11; }
+    .col-12 { grid-column: span 12; }
+}
+
+/* Grid layout - rows */
+.row-1 { grid-row: span 1; }
+.row-2 { grid-row: span 2; }
+.row-3 { grid-row: span 3; }
+.row-4 { grid-row: span 4; }
+.row-5 { grid-row: span 5; }
+.row-6 { grid-row: span 6; }
