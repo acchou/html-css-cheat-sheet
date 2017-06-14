@@ -1171,28 +1171,28 @@
 
         <section id="css-text">
             <h2>Text and inline elements</h2>
-            <div class="snippet width-10">
+            <div class="snippet">
                 <h2 class="code">text-align:</h2>
                 <div class="codeblock">
-                    <div class="text-example" style="text-align: left;">
+                    <div class="text-example align" style="text-align: left;">
                         abc abc abc abc abc abc
                     </div>
                     <code>left;</code>
                 </div>
                 <div class="codeblock">
-                    <div class="text-example" style="text-align: center;">
+                    <div class="text-example align" style="text-align: center;">
                         abc abc abc abc abc abc
                     </div>
                     <code>center;</code>
                 </div>
                 <div class="codeblock">
-                    <div class="text-example" style="text-align: right;">
+                    <div class="text-example align" style="text-align: right;">
                         abc abc abc abc abc abc
                     </div>
                     <code>right;</code>
                 </div>
                 <div class="codeblock">
-                    <div class="text-example" style="text-align: justify;">
+                    <div class="text-example align" style="text-align: justify;">
                         abc abc abc abc abc abc
                     </div>
                     <code>justify;</code>
@@ -1223,85 +1223,6 @@
                         abc abc abc abc<br> abc abc abc abc<br> abc abc abc abc<br>
                     </div>
                     <code>2em;</code>
-                </div>
-            </div>
-            <div class="snippet span-8" id="css-text-vertical-align">
-                <h2 class="code">vertical-align:</h2>
-                <h3>Inline elements only. To align block elements, use flex. Also see section on <a href="#css-table-vertical-align">table cells</a>.</h3>
-                <div class="callouts">
-                    <div class="callout">
-                        <div class="ex-vertical-align-text">
-                            <div class="ex-align-box">box</div>
-                        </div>
-                        <h3><span class="code">line-height = height</span></h3>
-                    </div>
-                    <div class="callout">
-                        <div class="ex-vertical-align-text">
-                            <span class="ex-align-text base">base</span>
-                            <div class="ex-align-box"></div>
-                        </div>
-                        <h3>Inline block without text</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="codeblock">
-                        <div class="ex-vertical-align-text">
-                            <div class="ex-align-box">box</div>
-                            <span class="ex-align-text base">base</span>
-                        </div>
-                        <code>baseline;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-vertical-align-text">
-                            <div class="ex-align-box">box</div>
-                            <span class="ex-align-text top">top</span>
-                        </div>
-                        <code>top;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-vertical-align-text">
-                            <div class="ex-align-box">box</div>
-                            <span class="ex-align-text middle">middle</span>
-                        </div>
-                        <code>middle;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-vertical-align-text">
-                            <div class="ex-align-box">box</div>
-                            <span class="ex-align-text bottom">bottom</span>
-                        </div>
-                        <code>bottom;</code>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="codeblock">
-                        <div class="ex-vertical-align-text">
-                            <span class="ex-align-text base">base</span>
-                            <span class="ex-align-text super">super</span>
-                        </div>
-                        <code>super;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-vertical-align-text">
-                            <span class="ex-align-text base">base</span>
-                            <span class="ex-align-text sub">sub</span>
-                        </div>
-                        <code>sub;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-vertical-align-text">
-                            <span class="ex-align-text base">base</span>
-                            <span class="ex-align-text" style="vertical-align: 50%;">50%</span>
-                        </div>
-                        <code>50%;</code>
-                    </div>
-                    <div class="codeblock">
-                        <div class="ex-vertical-align-text">
-                            <span class="ex-align-text base">base</span>
-                            <span class="ex-align-text" style="vertical-align: -50%;">-50%</span>
-                        </div>
-                        <code>-50%;</code>
-                    </div>
                 </div>
             </div>
             <div class="snippet">
@@ -1385,10 +1306,87 @@
                     <code>uppercase;</code>
                 </div>
             </div>
+            <div class="snippet span-8" id="css-text-vertical-align">
+                <h2 class="code">vertical-align:</h2>
+                <h3>Inline elements only. To align block elements, use flex. Also see section on <a href="#css-table-vertical-align">table cells</a>.</h3>
+                <div class="grid col-2">
+                    <div class="callout">
+                        <div class="ex-vertical-align-text">
+                            <div class="ex-align-box">box</div>
+                        </div>
+                        <h3><span class="code">line-height = height</span></h3>
+                    </div>
+                    <div class="callout">
+                        <div class="ex-vertical-align-text">
+                            <span class="ex-align-text base">base</span>
+                            <div class="ex-align-box"></div>
+                        </div>
+                        <h3>Inline block without text</h3>
+                    </div>
+                </div>
+                <div class="grid col-4">
+                    <div class="codeblock">
+                        <div class="ex-vertical-align-text">
+                            <div class="ex-align-box">box</div>
+                            <span class="ex-align-text base">base</span>
+                        </div>
+                        <code>baseline;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-vertical-align-text">
+                            <div class="ex-align-box">box</div>
+                            <span class="ex-align-text top">top</span>
+                        </div>
+                        <code>top;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-vertical-align-text">
+                            <div class="ex-align-box">box</div>
+                            <span class="ex-align-text middle">middle</span>
+                        </div>
+                        <code>middle;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-vertical-align-text">
+                            <div class="ex-align-box">box</div>
+                            <span class="ex-align-text bottom">bottom</span>
+                        </div>
+                        <code>bottom;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-vertical-align-text">
+                            <span class="ex-align-text base">base</span>
+                            <span class="ex-align-text super">super</span>
+                        </div>
+                        <code>super;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-vertical-align-text">
+                            <span class="ex-align-text base">base</span>
+                            <span class="ex-align-text sub">sub</span>
+                        </div>
+                        <code>sub;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-vertical-align-text">
+                            <span class="ex-align-text base">base</span>
+                            <span class="ex-align-text" style="vertical-align: 50%;">50%</span>
+                        </div>
+                        <code>50%;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-vertical-align-text">
+                            <span class="ex-align-text base">base</span>
+                            <span class="ex-align-text" style="vertical-align: -50%;">-50%</span>
+                        </div>
+                        <code>-50%;</code>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="css-list">
             <h2>Lists</h2>
-            <div class="snippet">
+            <div class="snippet span-10">
                 <h2 class="code">list-style:</h2>
                 <h3>Adjust list style type, position, and image.</h3>
                 <div class="row">

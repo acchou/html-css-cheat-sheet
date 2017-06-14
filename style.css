@@ -682,6 +682,10 @@ a:link, a:visited {
     border-bottom: 1px dashed #999;
 }
 
+.text-example.align {
+    max-width: 8em;
+}
+
 .ex-border-width {
     border-color: black;
     border-style: solid;
@@ -1505,10 +1509,10 @@ iframe {
 .grid.col-2 { grid-template-columns: 1fr; }
 
 @media(min-width: 600px) {
-    .grid.col-5 { grid-template-columns: repeat(2, 1fr); }
-    .grid.col-4 { grid-template-columns: repeat(2, 1fr); }
-    .grid.col-3 { grid-template-columns: repeat(1, 1fr); }
-    .grid.col-2 { grid-template-columns: repeat(1, 1fr); }
+    .grid.col-5 { grid-template-columns: repeat(4, 1fr); }
+    .grid.col-4 { grid-template-columns: repeat(4, 1fr); }
+    .grid.col-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid.col-2 { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media(min-width: 1000px) {
