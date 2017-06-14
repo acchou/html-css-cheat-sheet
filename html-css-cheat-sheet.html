@@ -24,7 +24,7 @@
         <h1>HTML</h1>
         <section id="html-templates">
             <h2>Templates</h2>
-            <div class="snippet">
+            <div class="snippet col-7">
                 <h2>HTML Document</h2>
                 <div class="codeblock">
                     <code>&lt;!DOCTYPE html&gt;</code>
@@ -43,7 +43,7 @@
         </section>
         <section id="html-elements">
             <h2>Elements</h2>
-            <div class="snippet">
+            <div class="snippet row-2 col-2">
                 <h2>Headers</h2>
                 <div class="codeblock ex-header">
                     <code><h1>&lt;h1&gt;</h1></code>
@@ -64,70 +64,64 @@
                     <code><h6>&lt;h6&gt;</h6></code>
                 </div>
             </div>
-            <div class="stack">
-                <div class="snippet">
-                    <h2>Paragraph</h2>
-                    <div class="codeblock">
-                        <code>&lt;p&gt;content&lt;/p&gt;</code>
-                    </div>
-                </div>
-                <div class="snippet">
-                    <h2>Line break</h2>
-                    <div class="codeblock">
-                        <code>&lt;br&gt;</code>
-                    </div>
-                </div>
-                <div class="snippet">
-                    <h2>Horizontal rule</h2>
-                    <div class="codeblock">
-                        <hr>
-                        <code>&lt;hr&gt;</code>
-                    </div>
+            <div class="snippet col-2">
+                <h2>Paragraph</h2>
+                <div class="codeblock">
+                    <code>&lt;p&gt;content&lt;/p&gt;</code>
                 </div>
             </div>
-            <div class="stack">
-                <div class="snippet">
-                    <h2>Division</h2>
-                    <h3>Block-level generic grouping element</h3>
-                    <div class="codeblock">
-                        <code>&lt;div class=&quot;kind&quot;&gt;</code>
-                        <code>    content</code>
-                        <code>&lt;/div&gt;</code>
-                    </div>
-                </div>
-                <div class="snippet">
-                    <h2>Span</h2>
-                    <h3>Inline generic grouping element</h3>
-                    <div class="codeblock">
-                        <code>&lt;span class=&quot;kind&quot;&gt;</code>
-                        <code>    content</code>
-                        <code>&lt;/span&gt;</code>
-                    </div>
+            <div class="snippet col-2">
+                <h2>Line break</h2>
+                <div class="codeblock">
+                    <code>&lt;br&gt;</code>
                 </div>
             </div>
-            <div class="stack">
-                <div class="snippet">
-                    <h2>Article</h2>
-                    <h3>A self-contained unit of content</h3>
-                    <div class="codeblock">
-                        <code>&lt;article&gt;</code>
-                        <code>  &lt;h2&gt;Header&lt;/h2&gt;</code>
-                        <code>  content</code>
-                        <code>&lt;/article&gt;</code>
-                    </div>
-                </div>
-                <div class="snippet">
-                    <h2>Section</h2>
-                    <h3>A unit of content</h3>
-                    <div class="codeblock">
-                        <code>&lt;section&gt;</code>
-                        <code>  &lt;h2&gt;Header&lt;/h2&gt;</code>
-                        <code>  content</code>
-                        <code>&lt;/section&gt;</code>
-                    </div>
+            <div class="snippet col-2">
+                <h2>Horizontal rule</h2>
+                <div class="codeblock">
+                    <hr>
+                    <code>&lt;hr&gt;</code>
                 </div>
             </div>
             <div class="snippet">
+                <h2>Division</h2>
+                <h3>Block-level generic grouping element</h3>
+                <div class="codeblock">
+                    <code>&lt;div class=&quot;kind&quot;&gt;</code>
+                    <code>    content</code>
+                    <code>&lt;/div&gt;</code>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2>Span</h2>
+                <h3>Inline generic grouping element</h3>
+                <div class="codeblock">
+                    <code>&lt;span class=&quot;kind&quot;&gt;</code>
+                    <code>    content</code>
+                    <code>&lt;/span&gt;</code>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2>Article</h2>
+                <h3>A self-contained unit of content</h3>
+                <div class="codeblock">
+                    <code>&lt;article&gt;</code>
+                    <code>  &lt;h2&gt;Header&lt;/h2&gt;</code>
+                    <code>  content</code>
+                    <code>&lt;/article&gt;</code>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2>Section</h2>
+                <h3>A unit of content</h3>
+                <div class="codeblock">
+                    <code>&lt;section&gt;</code>
+                    <code>  &lt;h2&gt;Header&lt;/h2&gt;</code>
+                    <code>  content</code>
+                    <code>&lt;/section&gt;</code>
+                </div>
+            </div>
+            <div class="snippet col-4">
                 <h2>Figure</h2>
                 <div class="codeblock">
                     <code>&lt;figure&gt;</code>
@@ -136,102 +130,113 @@
                     <code>&lt;/figure&gt;</code>
                 </div>
             </div>
-            <div class="snippet">
-                <h2>Text</h2>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <strong>strong</strong>
-                            </div>
-                            <code>&lt;strong&gt;strong&lt;/strong&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <em>emphasized</em>
-                            </div>
-                            <code>&lt;em&gt;emphasized&lt;/em&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <i>semantic</i>
-                            </div>
-                            <code>&lt;i&gt;semantic&lt;/i&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <s>strikethrough</s>
-                            </div>
-                            <code>&lt;s&gt;strikethrough&lt;/s&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <time datetime="2017-05-18T15:31">May 18</time>
-                            </div>
-                            <code>&lt;time datetime=&quot;2017-05-18T13:30&quot;&gt;<br>&nbsp;&nbsp;May 18<br>&lt;/time&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <abbr title="abbreviation">abbr</abbr>
-                            </div>
-                            <code>&lt;abbr title=&quot;abbreviation&quot;&gt;abbr&lt;/abbr&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <mark>mark</mark>
-                            </div>
-                            <code>&lt;mark&gt;mark&lt;/mark&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <u>underline</u>
-                            </div>
-                            <code>&lt;u&gt;underline&lt;/u&gt;</code>
-                        </div>
+            <div class="snippet col-5">
+                <h2>Navigation</h2>
+                <div class="codeblock" id="html-elements-nav">
+                    <div class="ex-element">
+                        See navigation bar at the top.
                     </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                x<sup>sup</sup>
-                            </div>
-                            <code>&lt;sup&gt;sup&lt;/sup&gt;</code>
+                    <code>&lt;nav&gt;</code>
+                    <code>    &lt;ul&gt;</code>
+                    <code>        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;First&lt;/a&gt;&lt;/li&gt;</code>
+                    <code>        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Second&lt;/a&gt;&lt;/li&gt;</code>
+                    <code>        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Third&lt;/a&gt;&lt;/li&gt;</code>
+                    <code>    &lt;/ul&gt;</code>
+                    <code>&lt;/nav&gt;</code>
+                </div>
+            </div>
+            <div class="snippet col-12">
+                <h2>Text</h2>
+                <div class="component-grid-3">
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <strong>strong</strong>
                         </div>
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                x<sub>sub</sub>
-                            </div>
-                            <code>&lt;sub&gt;sub&lt;/sub&gt;</code>
+                        <code>&lt;strong&gt;strong&lt;/strong&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <em>emphasized</em>
                         </div>
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <q>inline quote</q>
-                            </div>
-                            <code>&lt;q&gt;inline quote&lt;/q&gt;</code>
+                        <code>&lt;em&gt;emphasized&lt;/em&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <i>semantic</i>
                         </div>
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <blockquote>block quote</blockquote>
-                            </div>
-                            <code>&lt;blockquote&gt;block quote&lt;/blockquote&gt;</code>
+                        <code>&lt;i&gt;semantic&lt;/i&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <s>strikethrough</s>
                         </div>
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <dfn>term</dfn> definition
-                            </div>
-                            <code>&lt;dfn&gt;term&lt;/dfn&gt;</code>
+                        <code>&lt;s&gt;strikethrough&lt;/s&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <abbr title="abbreviation">abbr</abbr>
                         </div>
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <cite>citation</cite>
-                            </div>
-                            <code>&lt;cite&gt;citation&lt;/cite&gt;</code>
+                        <code>&lt;abbr title=&quot;abbreviation&quot;&gt;abbr&lt;/abbr&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <mark>mark</mark>
                         </div>
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <data value="42">data</data>
-                            </div>
-                            <code>&lt;data value="42"&gt;data&lt;/data&gt;</code>
+                        <code>&lt;mark&gt;mark&lt;/mark&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <u>underline</u>
                         </div>
+                        <code>&lt;u&gt;underline&lt;/u&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            x<sup>sup</sup>
+                        </div>
+                        <code>&lt;sup&gt;sup&lt;/sup&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            x<sub>sub</sub>
+                        </div>
+                        <code>&lt;sub&gt;sub&lt;/sub&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <q>inline quote</q>
+                        </div>
+                        <code>&lt;q&gt;inline quote&lt;/q&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <time datetime="2017-05-18T15:31">May 18</time>
+                        </div>
+                        <code>&lt;time datetime=&quot;2017-05-18T13:30&quot;&gt;<br>&nbsp;&nbsp;May 18<br>&lt;/time&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <blockquote>block quote</blockquote>
+                        </div>
+                        <code>&lt;blockquote&gt;block quote&lt;/blockquote&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <dfn>term</dfn> definition
+                        </div>
+                        <code>&lt;dfn&gt;term&lt;/dfn&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <cite>citation</cite>
+                        </div>
+                        <code>&lt;cite&gt;citation&lt;/cite&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <data value="42">data</data>
+                        </div>
+                        <code>&lt;data value="42"&gt;data&lt;/data&gt;</code>
                     </div>
                 </div>
             </div>
@@ -262,22 +267,7 @@
                     <code>&lt;var&gt;variable&lt;/var&gt;</code>
                 </div>
             </div>
-            <div class="snippet">
-                <h2>Navigation</h2>
-                <div class="codeblock" id="html-elements-nav">
-                    <div class="ex-element">
-                        See navigation bar at the top.
-                    </div>
-                    <code>&lt;nav&gt;</code>
-                    <code>    &lt;ul&gt;</code>
-                    <code>        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;First&lt;/a&gt;&lt;/li&gt;</code>
-                    <code>        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Second&lt;/a&gt;&lt;/li&gt;</code>
-                    <code>        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Third&lt;/a&gt;&lt;/li&gt;</code>
-                    <code>    &lt;/ul&gt;</code>
-                    <code>&lt;/nav&gt;</code>
-                </div>
-            </div>
-            <div class="snippet">
+            <div class="snippet col-4">
                 <h2>Forms</h2>
                 <div class="codeblock">
                     <div class="ex-form">
@@ -314,206 +304,194 @@
                     <code>&lt;/form&gt;</code>
                 </div>
             </div>
-            <div class="snippet">
+            <div class="snippet col-9">
                 <h2>UI elements</h2>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <button>button</button>
-                            </div>
-                            <code>&lt;button&gt;button&lt;/button&gt;</code>
+                <div class="component-grid-3">
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <button>button</button>
                         </div>
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <meter value="0.6">
-                            </div>
-                            <code>&lt;meter value="0.6"&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <select>
-                                    <option>Value 1</option> 
-                                    <option>Value 2</option>
-                                    <option>Value 3</option>
-                                </select>
-                            </div>
-                            <code>&lt;select&gt;</code>
-                            <code>  &lt;option&gt;Value 1&lt;/option&gt; </code>
-                            <code>  &lt;option&gt;Value 2&lt;/option&gt;</code>
-                            <code>  &lt;option&gt;Value 3&lt;/option&gt;</code>
-                            <code>&lt;/select&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <select>
-                                    <optgroup label="Group 1">
-                                        <option>Value 1</option>
-                                        <option>Value 2</option>
-                                    </optgroup>
-                                    <optgroup label="Group 2">
-                                        <option>Value 3</option>
-                                        <option>Value 4</option>
-                                    </optgroup>
-                                </select>
-                            </div>
-                            <code>&lt;select&gt;</code>
-                            <code>  &lt;optgroup label=&quot;Group 1&quot;&gt;</code>
-                            <code>    &lt;option&gt;Value 1&lt;/option&gt;</code>
-                            <code>    &lt;option&gt;Value 2&lt;/option&gt;</code>
-                            <code>  &lt;/optgroup&gt;</code>
-                            <code>  &lt;optgroup label=&quot;Group 2&quot;&gt;</code>
-                            <code>    &lt;option&gt;Value 3&lt;/option&gt;</code>
-                            <code>    &lt;option&gt;Value 4&lt;/option&gt;</code>
-                            <code>  &lt;/optgroup&gt;</code>
-                            <code>&lt;/select&gt;</code>
-                        </div>
+                        <code>&lt;button&gt;button&lt;/button&gt;</code>
                     </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <progress value="0.6">
-                            </div>
-                            <code>&lt;progress value="0.6"&gt;</code>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <meter value="0.6">
                         </div>
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <textarea rows="3" cols="30">content</textarea>
-                            </div>
-                            <code>&lt;textarea&gt;content&lt;/textarea&gt;</code>
+                        <code>&lt;meter value="0.6"&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <select>
+                                <option>Value 1</option> 
+                                <option>Value 2</option>
+                                <option>Value 3</option>
+                            </select>
                         </div>
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <details>
-                                    <summary>Summary</summary>
-                                    <p>The gory details.</p>
-                                </details>
-                            </div>
-                            <code>&lt;details&gt;</code>
-                            <code>  &lt;summary&gt;Summary&lt;/summary&gt;</code>
-                            <code>  &lt;p&gt;The gory details.&lt;/p&gt;</code>
-                            <code>&lt;/details&gt;</code>
+                        <code>&lt;select&gt;</code>
+                        <code>  &lt;option&gt;Value 1&lt;/option&gt; </code>
+                        <code>  &lt;option&gt;Value 2&lt;/option&gt;</code>
+                        <code>  &lt;option&gt;Value 3&lt;/option&gt;</code>
+                        <code>&lt;/select&gt;</code>
+                    </div>
+                    <div class="codeblock row-2">
+                        <div class="ex-element">
+                            <select>
+                                <optgroup label="Group 1">
+                                    <option>Value 1</option>
+                                    <option>Value 2</option>
+                                </optgroup>
+                                <optgroup label="Group 2">
+                                    <option>Value 3</option>
+                                    <option>Value 4</option>
+                                </optgroup>
+                            </select>
                         </div>
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <label>label
+                        <code>&lt;select&gt;</code>
+                        <code>  &lt;optgroup label=&quot;Group 1&quot;&gt;</code>
+                        <code>    &lt;option&gt;Value 1&lt;/option&gt;</code>
+                        <code>    &lt;option&gt;Value 2&lt;/option&gt;</code>
+                        <code>  &lt;/optgroup&gt;</code>
+                        <code>  &lt;optgroup label=&quot;Group 2&quot;&gt;</code>
+                        <code>    &lt;option&gt;Value 3&lt;/option&gt;</code>
+                        <code>    &lt;option&gt;Value 4&lt;/option&gt;</code>
+                        <code>  &lt;/optgroup&gt;</code>
+                        <code>&lt;/select&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <progress value="0.6">
+                        </div>
+                        <code>&lt;progress value="0.6"&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <textarea rows="3" cols="30">content</textarea>
+                        </div>
+                        <code>&lt;textarea&gt;content&lt;/textarea&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <details>
+                                <summary>Summary</summary>
+                                <p>The gory details.</p>
+                            </details>
+                        </div>
+                        <code>&lt;details&gt;</code>
+                        <code>  &lt;summary&gt;Summary&lt;/summary&gt;</code>
+                        <code>  &lt;p&gt;The gory details.&lt;/p&gt;</code>
+                        <code>&lt;/details&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <label>label
+                        <input placeholder="labelled ui element">
+                    </label>
+                        </div>
+                        <code>&lt;label&gt;label &lt;input&gt;&lt;/label&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <label>label
                             <input placeholder="labelled ui element">
-                        </label>
-                            </div>
-                            <code>&lt;label&gt;label &lt;input&gt;&lt;/label&gt;</code>
+                            </label>
                         </div>
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <label>label
-                                <input placeholder="labelled ui element">
-                                </label>
-                            </div>
-                            <code>&lt;label for="name"&gt;label&lt;/label&gt;</code>
-                            <code>&lt;input id="name"&gt;</code>
-                        </div>
+                        <code>&lt;label for="name"&gt;label&lt;/label&gt;</code>
+                        <code>&lt;input id="name"&gt;</code>
                     </div>
                 </div>
             </div>
-            <div class="snippet">
+            <div class="snippet col-12">
                 <h2>Input types</h2>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="ex-element">
-                                <input type="button" value="ok">
-                            </div>
-                            <code>&lt;input type=&quot;button&quot; value=&quot;ok&quot;&gt;</code>
+                <div class="component-grid-4">
+                    <div class="codeblock">
+                        <div class="ex-element">
+                            <input type="button" value="ok">
                         </div>
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="checkbox" checked></div>
-                            <code>&lt;input type=&quot;checkbox&quot;&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="color"></div>
-                            <code>&lt;input type=&quot;color&quot;&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="date"></div>
-                            <code>&lt;input type=&quot;date&quot;&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="datetime-local"></div>
-                            <code>&lt;input type=&quot;datetime-local&quot;&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="email" placeholder="andy@example.com"></div>
-                            <code>&lt;input type=&quot;email&quot;&gt;</code>
-                        </div>
+                        <code>&lt;input type=&quot;button&quot; value=&quot;ok&quot;&gt;</code>
                     </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="file"></div>
-                            <code>&lt;input type=&quot;file&quot;&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="month"></div>
-                            <code>&lt;input type=&quot;month&quot;&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="number" placeholder="123"></div>
-                            <code>&lt;input type=&quot;number&quot;&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="password" value="password"></div>
-                            <code>&lt;input type=&quot;password&quot;&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="radio" checked></div>
-                            <code>&lt;input type=&quot;radio&quot;&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="range" value="75"></div>
-                            <code>&lt;input type=&quot;range&quot;&gt;</code>
-                        </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="checkbox" checked></div>
+                        <code>&lt;input type=&quot;checkbox&quot;&gt;</code>
                     </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="reset"></div>
-                            <code>&lt;input type=&quot;reset&quot;&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="search" placeholder="search term"></div>
-                            <code>&lt;input type=&quot;search&quot;&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="submit"></div>
-                            <code>&lt;input type=&quot;submit&quot;&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="tel" placeholder="415-123-4567"></div>
-                            <code>&lt;input type=&quot;tel&quot;&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="text" placeholder="input"></div>
-                            <code>&lt;input type=&quot;text&quot;&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="hidden"></div>
-                            <code>&lt;input type=&quot;hidden&quot;&gt;</code>
-                        </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="color"></div>
+                        <code>&lt;input type=&quot;color&quot;&gt;</code>
                     </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="time"></div>
-                            <code>&lt;input type=&quot;time&quot;&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="url" placeholder="https://www.google.com"></div>
-                            <code>&lt;input type=&quot;url&quot;&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="week"></div>
-                            <code>&lt;input type=&quot;week&quot;&gt;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-element"><input type="image" src="https://www.w3schools.com/html/html5.gif" width="50px"></div>
-                            <code>&lt;input type=&quot;image&quot;&gt;</code>
-                        </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="date"></div>
+                        <code>&lt;input type=&quot;date&quot;&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="datetime-local"></div>
+                        <code>&lt;input type=&quot;datetime-local&quot;&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="email" placeholder="andy@example.com"></div>
+                        <code>&lt;input type=&quot;email&quot;&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="file"></div>
+                        <code>&lt;input type=&quot;file&quot;&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="month"></div>
+                        <code>&lt;input type=&quot;month&quot;&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="number" placeholder="123"></div>
+                        <code>&lt;input type=&quot;number&quot;&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="password" value="password"></div>
+                        <code>&lt;input type=&quot;password&quot;&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="radio" checked></div>
+                        <code>&lt;input type=&quot;radio&quot;&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="range" value="75"></div>
+                        <code>&lt;input type=&quot;range&quot;&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="reset"></div>
+                        <code>&lt;input type=&quot;reset&quot;&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="search" placeholder="search term"></div>
+                        <code>&lt;input type=&quot;search&quot;&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="submit"></div>
+                        <code>&lt;input type=&quot;submit&quot;&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="tel" placeholder="415-123-4567"></div>
+                        <code>&lt;input type=&quot;tel&quot;&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="text" placeholder="input"></div>
+                        <code>&lt;input type=&quot;text&quot;&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="hidden"></div>
+                        <code>&lt;input type=&quot;hidden&quot;&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="time"></div>
+                        <code>&lt;input type=&quot;time&quot;&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="url" placeholder="https://www.google.com"></div>
+                        <code>&lt;input type=&quot;url&quot;&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="week"></div>
+                        <code>&lt;input type=&quot;week&quot;&gt;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-element"><input type="image" src="https://www.w3schools.com/html/html5.gif" width="50px"></div>
+                        <code>&lt;input type=&quot;image&quot;&gt;</code>
                     </div>
                 </div>
             </div>
@@ -526,7 +504,7 @@
                     <code>&lt;a href=&quot;URL&quot;&gt;open link&lt;/a&gt;</code>
                 </div>
             </div>
-            <div class="snippet">
+            <div class="snippet col-6">
                 <h2>Link in new tab</h2>
                 <div class="codeblock">
                     <code>&lt;a href=&quot;URL&quot; target=&quot;_blank&quot;&gt;open link in new tab&lt;/a&gt;</code>
@@ -541,7 +519,7 @@
                     <code>&lt;img src=&quot;URL&quot;&gt;</code>
                 </div>
             </div>
-            <div class="snippet">
+            <div class="snippet col-4">
                 <h2>Image with description</h2>
                 <div class="codeblock">
                     <code>&lt;img src=&quot;URL&quot; alt=&quot;image description&quot;&gt;</code>
@@ -551,12 +529,7 @@
         <section id="html-lists">
             <h2>Lists</h2>
             <div class="snippet">
-                <h2>
-                    <ul>
-                        <li>List</li>
-                    </ul>
-                </h2>
-                <h3>Unordered list</h3>
+                <h2>Unordered list</h2>
                 <div class="codeblock">
                     <code>&lt;ul&gt;</code>
                     <code>    &lt;li&gt;Item 1&lt;/li&gt;</code>
@@ -565,12 +538,7 @@
                 </div>
             </div>
             <div class="snippet">
-                <h2>
-                    <ol>
-                        <li>List</li>
-                    </ol>
-                </h2>
-                <h3>Ordered list</h3>
+                <h2>Ordered list</h2>
                 <div class="codeblock">
                     <code>&lt;ol&gt;</code>
                     <code>    &lt;li&gt;Item 1&lt;/li&gt;</code>
@@ -579,13 +547,7 @@
                 </div>
             </div>
             <div class="snippet">
-                <h2>
-                    <dl>
-                        <dt>Term</dt>
-                        <dd>Description</dd>
-                    </dl>
-                </h2>
-                <h3>Description list</h3>
+                <h2>Description list</h2>
                 <div class="codeblock">
                     <code>&lt;dl&gt;</code>
                     <code>    &lt;dt&gt;Term&lt;/dt&gt;</code>
@@ -619,7 +581,7 @@
                     <code>&lt;table&gt;&#10;    &lt;tr&gt;&#10;        &lt;td&gt;data&lt;/td&gt;&#10;    &lt;/tr&gt;&#10;&lt;/table&gt;</code>
                 </div>
             </div>
-            <div class="snippet">
+            <div class="snippet col-6 row-2">
                 <h2>Full Table</h2>
                 <div class="codeblock">
                     <div class="ex-full-table-elements">
@@ -652,59 +614,57 @@
                     </div>
                 </div>
             </div>
-            <div class="stack">
-                <div class="snippet">
-                    <h2>Span columns</h2>
-                    <div class="codeblock">
-                        <div class="ex-table">
-                            <table class="ex-full-table">
-                                <thead>
-                                    <tr>
-                                        <th>name</th>
-                                        <th>number</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Andy</td>
-                                        <td>42</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">Kevin</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <code>&lt;td colspan=&quot;2&quot;&gt;Kevin&lt;/td&gt;</code>
+            <div class="snippet">
+                <h2>Span columns</h2>
+                <div class="codeblock">
+                    <div class="ex-table">
+                        <table class="ex-full-table">
+                            <thead>
+                                <tr>
+                                    <th>name</th>
+                                    <th>number</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Andy</td>
+                                    <td>42</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Kevin</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                </div>
-                <div class="snippet">
-                    <h2>Span rows</h2>
-                    <div class="codeblock">
-                        <div class="ex-table">
-                            <table class="ex-full-table">
-                                <thead>
-                                    <tr>
-                                        <th>name</th>
-                                        <th>number</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td rowspan="2">Andy</td>
-                                        <td>42</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1024</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <code>&lt;td rowspan=&quot;2&quot;&gt;Andy&lt;/td&gt;</code>
-                    </div>
+                    <code>&lt;td colspan=&quot;2&quot;&gt;Kevin&lt;/td&gt;</code>
                 </div>
             </div>
             <div class="snippet">
+                <h2>Span rows</h2>
+                <div class="codeblock">
+                    <div class="ex-table">
+                        <table class="ex-full-table">
+                            <thead>
+                                <tr>
+                                    <th>name</th>
+                                    <th>number</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="2">Andy</td>
+                                    <td>42</td>
+                                </tr>
+                                <tr>
+                                    <td>1024</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <code>&lt;td rowspan=&quot;2&quot;&gt;Andy&lt;/td&gt;</code>
+                </div>
+            </div>
+            <div class="snippet col-4">
                 <h2>Column groups</h2>
                 <h3>Operate on an entire column</h3>
                 <div class="codeblock">
@@ -2016,44 +1976,42 @@
         <!-- End section Box Model -->
         <section id="css-positioning">
             <h2>Positioning</h2>
-            <div class="stack">
-                <div class="snippet">
-                    <h2 class="code">position: static;</h2>
+            <div class="snippet">
+                <h2 class="code">position: static;</h2>
+                <div class="codeblock">
+                    <div class="box placeholder"></div>
+                    <div class="box static"></div>
+                    <div class="box placeholder"></div>
+                </div>
+            </div>
+            <div class="snippet">
+                <h2 class="code">position: relative;</h2>
+                <div class="row">
                     <div class="codeblock">
                         <div class="box placeholder"></div>
-                        <div class="box static"></div>
+                        <div class="box relative" style="top: 10px;"></div>
                         <div class="box placeholder"></div>
+                        <code class="nudge-top">top: 10px;</code>
+                    </div>
+                    <div class="codeblock nudge-top">
+                        <div class="box placeholder"></div>
+                        <div class="box relative" style="bottom: 10px;"></div>
+                        <div class="box placeholder"></div>
+                        <code>bottom: 10px;</code>
                     </div>
                 </div>
-                <div class="snippet">
-                    <h2 class="code">position: relative;</h2>
-                    <div class="row">
-                        <div class="codeblock">
-                            <div class="box placeholder"></div>
-                            <div class="box relative" style="top: 10px;"></div>
-                            <div class="box placeholder"></div>
-                            <code class="nudge-top">top: 10px;</code>
-                        </div>
-                        <div class="codeblock nudge-top">
-                            <div class="box placeholder"></div>
-                            <div class="box relative" style="bottom: 10px;"></div>
-                            <div class="box placeholder"></div>
-                            <code>bottom: 10px;</code>
-                        </div>
+                <div class="row">
+                    <div class="codeblock">
+                        <div class="box placeholder"></div>
+                        <div class="box relative" style="left: 10px;"></div>
+                        <div class="box placeholder"></div>
+                        <code>left: 10px;</code>
                     </div>
-                    <div class="row">
-                        <div class="codeblock">
-                            <div class="box placeholder"></div>
-                            <div class="box relative" style="left: 10px;"></div>
-                            <div class="box placeholder"></div>
-                            <code>left: 10px;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="box placeholder"></div>
-                            <div class="box relative" style="right: 10px;"></div>
-                            <div class="box placeholder"></div>
-                            <code>right: 10px;</code>
-                        </div>
+                    <div class="codeblock">
+                        <div class="box placeholder"></div>
+                        <div class="box relative" style="right: 10px;"></div>
+                        <div class="box placeholder"></div>
+                        <code>right: 10px;</code>
                     </div>
                 </div>
             </div>
