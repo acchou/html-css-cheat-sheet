@@ -3,20 +3,18 @@ body {
     font-weight: normal;
     padding: 0;
     margin: 0;
-    font-size: 1 vmin;
+    font-size: 16px;
     width: 100%;
+}
+
+@media(min-width: 800px) {
+    body {
+        font-size: 18px;
+    }
 }
 
 ul, ol {
     margin: 0;
-}
-
-.title {
-    font-size: 20pt;
-}
-
-.sheet {
-    display: block;
 }
 
 /* Positioning */
@@ -39,7 +37,6 @@ ul, ol {
 /* Snippets explain a CSS property, HTML element, 
    or a single concept. */
 .snippet {
-    grid-column: span 3;
     display: inline-block;
     vertical-align: top;
     margin: 1vmin;
@@ -80,19 +77,25 @@ section > h1 {
 }
 
 section > h2 {
-    grid-column: 1/-1;
-    border: 2px solid gray;
     border-radius: 8px;
+    border: 2px solid gray;
     color: black;
     display: block;
-    font-size: 2em;
+    font-size: 1.4em;
     font-weight: normal;
+    grid-column: 1/-1;
     margin-top: 1em;
     padding: 0.5em 0.75em;
 }
 
+@media(min-width: 900px) {
+    section > h2 {
+        font-size: 1.5em;
+    }
+}
+
 section > h3, .snippet > h3, .callout > h3 {
-    font-size: 11pt;
+    font-size: 0.9em;
     font-weight: normal;
     color: #777;
     background-color: initial;
@@ -168,7 +171,7 @@ code.comment {
 
 code.subtle {
     color: #888;
-    font-size: 12px;
+    font-size: 0.5em;
     padding: 4px;
 }
 
@@ -656,10 +659,6 @@ a:link, a:visited {
     float: right;
 }
 
-.symbol {
-    font-size: 22px;
-}
-
 .ex-overflow-box {
     display: inline-block;
     border: 1px dashed #999;
@@ -812,6 +811,7 @@ table.all-borders td {
 .ex-vertical-align-text {
     display: inline-block;
     border-bottom: 1px dashed #999;
+    white-space: nowrap;
 }
 
 .box.vertical {
@@ -879,7 +879,7 @@ span.super {
 
 .box-zindex.placeholder {
     align-items: flex-start;
-    font-size: 16px;
+    font-size: 1em;
     left: 0;
     justify-content: flex-start;
     top: 0;
@@ -894,6 +894,13 @@ span.super {
 
 .ex-full-table-elements {
     display: flex;
+    flex-direction: column;
+}
+
+@media(min-width: 500px) {
+    .ex-full-table-elements {
+        flex-direction: row;
+    }
 }
 
 .ex-full-table-elements > code {
@@ -907,7 +914,7 @@ span.super {
 .ex-css-element > code {
     font-family: 'Source Code Pro', monospace;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 .ex-css-element {
@@ -1490,24 +1497,25 @@ iframe {
 
 /* Grids for laying out the cheat sheet itself */
 
-.component-grid-5 {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+.grid { display: grid; }
+
+.grid.col-5 { grid-template-columns: 1fr; }
+.grid.col-4 { grid-template-columns: 1fr; }
+.grid.col-3 { grid-template-columns: 1fr; }
+.grid.col-2 { grid-template-columns: 1fr; }
+
+@media(min-width: 600px) {
+    .grid.col-5 { grid-template-columns: repeat(2, 1fr); }
+    .grid.col-4 { grid-template-columns: repeat(2, 1fr); }
+    .grid.col-3 { grid-template-columns: repeat(1, 1fr); }
+    .grid.col-2 { grid-template-columns: repeat(1, 1fr); }
 }
 
-.component-grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.component-grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.component-grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+@media(min-width: 1000px) {
+    .grid.col-5 { grid-template-columns: repeat(5, 1fr); }
+    .grid.col-4 { grid-template-columns: repeat(4, 1fr); }
+    .grid.col-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid.col-2 { grid-template-columns: repeat(2, 1fr); }
 }
 
 section {
@@ -1516,66 +1524,69 @@ section {
     grid-template-columns: repeat(3, 1fr);
 }
 
-@media(min-width: 500px) {
+@media(min-width: 600px) {
      section {
         grid-template-columns: repeat(6, 1fr);
     }
 }
 
-@media(min-width: 800px) {
+@media(min-width: 1000px) {
      section {
         grid-template-columns: repeat(12, 1fr);
     }
 }
 
 /* Grid layout - columns */
-.col-1 { grid-column: span 1; }
-.col-2 { grid-column: span 2; }
-.col-3 { grid-column: span 3; }
-.col-4 { grid-column: span 3; }
-.col-5 { grid-column: span 3; }
-.col-6 { grid-column: span 3; }
-.col-7 { grid-column: span 3; }
-.col-8 { grid-column: span 3; }
-.col-9 { grid-column: span 3; }
-.col-10 { grid-column: span 3; }
-.col-11 { grid-column: span 3; }
-.col-12 { grid-column: span 3; }
+.snippet { grid-column: span 3; }
+.span-1 { grid-column: span 3; }
+.span-2 { grid-column: span 3; }
+.span-3 { grid-column: span 3; }
+.span-4 { grid-column: span 3; }
+.span-5 { grid-column: span 3; }
+.span-6 { grid-column: span 3; }
+.span-7 { grid-column: span 3; }
+.span-8 { grid-column: span 3; }
+.span-9 { grid-column: span 3; }
+.span-10 { grid-column: span 3; }
+.span-11 { grid-column: span 3; }
+.span-12 { grid-column: span 3; }
 
-@media(min-width: 500px) {
-    .col-1 { grid-column: span 1; }
-    .col-2 { grid-column: span 2; }
-    .col-3 { grid-column: span 3; }
-    .col-4 { grid-column: span 4; }
-    .col-5 { grid-column: span 5; }
-    .col-6 { grid-column: span 6; }
-    .col-7 { grid-column: span 6; }
-    .col-8 { grid-column: span 6; }
-    .col-9 { grid-column: span 6; }
-    .col-10 { grid-column: span 6; }
-    .col-11 { grid-column: span 6; }
-    .col-12 { grid-column: span 6; }
+@media(min-width: 600px) {
+    .snippet { grid-column: span 3; }
+    .span-1 { grid-column: span 1; }
+    .span-2 { grid-column: span 2; }
+    .span-3 { grid-column: span 3; }
+    .span-4 { grid-column: span 3; }
+    .span-5 { grid-column: span 4; }
+    .span-6 { grid-column: span 5; }
+    .span-7 { grid-column: span 6; }
+    .span-8 { grid-column: span 6; }
+    .span-9 { grid-column: span 6; }
+    .span-10 { grid-column: span 6; }
+    .span-11 { grid-column: span 6; }
+    .span-12 { grid-column: span 6; }
 }
 
-@media(min-width: 800px) {
-    .col-1 { grid-column: span 1; }
-    .col-2 { grid-column: span 2; }
-    .col-3 { grid-column: span 3; }
-    .col-4 { grid-column: span 4; }
-    .col-5 { grid-column: span 5; }
-    .col-6 { grid-column: span 6; }
-    .col-7 { grid-column: span 7; }
-    .col-8 { grid-column: span 8; }
-    .col-9 { grid-column: span 9; }
-    .col-10 { grid-column: span 10; }
-    .col-11 { grid-column: span 11; }
-    .col-12 { grid-column: span 12; }
+@media(min-width: 1000px) {
+    .snippet { grid-column: span 3; }
+    .span-1 { grid-column: span 1; }
+    .span-2 { grid-column: span 2; }
+    .span-3 { grid-column: span 3; }
+    .span-4 { grid-column: span 4; }
+    .span-5 { grid-column: span 5; }
+    .span-6 { grid-column: span 6; }
+    .span-7 { grid-column: span 7; }
+    .span-8 { grid-column: span 8; }
+    .span-9 { grid-column: span 9; }
+    .span-10 { grid-column: span 10; }
+    .span-11 { grid-column: span 11; }
+    .span-12 { grid-column: span 12; }
 }
 
 /* Grid layout - rows */
-.row-1 { grid-row: span 1; }
-.row-2 { grid-row: span 2; }
-.row-3 { grid-row: span 3; }
-.row-4 { grid-row: span 4; }
-.row-5 { grid-row: span 5; }
-.row-6 { grid-row: span 6; }
+.span-rows-1 { grid-row: span 1; }
+.span-rows-2 { grid-row: span 2; }
+.span-rows-3 { grid-row: span 3; }
+.span-rows-4 { grid-row: span 4; }
+.span-rows-5 { grid-row: span 5; }
+.span-rows-6 { grid-row: span 6; }
