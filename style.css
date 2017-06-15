@@ -1613,8 +1613,6 @@ section {
       12 -- 1,2,3,4,6,12
       18 -- 1,2,3,6,9,18
       24 -- 1,2,3,4,6,8,12,24
-
-    There is also 10% overhead for padding.
 */
 @media(max-width: 400px)  { section { grid-template-columns: repeat(1, 1fr); } }
 @media(min-width: 400px)  { section { grid-template-columns: repeat(4, 1fr); } }
