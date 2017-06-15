@@ -4,7 +4,7 @@ body {
     padding: 0;
     margin: 0;
     font-size: 14px;
-    width: 100%;
+    width: 97%;
     max-width: 2400px;
 }
 
@@ -15,10 +15,11 @@ body {
 }
 
 .size-boxes {
-    display: none;
+    display: block;
 }
 
 .size-box {
+    z-index: 10;
     position: fixed;
     height: 100px;
     width: 100px;
@@ -85,6 +86,7 @@ ul, ol {
     background-color: #eee;
     border-radius: 6px;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 @media(min-width:800px) {
@@ -143,6 +145,10 @@ section > h3, .snippet > h3, .callout > h3 {
     background-color: initial;
 }
 
+section > h3 {
+    grid-column: 1/-1;
+}
+
 code, .code, span.code {
     font-family: 'Source Code Pro', monospace;
     white-space: pre;
@@ -160,13 +166,15 @@ code {
 .callout {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 16px 0;
+    align-items: left;
+    margin: 16px 24px;
 }
 
-.callouts {
-    display: flex;
-    justify-content: space-around;
+@media(min-width: 600px) {
+    .callout {
+        align-items: center;
+        margin: 16px 0;
+    }
 }
 
 #css-positioning-fixed {
@@ -219,7 +227,13 @@ code.subtle {
 
 section {
     padding: 0 0;
-    margin: 0 1em;
+    margin: 0 0.5em;
+}
+
+@media(min-width: 600px) {
+    section {
+        margin: 0 1em;
+    }
 }
 
 .infill {
@@ -317,6 +331,10 @@ section {
 .margin-box, .border-box, .padding-box, .content-box {
     padding: 1em; 
     padding-top: 0em; 
+}
+
+.ex-box-sizing {
+    max-width: 11em;
 }
 
 .border-box {
@@ -1189,10 +1207,6 @@ nav > ul > li.nav-right {
     margin: 0 60px;
 }
 
-nav > ul > li.nav-right:hover > .size-boxes {
-    display: block;
-}
-
 @media(min-width: 600px) {
     nav > ul > li.nav-right {
         display: block;
@@ -1554,14 +1568,14 @@ iframe {
 .grid.col-3 { grid-template-columns: 1fr; }
 .grid.col-2 { grid-template-columns: 1fr; }
 
-@media(min-width: 600px) {
-    .grid.col-5 { grid-template-columns: repeat(4, 1fr); }
-    .grid.col-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.col-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.col-2 { grid-template-columns: repeat(2, 1fr); }
+@media(min-width: 400px) {
+    .grid.col-5 { grid-template-columns: repeat(2, 1fr); }
+    .grid.col-4 { grid-template-columns: repeat(2, 1fr); }
+    .grid.col-3 { grid-template-columns: repeat(2, 1fr); }
+    .grid.col-2 { grid-template-columns: repeat(1, 1fr); }
 }
 
-@media(min-width: 1000px) {
+@media(min-width: 600px) {
     .grid.col-5 { grid-template-columns: repeat(5, 1fr); }
     .grid.col-4 { grid-template-columns: repeat(4, 1fr); }
     .grid.col-3 { grid-template-columns: repeat(3, 1fr); }
@@ -1584,15 +1598,15 @@ section {
 
     There is also 10% overhead for padding.
 */
-@media(max-width: 440px)  { section { grid-template-columns: repeat(1, 1fr); } }
-@media(min-width: 440px)  { section { grid-template-columns: repeat(4, 1fr); } }
-@media(min-width: 660px)  { section { grid-template-columns: repeat(6, 1fr); } }
-@media(min-width: 1320px) { section { grid-template-columns: repeat(12, 1fr); } }
-@media(min-width: 1980px) { section { grid-template-columns: repeat(18, 1fr); } }
-@media(min-width: 2640px) { section { grid-template-columns: repeat(24, 1fr); } }
+@media(max-width: 400px)  { section { grid-template-columns: repeat(1, 1fr); } }
+@media(min-width: 400px)  { section { grid-template-columns: repeat(4, 1fr); } }
+@media(min-width: 600px)  { section { grid-template-columns: repeat(6, 1fr); } }
+@media(min-width: 1200px) { section { grid-template-columns: repeat(12, 1fr); } }
+@media(min-width: 1800px) { section { grid-template-columns: repeat(18, 1fr); } }
+@media(min-width: 2400px) { section { grid-template-columns: repeat(24, 1fr); } }
 
 /* Grid layout - columns */
-@media(max-width: 440px) {
+@media(max-width: 400px) {
     .snippet { grid-column: span 1; }
     .span-1  { grid-column: span 1; }
     .span-2  { grid-column: span 1; }
@@ -1620,7 +1634,7 @@ section {
     .span-24 { grid-column: span 1; }
 }
 
-@media(min-width: 440px) {
+@media(min-width: 400px) {
     .snippet { grid-column: span 2; }
     .span-1  { grid-column: span 1; }
     .span-2  { grid-column: span 2; }
@@ -1648,8 +1662,8 @@ section {
     .span-24 { grid-column: span 4; }
 }
 
-@media(min-width: 660px) {
-    .snippet { grid-column: span 6; }
+@media(min-width: 600px) {
+    .snippet { grid-column: span 3; }
     .span-1  { grid-column: span 1; }
     .span-2  { grid-column: span 2; }
     .span-3  { grid-column: span 3; }
@@ -1676,8 +1690,8 @@ section {
     .span-24 { grid-column: span 6; }
 }
 
-@media(min-width: 1320px) {
-    .snippet { grid-column: span 6; }
+@media(min-width: 1200px) {
+    .snippet { grid-column: span 3; }
     .span-1  { grid-column: span 1; }
     .span-2  { grid-column: span 2; }
     .span-3  { grid-column: span 3; }
@@ -1704,8 +1718,8 @@ section {
     .span-24 { grid-column: span 12; }
 }
 
-@media(min-width: 1980px) {
-    .snippet { grid-column: span 6; }
+@media(min-width: 1800px) {
+    .snippet { grid-column: span 4; }
     .span-1  { grid-column: span 1; }
     .span-2  { grid-column: span 2; }
     .span-3  { grid-column: span 3; }
@@ -1732,8 +1746,8 @@ section {
     .span-24 { grid-column: span 18; }
 }
 
-@media(min-width: 2640px) {
-    .snippet { grid-column: span 6; }
+@media(min-width: 2400px) {
+    .snippet { grid-column: span 4; }
     .span-1  { grid-column: span 1; }
     .span-2  { grid-column: span 2; }
     .span-3  { grid-column: span 3; }
