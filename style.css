@@ -1568,6 +1568,10 @@ iframe {
 .grid.col-3 { grid-template-columns: 1fr; }
 .grid.col-2 { grid-template-columns: 1fr; }
 
+.grid.center {
+    align-items: center;
+}
+
 @media(min-width: 400px) {
     .grid.col-5 { grid-template-columns: repeat(2, 1fr); }
     .grid.col-4 { grid-template-columns: repeat(2, 1fr); }
