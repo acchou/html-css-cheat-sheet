@@ -218,6 +218,42 @@
                     </fieldset>
                 </div>
             </div>
+            <div class="snippet span-5">
+                <h2>Tooltip</h2>
+                <div class="codeblock">
+                    <div class="ex-tooltip">
+                        <div class="box biggest"></div>
+                        <p class="tooltip">This is a tooltip message.</p>
+                    </div>
+                    <fieldset>
+                        <legend>HTML</legend>
+                        <code>&lt;div class=&quot;ex-tooltip&quot;&gt;</code>
+                        <code>  &lt;div class=&quot;box biggest&quot;&gt;&lt;/div&gt;</code>
+                        <code>  &lt;p class=&quot;tooltip&quot;&gt;This is a tooltip message.&lt;/p&gt;</code>
+                        <code>&lt;/div&gt;</code>
+                    </fieldset>
+                    <fieldset>
+                        <legend>CSS</legend>
+                        <code>.tooltip {</code>
+                        <code>  background-color: transparent;</code>
+                        <code>  border-radius: 8px;</code>
+                        <code>  color: transparent;</code>
+                        <code>  font-size: 0.7em;</code>
+                        <code>  position: absolute;</code>
+                        <code>  transition: 0.5s;</code>
+                        <code>  padding: 0.5em 1em;</code>
+                        <code>  margin-top: 0;</code>
+                        <code>  z-index: 1000;</code>
+                        <code>}</code>
+                        <code></code>
+                        <code>.ex-tooltip:hover > .tooltip {</code>
+                        <code>  background-color: yellow;</code>
+                        <code>  color: black;</code>
+                        <code>  font-size: 1.2em;</code>
+                        <code>}</code>
+                    </fieldset>
+                </div>
+            </div>
         </section>
         <section id="animation-css">
             <h2>CSS animation</h2>
