@@ -1389,9 +1389,17 @@ table.transform-origin {
     margin: 16px 0 16px 16px;
 }
 
-table.perspective .codeblock {
+.perspective {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.perspective > .codeblock {
     overflow: hidden;
     padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .ex-transform-origin {
