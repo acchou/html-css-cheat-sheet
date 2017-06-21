@@ -15,7 +15,7 @@ body {
 }
 
 .size-boxes {
-    display: block;
+    display: none;
 }
 
 .size-box {
