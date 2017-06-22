@@ -2256,78 +2256,77 @@
 
         <section id="css-flexbox-containers">
             <h2>Flexbox containers</h2>
-            <div class="flex inline noborder column">
-                <div class="snippet">
-                    <h2 class="code">display:</h2>
-                    <h3>Flexbox container mode</h3>
-                    <div class="codeblock" title="A block using flexbox for child elements">
-                        <div class="box placeholder"></div>
-                        <div class="flex">
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                        </div>
-                        <div class="box placeholder"></div>
-                        <code>flex;</code>
+            <div class="snippet">
+                <h2 class="code">display:</h2>
+                <h3>Flexbox container mode</h3>
+                <div class="codeblock" title="A block using flexbox for child elements">
+                    <div class="box placeholder"></div>
+                    <div class="flex">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
                     </div>
-                    <div class="codeblock" title="An inline block using flexbox for child elements">
-                        <div class="box placeholder"></div>
-                        <div class="flex inline valign-middle">
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                        </div>
-                        <div class="box placeholder"></div>
-                        <code>inline-flex;</code>
+                    <div class="box placeholder"></div>
+                    <code>flex;</code>
+                </div>
+                <div class="codeblock" title="An inline block using flexbox for child elements">
+                    <div class="box placeholder"></div>
+                    <div class="flex inline valign-middle">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
                     </div>
+                    <div class="box placeholder"></div>
+                    <code>inline-flex;</code>
                 </div>
             </div>
             <div class="snippet span-6">
                 <h2 class="code">flex-flow:</h2>
-                <div class="snippet container">
+                <div class="container">
                     <h3>Flex direction and wrap</h3>
                     <div class="codeblock">
                         <code>&lt;flex-direction&gt; &lt;flex-wrap&gt;;</code>
                     </div>
-                    <div class="grid col-2">
-                        <!-- XXX Restore multiple columns -->
-                        <div class="snippet">
+                    <div class="grid col-3">
+                        <div class="snippet span-2">
                             <h2 class="code">flex-direction: </h2>
                             <h3>Direction of main axis</h3>
-                            <div class="codeblock">
-                                <div class="flex row">
-                                    <div class="box">1</div>
-                                    <div class="box">2</div>
-                                    <div class="box">3</div>
+                            <div class="grid col-2">
+                                <div class="codeblock">
+                                    <div class="flex row">
+                                        <div class="box">1</div>
+                                        <div class="box">2</div>
+                                        <div class="box">3</div>
+                                    </div>
+                                    <code class="center">row;</code>
                                 </div>
-                                <code class="center">row;</code>
-                            </div>
-                            <div class="codeblock">
-                                <div class="flex column">
-                                    <div class="box">1</div>
-                                    <div class="box">2</div>
-                                    <div class="box">3</div>
+                                <div class="codeblock">
+                                    <div class="flex row-reverse">
+                                        <div class="box">1</div>
+                                        <div class="box">2</div>
+                                        <div class="box">3</div>
+                                    </div>
+                                    <code>row-reverse;</code>
                                 </div>
-                                <code>column;</code>
-                            </div>
-                            <div class="codeblock">
-                                <div class="flex row-reverse">
-                                    <div class="box">1</div>
-                                    <div class="box">2</div>
-                                    <div class="box">3</div>
+                                <div class="codeblock">
+                                    <div class="flex column">
+                                        <div class="box">1</div>
+                                        <div class="box">2</div>
+                                        <div class="box">3</div>
+                                    </div>
+                                    <code>column;</code>
                                 </div>
-                                <code>row-reverse;</code>
-                            </div>
-                            <div class="codeblock">
-                                <div class="flex column-reverse">
-                                    <div class="box">1</div>
-                                    <div class="box">2</div>
-                                    <div class="box">3</div>
+                                <div class="codeblock">
+                                    <div class="flex column-reverse">
+                                        <div class="box">1</div>
+                                        <div class="box">2</div>
+                                        <div class="box">3</div>
+                                    </div>
+                                    <code>column-reverse;</code>
                                 </div>
-                                <code>column-reverse;</code>
                             </div>
                         </div>
-                        <div class="snippet">
+                        <div class="snippet span-1">
                             <h2 class="code">flex-wrap:</h2>
                             <h3>Wrap items across lines</h3>
                             <div class="codeblock">
@@ -2417,112 +2416,104 @@
                     <code>space-around;</code>
                 </div>
             </div>
-            <div class="snippet span-4">
+            <div class="snippet span-6">
                 <h2 class="code">align-items:</h2>
                 <h3>Alignment on cross axis</h3>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="flex align-start taller">
-                                <div class="box"></div>
-                                <div class="box"></div>
-                                <div class="box"></div>
-                            </div>
-                            <code>flex-start;</code>
+                <div class="grid col-3">
+                    <div class="codeblock">
+                        <div class="flex align-start taller">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
                         </div>
-                        <div class="codeblock">
-                            <div class="flex align-center taller">
-                                <div class="box"></div>
-                                <div class="box"></div>
-                                <div class="box"></div>
-                            </div>
-                            <code>center;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="flex align-end taller">
-                                <div class="box"></div>
-                                <div class="box"></div>
-                                <div class="box"></div>
-                            </div>
-                            <code>flex-end;</code>
-                        </div>
+                        <code>flex-start;</code>
                     </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="flex align-baseline taller">
-                                <div class="line"></div>
-                                <div class="box">a</div>
-                                <div class="box bigger">b</div>
-                                <div class="box biggest">c</div>
-                            </div>
-                            <code>baseline;</code>
+                    <div class="codeblock">
+                        <div class="flex align-center taller">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
                         </div>
-                        <div class="codeblock">
-                            <div class="flex align-stretch taller">
-                                <div class="box"></div>
-                                <div class="box"></div>
-                                <div class="box"></div>
-                            </div>
-                            <code>stretch;</code>
+                        <code>center;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="flex align-end taller">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
                         </div>
+                        <code>flex-end;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="flex align-baseline taller">
+                            <div class="line"></div>
+                            <div class="box">a</div>
+                            <div class="box bigger">b</div>
+                            <div class="box biggest">c</div>
+                        </div>
+                        <code>baseline;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="flex align-stretch taller">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                        <code>stretch;</code>
                     </div>
                 </div>
             </div>
-            <div class="snippet span-4">
+            <div class="snippet span-5">
                 <h2 class="code">align-content:</h2>
                 <h3>Alignment of wrapped lines</h3>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="flex wrap content-start taller">
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
-                            </div>
-                            <code>flex-start;</code>
+                <div class="grid col-3">
+                    <div class="codeblock">
+                        <div class="flex wrap content-start taller">
+                            <div class="box flatter fullwidth"></div>
+                            <div class="box flatter fullwidth"></div>
+                            <div class="box flatter fullwidth"></div>
                         </div>
-                        <div class="codeblock">
-                            <div class="flex wrap content-center taller">
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
-                            </div>
-                            <code>center;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="flex wrap content-end taller">
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
-                            </div>
-                            <code>flex-end;</code>
-                        </div>
+                        <code>flex-start;</code>
                     </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="flex wrap content-between taller">
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
-                            </div>
-                            <code>space-between;</code>
+                    <div class="codeblock">
+                        <div class="flex wrap content-center taller">
+                            <div class="box flatter fullwidth"></div>
+                            <div class="box flatter fullwidth"></div>
+                            <div class="box flatter fullwidth"></div>
                         </div>
-                        <div class="codeblock">
-                            <div class="flex wrap content-around taller">
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
-                            </div>
-                            <code>space-around;</code>
+                        <code>center;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="flex wrap content-end taller">
+                            <div class="box flatter fullwidth"></div>
+                            <div class="box flatter fullwidth"></div>
+                            <div class="box flatter fullwidth"></div>
                         </div>
-                        <div class="codeblock">
-                            <div class="flex wrap content-stretch taller">
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
-                                <div class="box flatter fullwidth"></div>
-                            </div>
-                            <code>stretch;</code>
+                        <code>flex-end;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="flex wrap content-between taller">
+                            <div class="box flatter fullwidth"></div>
+                            <div class="box flatter fullwidth"></div>
+                            <div class="box flatter fullwidth"></div>
                         </div>
+                        <code>space-between;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="flex wrap content-around taller">
+                            <div class="box flatter fullwidth"></div>
+                            <div class="box flatter fullwidth"></div>
+                            <div class="box flatter fullwidth"></div>
+                        </div>
+                        <code>space-around;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="flex wrap content-stretch taller">
+                            <div class="box flatter fullwidth"></div>
+                            <div class="box flatter fullwidth"></div>
+                            <div class="box flatter fullwidth"></div>
+                        </div>
+                        <code>stretch;</code>
                     </div>
                 </div>
             </div>
@@ -2533,17 +2524,17 @@
             <h2>Flexbox items</h2>
             <div class="snippet span-8">
                 <h2 class="code">flex:</h2>
-                <div class="snippet container">
+                <div class="container">
                     <h3>Combine grow, shrink, basis</h3>
                     <div class="codeblock">
                         <code>&lt;flex-grow&gt; &lt;flex-shrink&gt;? || &lt;flex-basis&gt;;</code>
                     </div>
-                    <div class="columns">
-                        <div class="snippet column">
+                    <div class="grid col-3">
+                        <div class="snippet span-1">
                             <h2 class="code">flex-grow:</h2>
                             <h3>Item growth multiplier</h3>
                             <div class="codeblock">
-                                <div class="flex width-10">
+                                <div class="flex">
                                     <div class="box grow-0">0</div>
                                     <div class="box grow-0">0</div>
                                 </div>
@@ -2551,32 +2542,32 @@
                                 <p class="tooltip">no grow</p>
                             </div>
                             <div class="codeblock">
-                                <div class="flex width-10">
+                                <div class="flex">
                                     <div class="box grow-1">1</div>
                                     <div class="box grow-1">1</div>
                                 </div>
                                 <code>1;</code>
                             </div>
                             <div class="codeblock">
-                                <div class="flex width-10">
+                                <div class="flex">
                                     <div class="box grow-10">10</div>
                                     <div class="box grow-20 placeholder">20</div>
                                 </div>
                                 <code>10;</code>
                             </div>
                             <div class="codeblock">
-                                <div class="flex width-10">
+                                <div class="flex">
                                     <div class="box grow-99">99</div>
                                     <div class="box grow-20 placeholder">20</div>
                                 </div>
                                 <code>99;</code>
                             </div>
                         </div>
-                        <div class="snippet column">
+                        <div class="snippet span-1">
                             <h2 class="code">flex-shrink:</h2>
                             <h3>Item shrink multiplier</h3>
                             <div class="codeblock">
-                                <div class="flex width-10">
+                                <div class="flex">
                                     <div class="box flex-basis-100pct shrink-0">0</div>
                                     <div class="box flex-basis-100pct shrink-0">0</div>
                                 </div>
@@ -2584,28 +2575,28 @@
                                 <p class="tooltip">no shrink</p>
                             </div>
                             <div class="codeblock">
-                                <div class="flex width-10">
+                                <div class="flex">
                                     <div class="box flex-basis-100pct shrink-1">1</div>
                                     <div class="box flex-basis-100pct shrink-1">1</div>
                                 </div>
                                 <code>1;</code>
                             </div>
                             <div class="codeblock">
-                                <div class="flex width-10">
+                                <div class="flex">
                                     <div class="box flex-basis-100pct shrink-10">10</div>
                                     <div class="box flex-basis-100pct shrink-20 placeholder">20</div>
                                 </div>
                                 <code>10;</code>
                             </div>
                             <div class="codeblock">
-                                <div class="flex width-10">
+                                <div class="flex">
                                     <div class="box flex-basis-100pct shrink-99">99</div>
                                     <div class="box flex-basis-100pct shrink-20 placeholder">20</div>
                                 </div>
                                 <code>99;</code>
                             </div>
                         </div>
-                        <div class="snippet column" title="Flex item 's initial size along main axis">
+                        <div class="snippet span-1" title="Flex item 's initial size along main axis">
                             <h2 class="code">flex-basis:</h2>
                             <h3>Initial size of an item</h3>
                             <div class="codeblock">
@@ -2636,83 +2627,70 @@
                     </div>
                 </div>
             </div>
-            <div class="snippet span-4">
+            <div class="snippet span-5">
                 <h2 class="code">align-self:</h2>
                 <h3>Item-specific cross axis alignment</h3>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="flex taller">
-                                <div class="box placeholder"></div>
-                                <div class="box align-self-start"></div>
-                                <div class="box placeholder"></div>
-                            </div>
-                            <code>flex-start;</code>
+                <div class="grid col-3">
+                    <div class="codeblock">
+                        <div class="flex taller">
+                            <div class="box placeholder"></div>
+                            <div class="box align-self-start"></div>
+                            <div class="box placeholder"></div>
                         </div>
-                        <div class="codeblock">
-                            <div class="flex taller">
-                                <div class="box placeholder"></div>
-                                <div class="box align-self-center"></div>
-                                <div class="box placeholder"></div>
-                            </div>
-                            <code>center;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="flex taller">
-                                <div class="box placeholder"></div>
-                                <div class="box align-self-end"></div>
-                                <div class="box placeholder"></div>
-                            </div>
-                            <code>flex-end;</code>
-                        </div>
+                        <code>flex-start;</code>
                     </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="flex taller">
-                                <div class="box placeholder">a</div>
-                                <div class="line-short align-self-baseline"></div>
-                                <div class="box align-self-baseline">b</div>
-                                <div class="box bigger align-self-baseline">c</div>
-                            </div>
-                            <code>baseline;</code>
+                    <div class="codeblock">
+                        <div class="flex taller">
+                            <div class="box placeholder"></div>
+                            <div class="box align-self-center"></div>
+                            <div class="box placeholder"></div>
                         </div>
-                        <div class="codeblock">
-                            <div class="flex taller justify-center">
-                                <div class="box placeholder"></div>
-                                <div class="box align-self-stretch"></div>
-                                <div class="box placeholder"></div>
-                            </div>
-                            <code>stretch;</code>
+                        <code>center;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="flex taller">
+                            <div class="box placeholder"></div>
+                            <div class="box align-self-end"></div>
+                            <div class="box placeholder"></div>
                         </div>
+                        <code>flex-end;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="flex taller">
+                            <div class="box placeholder">a</div>
+                            <div class="line-short align-self-baseline"></div>
+                            <div class="box align-self-baseline">b</div>
+                            <div class="box bigger align-self-baseline">c</div>
+                        </div>
+                        <code>baseline;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="flex taller justify-center">
+                            <div class="box placeholder"></div>
+                            <div class="box align-self-stretch"></div>
+                            <div class="box placeholder"></div>
+                        </div>
+                        <code>stretch;</code>
                     </div>
                 </div>
             </div>
-            <div class="flex inline noborder column">
-                <!-- <div class="snippet">
-                <h2 class="code">flex:</h2>
-                <h3>Combine grow, shrink, basis</h3>
+            <div class="snippet" title="Higher order items appear after lower order items. Samer order items appear in source order. Default 0.">
+                <h2 class="code">order:</h2>
+                <h3>Display order of an item</h3>
                 <div class="codeblock">
-                    <code>&lt;grow&gt; &lt;shrink&gt; &lt;basis&gt;;</code>
+                    <code>&lt;div class=&quot;first&quot;&gt;1&lt;/div&gt;</code>
+                    <code>&lt;div class=&quot;second&quot;&gt;2&lt;/div&gt;</code>
+                    <code>&lt;div class=&quot;third&quot;&gt;3&lt;/div&gt;</code>
                 </div>
-                                </div> -->
-                <div class="snippet" title="Higher order items appear after lower order items. Samer order items appear in source order. Default 0.">
-                    <h2 class="code">order:</h2>
-                    <h3>Display order of an item</h3>
-                    <div class="codeblock">
-                        <code>&lt;div class=&quot;first&quot;&gt;1&lt;/div&gt;</code>
-                        <code>&lt;div class=&quot;second&quot;&gt;2&lt;/div&gt;</code>
-                        <code>&lt;div class=&quot;third&quot;&gt;3&lt;/div&gt;</code>
+                <div class="codeblock">
+                    <div class="flex">
+                        <div class="box first">1</div>
+                        <div class="box second">2</div>
+                        <div class="box third">3</div>
                     </div>
-                    <div class="codeblock">
-                        <div class="flex">
-                            <div class="box first">1</div>
-                            <div class="box second">2</div>
-                            <div class="box third">3</div>
-                        </div>
-                        <code>.first, .second {</code>
-                        <code>  order: 1;</code>
-                        <code>}</code>
-                    </div>
+                    <code>.first, .second {</code>
+                    <code>  order: 1;</code>
+                    <code>}</code>
                 </div>
             </div>
         </section>
@@ -3351,186 +3329,178 @@
             <h2>Table display</h2>
             <div class="snippet span-4" id="css-table-display">
                 <h2 class="code">display:</h2>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="ex-table">
-                                <table class="highlight">
-                                    <tr>
-                                        <td>A</td>
-                                        <td>B</td>
-                                    </tr>
-                                    <tr>
-                                        <td>C</td>
-                                        <td>D</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <code>table;</code>
+                <div class="grid col-2" style="align-items: flex-end;">
+                    <div class="codeblock">
+                        <div class="ex-table">
+                            <table class="highlight">
+                                <tr>
+                                    <td>A</td>
+                                    <td>B</td>
+                                </tr>
+                                <tr>
+                                    <td>C</td>
+                                    <td>D</td>
+                                </tr>
+                            </table>
                         </div>
-                        <div class="codeblock">
-                            <div class="ex-table">
-                                <table>
-                                    <tr class="highlight">
-                                        <td>A1</td>
-                                        <td>B1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>A2</td>
-                                        <td>B2</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <code>table-row;</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-table">
-                                <table>
-                                    <tr>
-                                        <td class="cell highlight">A1</td>
-                                        <td>B1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>A2</td>
-                                        <td>B2</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <code>table-cell;</code>
-                        </div>
+                        <code>table;</code>
                     </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="ex-table">
-                                abc
-                                <table class="highlight" style="display: inline-table;">
-                                    <tr>
-                                        <td>A1</td>
-                                        <td>B1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>A2</td>
-                                        <td>B2</td>
-                                    </tr>
-                                </table>
-                                def
-                            </div>
-                            <code>inline-table;</code>
+                    <div class="codeblock">
+                        <div class="ex-table">
+                            <table>
+                                <tr class="highlight">
+                                    <td>A1</td>
+                                    <td>B1</td>
+                                </tr>
+                                <tr>
+                                    <td>A2</td>
+                                    <td>B2</td>
+                                </tr>
+                            </table>
                         </div>
-                        <div class="codeblock">
-                            <div class="ex-table">
-                                <table>
-                                    <tr>
-                                        <td>A1</td>
-                                        <td>B1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>A2</td>
-                                        <td>B2</td>
-                                    </tr>
-                                    <caption class="caption highlight">A caption</caption>
-                                </table>
-                            </div>
-                            <code>table-caption;</code>
+                        <code>table-row;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-table">
+                            <table>
+                                <tr>
+                                    <td class="cell highlight">A1</td>
+                                    <td>B1</td>
+                                </tr>
+                                <tr>
+                                    <td>A2</td>
+                                    <td>B2</td>
+                                </tr>
+                            </table>
                         </div>
+                        <code>table-cell;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-table">
+                            abc
+                            <table class="highlight" style="display: inline-table;">
+                                <tr>
+                                    <td>A1</td>
+                                    <td>B1</td>
+                                </tr>
+                                <tr>
+                                    <td>A2</td>
+                                    <td>B2</td>
+                                </tr>
+                            </table>
+                            def
+                        </div>
+                        <code>inline-table;</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-table">
+                            <table>
+                                <tr>
+                                    <td>A1</td>
+                                    <td>B1</td>
+                                </tr>
+                                <tr>
+                                    <td>A2</td>
+                                    <td>B2</td>
+                                </tr>
+                                <caption class="caption highlight">A caption</caption>
+                            </table>
+                        </div>
+                        <code>table-caption;</code>
                     </div>
                 </div>
             </div>
             <div class="snippet span-6">
                 <h2>Table borders</h2>
-                <div class="columns">
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="ex-table">
-                                <table>
-                                    <tr>
-                                        <td class="border">A1</td>
-                                        <td class="border">B1</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="border">A2</td>
-                                        <td class="border">B2</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <code>td {</code>
-                            <code>  border: 2px solid black;</code>
-                            <code>}</code>
+                <div class="grid col-2">
+                    <div class="codeblock">
+                        <div class="ex-table">
+                            <table>
+                                <tr>
+                                    <td class="border">A1</td>
+                                    <td class="border">B1</td>
+                                </tr>
+                                <tr>
+                                    <td class="border">A2</td>
+                                    <td class="border">B2</td>
+                                </tr>
+                            </table>
                         </div>
-                        <div class="codeblock">
-                            <div class="ex-table">
-                                <table class="border">
-                                    <tr>
-                                        <td>A1</td>
-                                        <td>B1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>A2</td>
-                                        <td>B2</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <code>table {</code>
-                            <code>  border: 2px solid black;</code>
-                            <code>}</code>
-                        </div>
-                        <div class="codeblock">
-                            <div class="ex-table">
-                                <table>
-                                    <tr class="border">
-                                        <td>A1</td>
-                                        <td>B1</td>
-                                    </tr>
-                                    <tr class="border">
-                                        <td>A2</td>
-                                        <td>B2</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <code>tr {</code>
-                            <code>  border: 2px solid black;</code>
-                            <code>}</code>
-                        </div>
+                        <code>td {</code>
+                        <code>  border: 2px solid black;</code>
+                        <code>}</code>
                     </div>
-                    <div class="column">
-                        <div class="codeblock">
-                            <div class="ex-table">
-                                <table class="column-borders">
-                                    <tr>
-                                        <td>A1</td>
-                                        <td>B1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>A2</td>
-                                        <td>B2</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <code>table td + td {</code>
-                            <code>  border-left: 2px solid black;</code>
-                            <code>}</code>
+                    <div class="codeblock">
+                        <div class="ex-table">
+                            <table class="border">
+                                <tr>
+                                    <td>A1</td>
+                                    <td>B1</td>
+                                </tr>
+                                <tr>
+                                    <td>A2</td>
+                                    <td>B2</td>
+                                </tr>
+                            </table>
                         </div>
-                        <div class="codeblock">
-                            <div class="ex-table">
-                                <table class="row-borders">
-                                    <tr>
-                                        <td>A1</td>
-                                        <td>B1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>A2</td>
-                                        <td>B2</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <code>table tr + tr {</code>
-                            <code>  border-top: 2px solid black;</code>
-                            <code>}</code>
+                        <code>table {</code>
+                        <code>  border: 2px solid black;</code>
+                        <code>}</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-table">
+                            <table>
+                                <tr class="border">
+                                    <td>A1</td>
+                                    <td>B1</td>
+                                </tr>
+                                <tr class="border">
+                                    <td>A2</td>
+                                    <td>B2</td>
+                                </tr>
+                            </table>
                         </div>
+                        <code>tr {</code>
+                        <code>  border: 2px solid black;</code>
+                        <code>}</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-table">
+                            <table class="column-borders">
+                                <tr>
+                                    <td>A1</td>
+                                    <td>B1</td>
+                                </tr>
+                                <tr>
+                                    <td>A2</td>
+                                    <td>B2</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <code>table td + td {</code>
+                        <code>  border-left: 2px solid black;</code>
+                        <code>}</code>
+                    </div>
+                    <div class="codeblock">
+                        <div class="ex-table">
+                            <table class="row-borders">
+                                <tr>
+                                    <td>A1</td>
+                                    <td>B1</td>
+                                </tr>
+                                <tr>
+                                    <td>A2</td>
+                                    <td>B2</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <code>table tr + tr {</code>
+                        <code>  border-top: 2px solid black;</code>
+                        <code>}</code>
                     </div>
                 </div>
             </div>
-            <div class="snippet">
+            <div class="snippet span-2">
                 <h2 class="code">border-collapse:</h2>
                 <div class="codeblock">
                     <div class="ex-table">

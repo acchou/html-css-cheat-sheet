@@ -90,7 +90,6 @@ ul, ol {
 /* Snippets explain a CSS property, HTML element, 
    or a single concept. */
 .snippet {
-    display: inline-block;
     vertical-align: top;
     margin: 1vmin;
     background-color: #eee;
@@ -105,7 +104,7 @@ ul, ol {
     }
 }
 
-.snippet.container {
+.container {
     margin: 0;
     background-color: white;
     border: 2px solid #ccc;
@@ -148,7 +147,7 @@ section > h2 {
     }
 }
 
-section > h3, .snippet > h3, .callout > h3 {
+section > h3, .snippet > h3, .callout > h3, .container > h3 {
     font-size: 0.9em;
     font-weight: normal;
     color: #777;
