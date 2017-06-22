@@ -75,6 +75,16 @@ ul, ol {
 
 .fixed {
     position: fixed;
+    background-color: rgba(40%, 40%, 40%, 0.7);
+    min-width: 30%;
+    min-height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fixed > code {
+    color: white;
 }
 
 /* Snippets explain a CSS property, HTML element, 
@@ -178,7 +188,6 @@ code {
 }
 
 #css-positioning-fixed {
-    width: 500px;
     border: 4px double black;
 }
 
@@ -1721,3 +1730,11 @@ section {
 .span-rows-4 { grid-row: span 4; }
 .span-rows-5 { grid-row: span 5; }
 .span-rows-6 { grid-row: span 6; }
+
+#css-padding, #css-margin {
+    grid-column: 1/span 4;
+}
+
+#css-width {
+    grid-column: 1/span 6;
+}
