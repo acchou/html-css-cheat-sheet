@@ -1685,8 +1685,8 @@
             <div class="snippet span-4">
                 <h2 class="code">height:</h2>
                 <h3>%-heights are tricky; use Flexbox</h3>
-                <div class="flex noborder column">
-                    <div class="flex noborder align-end">
+                <div class="flex-column">
+                    <div class="ex-css-height">
                         <div class="codeblock">
                             <div class="bar vertical" style="height: 100px;"></div>
                             <code>100px;</code>
@@ -1704,7 +1704,7 @@
                             <code>8px;</code>
                         </div>
                     </div>
-                    <div class="flex noborder align-end">
+                    <div class="ex-css-height">
                         <div class="codeblock">
                             <div class="bar vertical" style="height: 10em;"></div>
                             <code>10em; </code>
@@ -1808,15 +1808,15 @@
             </div>
             <div class="snippet span-5">
                 <h2>Other padding</h2>
-                <div class="flex noborder column align-center">
+                <div class="flex-column">
                     <div class="codeblock">
                         <code>padding-top: 20px;</code>
                     </div>
-                    <div class="flex noborder column align-center">
+                    <div class="flex-column">
                         <div class="box ex-padding" style="padding-top: 20px;">
                             <div class="box absolute" style="top:20px; left: 0;"></div>
                         </div>
-                        <div class="flex noborder align-center">
+                        <div class="flex-row">
                             <div class="codeblock">
                                 <code>padding-left: <br>20px;</code>
                             </div>
@@ -1914,7 +1914,7 @@
             </div>
             <div class="snippet span-5">
                 <h2>Other margins</h2>
-                <div class="flex noborder justify-center">
+                <div class="flex-row">
                     <div class="codeblock" title="Horizontal centering for block elements">
                         <div class="ex-margin" style="width:300px;">
                             <div class="box bigger" style="display: block; width: 1.5em; margin: 0 auto;"></div>
@@ -1923,14 +1923,14 @@
                         <p class="tooltip">Center block elements</p>
                     </div>
                 </div>
-                <div class="flex noborder column align-center">
+                <div class="flex-column">
                     <div class="codeblock">
                         <code>margin-top: 20px;</code>
                     </div>
                     <div class="ex-margin">
                         <div class="box nomargin" style="margin-top: 20px;"></div>
                     </div>
-                    <div class="flex noborder align-center">
+                    <div class="flex-row">
                         <div class="codeblock">
                             <code>margin-left: <br>20px;</code>
                         </div>
@@ -2261,7 +2261,7 @@
                 <h3>Flexbox container mode</h3>
                 <div class="codeblock" title="A block using flexbox for child elements">
                     <div class="box placeholder"></div>
-                    <div class="flex">
+                    <div style="display: flex;">
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
@@ -2271,7 +2271,7 @@
                 </div>
                 <div class="codeblock" title="An inline block using flexbox for child elements">
                     <div class="box placeholder"></div>
-                    <div class="flex inline valign-middle">
+                    <div style="display: inline-flex; vertical-align: middle;">
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
@@ -2287,13 +2287,14 @@
                     <div class="codeblock">
                         <code>&lt;flex-direction&gt; &lt;flex-wrap&gt;;</code>
                     </div>
-                    <div class="grid col-3">
+                    <!-- <div class="grid col-3"> -->
+                    <div class="flex noborder">
                         <div class="snippet span-2">
                             <h2 class="code">flex-direction: </h2>
                             <h3>Direction of main axis</h3>
                             <div class="grid col-2">
                                 <div class="codeblock">
-                                    <div class="flex row">
+                                    <div class="flex" style="flex-direction: row;">
                                         <div class="box">1</div>
                                         <div class="box">2</div>
                                         <div class="box">3</div>
@@ -2301,7 +2302,7 @@
                                     <code class="center">row;</code>
                                 </div>
                                 <div class="codeblock">
-                                    <div class="flex row-reverse">
+                                    <div class="flex" style="flex-direction: row-reverse;">
                                         <div class="box">1</div>
                                         <div class="box">2</div>
                                         <div class="box">3</div>
@@ -2309,7 +2310,7 @@
                                     <code>row-reverse;</code>
                                 </div>
                                 <div class="codeblock">
-                                    <div class="flex column">
+                                    <div class="flex" style="flex-direction: column;">
                                         <div class="box">1</div>
                                         <div class="box">2</div>
                                         <div class="box">3</div>
@@ -2317,7 +2318,7 @@
                                     <code>column;</code>
                                 </div>
                                 <div class="codeblock">
-                                    <div class="flex column-reverse">
+                                    <div class="flex" style="flex-direction: column-reverse;">
                                         <div class="box">1</div>
                                         <div class="box">2</div>
                                         <div class="box">3</div>
@@ -2330,7 +2331,7 @@
                             <h2 class="code">flex-wrap:</h2>
                             <h3>Wrap items across lines</h3>
                             <div class="codeblock">
-                                <div class="flex wrap width-8">
+                                <div class="flex width-8" style="flex-wrap: wrap;">
                                     <div class="box">1</div>
                                     <div class="box">2</div>
                                     <div class="box">3</div>
@@ -2343,7 +2344,7 @@
                                 <code>wrap;</code>
                             </div>
                             <div class="codeblock">
-                                <div class="flex nowrap width-8">
+                                <div class="flex width-8" style="flex-wrap: nowrap;">
                                     <div class="box">1</div>
                                     <div class="box">2</div>
                                     <div class="box">3</div>
@@ -2356,7 +2357,7 @@
                                 <code>nowrap;</code>
                             </div>
                             <div class="codeblock">
-                                <div class="flex wrap-reverse width-8">
+                                <div class="flex width-8" style="flex-wrap: wrap-reverse;">
                                     <div class="box">1</div>
                                     <div class="box">2</div>
                                     <div class="box">3</div>
@@ -2376,7 +2377,7 @@
                 <h2 class="code">justify-content:</h2>
                 <h3>Justification of items</h3>
                 <div class="codeblock width-10" title="Justify items at the start of the flexbox container along main axis">
-                    <div class="flex justify-start">
+                    <div class="flex" style="justify-content: flex-start;">
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
@@ -2384,7 +2385,7 @@
                     <code>flex-start;</code>
                 </div>
                 <div class="codeblock" title="Justify items at the center of the flexbox container along main axis">
-                    <div class="flex justify-center">
+                    <div class="flex" style="justify-content: center;">
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
@@ -2392,7 +2393,7 @@
                     <code>center;</code>
                 </div>
                 <div class="codeblock" title="Justify items at the end of the flexbox container along main axis">
-                    <div class="flex justify-end">
+                    <div class="flex" style="justify-content: flex-end;">
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
@@ -2400,7 +2401,7 @@
                     <code>flex-end;</code>
                 </div>
                 <div class="codeblock" title="Justify items with equal space between items along main axis">
-                    <div class="flex justify-between">
+                    <div class="flex" style="justify-content: space-between;">
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
@@ -2408,7 +2409,7 @@
                     <code>space-between;</code>
                 </div>
                 <div class="codeblock" title="Justify items with equal space on either side of each item along main axis">
-                    <div class="flex justify-around">
+                    <div class="flex" style="justify-content: space-around;">
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
@@ -2421,7 +2422,7 @@
                 <h3>Alignment on cross axis</h3>
                 <div class="grid col-3">
                     <div class="codeblock">
-                        <div class="flex align-start taller">
+                        <div class="flex taller" style="align-items: flex-start;">
                             <div class="box"></div>
                             <div class="box"></div>
                             <div class="box"></div>
@@ -2429,7 +2430,7 @@
                         <code>flex-start;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex align-center taller">
+                        <div class="flex taller" style="align-items: center;">
                             <div class="box"></div>
                             <div class="box"></div>
                             <div class="box"></div>
@@ -2437,7 +2438,7 @@
                         <code>center;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex align-end taller">
+                        <div class="flex taller" style="align-items: flex-end;">
                             <div class="box"></div>
                             <div class="box"></div>
                             <div class="box"></div>
@@ -2445,7 +2446,7 @@
                         <code>flex-end;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex align-baseline taller">
+                        <div class="flex taller" style="align-items: baseline;">
                             <div class="line"></div>
                             <div class="box">a</div>
                             <div class="box bigger">b</div>
@@ -2454,7 +2455,7 @@
                         <code>baseline;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex align-stretch taller">
+                        <div class="flex taller" style="align-items: stretch;">
                             <div class="box"></div>
                             <div class="box"></div>
                             <div class="box"></div>
@@ -2468,7 +2469,7 @@
                 <h3>Alignment of wrapped lines</h3>
                 <div class="grid col-3">
                     <div class="codeblock">
-                        <div class="flex wrap content-start taller">
+                        <div class="flex wrap taller" style="align-content: flex-start;">
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
@@ -2476,7 +2477,7 @@
                         <code>flex-start;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex wrap content-center taller">
+                        <div class="flex wrap taller" style="align-content: center;">
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
@@ -2484,7 +2485,7 @@
                         <code>center;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex wrap content-end taller">
+                        <div class="flex wrap taller" style="align-content: flex-end;">
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
@@ -2492,7 +2493,7 @@
                         <code>flex-end;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex wrap content-between taller">
+                        <div class="flex wrap taller" style="align-content: space-between;">
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
@@ -2500,7 +2501,7 @@
                         <code>space-between;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex wrap content-around taller">
+                        <div class="flex wrap taller" style="align-content: space-around;">
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
@@ -2508,7 +2509,7 @@
                         <code>space-around;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex wrap content-stretch taller">
+                        <div class="flex wrap taller" style="align-content: stretch;">
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
@@ -2535,30 +2536,30 @@
                             <h3>Item growth multiplier</h3>
                             <div class="codeblock">
                                 <div class="flex">
-                                    <div class="box grow-0">0</div>
-                                    <div class="box grow-0">0</div>
+                                    <div class="box" style="flex-grow: 0;">0</div>
+                                    <div class="box" style="flex-grow: 0;">0</div>
                                 </div>
                                 <code>0;</code>
                                 <p class="tooltip">no grow</p>
                             </div>
                             <div class="codeblock">
                                 <div class="flex">
-                                    <div class="box grow-1">1</div>
-                                    <div class="box grow-1">1</div>
+                                    <div class="box" style="flex-grow: 1;">1</div>
+                                    <div class="box" style="flex-grow: 1;">1</div>
                                 </div>
                                 <code>1;</code>
                             </div>
                             <div class="codeblock">
                                 <div class="flex">
-                                    <div class="box grow-10">10</div>
-                                    <div class="box grow-20 placeholder">20</div>
+                                    <div class="box" style="flex-grow: 10;">10</div>
+                                    <div class="box placeholder" style="flex-grow: 20;">20</div>
                                 </div>
                                 <code>10;</code>
                             </div>
                             <div class="codeblock">
                                 <div class="flex">
-                                    <div class="box grow-99">99</div>
-                                    <div class="box grow-20 placeholder">20</div>
+                                    <div class="box" style="flex-grow: 99;">99</div>
+                                    <div class="box placeholder" style="flex-grow: 20;">20</div>
                                 </div>
                                 <code>99;</code>
                             </div>
@@ -2568,58 +2569,58 @@
                             <h3>Item shrink multiplier</h3>
                             <div class="codeblock">
                                 <div class="flex">
-                                    <div class="box flex-basis-100pct shrink-0">0</div>
-                                    <div class="box flex-basis-100pct shrink-0">0</div>
+                                    <div class="box fullwidth" style="flex-shrink: 0;">0</div>
+                                    <div class="box fullwidth" style="flex-shrink: 0;">0</div>
                                 </div>
                                 <code>0;</code>
                                 <p class="tooltip">no shrink</p>
                             </div>
                             <div class="codeblock">
                                 <div class="flex">
-                                    <div class="box flex-basis-100pct shrink-1">1</div>
-                                    <div class="box flex-basis-100pct shrink-1">1</div>
+                                    <div class="box fullwidth" style="flex-shrink: 1;">1</div>
+                                    <div class="box fullwidth" style="flex-shrink: 1;">1</div>
                                 </div>
                                 <code>1;</code>
                             </div>
                             <div class="codeblock">
                                 <div class="flex">
-                                    <div class="box flex-basis-100pct shrink-10">10</div>
-                                    <div class="box flex-basis-100pct shrink-20 placeholder">20</div>
+                                    <div class="box fullwidth" style="flex-shrink: 10;">10</div>
+                                    <div class="box fullwidth placeholder" style="flex-shrink: 20;">20</div>
                                 </div>
                                 <code>10;</code>
                             </div>
                             <div class="codeblock">
                                 <div class="flex">
-                                    <div class="box flex-basis-100pct shrink-99">99</div>
-                                    <div class="box flex-basis-100pct shrink-20 placeholder">20</div>
+                                    <div class="box fullwidth" style="flex-shrink: 99;">99</div>
+                                    <div class="box fullwidth placeholder" style="flex-shrink: 20;">20</div>
                                 </div>
                                 <code>99;</code>
                             </div>
                         </div>
                         <div class="snippet span-1" title="Flex item 's initial size along main axis">
                             <h2 class="code">flex-basis:</h2>
-                            <h3>Initial size of an item</h3>
+                            <h3>Size of a flex item as the basis for grow and shrink factors.</h3>
                             <div class="codeblock">
                                 <div class="flex">
-                                    <div class="box flex-basis-content">abc</div>
+                                    <div class="box" style="flex-basis: content;">abc</div>
                                 </div>
                                 <code>content;</code>
                             </div>
                             <div class="codeblock">
                                 <div class="flex">
-                                    <div class="box flex-basis-50px">abc</div>
+                                    <div class="box" style="flex-basis: 50px;">abc</div>
                                 </div>
                                 <code>50px;</code>
                             </div>
                             <div class="codeblock">
                                 <div class="flex">
-                                    <div class="box flex-basis-50pct">abc</div>
+                                    <div class="box" style="flex-basis: 50%;">abc</div>
                                 </div>
                                 <code>50%;</code>
                             </div>
                             <div class="codeblock">
                                 <div class="flex">
-                                    <div class="box flex-basis-100pct">abc</div>
+                                    <div class="box" style="flex-basis: 100%;">abc</div>
                                 </div>
                                 <code>100%;</code>
                             </div>
@@ -2634,7 +2635,7 @@
                     <div class="codeblock">
                         <div class="flex taller">
                             <div class="box placeholder"></div>
-                            <div class="box align-self-start"></div>
+                            <div class="box" style="align-self: flex-start;"></div>
                             <div class="box placeholder"></div>
                         </div>
                         <code>flex-start;</code>
@@ -2642,7 +2643,7 @@
                     <div class="codeblock">
                         <div class="flex taller">
                             <div class="box placeholder"></div>
-                            <div class="box align-self-center"></div>
+                            <div class="box" style="align-self: center;"></div>
                             <div class="box placeholder"></div>
                         </div>
                         <code>center;</code>
@@ -2650,7 +2651,7 @@
                     <div class="codeblock">
                         <div class="flex taller">
                             <div class="box placeholder"></div>
-                            <div class="box align-self-end"></div>
+                            <div class="box" style="align-self: flex-end;"></div>
                             <div class="box placeholder"></div>
                         </div>
                         <code>flex-end;</code>
@@ -2658,16 +2659,16 @@
                     <div class="codeblock">
                         <div class="flex taller">
                             <div class="box placeholder">a</div>
-                            <div class="line-short align-self-baseline"></div>
-                            <div class="box align-self-baseline">b</div>
-                            <div class="box bigger align-self-baseline">c</div>
+                            <div class="line-short" style="align-self: baseline;"></div>
+                            <div class="box" style="align-self: baseline;">b</div>
+                            <div class="box bigger" style="align-self: baseline;">c</div>
                         </div>
                         <code>baseline;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex taller justify-center">
+                        <div class="flex taller">
                             <div class="box placeholder"></div>
-                            <div class="box align-self-stretch"></div>
+                            <div class="box" style="align-self: stretch;"></div>
                             <div class="box placeholder"></div>
                         </div>
                         <code>stretch;</code>
