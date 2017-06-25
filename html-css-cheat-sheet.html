@@ -1846,7 +1846,7 @@
                     <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">collapse.</a>
                 </h3>
                 <div class="callout">
-                    <div class="ex-margin relative" style="top: 12px">
+                    <div class="ex-margin" style="position: relative; top: 12px">
                         <div class="box" style="padding: 0; margin: 10px;"></div>
                     </div>
                     <!-- Not actually using margin collapsing to implement this 
@@ -1995,7 +1995,7 @@
                 <h2 class="code">position: static;</h2>
                 <div class="codeblock">
                     <div class="box placeholder"></div>
-                    <div class="box static"></div>
+                    <div class="box" style="position: static;"></div>
                     <div class="box placeholder"></div>
                 </div>
             </div>
@@ -2004,13 +2004,13 @@
                 <div class="row">
                     <div class="codeblock">
                         <div class="box placeholder"></div>
-                        <div class="box relative" style="top: 10px;"></div>
+                        <div class="box" style="position: relative; top: 10px;"></div>
                         <div class="box placeholder"></div>
                         <code class="nudge-top">top: 10px;</code>
                     </div>
                     <div class="codeblock nudge-top">
                         <div class="box placeholder"></div>
-                        <div class="box relative" style="bottom: 10px;"></div>
+                        <div class="box" style="position: relative; bottom: 10px;"></div>
                         <div class="box placeholder"></div>
                         <code>bottom: 10px;</code>
                     </div>
@@ -2018,13 +2018,13 @@
                 <div class="row">
                     <div class="codeblock">
                         <div class="box placeholder"></div>
-                        <div class="box relative" style="left: 10px;"></div>
+                        <div class="box" style="position: relative; left: 10px;"></div>
                         <div class="box placeholder"></div>
                         <code>left: 10px;</code>
                     </div>
                     <div class="codeblock">
                         <div class="box placeholder"></div>
-                        <div class="box relative" style="right: 10px;"></div>
+                        <div class="box" style="position: relative; right: 10px;"></div>
                         <div class="box placeholder"></div>
                         <code>right: 10px;</code>
                     </div>
@@ -2036,11 +2036,11 @@
                 <div class="callout">
                     <code>   (relative | absolute | fixed) </code>
                     <code>                                &#8600;</code>
-                    <div class="relative positioned">
+                    <div class="ex-positioned">
                         <div class="box biggest placeholder wider">
                             <code class="subtle">static<br>position</code>
                         </div>
-                        <div class="box absolute" style="background-color:hsla(0,0%,40%,0.7)">
+                        <div class="box" style="position: absolute; background-color:hsla(0,0%,40%,0.7)">
                             <code class="subtle" style="color: #eee; padding: 4px 10px;">Absolute<br>position</code>
                         </div>
                         <div class="box biggest placeholder wider">
@@ -2053,63 +2053,63 @@
                 </div>
                 <div class="grid col-2">
                     <div class="codeblock">
-                        <div class="relative positioned">
+                        <div class="ex-positioned">
                             <div class="box biggest placeholder"></div>
-                            <div class="box absolute" style="left: 0; top: 0;"></div>
+                            <div class="box" style="position: absolute; left: 0; top: 0;"></div>
                             <div class="box biggest placeholder"></div>
                             <div class="box biggest placeholder"></div>
                         </div>
                         <code>left:0; top:0;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="relative positioned">
+                        <div class="ex-positioned">
                             <div class="box biggest placeholder"></div>
-                            <div class="box absolute" style="right: 0; top: 0;"></div>
+                            <div class="box" style="position: absolute; right: 0; top: 0;"></div>
                             <div class="box biggest placeholder"></div>
                             <div class="box biggest placeholder"></div>
                         </div>
                         <code>right:0; top:0;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="relative positioned">
+                        <div class="ex-positioned">
                             <div class="box biggest placeholder"></div>
-                            <div class="box absolute" style="left: 0; bottom: 0;"></div>
+                            <div class="box" style="position: absolute; left: 0; bottom: 0;"></div>
                             <div class="box biggest placeholder"></div>
                             <div class="box biggest placeholder"></div>
                         </div>
                         <code>left:0; bottom:0;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="relative positioned">
+                        <div class="ex-positioned">
                             <div class="box biggest placeholder"></div>
-                            <div class="box absolute" style="right: 0; bottom: 0;"></div>
+                            <div class="box" style="position: absolute; right: 0; bottom: 0;"></div>
                             <div class="box biggest placeholder"></div>
                             <div class="box biggest placeholder"></div>
                         </div>
                         <code>right:0; bottom:0;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="relative positioned">
+                        <div class="ex-positioned">
                             <div class="box biggest placeholder"></div>
-                            <div class="box absolute" style="left: 0; right: 0;"></div>
+                            <div class="box" style="position: absolute; left: 0; right: 0;"></div>
                             <div class="box biggest placeholder"></div>
                             <div class="box biggest placeholder"></div>
                         </div>
                         <code>left:0; right:0;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="relative positioned">
+                        <div class="ex-positioned">
                             <div class="box biggest placeholder"></div>
-                            <div class="box absolute" style="top: 0; bottom: 0;"></div>
+                            <div class="box" style="position: absolute; top: 0; bottom: 0;"></div>
                             <div class="box biggest placeholder"></div>
                             <div class="box biggest placeholder"></div>
                         </div>
                         <code>top:0; bottom:0;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="relative positioned">
+                        <div class="ex-positioned">
                             <div class="box biggest placeholder"></div>
-                            <div class="box absolute" style="left: 0; right: 0; top: 0; bottom: 0;"></div>
+                            <div class="box" style="position: absolute; left: 0; right: 0; top: 0; bottom: 0;"></div>
                             <div class="box biggest placeholder"></div>
                             <div class="box biggest placeholder"></div>
                         </div>
@@ -2117,9 +2117,9 @@
                         <code>top:0; bottom:0;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="relative positioned">
+                        <div class="ex-positioned">
                             <div class="box biggest placeholder"></div>
-                            <div class="box absolute" style="left: 10%; right: 10%; top: 10%; bottom: 10%"></div>
+                            <div class="box" style="position: absolute; left: 10%; right: 10%; top: 10%; bottom: 10%"></div>
                             <div class="box biggest placeholder"></div>
                             <div class="box biggest placeholder"></div>
                         </div>

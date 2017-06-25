@@ -1,6 +1,13 @@
+:root {
+    --main-font: 'Source Sans Pro', sans-serif;
+    --code-font: 'Source Code Pro', monospace;
+    --light-font-color: white;
+    --dark-font-color: black;
+    --size-box-height: 100px;
+}
+
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: normal;
+    font-family: var(--main-font);
     padding: 0;
     margin: 0;
     font-size: 14px;
@@ -19,58 +26,43 @@ body {
 }
 
 .size-box {
-    z-index: 10;
+    z-index: 1000;
     position: fixed;
-    height: 100px;
-    width: 100px;
+    height: var(--size-box-height);
+    width: var(--size-box-height);
     top: 52px;
-    right: 100px;
-    background-color: red;
-    color: white;
+    color: var(--light-font-color);
     text-align: center;
-    line-height: 100px;
+    line-height: var(--size-box-height);
 }
 
-.size-box.box-1  { left:     0; background-color: rgba(0%, 0%, 100%, 0.7); }
-.size-box.box-2  { left: 100px; background-color: rgba(20%, 0%, 80%, 0.7); }
-.size-box.box-3  { left: 200px; background-color: rgba(40%, 0%, 60%, 0.7); }
-.size-box.box-4  { left: 300px; background-color: rgba(60%, 0%, 40%, 0.7); }
-.size-box.box-5  { left: 400px; background-color: rgba(80%, 0%, 20%, 0.7); }
-.size-box.box-6  { left: 500px; background-color: rgba(0%, 0%, 100%, 0.7); }
-.size-box.box-7  { left: 600px; background-color: rgba(20%, 0%, 80%, 0.7); }
-.size-box.box-8  { left: 700px; background-color: rgba(40%, 0%, 60%, 0.7); }
-.size-box.box-9  { left: 800px; background-color: rgba(60%, 0%, 40%, 0.7); }
-.size-box.box-10 { left: 900px; background-color: rgba(80%, 0%, 20%, 0.7); }
-.size-box.box-11 { left: 1000px; background-color: rgba(0%, 0%, 100%, 0.7); }
-.size-box.box-12 { left: 1100px; background-color: rgba(20%, 0%, 80%, 0.7); }
-.size-box.box-13 { left: 1200px; background-color: rgba(40%, 0%, 60%, 0.7); }
-.size-box.box-14 { left: 1300px; background-color: rgba(60%, 0%, 40%, 0.7); }
-.size-box.box-15 { left: 1400px; background-color: rgba(80%, 0%, 20%, 0.7); }
-.size-box.box-16 { left: 1500px; background-color: rgba(0%, 0%, 100%, 0.7); }
-.size-box.box-17 { left: 1600px; background-color: rgba(20%, 0%, 80%, 0.7); }
-.size-box.box-18 { left: 1700px; background-color: rgba(40%, 0%, 60%, 0.7); }
-.size-box.box-19 { left: 1800px; background-color: rgba(60%, 0%, 40%, 0.7); }
-.size-box.box-20 { left: 1900px; background-color: rgba(80%, 0%, 20%, 0.7); }
-.size-box.box-21 { left: 2000px; background-color: rgba(0%, 0%, 100%, 0.7); }
-.size-box.box-22 { left: 2100px; background-color: rgba(20%, 0%, 80%, 0.7); }
-.size-box.box-23 { left: 2200px; background-color: rgba(40%, 0%, 60%, 0.7); }
-.size-box.box-24 { left: 2300px; background-color: rgba(60%, 0%, 40%, 0.7); }
+.size-box.box-1  { left: calc(0 * var(--size-box-height)); background-color: rgba(0%, 0%, 100%, 0.7); }
+.size-box.box-2  { left: calc(1 * var(--size-box-height)); background-color: rgba(20%, 0%, 80%, 0.7); }
+.size-box.box-3  { left: calc(2 * var(--size-box-height)); background-color: rgba(40%, 0%, 60%, 0.7); }
+.size-box.box-4  { left: calc(3 * var(--size-box-height)); background-color: rgba(60%, 0%, 40%, 0.7); }
+.size-box.box-5  { left: calc(4 * var(--size-box-height)); background-color: rgba(80%, 0%, 20%, 0.7); }
+.size-box.box-6  { left: calc(5 * var(--size-box-height)); background-color: rgba(0%, 0%, 100%, 0.7); }
+.size-box.box-7  { left: calc(6 * var(--size-box-height)); background-color: rgba(20%, 0%, 80%, 0.7); }
+.size-box.box-8  { left: calc(7 * var(--size-box-height)); background-color: rgba(40%, 0%, 60%, 0.7); }
+.size-box.box-9  { left: calc(8 * var(--size-box-height)); background-color: rgba(60%, 0%, 40%, 0.7); }
+.size-box.box-10 { left: calc(9 * var(--size-box-height)); background-color: rgba(80%, 0%, 20%, 0.7); }
+.size-box.box-11 { left: calc(10 * var(--size-box-height)); background-color: rgba(0%, 0%, 100%, 0.7); }
+.size-box.box-12 { left: calc(11 * var(--size-box-height)); background-color: rgba(20%, 0%, 80%, 0.7); }
+.size-box.box-13 { left: calc(12 * var(--size-box-height)); background-color: rgba(40%, 0%, 60%, 0.7); }
+.size-box.box-14 { left: calc(13 * var(--size-box-height)); background-color: rgba(60%, 0%, 40%, 0.7); }
+.size-box.box-15 { left: calc(14 * var(--size-box-height)); background-color: rgba(80%, 0%, 20%, 0.7); }
+.size-box.box-16 { left: calc(15 * var(--size-box-height)); background-color: rgba(0%, 0%, 100%, 0.7); }
+.size-box.box-17 { left: calc(16 * var(--size-box-height)); background-color: rgba(20%, 0%, 80%, 0.7); }
+.size-box.box-18 { left: calc(17 * var(--size-box-height)); background-color: rgba(40%, 0%, 60%, 0.7); }
+.size-box.box-19 { left: calc(18 * var(--size-box-height)); background-color: rgba(60%, 0%, 40%, 0.7); }
+.size-box.box-20 { left: calc(19 * var(--size-box-height)); background-color: rgba(80%, 0%, 20%, 0.7); }
+.size-box.box-21 { left: calc(20 * var(--size-box-height)); background-color: rgba(0%, 0%, 100%, 0.7); }
+.size-box.box-22 { left: calc(21 * var(--size-box-height)); background-color: rgba(20%, 0%, 80%, 0.7); }
+.size-box.box-23 { left: calc(22 * var(--size-box-height)); background-color: rgba(40%, 0%, 60%, 0.7); }
+.size-box.box-24 { left: calc(23 * var(--size-box-height)); background-color: rgba(60%, 0%, 40%, 0.7); }
 
 ul, ol {
     margin: 0;
-}
-
-/* Positioning */
-.static {
-    position: static;
-}
-
-.relative {
-    position: relative;
-}
-
-.absolute {
-    position: absolute;
 }
 
 .fixed {
@@ -279,7 +271,7 @@ section {
 }
 
 .box, .bar {
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--code-font);
     display: inline-block;
     border-radius: 4px;
     min-height: 1.5em;
@@ -299,6 +291,10 @@ section {
 .box {
     min-width: 1.5em;
     margin: 4px;
+}
+
+.box.absolute {
+    position: absolute;
 }
 
 .box.padding {
@@ -433,7 +429,8 @@ section {
     margin: 0;
 }
 
-.positioned {
+.ex-positioned {
+    position: relative;
     border: 4px double black;
     border-radius: 4px;
 }
