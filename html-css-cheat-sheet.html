@@ -926,7 +926,7 @@
                     <code>a:target { background-color: red }</code>
                 </div>
             </div>
-            <div class="snippet span-12">
+            <div class="snippet span-8">
                 <h2>Pseudo elements</h2>
                 <div class="grid col-2">
                     <div class="codeblock">
@@ -949,7 +949,7 @@
                     </div>
                     <div class="codeblock">
                         <div class="ex-pseudo">
-                            <a class="underline">The element content.</a>
+                            <a class="underline">An underline.</a>
                         </div>
                         <code>.underline {</code>
                         <code>    position: relative;</code>
@@ -959,13 +959,13 @@
                         <code>    position: absolute;</code>
                         <code>    content: "";</code>
                         <code>    display: block;</code>
-                        <code>    border-top: 1px solid green;</code>
+                        <code>    border-top: 1px solid #999;</code>
                         <code>    width: 70%;</code>
                         <code>}</code>
                     </div>
                     <div class="codeblock">
                         <div class="ex-pseudo">
-                            <a class="overline">The element content.</a>
+                            <a class="overline">An overline.</a>
                         </div>
                         <code>.overline {</code>
                         <code>    position: relative;</code>
@@ -975,7 +975,7 @@
                         <code>    position: absolute;</code>
                         <code>    content: "";</code>
                         <code>    display: block;</code>
-                        <code>    border-bottom: 1px solid green;</code>
+                        <code>    border-bottom: 1px solid #999;</code>
                         <code>    width: 70%;</code>
                         <code>}</code>
                     </div>
@@ -1346,7 +1346,7 @@
                     </div>
                     <div class="callout">
                         <div class="ex-vertical-align-text">
-                            <span class="ex-align-text base">base</span>
+                            <span class="ex-align-text" style="vertical-align: baseline;">base</span>
                             <div class="ex-align-box"></div>
                         </div>
                         <h3>Inline block without text</h3>
@@ -1356,55 +1356,55 @@
                     <div class="codeblock">
                         <div class="ex-vertical-align-text">
                             <div class="ex-align-box">box</div>
-                            <span class="ex-align-text base">base</span>
+                            <span class="ex-align-text" style="vertical-align: baseline;">base</span>
                         </div>
                         <code>baseline;</code>
                     </div>
                     <div class="codeblock">
                         <div class="ex-vertical-align-text">
                             <div class="ex-align-box">box</div>
-                            <span class="ex-align-text top">top</span>
+                            <span class="ex-align-text" style="vertical-align: top;">top</span>
                         </div>
                         <code>top;</code>
                     </div>
                     <div class="codeblock">
                         <div class="ex-vertical-align-text">
                             <div class="ex-align-box">box</div>
-                            <span class="ex-align-text middle">middle</span>
+                            <span class="ex-align-text" style="vertical-align: middle;">middle</span>
                         </div>
                         <code>middle;</code>
                     </div>
                     <div class="codeblock">
                         <div class="ex-vertical-align-text">
                             <div class="ex-align-box">box</div>
-                            <span class="ex-align-text bottom">bottom</span>
+                            <span class="ex-align-text" style="vertical-align: bottom;">bottom</span>
                         </div>
                         <code>bottom;</code>
                     </div>
                     <div class="codeblock">
                         <div class="ex-vertical-align-text">
-                            <span class="ex-align-text base">base</span>
-                            <span class="ex-align-text super">super</span>
+                            <span class="ex-align-text" style="vertical-align: baseline;">base</span>
+                            <span class="ex-align-text" style="vertical-align: super;">super</span>
                         </div>
                         <code>super;</code>
                     </div>
                     <div class="codeblock">
                         <div class="ex-vertical-align-text">
-                            <span class="ex-align-text base">base</span>
-                            <span class="ex-align-text sub">sub</span>
+                            <span class="ex-align-text" style="vertical-align: baseline;">base</span>
+                            <span class="ex-align-text" style="vertical-align: sub;">sub</span>
                         </div>
                         <code>sub;</code>
                     </div>
                     <div class="codeblock">
                         <div class="ex-vertical-align-text">
-                            <span class="ex-align-text base">base</span>
+                            <span class="ex-align-text" style="vertical-align: baseline;">base</span>
                             <span class="ex-align-text" style="vertical-align: 50%;">50%</span>
                         </div>
                         <code>50%;</code>
                     </div>
                     <div class="codeblock">
                         <div class="ex-vertical-align-text">
-                            <span class="ex-align-text base">base</span>
+                            <span class="ex-align-text" style="vertical-align: baseline;">base</span>
                             <span class="ex-align-text" style="vertical-align: -50%;">-50%</span>
                         </div>
                         <code>-50%;</code>
@@ -1662,7 +1662,7 @@
                     are doing this, making %-widths of the div.bar work.
                     This doesn't work for heights because blocks don't 
                     expand their heights by default, only widths. -->
-                    <div class="column width-10">
+                    <div class="column" style="width: 10em;">
                         <div class="codeblock">
                             <div class="bar" style="width: 100%;"></div>
                             <code>100%;</code>
@@ -2040,7 +2040,7 @@
                         <div class="box biggest placeholder wider">
                             <code class="subtle">static<br>position</code>
                         </div>
-                        <div class="box" style="position: absolute; background-color:hsla(0,0%,40%,0.7)">
+                        <div class="box" style="position: absolute; background-color: var(--transparent-region-color);">
                             <code class="subtle" style="color: #eee; padding: 4px 10px;">Absolute<br>position</code>
                         </div>
                         <div class="box biggest placeholder wider">
@@ -2261,7 +2261,7 @@
                 <h3>Flexbox container mode</h3>
                 <div class="codeblock" title="A block using flexbox for child elements">
                     <div class="box placeholder"></div>
-                    <div style="display: flex;">
+                    <div class="flex">
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
@@ -2271,7 +2271,7 @@
                 </div>
                 <div class="codeblock" title="An inline block using flexbox for child elements">
                     <div class="box placeholder"></div>
-                    <div style="display: inline-flex; vertical-align: middle;">
+                    <div class="flex inline">
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
@@ -2287,9 +2287,8 @@
                     <div class="codeblock">
                         <code>&lt;flex-direction&gt; &lt;flex-wrap&gt;;</code>
                     </div>
-                    <!-- <div class="grid col-3"> -->
-                    <div class="flex noborder">
-                        <div class="snippet span-2">
+                    <div class="flex ex-flow">
+                        <div class="snippet">
                             <h2 class="code">flex-direction: </h2>
                             <h3>Direction of main axis</h3>
                             <div class="grid col-2">
@@ -2327,11 +2326,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="snippet span-1">
+                        <div class="snippet">
                             <h2 class="code">flex-wrap:</h2>
                             <h3>Wrap items across lines</h3>
                             <div class="codeblock">
-                                <div class="flex width-8" style="flex-wrap: wrap;">
+                                <div class="flex ex-wrap" style="flex-wrap: wrap;">
                                     <div class="box">1</div>
                                     <div class="box">2</div>
                                     <div class="box">3</div>
@@ -2340,11 +2339,13 @@
                                     <div class="box">6</div>
                                     <div class="box">7</div>
                                     <div class="box">8</div>
+                                    <div class="box">9</div>
+                                    <div class="box">10</div>
                                 </div>
                                 <code>wrap;</code>
                             </div>
                             <div class="codeblock">
-                                <div class="flex width-8" style="flex-wrap: nowrap;">
+                                <div class="flex ex-wrap" style="flex-wrap: nowrap; overflow: scroll;">
                                     <div class="box">1</div>
                                     <div class="box">2</div>
                                     <div class="box">3</div>
@@ -2353,11 +2354,13 @@
                                     <div class="box">6</div>
                                     <div class="box">7</div>
                                     <div class="box">8</div>
+                                    <div class="box">9</div>
+                                    <div class="box">10</div>
                                 </div>
                                 <code>nowrap;</code>
                             </div>
                             <div class="codeblock">
-                                <div class="flex width-8" style="flex-wrap: wrap-reverse;">
+                                <div class="flex ex-wrap" style="flex-wrap: wrap-reverse;">
                                     <div class="box">1</div>
                                     <div class="box">2</div>
                                     <div class="box">3</div>
@@ -2366,6 +2369,8 @@
                                     <div class="box">6</div>
                                     <div class="box">7</div>
                                     <div class="box">8</div>
+                                    <div class="box">9</div>
+                                    <div class="box">10</div>
                                 </div>
                                 <code>wrap-reverse;</code>
                             </div>
@@ -2376,7 +2381,7 @@
             <div class="snippet">
                 <h2 class="code">justify-content:</h2>
                 <h3>Justification of items</h3>
-                <div class="codeblock width-10" title="Justify items at the start of the flexbox container along main axis">
+                <div class="codeblock" title="Justify items at the start of the flexbox container along main axis">
                     <div class="flex" style="justify-content: flex-start;">
                         <div class="box"></div>
                         <div class="box"></div>
@@ -2422,7 +2427,7 @@
                 <h3>Alignment on cross axis</h3>
                 <div class="grid col-3">
                     <div class="codeblock">
-                        <div class="flex taller" style="align-items: flex-start;">
+                        <div class="flex ex-align-items" style="align-items: flex-start;">
                             <div class="box"></div>
                             <div class="box"></div>
                             <div class="box"></div>
@@ -2430,7 +2435,7 @@
                         <code>flex-start;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex taller" style="align-items: center;">
+                        <div class="flex ex-align-items" style="align-items: center;">
                             <div class="box"></div>
                             <div class="box"></div>
                             <div class="box"></div>
@@ -2438,7 +2443,7 @@
                         <code>center;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex taller" style="align-items: flex-end;">
+                        <div class="flex ex-align-items" style="align-items: flex-end;">
                             <div class="box"></div>
                             <div class="box"></div>
                             <div class="box"></div>
@@ -2446,7 +2451,7 @@
                         <code>flex-end;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex taller" style="align-items: baseline;">
+                        <div class="flex ex-align-items" style="align-items: baseline;">
                             <div class="line"></div>
                             <div class="box">a</div>
                             <div class="box bigger">b</div>
@@ -2455,7 +2460,7 @@
                         <code>baseline;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex taller" style="align-items: stretch;">
+                        <div class="flex ex-align-items" style="align-items: stretch;">
                             <div class="box"></div>
                             <div class="box"></div>
                             <div class="box"></div>
@@ -2469,7 +2474,7 @@
                 <h3>Alignment of wrapped lines</h3>
                 <div class="grid col-3">
                     <div class="codeblock">
-                        <div class="flex wrap taller" style="align-content: flex-start;">
+                        <div class="flex ex-align-content" style="align-content: flex-start;">
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
@@ -2477,7 +2482,7 @@
                         <code>flex-start;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex wrap taller" style="align-content: center;">
+                        <div class="flex ex-align-content" style="align-content: center;">
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
@@ -2485,7 +2490,7 @@
                         <code>center;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex wrap taller" style="align-content: flex-end;">
+                        <div class="flex ex-align-content" style="align-content: flex-end;">
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
@@ -2493,7 +2498,7 @@
                         <code>flex-end;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex wrap taller" style="align-content: space-between;">
+                        <div class="flex ex-align-content" style="align-content: space-between;">
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
@@ -2501,7 +2506,7 @@
                         <code>space-between;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex wrap taller" style="align-content: space-around;">
+                        <div class="flex ex-align-content" style="align-content: space-around;">
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
@@ -2509,7 +2514,7 @@
                         <code>space-around;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex wrap taller" style="align-content: stretch;">
+                        <div class="flex ex-align-content" style="align-content: stretch;">
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
                             <div class="box flatter fullwidth"></div>
@@ -2633,7 +2638,7 @@
                 <h3>Item-specific cross axis alignment</h3>
                 <div class="grid col-3">
                     <div class="codeblock">
-                        <div class="flex taller">
+                        <div class="flex ex-align-self">
                             <div class="box placeholder"></div>
                             <div class="box" style="align-self: flex-start;"></div>
                             <div class="box placeholder"></div>
@@ -2641,7 +2646,7 @@
                         <code>flex-start;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex taller">
+                        <div class="flex ex-align-self">
                             <div class="box placeholder"></div>
                             <div class="box" style="align-self: center;"></div>
                             <div class="box placeholder"></div>
@@ -2649,7 +2654,7 @@
                         <code>center;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex taller">
+                        <div class="flex ex-align-self">
                             <div class="box placeholder"></div>
                             <div class="box" style="align-self: flex-end;"></div>
                             <div class="box placeholder"></div>
@@ -2657,7 +2662,7 @@
                         <code>flex-end;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex taller">
+                        <div class="flex ex-align-self">
                             <div class="box placeholder">a</div>
                             <div class="line-short" style="align-self: baseline;"></div>
                             <div class="box" style="align-self: baseline;">b</div>
@@ -2666,7 +2671,7 @@
                         <code>baseline;</code>
                     </div>
                     <div class="codeblock">
-                        <div class="flex taller">
+                        <div class="flex ex-align-self">
                             <div class="box placeholder"></div>
                             <div class="box" style="align-self: stretch;"></div>
                             <div class="box placeholder"></div>
@@ -3647,7 +3652,7 @@
             <div class="snippet span-6" id="css-table-vertical-align">
                 <h2 class="code">vertical-align:</h2>
                 <h3>Works in <a href="#css-table-display">table cells</a>. Also works for <a href="#css-text-vertical-align">inline elements</a>.</h3>
-                <div class="flex noborder">
+                <div class="ex-vertical-align">
                     <div class="codeblock">
                         <div class="ex-table">
                             <table>
