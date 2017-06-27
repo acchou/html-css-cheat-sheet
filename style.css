@@ -893,6 +893,13 @@ table.all-borders td {
     background-color: var(--bg-transition);
 }
 
+.ex-transition-timing-function, .ex-animation-timing-function {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-auto-flow: column;
+}
+
 .animation:hover .box {
     animation: slideright 1s infinite linear;
 }
