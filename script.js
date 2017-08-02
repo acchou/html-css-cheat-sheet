@@ -90,3 +90,5 @@ function centerXY(elem, container) {
     elem.style.top = Math.round(midY - diameter / 2) + 'px';
     elem.style.left = Math.round(midX - diameter / 2) + 'px';
 }
+
+centerXY(ball, field);
