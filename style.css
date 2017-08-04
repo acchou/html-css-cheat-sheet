@@ -1510,7 +1510,7 @@ section {
     grid-column: 1/span 6;
 }
 
-#field {
+#field, #field2 {
     width: 200px;
     border: 10px groove black;
     background-color: #00FF00;

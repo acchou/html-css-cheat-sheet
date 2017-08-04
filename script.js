@@ -92,3 +92,23 @@ function centerXY(elem, container) {
 }
 
 centerXY(ball, field);
+
+document.onclick = function (e) { // shows click coordinates
+    window.coords.innerHTML = e.clientX + ':' + e.clientY;
+};
+
+function getCoords(elem) {
+    let bounds = elem.getBoundingClientRect();
+    let upperLeft = { x: bounds.left, y: bounds.top };
+    let lowerRight = { x: bounds.right, y: bounds.bottom };
+    let style = getComputedStyle(elem);
+    let upperLeftInner = {
+        x: bounds.left + elem.clientLeft,
+        y: bounds.top + elem.clientTop
+    };
+    let lowerRightInner = {
+        x: bounds.left + elem.clientLeft + elem.clientWidth,
+        y: bounds.bottom + elem.clientTop + elem.clientHeight
+    };
+}
+
