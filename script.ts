@@ -5,7 +5,7 @@ div.className = "section";
 div.id = "html-inserted";
 div.textContent = "hello world\n";
 
-document.querySelector('section').prepend(div);
+document.querySelector('section').appendChild(div);
 
 let data = {
     "Fish": {
@@ -33,7 +33,7 @@ function createTree(container, data) {
     keys.forEach(child => {
         let li = document.createElement('li');
         li.textContent = child;
-        ul.append(li);
+        ul.appendChild(li);
         createTree(ul, data[child]);
     })
     container.append(ul);
@@ -69,14 +69,14 @@ function annotateListItems() {
         let childItems = item.getElementsByTagName('li');
         let nChildren = childItems.length;
         if (nChildren > 0) {
-            item.firstChild.data += '[' + nChildren + ']'
+            item.firstChild.textContent += '[' + nChildren + ']'
         }
     }
 }
 
 annotateListItems();
 
-function sortTable(table, sortColumn) {
+function sortTable(table: HTMLTableElement, sortColumn) {
     let sortedRows = Array.from(table.rows)
         .slice(1)
         .sort((rowA, rowB) => rowA.cells[sortColumn].textContent > rowB.cells[sortColumn].textContent ? 1 : -1);
@@ -91,10 +91,13 @@ function centerXY(elem, container) {
     elem.style.left = Math.round(midX - diameter / 2) + 'px';
 }
 
+let ball = document.getElementById("ball");
+let field = document.getElementById("field");
 centerXY(ball, field);
 
+let coords = document.getElementById("coords");
 document.onclick = function (e) { // shows click coordinates
-    window.coords.innerHTML = e.clientX + ':' + e.clientY;
+    coords.innerHTML = e.clientX + ':' + e.clientY;
 };
 
 function getCoords(elem) {
