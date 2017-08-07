@@ -26,7 +26,7 @@ let data = {
 };
 
 
-function createTree(container, data) {
+function createTree(container: Element, data: any) {
     let keys = Object.keys(data);
     if (keys.length == 0) { return }
     let ul = document.createElement('ul');
@@ -36,28 +36,29 @@ function createTree(container, data) {
         ul.appendChild(li);
         createTree(ul, data[child]);
     })
-    container.append(ul);
+    container.appendChild(ul);
 }
 
 createTree(div, data);
 
-function processlist(list) {
+function processlist(list: HTMLUListElement) {
     let n = 0;
-    for (let child of list.children) {
-        let count = processitem(child);
+    Array.from(list.children).forEach(child => {
+        let count = processitem(child as HTMLLIElement);
         n += count;
-    }
+    });
     return n;
 }
 
-function processitem(item) {
+function processitem(item: HTMLLIElement) {
     let text = item.firstChild;
     let n = 0;
-    for (let child of item.children) {
-        let count = processlist(child);
+
+    Array.from(item.children).forEach(child => {
+        let count = processlist(child as HTMLUListElement);
         n += count;
-    }
-    if (n > 0) text.data += '[' + n + ']';
+    });
+    if (n > 0) text.textContent += '[' + n + ']';
     return n + 1;
 }
 
@@ -81,6 +82,7 @@ function sortTable(table: HTMLTableElement, sortColumn) {
         .slice(1)
         .sort((rowA, rowB) => rowA.cells[sortColumn].textContent > rowB.cells[sortColumn].textContent ? 1 : -1);
     table.rows[0].after(...sortedRows);
+    let firstRow = table.rows[0];
 }
 
 function centerXY(elem, container) {
