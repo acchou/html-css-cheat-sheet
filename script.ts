@@ -236,10 +236,10 @@ document.getElementById("selfHider").onclick = function () {
 }
 
 let fieldClick = document.getElementById("fieldClick");
-let ballClick = document.getElementById("ballClick");
-let fieldRect = fieldClick.getBoundingClientRect();
 
 fieldClick.addEventListener("click", function (event) {
+    let ballClick = document.getElementById("ballClick");
+    let fieldRect = fieldClick.getBoundingClientRect();
     let x = event.clientX - fieldRect.left - field.clientLeft - ballClick.clientWidth / 2;
     let y = event.clientY - fieldRect.top - field.clientTop - ballClick.clientHeight / 2;
     x = Math.max(x, 0);
@@ -268,7 +268,8 @@ Array.from(document.querySelectorAll(".pane")).forEach((pane) => {
 });
 
 Array.from(document.querySelectorAll(".gallery")).forEach((gallery: HTMLElement) => {
-    let singleWidth = (<HTMLElement>gallery.firstElementChild.firstElementChild).offsetWidth;
+    //let singleWidth = (<HTMLElement>gallery.firstElementChild.firstElementChild).offsetWidth;
+    let singleWidth = 130;
     gallery.style.width = String(singleWidth * 3) + "px";
 });
 
