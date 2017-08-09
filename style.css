@@ -249,6 +249,14 @@ code.subtle {
     font-size: 1.2em;
 }
 
+.ex-transition-translate .box {
+    transition: 1s all;
+}
+
+.ex-transition-translate:hover .box {
+    transform: translateX(200px);
+}
+
 section {
     padding: 0 0;
     margin: 0 0.5em;
@@ -1512,15 +1520,18 @@ section {
 
 /* XXX For examples from Javascript.info tutorial XXX */
 
-#field, #field2 {
+#field, #field2, #fieldClick {
     width: 200px;
     border: 10px groove black;
     background-color: #00FF00;
     position: relative;
 }
 
-#ball {
+#ball, #ballClick {
     position: absolute;
+    transition: 1s all;
+    top: 0;
+    left: 0;
 }
 
 .note {
@@ -1550,4 +1561,95 @@ blockquote:before {
   line-height: .1em;
   margin-right: .25em;
   vertical-align: -.4em;
+}
+
+div.scratch {
+    padding: 30px;
+    margin: 40px;
+    border: 10px solid gray;
+}
+
+.menu ul {
+    display: none;
+    list-style: none;
+}
+
+.menu .title {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.menu .expanded, .menu .collapsed {
+    cursor: pointer;
+}
+
+.menu.open ul {
+    display: block;
+}
+
+.menu .collapsed {
+    display: inline-block;
+}
+
+.menu .expanded {
+    display: none;
+}
+
+.menu.open .collapsed {
+    display: none;
+}
+
+.menu.open .expanded {
+    display: inline-block;
+}
+
+.pane {
+  background: #edf5e1;
+  padding: 10px 20px 10px;
+  border-top: solid 2px #c4df9b;
+  position: relative;
+}
+
+.remove-button {
+  font-size: 110%;
+  color: darkred;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.arrow {
+    font-size: 18px;
+    background-color: gray;
+    color: black;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+.carousel {
+    display: inline-flex;
+    align-items: center;
+    background-color: #eee;
+    border-radius: 8px;
+    border: 1px solid grey;
+    padding: 16px;
+}
+
+.gallery {
+    overflow: hidden;
+}
+
+.gallery li {
+    display: inline-block;
+}
+
+.gallery ul {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 0;
+    transition: 1s all;
 }

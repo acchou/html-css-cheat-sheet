@@ -190,6 +190,8 @@ function positionAtAbsolute(anchor: Element, position: string, elem: HTMLElement
         case "right-in":
             top = anchorBounds.top;
             left = anchorBounds.right - elem.clientWidth;
+            break;
+
         default:
             console.log("bad position: " + position);
             break;
@@ -215,3 +217,83 @@ showNoteAbsolute(blockquote, "top-in", "note top in");
 showNoteAbsolute(blockquote, "bottom-in", "note bottom in");
 showNoteAbsolute(blockquote, "right-in", "note right in");
 document.body.style.height = "2000px";
+
+let clickmeButton = document.getElementById("clickmebutton");
+let n = 0;
+function clickmeHandler(event: MouseEvent) {
+    alert(`${event.type} at ${event.currentTarget} Coordinates: ${event.clientX}, ${event.clientY}`);
+    clickmeButton.insertAdjacentText("afterend", `clicked ${n} times`);
+}
+
+clickmeButton.addEventListener("click", clickmeHandler);
+
+document.getElementById("hider").onclick = function () {
+    document.getElementById("text").hidden = true;
+}
+
+document.getElementById("selfHider").onclick = function () {
+    this.hidden = true;
+}
+
+let fieldClick = document.getElementById("fieldClick");
+let ballClick = document.getElementById("ballClick");
+let fieldRect = fieldClick.getBoundingClientRect();
+
+fieldClick.addEventListener("click", function (event) {
+    let x = event.clientX - fieldRect.left - field.clientLeft - ballClick.clientWidth / 2;
+    let y = event.clientY - fieldRect.top - field.clientTop - ballClick.clientHeight / 2;
+    x = Math.max(x, 0);
+    x = Math.min(x, fieldClick.clientWidth - ballClick.clientWidth);
+
+    y = Math.max(y, 0);
+    y = Math.min(y, fieldClick.clientHeight - ballClick.clientHeight);
+
+    ballClick.style.top = String(y) + "px";
+    ballClick.style.left = String(x) + "px";
+})
+
+function toggleListControl(event: Event) {
+    (this as HTMLElement).parentElement.classList.toggle("open");
+}
+
+Array.from(document.querySelectorAll(".menu > .title, .menu > .collapsed, .menu > .expanded")).forEach((title) => {
+    title.addEventListener("click", toggleListControl);
+});
+
+let removeButton = document.getElementsByClassName("remove-button")[0] as HTMLElement;
+Array.from(document.querySelectorAll(".pane")).forEach((pane) => {
+    let button = removeButton.cloneNode(true) as HTMLButtonElement;
+    pane.insertAdjacentElement("afterbegin", button);
+    button.style.position = "absolute";
+    button.style.top = "0";
+    button.style.right = "0";
+    button.style.margin = "4px 8px";
+    button.addEventListener("click", () => pane.remove());
+});
+
+Array.from(document.querySelectorAll(".gallery")).forEach((gallery: HTMLElement) => {
+    let singleWidth = (<HTMLElement>gallery.firstElementChild.firstElementChild).offsetWidth;
+    gallery.style.width = String(singleWidth * 3) + "px";
+});
+
+Array.from(document.querySelectorAll(".carousel")).forEach((carousel: HTMLElement) => {
+    let leftArrow = carousel.querySelector(".arrow.left") as HTMLButtonElement;
+    let rightArrow = carousel.querySelector(".arrow.right") as HTMLButtonElement;
+    let list = carousel.querySelector(".gallery > ul") as HTMLElement;
+    let position = 0;
+    leftArrow.addEventListener("click", (event: Event) => {
+        let newPosition = position + list.clientWidth;
+        if (newPosition <= 0) {
+            position = newPosition;
+            list.style.transform = `translateX(${position}px)`;
+        }
+    });
+    rightArrow.addEventListener("click", (event: Event) => {
+        let newPosition = position - list.clientWidth;
+        if (newPosition >= -list.scrollWidth) {
+            position = newPosition;
+            list.style.transform = `translateX(${position}px)`;
+        }
+    });
+});
+

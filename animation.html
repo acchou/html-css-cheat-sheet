@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Animation with animation.css</title>
+    <title>Animation and Transitions</title>
     <link href="style.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
@@ -22,6 +22,19 @@
     </nav>
     <section id="animation-transitions">
         <h1>Animation and Transitions</h1>
+        <section id="transition-template span-8">
+            <h2>Transition template</h2>
+            <div class="snippet transition">
+                <h2>Transition all properties</h2>
+                <div class="codeblock">
+                    <code>.element {</code>
+                    <code>  transition: 1s all;</code>
+                    <code>  </code>
+                    <code>  /* Add other properties such as transform, margin, etc. */</code>
+                    <code>}</code>
+                </div>
+            </div>
+        </section>
         <section id="transition-css">
             <h2>Transitions</h2>
             <h3>Different states may be defined using pseudo-classes like <span class="code">:hover</span> or <span class="code">:active</span>                or dynamically set using JavaScript.</h3>
@@ -250,6 +263,28 @@
                         <code>}</code>
                     </fieldset>
                 </div>
+            </div>
+            <div class="snippet span-3">
+                <h2>Translation</h2>
+                <div class="codeblock">
+                    <div class="ex-transition-translate">
+                        <div class="box biggest"></div>
+                    </div>
+                    <fieldset>
+                        <legend>CSS</legend>
+                        <code>.container .box {</code>
+                        <code>  transition: 1s all;</code>
+                        <code>}</code>
+                        <code></code>
+                        <code>.container:hover .box {</code>
+                        <code>  transform: translateX(200px);</code>
+                        <code>}</code>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="snippet span-8">
+                <h2>Translation</h2>
+
             </div>
         </section>
         <section id="animation-css">
