@@ -263,11 +263,7 @@ Array.from(document.querySelectorAll(".menu > .title, .menu > .collapsed, .menu 
 let removeButton = document.getElementsByClassName("remove-button")[0] as HTMLElement;
 Array.from(document.querySelectorAll(".pane")).forEach((pane) => {
     let button = removeButton.cloneNode(true) as HTMLButtonElement;
-    pane.insertAdjacentElement("afterbegin", button);
-    button.style.position = "absolute";
-    button.style.top = "0";
-    button.style.right = "0";
-    button.style.margin = "4px 8px";
+    pane.insertAdjacentElement("beforeend", button);
     button.addEventListener("click", () => pane.remove());
 });
 
@@ -295,5 +291,17 @@ Array.from(document.querySelectorAll(".carousel")).forEach((carousel: HTMLElemen
             list.style.transform = `translateX(${position}px)`;
         }
     });
+});
+
+document.getElementById("container").addEventListener("click", (event) => {
+    let target = <Element>event.target;
+    if (target.className != 'remove-button2') {
+        return;
+    }
+    let pane = target.closest('.pane2');
+    if (!pane) {
+        return;
+    }
+    pane.remove();
 });
 

@@ -1603,7 +1603,7 @@ div.scratch {
     display: inline-block;
 }
 
-.pane {
+.pane, .pane2 {
   background: #edf5e1;
   padding: 10px 20px 10px;
   border-top: solid 2px #c4df9b;
@@ -1613,7 +1613,24 @@ div.scratch {
 .remove-button {
   font-size: 110%;
   color: darkred;
+  top: 0;
+  position: absolute;
   right: 10px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+}
+
+.remove-button2 {
+  position: absolute;
+  font-size: 110%;
+  top: 0;
+  color: darkred;
+  right: 10px;
+  display: block;
   width: 24px;
   height: 24px;
   border: none;
