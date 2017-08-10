@@ -390,3 +390,15 @@ document.addEventListener("mouseout", function (event) {
         currentToolTip = undefined;
     }
 });
+
+// Ask before following a link
+let contents = document.getElementById("contents") as HTMLElement;
+contents.onclick = function (event) {
+    let target = event.target as Element;
+    let a = target.closest("A") as HTMLAnchorElement;
+    if (!a || !contents.contains(target)) return;
+
+    if (!confirm(`Are you sure you want to leave for ${a.href}`)) {
+        event.preventDefault();
+    }
+};
