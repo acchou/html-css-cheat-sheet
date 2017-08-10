@@ -391,7 +391,8 @@ document.addEventListener("mouseout", function (event) {
     }
 });
 
-// Ask before following a link
+// Ask before following a link - example of preventing default 
+// browser actions.
 let contents = document.getElementById("contents") as HTMLElement;
 contents.addEventListener("click", function (event) {
     let target = event.target as Element;
