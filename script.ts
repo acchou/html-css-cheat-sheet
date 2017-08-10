@@ -364,13 +364,7 @@ makeSortable(grid);
 // has the data-tooltip attribute.
 let currentToolTip: HTMLElement | undefined;
 
-document.addEventListener("mouseover", function(event) {
-    let target = event.target as HTMLElement;
-    let tip = target.dataset.tooltip;
-    if (!tip) {
-        return;
-    }
-
+function showToolTip(target: HTMLElement, tip: string) {
     if (currentToolTip) {
         currentToolTip.remove();
     }
@@ -387,14 +381,23 @@ document.addEventListener("mouseover", function(event) {
     }
     currentToolTip.style.top = top + "px";
     currentToolTip.style.left = rect.left + "px";
-});
+}
 
-document.addEventListener("mouseout", function(event) {
-    if (currentToolTip) {
-        currentToolTip.remove();
-        currentToolTip = undefined;
-    }
-});
+// Simple, doesn't work with nested elements
+function addToolTipsBasic() {
+    document.addEventListener("mouseover", function(event) {
+        let target = event.target as HTMLElement;
+        let tip = target.dataset.tooltip;
+        if (!tip) return;
+        showToolTip(target, tip);
+    });
+    document.addEventListener("mouseout", function(event) {
+        if (currentToolTip) {
+            currentToolTip.remove();
+            currentToolTip = undefined;
+        }
+    });
+}
 
 // Ask before following a link - example of preventing default
 // browser actions.
@@ -427,3 +430,22 @@ selectList.addEventListener("click", event => {
 selectList.addEventListener("mousedown", event => {
     event.preventDefault();
 });
+
+// Tooltip that works with nested elements
+function addToolTipsNested() {
+    document.addEventListener("mouseover", function(event) {
+        let target = event.target as HTMLElement;
+        let anchor = target.closest("[data-tooltip]") as HTMLElement;
+        if (!anchor) {
+            if (currentToolTip) {
+                currentToolTip.remove();
+            }
+            return;
+        }
+        let tip = anchor.dataset.tooltip;
+        if (!tip) return;
+        showToolTip(anchor, tip);
+    });
+}
+
+addToolTipsNested();

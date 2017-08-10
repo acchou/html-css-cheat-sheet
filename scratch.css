@@ -194,3 +194,24 @@ th:hover {
 li {
     cursor: pointer;
 }
+
+#house {
+    margin-top: 50px;
+    width: 400px;
+    border: 1px solid brown;
+    display: inline-block;
+}
+
+#roof {
+    width: 0;
+    height: 0;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-bottom: 20px solid brown;
+    margin-top: -20px;
+}
+
+p {
+    text-align: justify;
+    margin: 10px 3px;
+}
