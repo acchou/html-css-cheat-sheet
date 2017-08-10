@@ -6,17 +6,20 @@ div.scratch {
     position: relative;
 }
 
-#field, #field2, #fieldClick {
+#field,
+#field2,
+#fieldClick {
     width: 200px;
     border: 10px groove black;
-    background-color: #00FF00;
+    background-color: #00ff00;
     position: relative;
 }
 
-#ball, #ballClick {  
-    position: absolute; 
+#ball,
+#ballClick {
+    position: absolute;
     transition: 1s all;
-    top: 0; 
+    top: 0;
     left: 0;
 }
 
@@ -59,7 +62,8 @@ blockquote:before {
     cursor: pointer;
 }
 
-.menu .expanded, .menu .collapsed {
+.menu .expanded,
+.menu .collapsed {
     cursor: pointer;
 }
 
@@ -83,7 +87,8 @@ blockquote:before {
     display: inline-block;
 }
 
-.pane, .pane2 {
+.pane,
+.pane2 {
     background: #edf5e1;
     padding: 10px 20px 10px;
     border-top: solid 2px #c4df9b;
@@ -155,7 +160,8 @@ blockquote:before {
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     border: 1px solid black;
     padding: 4px;
 }
@@ -169,14 +175,22 @@ th:hover {
 }
 
 .tooltip {
-      /* some styles for the tooltip, you can use your own instead */
-      position: fixed;
-      padding: 10px 20px;
-      border: 1px solid #b3c9ce;
-      border-radius: 4px;
-      text-align: center;
-      font: italic 14px/1.3 arial, sans-serif;
-      color: #333;
-      background: #fff;
-      box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+    /* some styles for the tooltip, you can use your own instead */
+    position: fixed;
+    padding: 10px 20px;
+    border: 1px solid #b3c9ce;
+    border-radius: 4px;
+    text-align: center;
+    font: italic 14px/1.3 arial, sans-serif;
+    color: #333;
+    background: #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+}
+
+.selected {
+    background: #0f0;
+}
+
+li {
+    cursor: pointer;
 }

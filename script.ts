@@ -1,5 +1,5 @@
 // These interface declarations allow for common DOM apis that are becoming available,
-// without as much type casting. A little less safety in return for convenience in 
+// without as much type casting. A little less safety in return for convenience in
 // a common case.
 interface Node {
     prepend(...nodes: (Node | string)[]): void;
@@ -8,42 +8,42 @@ interface Node {
     after(...nodes: (Node | string)[]): void;
 }
 
-let div = document.createElement('div');
+let div = document.createElement("div");
 div.className = "section";
 div.id = "html-inserted";
 div.textContent = "hello world\n";
 
-document.querySelector('section')!.appendChild(div);
+document.querySelector("section")!.appendChild(div);
 
 let data = {
-    "Fish": {
-        "trout": {},
-        "salmon": {}
+    Fish: {
+        trout: {},
+        salmon: {}
     },
 
-    "Tree": {
-        "Huge": {
-            "sequoia": {},
-            "oak": {}
+    Tree: {
+        Huge: {
+            sequoia: {},
+            oak: {}
         },
-        "Flowering": {
-            "redbud": {},
-            "magnolia": {}
+        Flowering: {
+            redbud: {},
+            magnolia: {}
         }
     }
 };
 
-
 function createTree(container: Element, data: any) {
     let keys = Object.keys(data);
-    if (keys.length == 0) { return }
-    let ul = document.createElement('ul');
-    keys.forEach(child => {
-        let li = document.createElement('li');
+    if (keys.length == 0) return;
+
+    let ul = document.createElement("ul");
+    for (let child in data) {
+        let li = document.createElement("li");
         li.textContent = child;
         ul.appendChild(li);
         createTree(ul, data[child]);
-    })
+    }
     container.appendChild(ul);
 }
 
@@ -51,10 +51,10 @@ createTree(div, data);
 
 function processlist(list: HTMLUListElement) {
     let n = 0;
-    Array.from(list.children).forEach(child => {
+    for (let child of Array.from(list.children)) {
         let count = processitem(child as HTMLLIElement);
         n += count;
-    });
+    }
     return n;
 }
 
@@ -62,23 +62,23 @@ function processitem(item: HTMLLIElement) {
     let text = item.firstChild!;
     let n = 0;
 
-    Array.from(item.children).forEach(child => {
+    for (let child of Array.from(item.children)) {
         let count = processlist(child as HTMLUListElement);
         n += count;
-    });
-    if (n > 0) text.textContent += '[' + n + ']';
+    }
+    if (n > 0) text.textContent += "[" + n + "]";
     return n + 1;
 }
 
 /* processlist(list); */
 
 function annotateListItems() {
-    let listItems = document.getElementsByTagName('li');
+    let listItems = document.getElementsByTagName("li");
     for (let item of listItems) {
-        let childItems = item.getElementsByTagName('li');
+        let childItems = item.getElementsByTagName("li");
         let nChildren = childItems.length;
         if (nChildren > 0) {
-            item.firstChild!.textContent += '[' + nChildren + ']'
+            item.firstChild!.textContent += "[" + nChildren + "]";
         }
     }
 }
@@ -88,7 +88,10 @@ annotateListItems();
 function sortTable(table: HTMLTableElement, sortColumn: number) {
     let sortedRows = Array.from(table.rows)
         .slice(1)
-        .sort((rowA, rowB) => rowA.cells[sortColumn].textContent! > rowB.cells[sortColumn].textContent! ? 1 : -1);
+        .sort(
+            (rowA, rowB) =>
+                rowA.cells[sortColumn].textContent! > rowB.cells[sortColumn].textContent! ? 1 : -1
+        );
     table.rows[0].after(...sortedRows);
     let firstRow = table.rows[0];
 }
@@ -97,8 +100,8 @@ function centerXY(elem: HTMLElement, container: Element) {
     let midY = container.clientHeight / 2;
     let midX = container.clientWidth / 2;
     let diameter = elem.offsetWidth;
-    elem.style.top = Math.round(midY - diameter / 2) + 'px';
-    elem.style.left = Math.round(midX - diameter / 2) + 'px';
+    elem.style.top = Math.round(midY - diameter / 2) + "px";
+    elem.style.left = Math.round(midX - diameter / 2) + "px";
 }
 
 let ball = document.getElementById("ball")!;
@@ -106,8 +109,9 @@ let field = document.getElementById("field")!;
 centerXY(ball, field);
 
 let coords = document.getElementById("coords")!;
-document.onclick = function (e) { // shows click coordinates
-    coords.innerHTML = e.clientX + ':' + e.clientY;
+document.onclick = function(e) {
+    // shows click coordinates
+    coords.innerHTML = e.clientX + ":" + e.clientY;
 };
 
 function getCoords(elem: Element) {
@@ -229,23 +233,25 @@ document.body.style.height = "2000px";
 let clickmeButton = document.getElementById("clickmebutton")!;
 let n = 0;
 function clickmeHandler(event: MouseEvent) {
-    alert(`${event.type} at ${event.currentTarget} Coordinates: ${event.clientX}, ${event.clientY}`);
+    alert(
+        `${event.type} at ${event.currentTarget} Coordinates: ${event.clientX}, ${event.clientY}`
+    );
     clickmeButton.insertAdjacentText("afterend", `clicked ${n} times`);
 }
 
 clickmeButton.addEventListener("click", clickmeHandler);
 
-document.getElementById("hider")!.onclick = function () {
+document.getElementById("hider")!.onclick = function() {
     document.getElementById("text")!.hidden = true;
-}
+};
 
-document.getElementById("selfHider")!.onclick = function () {
+document.getElementById("selfHider")!.onclick = function() {
     this.hidden = true;
-}
+};
 
 let fieldClick = document.getElementById("fieldClick")!;
 
-fieldClick.addEventListener("click", function (event) {
+fieldClick.addEventListener("click", function(event) {
     let ballClick = document.getElementById("ballClick")!;
     let fieldRect = fieldClick.getBoundingClientRect()!;
     let x = event.clientX - fieldRect.left - field.clientLeft - ballClick.clientWidth / 2;
@@ -258,30 +264,32 @@ fieldClick.addEventListener("click", function (event) {
 
     ballClick.style.top = String(y) + "px";
     ballClick.style.left = String(x) + "px";
-})
+});
 
 function toggleListControl(this: HTMLElement, event: Event) {
     this.parentElement!.classList.toggle("open");
 }
 
-Array.from(document.querySelectorAll(".menu > .title, .menu > .collapsed, .menu > .expanded")).forEach((title) => {
+for (let title of document.querySelectorAll(
+    ".menu > .title, .menu > .collapsed, .menu > .expanded"
+)) {
     title.addEventListener("click", toggleListControl);
-});
+}
 
 let removeButton = document.getElementsByClassName("remove-button")[0] as HTMLElement;
-Array.from(document.querySelectorAll(".pane")).forEach((pane) => {
+for (let pane of Array.from(document.querySelectorAll(".pane"))) {
     let button = removeButton.cloneNode(true) as HTMLButtonElement;
     pane.insertAdjacentElement("beforeend", button);
     button.addEventListener("click", () => pane.remove());
-});
+}
 
-Array.from(document.querySelectorAll(".gallery")).forEach((gallery: HTMLElement) => {
+for (let gallery of document.querySelectorAll(".gallery")) {
     //let singleWidth = (<HTMLElement>gallery.firstElementChild.firstElementChild).offsetWidth;
     let singleWidth = 130;
-    gallery.style.width = String(singleWidth * 3) + "px";
-});
+    (<HTMLElement>gallery).style.width = String(singleWidth * 3) + "px";
+}
 
-Array.from(document.querySelectorAll(".carousel")).forEach((carousel: HTMLElement) => {
+for (let carousel of document.querySelectorAll(".carousel")) {
     let leftArrow = carousel.querySelector(".arrow.left") as HTMLButtonElement;
     let rightArrow = carousel.querySelector(".arrow.right") as HTMLButtonElement;
     let list = carousel.querySelector(".gallery > ul") as HTMLElement;
@@ -300,32 +308,28 @@ Array.from(document.querySelectorAll(".carousel")).forEach((carousel: HTMLElemen
             list.style.transform = `translateX(${position}px)`;
         }
     });
-});
+}
 
-document.getElementById("container")!.addEventListener("click", (event) => {
+document.getElementById("container")!.addEventListener("click", event => {
     let target = <Element>event.target;
-    if (target.className != 'remove-button2') {
-        return;
-    }
-    let pane = target.closest('.pane2');
-    if (!pane) {
-        return;
-    }
+    if (target.className != "remove-button2") return;
+
+    let pane = target.closest(".pane2");
+    if (!pane) return;
+
     pane.remove();
 });
 
-
-Array.from(document.getElementsByClassName("tree")).forEach((tree) => {
-    tree.addEventListener("click", (event) => {
+for (let tree of Array.from(document.getElementsByClassName("tree"))) {
+    tree.addEventListener("click", event => {
         let li = (event.target as Element).closest("li") as HTMLLIElement;
-        if (!li) {
-            return;
-        }
-        Array.from(li.children).forEach((child: HTMLElement) => {
+        if (!li) return;
+
+        for (let child of Array.from(li.children) as HTMLElement[]) {
             child.hidden = !child.hidden;
-        })
+        }
     });
-});
+}
 
 // Sorting
 function makeSortable(table: HTMLTableElement) {
@@ -335,20 +339,20 @@ function makeSortable(table: HTMLTableElement) {
         if (type === "number") {
             compare = (a: string, b: string) => +a - +b;
         }
-        let sortedRows =
-            Array.from(tBody.rows).sort((row1, row2) => {
-                let a = row1.cells[index].textContent!;
-                let b = row2.cells[index].textContent!;
-                return compare(a, b);
-            });
+        let sortedRows = Array.from(tBody.rows).sort((row1, row2) => {
+            let a = row1.cells[index].textContent!;
+            let b = row2.cells[index].textContent!;
+            return compare(a, b);
+        });
         tBody.append(...sortedRows);
     }
 
     table.tHead.addEventListener("click", event => {
         let target = event.target as Element;
         let th = target.closest("th") as HTMLTableHeaderCellElement;
-        if (!th) { return; }
-        if (table !== target.closest("table")) { return; }
+        if (!th) return;
+        if (table !== target.closest("table")) return;
+
         doSort(table.tBodies[0], th.cellIndex, th.dataset.type || "string");
     });
 }
@@ -356,15 +360,16 @@ function makeSortable(table: HTMLTableElement) {
 let grid = document.getElementById("grid") as HTMLTableElement;
 makeSortable(grid);
 
-
 // Simple tooltip that automatically shows above the target element that
 // has the data-tooltip attribute.
 let currentToolTip: HTMLElement | undefined;
 
-document.addEventListener("mouseover", function (event) {
+document.addEventListener("mouseover", function(event) {
     let target = event.target as HTMLElement;
     let tip = target.dataset.tooltip;
-    if (!tip) { return; }
+    if (!tip) {
+        return;
+    }
 
     if (currentToolTip) {
         currentToolTip.remove();
@@ -384,17 +389,17 @@ document.addEventListener("mouseover", function (event) {
     currentToolTip.style.left = rect.left + "px";
 });
 
-document.addEventListener("mouseout", function (event) {
+document.addEventListener("mouseout", function(event) {
     if (currentToolTip) {
         currentToolTip.remove();
         currentToolTip = undefined;
     }
 });
 
-// Ask before following a link - example of preventing default 
+// Ask before following a link - example of preventing default
 // browser actions.
 let contents = document.getElementById("contents") as HTMLElement;
-contents.addEventListener("click", function (event) {
+contents.addEventListener("click", function(event) {
     let target = event.target as Element;
     let a = target.closest("A") as HTMLAnchorElement;
     if (!a || !contents.contains(target)) return;
@@ -402,4 +407,23 @@ contents.addEventListener("click", function (event) {
     if (!confirm(`Are you sure you want to leave for ${a.href}`)) {
         event.preventDefault();
     }
+});
+
+// Selectable list
+let selectList = document.getElementById("select-list")!;
+selectList.addEventListener("click", event => {
+    let target = event.target as HTMLLIElement;
+    if (target.tagName != "LI") return;
+    // Clear selected if ctrl/cmd are not pressed
+    if (!event.ctrlKey && !event.metaKey) {
+        for (let li of selectList.querySelectorAll(".selected")) {
+            li.classList.remove("selected");
+        }
+    }
+    target.classList.toggle("selected");
+});
+
+// Don't select text when clicking on list items.
+selectList.addEventListener("mousedown", event => {
+    event.preventDefault();
 });
