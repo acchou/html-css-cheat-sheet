@@ -1,0 +1,182 @@
+/* For examples from Javascript.info tutorial */
+div.scratch {
+    padding: 30px;
+    margin: 40px;
+    border: 10px solid gray;
+    position: relative;
+}
+
+#field, #field2, #fieldClick {
+    width: 200px;
+    border: 10px groove black;
+    background-color: #00FF00;
+    position: relative;
+}
+
+#ball, #ballClick {  
+    position: absolute; 
+    transition: 1s all;
+    top: 0; 
+    left: 0;
+}
+
+.note {
+    position: fixed;
+    z-index: 1000;
+    padding: 5px;
+    border: 1px solid black;
+    background: white;
+    text-align: center;
+    font: italic 14px Georgia;
+}
+
+blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 0 0 0 100px;
+    padding: .5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    display: inline-block;
+    white-space: pre;
+}
+
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: .1em;
+    margin-right: .25em;
+    vertical-align: -.4em;
+}
+
+.menu ul {
+    display: none;
+    list-style: none;
+}
+
+.menu .title {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.menu .expanded, .menu .collapsed {
+    cursor: pointer;
+}
+
+.menu.open ul {
+    display: block;
+}
+
+.menu .collapsed {
+    display: inline-block;
+}
+
+.menu .expanded {
+    display: none;
+}
+
+.menu.open .collapsed {
+    display: none;
+}
+
+.menu.open .expanded {
+    display: inline-block;
+}
+
+.pane, .pane2 {
+    background: #edf5e1;
+    padding: 10px 20px 10px;
+    border-top: solid 2px #c4df9b;
+    position: relative;
+}
+
+.remove-button {
+    font-size: 110%;
+    color: darkred;
+    top: 0;
+    position: absolute;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: block;
+}
+
+.remove-button2 {
+    position: absolute;
+    font-size: 110%;
+    top: 0;
+    color: darkred;
+    right: 10px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.arrow {
+    font-size: 18px;
+    background-color: gray;
+    color: black;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+.carousel {
+    display: inline-flex;
+    align-items: center;
+    background-color: #eee;
+    border-radius: 8px;
+    border: 1px solid grey;
+    padding: 16px;
+}
+
+.gallery {
+    overflow: hidden;
+}
+
+.gallery li {
+    display: inline-block;
+}
+
+.gallery ul {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 0;
+    transition: 1s all;
+}
+
+#grid {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 4px;
+}
+
+th {
+    cursor: pointer;
+}
+
+th:hover {
+    background: yellow;
+}
+
+.tooltip {
+      /* some styles for the tooltip, you can use your own instead */
+      position: fixed;
+      padding: 10px 20px;
+      border: 1px solid #b3c9ce;
+      border-radius: 4px;
+      text-align: center;
+      font: italic 14px/1.3 arial, sans-serif;
+      color: #333;
+      background: #fff;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+}

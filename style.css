@@ -28,6 +28,49 @@
     --height-size-box: 100px;
 }
 
+nav > ul {
+    position: fixed;
+    list-style: none;
+    min-width: 100px;
+    background-color: var(--bg-color-nav);
+    padding: 16px;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav > ul > li {
+    display: inline-block;
+    margin: 0px 20px;
+    color: var(--font-color-light);
+}
+
+nav > ul > li.nav-right {
+    display: none;
+    float: right;
+    margin: 0 60px;
+}
+
+@media(min-width: 600px) {
+    nav > ul > li.nav-right {
+        display: block;
+    }
+}
+
+
+nav {
+    padding-bottom: 75px;
+    width: 100%;
+}
+
+nav a:link, nav a:visited {
+    color: var(--font-color-light);
+    text-decoration: none;
+}
+
+ul, ol {
+    margin: 0;
+}
+
 body {
     font-family: var(--font-family-main);
     padding: 0;
@@ -82,13 +125,8 @@ body {
 .size-box.box-22 { left: calc(21 * var(--height-size-box)); background-color: rgba(20%, 0%, 80%, 0.7); }
 .size-box.box-23 { left: calc(22 * var(--height-size-box)); background-color: rgba(40%, 0%, 60%, 0.7); }
 .size-box.box-24 { left: calc(23 * var(--height-size-box)); background-color: rgba(60%, 0%, 40%, 0.7); }
-
-ul, ol {
-    margin: 0;
-}
-
 /* Snippets explain a CSS property, HTML element, 
-   or a single concept. */
+or a single concept. */
 .snippet {
     vertical-align: top;
     margin: 1vmin;
@@ -209,7 +247,7 @@ code {
 }
 
 /* Formatting code in headers. Default header padding 
-   makes code look too loose. */
+makes code look too loose. */
 .code.top {
     padding-bottom: 0;
 }
@@ -1003,45 +1041,6 @@ table.all-borders td {
     }
 }
 
-nav > ul {
-    position: fixed;
-    list-style: none;
-    min-width: 100px;
-    background-color: var(--bg-color-nav);
-    padding: 16px;
-    width: 100%;
-    z-index: 1000;
-}
-
-nav > ul > li {
-    display: inline-block;
-    margin: 0px 20px;
-    color: var(--font-color-light);
-}
-
-nav > ul > li.nav-right {
-    display: none;
-    float: right;
-    margin: 0 60px;
-}
-
-@media(min-width: 600px) {
-    nav > ul > li.nav-right {
-        display: block;
-    }
-}
-
-
-nav {
-    padding-bottom: 75px;
-    width: 100%;
-}
-
-nav a:link, nav a:visited {
-    color: var(--font-color-light);
-    text-decoration: none;
-}
-
 /* This adds space before the target of a link, to put the target below the navbar. */
 /* XXX Broken by grid layout? */
 :target:before {
@@ -1423,12 +1422,12 @@ section {
 
 /* We choose sizes of 100px large column format because it has many divisors: 
 
-    Similarly the other breakpoints have the most divisors of smaller numbers:
-      4 -- 1,2,4
-      6 -- 1,2,3,6
-      12 -- 1,2,3,4,6,12
-      18 -- 1,2,3,6,9,18
-      24 -- 1,2,3,4,6,8,12,24
+Similarly the other breakpoints have the most divisors of smaller numbers:
+4 -- 1,2,4
+6 -- 1,2,3,6
+12 -- 1,2,3,4,6,12
+18 -- 1,2,3,6,9,18
+24 -- 1,2,3,4,6,8,12,24
 */
 @media(max-width: 400px)  { section { grid-template-columns: repeat(1, 1fr); } }
 @media(min-width: 400px)  { section { grid-template-columns: repeat(4, 1fr); } }
@@ -1516,157 +1515,4 @@ section {
 
 #css-width {
     grid-column: 1/span 6;
-}
-
-/* XXX For examples from Javascript.info tutorial XXX */
-
-#field, #field2, #fieldClick {
-    width: 200px;
-    border: 10px groove black;
-    background-color: #00FF00;
-    position: relative;
-}
-
-#ball, #ballClick {
-    position: absolute;
-    transition: 1s all;
-    top: 0;
-    left: 0;
-}
-
-.note {
-  position: fixed;
-  z-index: 1000;
-  padding: 5px;
-  border: 1px solid black;
-  background: white;
-  text-align: center;
-  font: italic 14px Georgia;
-}
-
-blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  margin: 0 0 0 100px;
-  padding: .5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-  display: inline-block;
-  white-space: pre;
-}
-
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: .1em;
-  margin-right: .25em;
-  vertical-align: -.4em;
-}
-
-div.scratch {
-    padding: 30px;
-    margin: 40px;
-    border: 10px solid gray;
-}
-
-.menu ul {
-    display: none;
-    list-style: none;
-}
-
-.menu .title {
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.menu .expanded, .menu .collapsed {
-    cursor: pointer;
-}
-
-.menu.open ul {
-    display: block;
-}
-
-.menu .collapsed {
-    display: inline-block;
-}
-
-.menu .expanded {
-    display: none;
-}
-
-.menu.open .collapsed {
-    display: none;
-}
-
-.menu.open .expanded {
-    display: inline-block;
-}
-
-.pane, .pane2 {
-  background: #edf5e1;
-  padding: 10px 20px 10px;
-  border-top: solid 2px #c4df9b;
-  position: relative;
-}
-
-.remove-button {
-  font-size: 110%;
-  color: darkred;
-  top: 0;
-  position: absolute;
-  right: 10px;
-  width: 24px;
-  height: 24px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  display: block;
-}
-
-.remove-button2 {
-  position: absolute;
-  font-size: 110%;
-  top: 0;
-  color: darkred;
-  right: 10px;
-  display: block;
-  width: 24px;
-  height: 24px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
-
-.arrow {
-    font-size: 18px;
-    background-color: gray;
-    color: black;
-    border-radius: 100%;
-    display: inline-block;
-}
-
-.carousel {
-    display: inline-flex;
-    align-items: center;
-    background-color: #eee;
-    border-radius: 8px;
-    border: 1px solid grey;
-    padding: 16px;
-}
-
-.gallery {
-    overflow: hidden;
-}
-
-.gallery li {
-    display: inline-block;
-}
-
-.gallery ul {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    padding: 0;
-    transition: 1s all;
 }

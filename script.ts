@@ -1,11 +1,19 @@
-'use strict';
+// These interface declarations allow for common DOM apis that are becoming available,
+// without as much type casting. A little less safety in return for convenience in 
+// a common case.
+interface Node {
+    prepend(...nodes: (Node | string)[]): void;
+    append(...nodes: (Node | string)[]): void;
+    before(...nodes: (Node | string)[]): void;
+    after(...nodes: (Node | string)[]): void;
+}
 
 let div = document.createElement('div');
 div.className = "section";
 div.id = "html-inserted";
 div.textContent = "hello world\n";
 
-document.querySelector('section').appendChild(div);
+document.querySelector('section')!.appendChild(div);
 
 let data = {
     "Fish": {
@@ -51,7 +59,7 @@ function processlist(list: HTMLUListElement) {
 }
 
 function processitem(item: HTMLLIElement) {
-    let text = item.firstChild;
+    let text = item.firstChild!;
     let n = 0;
 
     Array.from(item.children).forEach(child => {
@@ -70,7 +78,7 @@ function annotateListItems() {
         let childItems = item.getElementsByTagName('li');
         let nChildren = childItems.length;
         if (nChildren > 0) {
-            item.firstChild.textContent += '[' + nChildren + ']'
+            item.firstChild!.textContent += '[' + nChildren + ']'
         }
     }
 }
@@ -80,7 +88,7 @@ annotateListItems();
 function sortTable(table: HTMLTableElement, sortColumn: number) {
     let sortedRows = Array.from(table.rows)
         .slice(1)
-        .sort((rowA, rowB) => rowA.cells[sortColumn].textContent > rowB.cells[sortColumn].textContent ? 1 : -1);
+        .sort((rowA, rowB) => rowA.cells[sortColumn].textContent! > rowB.cells[sortColumn].textContent! ? 1 : -1);
     table.rows[0].after(...sortedRows);
     let firstRow = table.rows[0];
 }
@@ -93,11 +101,11 @@ function centerXY(elem: HTMLElement, container: Element) {
     elem.style.left = Math.round(midX - diameter / 2) + 'px';
 }
 
-let ball = document.getElementById("ball");
-let field = document.getElementById("field");
+let ball = document.getElementById("ball")!;
+let field = document.getElementById("field")!;
 centerXY(ball, field);
 
-let coords = document.getElementById("coords");
+let coords = document.getElementById("coords")!;
 document.onclick = function (e) { // shows click coordinates
     coords.innerHTML = e.clientX + ':' + e.clientY;
 };
@@ -209,7 +217,7 @@ function showNoteAbsolute(anchor: Element, position: string, html: string) {
     positionAtAbsolute(anchor, position, note);
 }
 
-let blockquote = document.querySelector("blockquote");
+let blockquote = document.querySelector("blockquote")!;
 showNoteAbsolute(blockquote, "top", "note above");
 showNoteAbsolute(blockquote, "right", "note at right");
 showNoteAbsolute(blockquote, "bottom", "note below");
@@ -218,7 +226,7 @@ showNoteAbsolute(blockquote, "bottom-in", "note bottom in");
 showNoteAbsolute(blockquote, "right-in", "note right in");
 document.body.style.height = "2000px";
 
-let clickmeButton = document.getElementById("clickmebutton");
+let clickmeButton = document.getElementById("clickmebutton")!;
 let n = 0;
 function clickmeHandler(event: MouseEvent) {
     alert(`${event.type} at ${event.currentTarget} Coordinates: ${event.clientX}, ${event.clientY}`);
@@ -227,19 +235,19 @@ function clickmeHandler(event: MouseEvent) {
 
 clickmeButton.addEventListener("click", clickmeHandler);
 
-document.getElementById("hider").onclick = function () {
-    document.getElementById("text").hidden = true;
+document.getElementById("hider")!.onclick = function () {
+    document.getElementById("text")!.hidden = true;
 }
 
-document.getElementById("selfHider").onclick = function () {
+document.getElementById("selfHider")!.onclick = function () {
     this.hidden = true;
 }
 
-let fieldClick = document.getElementById("fieldClick");
+let fieldClick = document.getElementById("fieldClick")!;
 
 fieldClick.addEventListener("click", function (event) {
-    let ballClick = document.getElementById("ballClick");
-    let fieldRect = fieldClick.getBoundingClientRect();
+    let ballClick = document.getElementById("ballClick")!;
+    let fieldRect = fieldClick.getBoundingClientRect()!;
     let x = event.clientX - fieldRect.left - field.clientLeft - ballClick.clientWidth / 2;
     let y = event.clientY - fieldRect.top - field.clientTop - ballClick.clientHeight / 2;
     x = Math.max(x, 0);
@@ -252,8 +260,8 @@ fieldClick.addEventListener("click", function (event) {
     ballClick.style.left = String(x) + "px";
 })
 
-function toggleListControl(event: Event) {
-    (this as HTMLElement).parentElement.classList.toggle("open");
+function toggleListControl(this: HTMLElement, event: Event) {
+    this.parentElement!.classList.toggle("open");
 }
 
 Array.from(document.querySelectorAll(".menu > .title, .menu > .collapsed, .menu > .expanded")).forEach((title) => {
@@ -294,7 +302,7 @@ Array.from(document.querySelectorAll(".carousel")).forEach((carousel: HTMLElemen
     });
 });
 
-document.getElementById("container").addEventListener("click", (event) => {
+document.getElementById("container")!.addEventListener("click", (event) => {
     let target = <Element>event.target;
     if (target.className != 'remove-button2') {
         return;
@@ -306,3 +314,79 @@ document.getElementById("container").addEventListener("click", (event) => {
     pane.remove();
 });
 
+
+Array.from(document.getElementsByClassName("tree")).forEach((tree) => {
+    tree.addEventListener("click", (event) => {
+        let li = (event.target as Element).closest("li") as HTMLLIElement;
+        if (!li) {
+            return;
+        }
+        Array.from(li.children).forEach((child: HTMLElement) => {
+            child.hidden = !child.hidden;
+        })
+    });
+});
+
+// Sorting
+function makeSortable(table: HTMLTableElement) {
+    function doSort(tBody: HTMLTableSectionElement, index: number, type: string) {
+        // Default to string compare.
+        let compare = (a: string, b: string) => a.localeCompare(b);
+        if (type === "number") {
+            compare = (a: string, b: string) => +a - +b;
+        }
+        let sortedRows =
+            Array.from(tBody.rows).sort((row1, row2) => {
+                let a = row1.cells[index].textContent!;
+                let b = row2.cells[index].textContent!;
+                return compare(a, b);
+            });
+        tBody.append(...sortedRows);
+    }
+
+    table.tHead.addEventListener("click", event => {
+        let target = event.target as Element;
+        let th = target.closest("th") as HTMLTableHeaderCellElement;
+        if (!th) { return; }
+        if (table !== target.closest("table")) { return; }
+        doSort(table.tBodies[0], th.cellIndex, th.dataset.type || "string");
+    });
+}
+
+let grid = document.getElementById("grid") as HTMLTableElement;
+makeSortable(grid);
+
+
+// Simple tooltip that automatically shows above the target element that
+// has the data-tooltip attribute.
+let currentToolTip: HTMLElement | undefined;
+
+document.addEventListener("mouseover", function (event) {
+    let target = event.target as HTMLElement;
+    let tip = target.dataset.tooltip;
+    if (!tip) { return; }
+
+    if (currentToolTip) {
+        currentToolTip.remove();
+    }
+    currentToolTip = document.createElement("div");
+    currentToolTip.classList.add("tooltip");
+    currentToolTip.innerHTML = tip;
+    target.before(currentToolTip);
+    let top;
+    let rect = target.getBoundingClientRect();
+    top = rect.top - currentToolTip.offsetHeight - 4;
+    // Tooltip shows below the element if it won't fit above it.
+    if (top < 0) {
+        top = rect.top + target.offsetHeight + 4;
+    }
+    currentToolTip.style.top = top + "px";
+    currentToolTip.style.left = rect.left + "px";
+});
+
+document.addEventListener("mouseout", function (event) {
+    if (currentToolTip) {
+        currentToolTip.remove();
+        currentToolTip = undefined;
+    }
+});
