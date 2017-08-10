@@ -393,7 +393,7 @@ document.addEventListener("mouseout", function (event) {
 
 // Ask before following a link
 let contents = document.getElementById("contents") as HTMLElement;
-contents.onclick = function (event) {
+contents.addEventListener("click", function (event) {
     let target = event.target as Element;
     let a = target.closest("A") as HTMLAnchorElement;
     if (!a || !contents.contains(target)) return;
@@ -401,4 +401,4 @@ contents.onclick = function (event) {
     if (!confirm(`Are you sure you want to leave for ${a.href}`)) {
         event.preventDefault();
     }
-};
+});
