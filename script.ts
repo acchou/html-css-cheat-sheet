@@ -8,8 +8,15 @@ interface Node {
     after(...nodes: (Node | string)[]): void;
 }
 
-// Make some collections iterable
-NodeList.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
+interface HTMLCollectionOf<T extends Element> extends HTMLCollection {
+    [Symbol.iterator](): IterableIterator<T>;
+}
+
+interface HTMLCollection {
+    [Symbol.iterator](): IterableIterator<any>;
+}
+
+// Make HTMLCollection iterable with for...of loops
 HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
 
 // Scope for all variables to avoid conflict with globals named
@@ -98,7 +105,7 @@ window.addEventListener("load", () => {
     //
     function processlist(list: HTMLUListElement) {
         let n = 0;
-        for (let child of Array.from(list.children)) {
+        for (let child of list.children) {
             let count = processitem(child as HTMLLIElement);
             n += count;
         }
@@ -109,7 +116,7 @@ window.addEventListener("load", () => {
         let text = item.firstChild!;
         let n = 0;
 
-        for (let child of Array.from(item.children)) {
+        for (let child of item.children) {
             let count = processlist(child as HTMLUListElement);
             n += count;
         }
@@ -324,7 +331,7 @@ window.addEventListener("load", () => {
     // Remove button.
     //
     let removeButton = document.getElementsByClassName("remove-button")[0] as HTMLElement;
-    for (let pane of Array.from(document.querySelectorAll(".pane"))) {
+    for (let pane of document.querySelectorAll(".pane")) {
         let button = removeButton.cloneNode(true) as HTMLButtonElement;
         pane.insertAdjacentElement("beforeend", button);
         button.addEventListener("click", () => pane.remove());
@@ -377,12 +384,12 @@ window.addEventListener("load", () => {
     //
     // Collapsible tree control.
     //
-    for (let tree of Array.from(document.getElementsByClassName("tree"))) {
+    for (let tree of document.getElementsByClassName("tree")) {
         tree.addEventListener("click", event => {
             let li = (event.target as Element).closest("li") as HTMLLIElement;
             if (!li) return;
 
-            for (let child of Array.from(li.children) as HTMLElement[]) {
+            for (let child of li.children) {
                 child.hidden = !child.hidden;
             }
         });
