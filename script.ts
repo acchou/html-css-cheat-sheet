@@ -14,7 +14,44 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
 
 // Scope for all variables to avoid conflict with globals named
 // for the id's of elements. Works around a safari bug.
-{
+
+window.addEventListener("load", () => {
+    //
+    // Center ball on field.
+    //
+    function centerXY(elem: HTMLElement, container: Element) {
+        let midY = container.clientHeight / 2;
+        let midX = container.clientWidth / 2;
+        let diameter = elem.offsetWidth;
+        elem.style.top = Math.round(midY - diameter / 2) + "px";
+        elem.style.left = Math.round(midX - diameter / 2) + "px";
+    }
+
+    let ball = document.getElementById("ball")!;
+    let field = document.getElementById("field")!;
+
+    centerXY(ball, field);
+
+    //
+    // Sort a table
+    //
+    function sortTable(table: HTMLTableElement, sortColumn: number) {
+        let sortedRows = Array.from(table.rows)
+            .slice(1)
+            .sort(
+                (rowA, rowB) =>
+                    rowA.cells[sortColumn].textContent! > rowB.cells[sortColumn].textContent!
+                        ? 1
+                        : -1
+            );
+        table.rows[0].after(...sortedRows);
+        let firstRow = table.rows[0];
+    }
+    sortTable(document.getElementById("table") as HTMLTableElement, 0);
+
+    //
+    // Insert list inside the end of the <section> tag
+    //
     let div = document.createElement("div");
     div.className = "section";
     div.id = "html-inserted";
@@ -56,6 +93,9 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
 
     createTree(div, data);
 
+    //
+    // Add annotations to unordered lists showing how many list items are underneath each.
+    //
     function processlist(list: HTMLUListElement) {
         let n = 0;
         for (let child of Array.from(list.children)) {
@@ -77,6 +117,7 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
         return n + 1;
     }
 
+    // obsolete - better version below.
     // processlist(list);
 
     function annotateListItems() {
@@ -92,31 +133,9 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
 
     annotateListItems();
 
-    function sortTable(table: HTMLTableElement, sortColumn: number) {
-        let sortedRows = Array.from(table.rows)
-            .slice(1)
-            .sort(
-                (rowA, rowB) =>
-                    rowA.cells[sortColumn].textContent! > rowB.cells[sortColumn].textContent!
-                        ? 1
-                        : -1
-            );
-        table.rows[0].after(...sortedRows);
-        let firstRow = table.rows[0];
-    }
-
-    function centerXY(elem: HTMLElement, container: Element) {
-        let midY = container.clientHeight / 2;
-        let midX = container.clientWidth / 2;
-        let diameter = elem.offsetWidth;
-        elem.style.top = Math.round(midY - diameter / 2) + "px";
-        elem.style.left = Math.round(midX - diameter / 2) + "px";
-    }
-
-    let ball = document.getElementById("ball")!;
-    let field = document.getElementById("field")!;
-    centerXY(ball, field);
-
+    //
+    // showing click coordinates
+    //
     let coords = document.getElementById("coords")!;
     document.onclick = function(e) {
         // shows click coordinates
@@ -138,6 +157,9 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
         };
     }
 
+    //
+    // Adding notes around an element - positioning
+    //
     function positionAtFixed(anchor: Element, position: string, elem: HTMLElement) {
         let anchorBounds = anchor.getBoundingClientRect();
         let top, left;
@@ -237,8 +259,12 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
     showNoteAbsolute(blockquote, "top-in", "note top in");
     showNoteAbsolute(blockquote, "bottom-in", "note bottom in");
     showNoteAbsolute(blockquote, "right-in", "note right in");
+
     document.body.style.height = "2000px";
 
+    //
+    // Button click events.
+    //
     let clickmeButton = document.getElementById("clickmebutton")!;
     let n = 0;
     function clickmeHandler(event: MouseEvent) {
@@ -250,6 +276,9 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
 
     clickmeButton.addEventListener("click", clickmeHandler);
 
+    //
+    // Hiding buttons
+    //
     document.getElementById("hider")!.onclick = function() {
         document.getElementById("text")!.hidden = true;
     };
@@ -258,6 +287,9 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
         this.hidden = true;
     };
 
+    //
+    // Animating "click to move" - ball on field.
+    //
     let fieldClick = document.getElementById("fieldClick")!;
 
     fieldClick.addEventListener("click", function(event) {
@@ -275,6 +307,9 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
         ballClick.style.left = String(x) + "px";
     });
 
+    //
+    // Simple list control - expand and collapse
+    //
     function toggleListControl(this: HTMLElement, event: Event) {
         this.parentElement!.classList.toggle("open");
     }
@@ -285,6 +320,9 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
         title.addEventListener("click", toggleListControl);
     }
 
+    //
+    // Remove button.
+    //
     let removeButton = document.getElementsByClassName("remove-button")[0] as HTMLElement;
     for (let pane of Array.from(document.querySelectorAll(".pane"))) {
         let button = removeButton.cloneNode(true) as HTMLButtonElement;
@@ -292,6 +330,9 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
         button.addEventListener("click", () => pane.remove());
     }
 
+    //
+    // Image Gallery with animated scrolling.
+    //
     for (let gallery of document.querySelectorAll(".gallery")) {
         //let singleWidth = (<HTMLElement>gallery.firstElementChild.firstElementChild).offsetWidth;
         let singleWidth = 130;
@@ -319,6 +360,10 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
         });
     }
 
+    //
+    // Remove button - this time with a single handler on the container,
+    // using event delegation.
+    //
     document.getElementById("container")!.addEventListener("click", event => {
         let target = <Element>event.target;
         if (target.className != "remove-button2") return;
@@ -329,6 +374,9 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
         pane.remove();
     });
 
+    //
+    // Collapsible tree control.
+    //
     for (let tree of Array.from(document.getElementsByClassName("tree"))) {
         tree.addEventListener("click", event => {
             let li = (event.target as Element).closest("li") as HTMLLIElement;
@@ -340,7 +388,9 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
         });
     }
 
-    // Sorting
+    //
+    // Sortable table by clicking on header
+    //
     function makeSortable(table: HTMLTableElement) {
         function doSort(tBody: HTMLTableSectionElement, index: number, type: string) {
             // Default to string compare.
@@ -369,8 +419,10 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
     let grid = document.getElementById("grid") as HTMLTableElement;
     makeSortable(grid);
 
-    // Simple tooltip that automatically shows above the target element that
-    // has the data-tooltip attribute.
+    //
+    // Tooltip - for any element with the "data-tooltip" attribute.
+    // Doesn't work for nested elements.
+    //
     let currentToolTip: HTMLElement | undefined;
 
     function showToolTip(target: HTMLElement, tip: string) {
@@ -392,7 +444,6 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
         currentToolTip.style.left = rect.left + "px";
     }
 
-    // Simple, doesn't work with nested elements
     function addToolTipsBasic() {
         document.addEventListener("mouseover", function(event) {
             let target = event.target as HTMLElement;
@@ -408,8 +459,10 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
         });
     }
 
-    // Ask before following a link - example of preventing default
+    //
+    // Confirm before following a link - example of preventing default
     // browser actions.
+    //
     let contents = document.getElementById("contents") as HTMLElement;
     contents.addEventListener("click", function(event) {
         let target = event.target as Element;
@@ -421,7 +474,9 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
         }
     });
 
-    // Selectable list
+    //
+    // Selectable list with multi-select using Ctrl/Cmd + click.
+    //
     let selectList = document.getElementById("select-list")!;
     selectList.addEventListener("click", event => {
         let target = event.target as HTMLLIElement;
@@ -432,7 +487,7 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
                 li.classList.remove("selected");
             }
         }
-        target.classList.toggle("selected");
+        target.classList.add("selected");
     });
 
     // Don't select text when clicking on list items.
@@ -440,7 +495,9 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
         event.preventDefault();
     });
 
+    //
     // Tooltip that works with nested elements
+    //
     function addToolTipsNested() {
         document.addEventListener("mouseover", function(event) {
             let target = event.target as HTMLElement;
@@ -459,7 +516,9 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
 
     addToolTipsNested();
 
+    //
     // Drag and drop
+    //
     let ballDrag = document.getElementById("ballDrag") as HTMLElement;
 
     // Don't use browser's default action.
@@ -494,4 +553,4 @@ HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
             target.onmouseup = () => {};
         };
     });
-}
+});
