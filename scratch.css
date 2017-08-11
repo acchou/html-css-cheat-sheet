@@ -18,9 +18,9 @@ div.scratch {
 #ball,
 #ballClick {
     position: absolute;
-    transition: 1s all;
     top: 0;
     left: 0;
+    transition: 1s all;
 }
 
 .note {
@@ -214,4 +214,10 @@ li {
 p {
     text-align: justify;
     margin: 10px 3px;
+}
+
+.dragspace {
+    width: 100%;
+    height: 200px;
+    border: 1px solid gray;
 }

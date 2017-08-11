@@ -70,7 +70,7 @@ function processitem(item: HTMLLIElement) {
     return n + 1;
 }
 
-/* processlist(list); */
+// processlist(list);
 
 function annotateListItems() {
     let listItems = document.getElementsByTagName("li");
@@ -449,3 +449,39 @@ function addToolTipsNested() {
 }
 
 addToolTipsNested();
+
+// Drag and drop
+let ballDrag = document.getElementById("ballDrag") as HTMLElement;
+
+// Don't use browser's default action.
+ballDrag.ondragstart = function() {
+    return false;
+};
+
+ballDrag.addEventListener("mousedown", function(event) {
+    let target = event.target as HTMLElement;
+    let rect = target.getBoundingClientRect();
+    let offsetX = event.clientX - rect.left;
+    let offsetY = event.clientY - rect.top;
+
+    target.style.position = "absolute";
+    target.style.zIndex = "1000";
+    document.body.appendChild(target);
+    moveTarget(event.pageX, event.pageY);
+
+    function moveTarget(x: number, y: number) {
+        target.style.top = y - offsetY + "px";
+        target.style.left = x - offsetX + "px";
+    }
+
+    function mouseMoveHandler(event: MouseEvent) {
+        moveTarget(event.pageX, event.pageY);
+    }
+
+    document.addEventListener("mousemove", mouseMoveHandler);
+
+    target.onmouseup = function() {
+        document.removeEventListener("mousemove", mouseMoveHandler);
+        target.onmouseup = () => {};
+    };
+});
