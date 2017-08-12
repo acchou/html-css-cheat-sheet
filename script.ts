@@ -526,38 +526,85 @@ window.addEventListener("load", () => {
     //
     // Drag and drop
     //
+    interface DraggableDelegate {
+        leaveDropTarget: (elem: HTMLElement) => void;
+        enterDropTarget: (elem: HTMLElement) => void;
+    }
+
+    function createDraggableEventHandler({ leaveDropTarget, enterDropTarget }: DraggableDelegate) {
+        let currentDropTarget: HTMLElement | undefined;
+
+        return function(event: MouseEvent) {
+            let target = event.target as HTMLElement;
+            let rect = target.getBoundingClientRect();
+            let offsetX = event.clientX - rect.left;
+            let offsetY = event.clientY - rect.top;
+
+            target.style.position = "absolute";
+            target.style.zIndex = "1000";
+            document.body.appendChild(target);
+            moveTarget(event.pageX, event.pageY);
+
+            function moveTarget(x: number, y: number) {
+                // Absolute position with parent = window.
+                // Therefore top and left are relative to the entire document body.
+                target.style.top = y - offsetY + "px";
+                target.style.left = x - offsetX + "px";
+            }
+
+            function mouseMoveHandler(event: MouseEvent) {
+                moveTarget(event.pageX, event.pageY);
+
+                target.hidden = true;
+                let mouseOverElem = document.elementFromPoint(event.clientX, event.clientY);
+                target.hidden = false;
+
+                if (currentDropTarget != mouseOverElem) {
+                    if (currentDropTarget) {
+                        leaveDropTarget(currentDropTarget);
+                    }
+
+                    if (mouseOverElem instanceof HTMLElement) {
+                        currentDropTarget = mouseOverElem;
+                        if (currentDropTarget) {
+                            enterDropTarget(currentDropTarget);
+                        }
+                    }
+                }
+            }
+
+            document.addEventListener("mousemove", mouseMoveHandler);
+
+            target.onmouseup = function() {
+                document.removeEventListener("mousemove", mouseMoveHandler);
+                target.onmouseup = () => {};
+            };
+        };
+    }
+
+    function describeBounds(bounds: ClientRect) {
+        return bounds.top + ", " + bounds.left;
+    }
+
+    function makeDraggable(element: HTMLElement, draggableCallbacks: DraggableDelegate) {
+        // Don't use browser's default action.
+        element.ondragstart = function() {
+            return false;
+        };
+
+        element.addEventListener("mousedown", createDraggableEventHandler(draggableCallbacks));
+    }
+
     let ballDrag = document.getElementById("ballDrag") as HTMLElement;
 
-    // Don't use browser's default action.
-    ballDrag.ondragstart = function() {
-        return false;
-    };
-
-    ballDrag.addEventListener("mousedown", function(event) {
-        let target = event.target as HTMLElement;
-        let rect = target.getBoundingClientRect();
-        let offsetX = event.clientX - rect.left;
-        let offsetY = event.clientY - rect.top;
-
-        target.style.position = "absolute";
-        target.style.zIndex = "1000";
-        document.body.appendChild(target);
-        moveTarget(event.pageX, event.pageY);
-
-        function moveTarget(x: number, y: number) {
-            target.style.top = y - offsetY + "px";
-            target.style.left = x - offsetX + "px";
+    makeDraggable(ballDrag, {
+        leaveDropTarget(elem) {
+            let bounds = elem.getBoundingClientRect();
+            console.log("leaveDropTarget " + elem.tagName + " " + describeBounds(bounds));
+        },
+        enterDropTarget(elem) {
+            let bounds = elem.getBoundingClientRect();
+            console.log("enterDropTarget " + elem.tagName + " " + describeBounds(bounds));
         }
-
-        function mouseMoveHandler(event: MouseEvent) {
-            moveTarget(event.pageX, event.pageY);
-        }
-
-        document.addEventListener("mousemove", mouseMoveHandler);
-
-        target.onmouseup = function() {
-            document.removeEventListener("mousemove", mouseMoveHandler);
-            target.onmouseup = () => {};
-        };
     });
 });
