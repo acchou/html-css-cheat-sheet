@@ -657,4 +657,38 @@ window.addEventListener("load", () => {
             console.log("slider pos: " + pos);
         }
     });
+
+    //
+    // Hero example
+    //
+    document.addEventListener("mousedown", function(event) {
+        let elem = document.elementFromPoint(event.clientX, event.clientY);
+        if (!elem) return;
+        let draggable = elem.closest(".draggable") as HTMLElement;
+        if (!draggable) return;
+
+        event.preventDefault();
+        let rect = draggable.getBoundingClientRect();
+        let offsetX = event.clientX - rect.left;
+        let offsetY = event.clientY - rect.top;
+
+        draggable.style.position = "absolute";
+        document.body.appendChild(draggable);
+
+        draggable.ondragstart = function() {
+            return false;
+        };
+
+        function moveHero(event: MouseEvent) {
+            draggable.style.left = event.pageX - offsetX + "px";
+            draggable.style.top = event.pageY - offsetY + "px";
+        }
+
+        document.addEventListener("mousemove", moveHero);
+        moveHero(event);
+
+        document.addEventListener("mouseup", function(event) {
+            document.removeEventListener("mousemove", moveHero);
+        });
+    });
 });
