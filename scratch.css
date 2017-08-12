@@ -208,3 +208,23 @@ p {
     height: 200px;
     border: 1px solid gray;
 }
+
+.slider {
+    border-radius: 5px;
+    background: #e0e0e0;
+    background: linear-gradient(left top, #e0e0e0, #eeeeee);
+    width: 310px;
+    height: 15px;
+    margin: 5px;
+}
+
+.thumb {
+    width: 10px;
+    height: 25px;
+    border-radius: 3px;
+    position: relative;
+    left: 10px;
+    top: -5px;
+    background: blue;
+    cursor: pointer;
+}

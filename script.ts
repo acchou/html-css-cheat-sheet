@@ -607,4 +607,54 @@ window.addEventListener("load", () => {
             console.log("enterDropTarget " + elem.tagName + " " + describeBounds(bounds));
         }
     });
+
+    interface SliderDelegate {
+        sliderPositionChanged: (percentage: number) => void;
+    }
+
+    function makeSlider(
+        slider: HTMLElement,
+        thumb: HTMLElement,
+        { sliderPositionChanged }: SliderDelegate
+    ) {
+        thumb.ondragstart = function() {
+            return false;
+        };
+
+        function moveThumb(event: MouseEvent) {
+            let thumbMidPointOffset = thumb.clientWidth / 2;
+            let sliderRect = slider.getBoundingClientRect();
+            let thumbPos = event.clientX - sliderRect.left - thumbMidPointOffset;
+            thumb.style.position = "relative";
+
+            if (thumbPos < 0) {
+                thumbPos = 0;
+            }
+            let maxPos = slider.offsetWidth - thumb.offsetWidth + thumbMidPointOffset;
+            if (thumbPos > maxPos) {
+                thumbPos = maxPos;
+            }
+            thumb.style.left = thumbPos + "px";
+            sliderPositionChanged(thumbPos / maxPos);
+        }
+
+        slider.addEventListener("mousedown", function(event) {
+            event.preventDefault();
+            moveThumb(event);
+            document.addEventListener("mousemove", moveThumb);
+        });
+
+        document.addEventListener("mouseup", function() {
+            document.removeEventListener("mousemove", moveThumb);
+        });
+    }
+
+    let slider = document.querySelector(".slider") as HTMLElement;
+    let thumb = document.querySelector(".thumb") as HTMLElement;
+
+    makeSlider(slider, thumb, {
+        sliderPositionChanged(pos) {
+            console.log("slider pos: " + pos);
+        }
+    });
 });
