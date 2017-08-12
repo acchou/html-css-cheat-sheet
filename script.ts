@@ -106,8 +106,10 @@ window.addEventListener("load", () => {
     function processlist(list: HTMLUListElement) {
         let n = 0;
         for (let child of list.children) {
-            let count = processitem(child as HTMLLIElement);
-            n += count;
+            if (child instanceof HTMLLIElement) {
+                let count = processitem(child);
+                n += count;
+            }
         }
         return n;
     }
@@ -117,8 +119,10 @@ window.addEventListener("load", () => {
         let n = 0;
 
         for (let child of item.children) {
-            let count = processlist(child as HTMLUListElement);
-            n += count;
+            if (child instanceof HTMLUListElement) {
+                let count = processlist(child);
+                n += count;
+            }
         }
         if (n > 0) text.textContent += "[" + n + "]";
         return n + 1;
@@ -386,7 +390,8 @@ window.addEventListener("load", () => {
     //
     for (let tree of document.getElementsByClassName("tree")) {
         tree.addEventListener("click", event => {
-            let li = (event.target as Element).closest("li") as HTMLLIElement;
+            if (!(event.target instanceof Element)) return;
+            let li = event.target.closest("li") as HTMLLIElement;
             if (!li) return;
 
             for (let child of li.children) {
@@ -414,7 +419,8 @@ window.addEventListener("load", () => {
         }
 
         table.tHead.addEventListener("click", event => {
-            let target = event.target as Element;
+            let target = event.target;
+            if (!(target instanceof HTMLElement)) return;
             let th = target.closest("th") as HTMLTableHeaderCellElement;
             if (!th) return;
             if (table !== target.closest("table")) return;
@@ -453,10 +459,12 @@ window.addEventListener("load", () => {
 
     function addToolTipsBasic() {
         document.addEventListener("mouseover", function(event) {
-            let target = event.target as HTMLElement;
-            let tip = target.dataset.tooltip;
-            if (!tip) return;
-            showToolTip(target, tip);
+            let target = event.target;
+            if (target instanceof HTMLElement) {
+                let tip = target.dataset.tooltip;
+                if (!tip) return;
+                showToolTip(target, tip);
+            }
         });
         document.addEventListener("mouseout", function(event) {
             if (currentToolTip) {
@@ -472,7 +480,8 @@ window.addEventListener("load", () => {
     //
     let contents = document.getElementById("contents") as HTMLElement;
     contents.addEventListener("click", function(event) {
-        let target = event.target as Element;
+        let target = event.target;
+        if (!(target instanceof Element)) return;
         let a = target.closest("A") as HTMLAnchorElement;
         if (!a || !contents.contains(target)) return;
 
@@ -486,8 +495,8 @@ window.addEventListener("load", () => {
     //
     let selectList = document.getElementById("select-list")!;
     selectList.addEventListener("click", event => {
-        let target = event.target as HTMLLIElement;
-        if (target.tagName != "LI") return;
+        let target = event.target;
+        if (!(target instanceof HTMLLIElement)) return;
         // Clear selected if ctrl/cmd are not pressed
         if (!event.ctrlKey && !event.metaKey) {
             for (let li of selectList.querySelectorAll(".selected")) {
@@ -507,9 +516,10 @@ window.addEventListener("load", () => {
     //
     function addToolTipsNested() {
         document.addEventListener("mouseover", function(event) {
-            let target = event.target as HTMLElement;
-            let anchor = target.closest("[data-tooltip]") as HTMLElement;
-            if (!anchor) {
+            let target = event.target;
+            if (!(target instanceof HTMLElement)) return;
+            let anchor = target.closest("[data-tooltip]");
+            if (!(anchor instanceof HTMLElement)) {
                 if (currentToolTip) {
                     currentToolTip.remove();
                 }
@@ -536,6 +546,7 @@ window.addEventListener("load", () => {
 
         return function(event: MouseEvent) {
             let target = event.target as HTMLElement;
+            if (!(target instanceof HTMLElement)) return;
             let rect = target.getBoundingClientRect();
             let offsetX = event.clientX - rect.left;
             let offsetY = event.clientY - rect.top;
@@ -665,7 +676,7 @@ window.addEventListener("load", () => {
         let elem = document.elementFromPoint(event.clientX, event.clientY);
         if (!elem) return;
         let draggable = elem.closest(".draggable") as HTMLElement;
-        if (!draggable) return;
+        if (!draggable || !(draggable instanceof HTMLElement)) return;
 
         event.preventDefault();
         let rect = draggable.getBoundingClientRect();
@@ -680,8 +691,20 @@ window.addEventListener("load", () => {
         };
 
         function moveHero(event: MouseEvent) {
-            draggable.style.left = event.pageX - offsetX + "px";
-            draggable.style.top = event.pageY - offsetY + "px";
+            let x = event.pageX - offsetX;
+            let y = event.pageY - offsetY;
+            let rect = draggable.getBoundingClientRect();
+            let bodyRect = document.body.getBoundingClientRect();
+            if (x < 0) x = 0;
+            if (x + rect.width > bodyRect.right) {
+                x = bodyRect.right - rect.width;
+            }
+            if (y < 0) y = 0;
+            if (y + rect.height > bodyRect.bottom) {
+                y = bodyRect.bottom - rect.height;
+            }
+            draggable.style.left = x + "px";
+            draggable.style.top = y + "px";
         }
 
         document.addEventListener("mousemove", moveHero);
