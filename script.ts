@@ -715,29 +715,28 @@ window.addEventListener("load", () => {
             return false;
         };
 
-        function moveHero(event: MouseEvent) {
-            let x = event.pageX - offsetX;
-            let y = event.pageY - offsetY;
+        function moveDraggable(event: MouseEvent) {
+            let left = event.pageX - offsetX;
+            let top = event.pageY - offsetY;
             let rect = draggable.getBoundingClientRect();
-            if (x < 0) x = 0;
+
+            if (left < 0) left = 0;
             let scrollWidth = documentScrollWidth();
-            if (x + rect.width > scrollWidth) {
-                x = scrollWidth - rect.width;
-            }
-            if (y < 0) y = 0;
+            left = Math.min(left, scrollWidth - rect.width);
+
+            if (top < 0) top = 0;
             let scrollHeight = documentScrollHeight();
-            if (y + rect.height > scrollHeight) {
-                y = scrollHeight - rect.height;
-            }
-            draggable.style.left = x + "px";
-            draggable.style.top = y + "px";
+            top = Math.min(top, scrollHeight - rect.height);
+
+            draggable.style.left = left + "px";
+            draggable.style.top = top + "px";
         }
 
-        document.addEventListener("mousemove", moveHero);
-        moveHero(event);
+        document.addEventListener("mousemove", moveDraggable);
+        moveDraggable(event);
 
         document.addEventListener("mouseup", function(event) {
-            document.removeEventListener("mousemove", moveHero);
+            document.removeEventListener("mousemove", moveDraggable);
         });
     });
 });
