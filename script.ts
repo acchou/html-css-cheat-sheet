@@ -19,9 +19,34 @@ interface HTMLCollection {
 // Make HTMLCollection iterable with for...of loops
 HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
 
-// Scope for all variables to avoid conflict with globals named
-// for the id's of elements. Works around a safari bug.
+//
+// Functions for total document height and width
+//
+function documentScrollHeight(): number {
+    return Math.max(
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.offsetHeight,
+        document.body.clientHeight,
+        document.documentElement.clientHeight
+    );
+}
 
+function documentScrollWidth(): number {
+    return Math.max(
+        document.body.scrollWidth,
+        document.documentElement.scrollWidth,
+        document.body.offsetWidth,
+        document.documentElement.offsetWidth,
+        document.body.clientWidth,
+        document.documentElement.clientWidth
+    );
+}
+
+// This is where the example code starts. Only do this after the
+// load event to ensure image sizes are known, otherwise some code
+// fails to work.
 window.addEventListener("load", () => {
     //
     // Center ball on field.
@@ -694,14 +719,15 @@ window.addEventListener("load", () => {
             let x = event.pageX - offsetX;
             let y = event.pageY - offsetY;
             let rect = draggable.getBoundingClientRect();
-            let bodyRect = document.body.getBoundingClientRect();
             if (x < 0) x = 0;
-            if (x + rect.width > bodyRect.right) {
-                x = bodyRect.right - rect.width;
+            let scrollWidth = documentScrollWidth();
+            if (x + rect.width > scrollWidth) {
+                x = scrollWidth - rect.width;
             }
             if (y < 0) y = 0;
-            if (y + rect.height > bodyRect.bottom) {
-                y = bodyRect.bottom - rect.height;
+            let scrollHeight = documentScrollHeight();
+            if (y + rect.height > scrollHeight) {
+                y = scrollHeight - rect.height;
             }
             draggable.style.left = x + "px";
             draggable.style.top = y + "px";
