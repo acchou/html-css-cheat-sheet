@@ -720,6 +720,15 @@ window.addEventListener("load", () => {
             let top = event.pageY - offsetY;
             let rect = draggable.getBoundingClientRect();
 
+            if (rect.top < 0) {
+                scrollBy(0, rect.top);
+            }
+
+            let windowHeight = document.documentElement.clientHeight;
+            if (rect.bottom > windowHeight) {
+                scrollBy(0, rect.bottom - windowHeight);
+            }
+
             if (left < 0) left = 0;
             let scrollWidth = documentScrollWidth();
             left = Math.min(left, scrollWidth - rect.width);
