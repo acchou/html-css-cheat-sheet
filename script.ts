@@ -697,6 +697,59 @@ window.addEventListener("load", () => {
     //
     // Hero example
     //
+    //     document.addEventListener("mousedown", function(event) {
+    //         let elem = document.elementFromPoint(event.clientX, event.clientY);
+    //         if (!elem) return;
+    //         let draggable = elem.closest(".draggable") as HTMLElement;
+    //         if (!draggable || !(draggable instanceof HTMLElement)) return;
+
+    //         event.preventDefault();
+    //         let rect = draggable.getBoundingClientRect();
+    //         let offsetX = event.clientX - rect.left;
+    //         let offsetY = event.clientY - rect.top;
+
+    //         draggable.style.position = "absolute";
+    //         document.body.appendChild(draggable);
+
+    //         draggable.ondragstart = function() {
+    //             return false;
+    //         };
+
+    //         function moveDraggable(event: MouseEvent) {
+    //             let left = event.pageX - offsetX;
+    //             let top = event.pageY - offsetY;
+    //             let rect = draggable.getBoundingClientRect();
+
+    //             if (rect.top < 0) {
+    //                 scrollBy(0, rect.top);
+    //             }
+
+    //             let windowHeight = document.documentElement.clientHeight;
+    //             if (rect.bottom > windowHeight) {
+    //                 scrollBy(0, rect.bottom - windowHeight);
+    //             }
+
+    //             if (left < 0) left = 0;
+    //             let scrollWidth = documentScrollWidth();
+    //             left = Math.min(left, scrollWidth - rect.width);
+
+    //             if (top < 0) top = 0;
+    //             let scrollHeight = documentScrollHeight();
+    //             top = Math.min(top, scrollHeight - rect.height);
+
+    //             draggable.style.left = left + "px";
+    //             draggable.style.top = top + "px";
+    //         }
+
+    //         document.addEventListener("mousemove", moveDraggable);
+    //         moveDraggable(event);
+
+    //         document.addEventListener("mouseup", function(event) {
+    //             document.removeEventListener("mousemove", moveDraggable);
+    //         });
+    //     });
+    // });
+
     document.addEventListener("mousedown", function(event) {
         let elem = document.elementFromPoint(event.clientX, event.clientY);
         if (!elem) return;
@@ -708,44 +761,58 @@ window.addEventListener("load", () => {
         let offsetX = event.clientX - rect.left;
         let offsetY = event.clientY - rect.top;
 
-        draggable.style.position = "absolute";
+        draggable.style.position = "fixed";
+        draggable.style.top = rect.top + "px";
+        draggable.style.left = rect.left + "px";
+
         document.body.appendChild(draggable);
+        setTimeout({}, 0);
 
         draggable.ondragstart = function() {
             return false;
         };
 
         function moveDraggable(event: MouseEvent) {
-            let left = event.pageX - offsetX;
-            let top = event.pageY - offsetY;
+            let left = event.clientX - offsetX;
+            let top = event.clientY - offsetY;
             let rect = draggable.getBoundingClientRect();
 
-            if (rect.top < 0) {
-                scrollBy(0, rect.top);
+            // Scrolling
+            if (rect.top <= 0) {
+                scrollBy(0, -20);
             }
 
             let windowHeight = document.documentElement.clientHeight;
-            if (rect.bottom > windowHeight) {
-                scrollBy(0, rect.bottom - windowHeight);
+            if (rect.bottom >= windowHeight) {
+                scrollBy(0, 20);
             }
 
+            // Ensure draggable stays fully onscreen.
             if (left < 0) left = 0;
-            let scrollWidth = documentScrollWidth();
-            left = Math.min(left, scrollWidth - rect.width);
+            let clientWidth = document.documentElement.clientWidth;
+            left = Math.min(left, clientWidth - rect.width);
 
             if (top < 0) top = 0;
-            let scrollHeight = documentScrollHeight();
-            top = Math.min(top, scrollHeight - rect.height);
+            let clientHeight = document.documentElement.clientHeight;
+            top = Math.min(top, clientHeight - rect.height);
 
             draggable.style.left = left + "px";
             draggable.style.top = top + "px";
         }
 
         document.addEventListener("mousemove", moveDraggable);
-        moveDraggable(event);
 
-        document.addEventListener("mouseup", function(event) {
+        function mouseUpHandler(event: MouseEvent) {
+            let rect = draggable.getBoundingClientRect();
+            let top = pageYOffset + rect.top;
+            let left = pageXOffset + rect.left;
+            draggable.style.top = top + "px";
+            draggable.style.left = left + "px";
+            draggable.style.position = "absolute";
             document.removeEventListener("mousemove", moveDraggable);
-        });
+            document.removeEventListener("mouseup", mouseUpHandler);
+        }
+
+        document.addEventListener("mouseup", mouseUpHandler);
     });
 });
