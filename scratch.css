@@ -272,3 +272,31 @@ p {
 .draggable {
     cursor: pointer;
 }
+
+#matrix {
+    width: 400px;
+    height: 300px;
+    /*margin: auto;*/
+    padding: 0 40px;
+    overflow: auto;
+    text-align: justify;
+    position: relative;
+}
+
+#arrowTop {
+    height: 9px;
+    width: 14px;
+    color: green;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+#arrowTop::before {
+    content: '▲';
+}
+
+.matrixcontainer {
+    margin: auto;
+}

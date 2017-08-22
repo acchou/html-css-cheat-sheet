@@ -173,10 +173,10 @@ window.addEventListener("load", () => {
     // showing click coordinates
     //
     let coords = document.getElementById("coords")!;
-    document.onclick = function(e) {
+    document.addEventListener("click", function(e) {
         // shows click coordinates
         coords.innerHTML = e.clientX + ":" + e.clientY;
-    };
+    });
 
     function getCoords(elem: Element) {
         let bounds = elem.getBoundingClientRect();
@@ -697,59 +697,6 @@ window.addEventListener("load", () => {
     //
     // Hero example
     //
-    //     document.addEventListener("mousedown", function(event) {
-    //         let elem = document.elementFromPoint(event.clientX, event.clientY);
-    //         if (!elem) return;
-    //         let draggable = elem.closest(".draggable") as HTMLElement;
-    //         if (!draggable || !(draggable instanceof HTMLElement)) return;
-
-    //         event.preventDefault();
-    //         let rect = draggable.getBoundingClientRect();
-    //         let offsetX = event.clientX - rect.left;
-    //         let offsetY = event.clientY - rect.top;
-
-    //         draggable.style.position = "absolute";
-    //         document.body.appendChild(draggable);
-
-    //         draggable.ondragstart = function() {
-    //             return false;
-    //         };
-
-    //         function moveDraggable(event: MouseEvent) {
-    //             let left = event.pageX - offsetX;
-    //             let top = event.pageY - offsetY;
-    //             let rect = draggable.getBoundingClientRect();
-
-    //             if (rect.top < 0) {
-    //                 scrollBy(0, rect.top);
-    //             }
-
-    //             let windowHeight = document.documentElement.clientHeight;
-    //             if (rect.bottom > windowHeight) {
-    //                 scrollBy(0, rect.bottom - windowHeight);
-    //             }
-
-    //             if (left < 0) left = 0;
-    //             let scrollWidth = documentScrollWidth();
-    //             left = Math.min(left, scrollWidth - rect.width);
-
-    //             if (top < 0) top = 0;
-    //             let scrollHeight = documentScrollHeight();
-    //             top = Math.min(top, scrollHeight - rect.height);
-
-    //             draggable.style.left = left + "px";
-    //             draggable.style.top = top + "px";
-    //         }
-
-    //         document.addEventListener("mousemove", moveDraggable);
-    //         moveDraggable(event);
-
-    //         document.addEventListener("mouseup", function(event) {
-    //             document.removeEventListener("mousemove", moveDraggable);
-    //         });
-    //     });
-    // });
-
     document.addEventListener("mousedown", function(event) {
         let elem = document.elementFromPoint(event.clientX, event.clientY);
         if (!elem) return;
@@ -815,4 +762,59 @@ window.addEventListener("load", () => {
 
         document.addEventListener("mouseup", mouseUpHandler);
     });
+
+    //
+    // Scrolling - green arrow for returning to top
+    //
+    let matrix = document.getElementById("matrix") as HTMLElement;
+    let arrow = document.getElementById("arrowTop") as HTMLElement;
+    matrix.addEventListener("scroll", function(event: Event) {
+        event.preventDefault();
+        //arrow.style.top = matrix.scrollTop + 10 + "px";
+        if (matrix.scrollTop < matrix.clientHeight) {
+            arrow.style.visibility = "hidden";
+        } else {
+            arrow.style.visibility = "visible";
+        }
+    });
+
+    arrow.addEventListener("click", function(event: MouseEvent) {
+        matrix.scrollTop = 0;
+    });
+
+    //
+    // Load images on demand
+    //
+
+    function withinBounds(num: number, lower: number, upper: number) {
+        return num >= lower && num <= upper;
+    }
+
+    function isVisible(elem: Element) {
+        let rect = elem.getBoundingClientRect();
+        let screenTop = 0;
+        let screenBottom = document.documentElement.clientHeight;
+        return (
+            withinBounds(rect.top, screenTop, screenBottom) ||
+            withinBounds(rect.bottom, screenTop, screenBottom)
+        );
+    }
+
+    let images = document.querySelectorAll("img[data-src]") as NodeListOf<HTMLImageElement>;
+    for (let image of images) {
+        function imageLoader() {
+            if (isVisible(image)) {
+                let src = image.dataset["src"];
+                if (src) {
+                    image.src = src + "?nocache=" + Math.random();
+                }
+                document.removeEventListener("scroll", imageLoader);
+            }
+        }
+        if (isVisible(image)) {
+            imageLoader();
+        } else {
+            document.addEventListener("scroll", imageLoader);
+        }
+    }
 });
