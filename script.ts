@@ -58,6 +58,23 @@ function isVisible(elem: Element) {
     );
 }
 
+function preloadImages(sources: string[], callback: (images: HTMLImageElement[]) => void) {
+    let images = new Array(sources.length);
+    let nLoaded = 0;
+    function onLoad() {
+        if (++nLoaded == sources.length) {
+            callback(images);
+        }
+    }
+    for (let i = 0; i < sources.length; i++) {
+        let image = document.createElement("img") as HTMLImageElement;
+        image.src = sources[i];
+        images[i] = image;
+        image.addEventListener("load", onLoad);
+        image.addEventListener("error", onLoad);
+    }
+}
+
 // This is where the example code starts. Only do this after the
 // load event to ensure image sizes are known, otherwise some code
 // fails to work.
@@ -818,3 +835,32 @@ window.addEventListener("load", () => {
         }
     }
 });
+
+let sources = [
+    "https://en.js.cx/images-load/1.jpg",
+    "https://en.js.cx/images-load/2.jpg",
+    "https://en.js.cx/images-load/3.jpg"
+];
+
+// add random characters to prevent browser caching
+for (let i = 0; i < sources.length; i++) {
+    sources[i] += "?" + Math.random();
+}
+
+// for each image,
+// let's create another img with the same src and check that we have its width immediately
+function testLoaded(images: HTMLImageElement[]) {
+    let preloadElement = document.getElementById("preload") as HTMLElement;
+    let widthSum = 0;
+    for (let i = 0; i < sources.length; i++) {
+        let img = document.createElement("img");
+        img.src = sources[i];
+        widthSum += img.width;
+    }
+    preloadElement.append(...images);
+    let widthSumElem = document.createTextNode("widthSum = " + widthSum + " (should be 300)");
+    preloadElement.append(widthSumElem);
+}
+
+// every image is 100x100, the total width should be 300
+preloadImages(sources, testLoaded);
