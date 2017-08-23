@@ -836,6 +836,9 @@ window.addEventListener("load", () => {
     }
 });
 
+//
+// Preload images
+//
 let sources = [
     "https://en.js.cx/images-load/1.jpg",
     "https://en.js.cx/images-load/2.jpg",
