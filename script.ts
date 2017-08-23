@@ -44,6 +44,20 @@ function documentScrollWidth(): number {
     );
 }
 
+function withinBounds(num: number, lower: number, upper: number) {
+    return num >= lower && num <= upper;
+}
+
+function isVisible(elem: Element) {
+    let rect = elem.getBoundingClientRect();
+    let screenTop = 0;
+    let screenBottom = document.documentElement.clientHeight;
+    return (
+        withinBounds(rect.top, screenTop, screenBottom) ||
+        withinBounds(rect.bottom, screenTop, screenBottom)
+    );
+}
+
 // This is where the example code starts. Only do this after the
 // load event to ensure image sizes are known, otherwise some code
 // fails to work.
@@ -785,20 +799,6 @@ window.addEventListener("load", () => {
     //
     // Load images on demand
     //
-
-    function withinBounds(num: number, lower: number, upper: number) {
-        return num >= lower && num <= upper;
-    }
-
-    function isVisible(elem: Element) {
-        let rect = elem.getBoundingClientRect();
-        let screenTop = 0;
-        let screenBottom = document.documentElement.clientHeight;
-        return (
-            withinBounds(rect.top, screenTop, screenBottom) ||
-            withinBounds(rect.bottom, screenTop, screenBottom)
-        );
-    }
 
     let images = document.querySelectorAll("img[data-src]") as NodeListOf<HTMLImageElement>;
     for (let image of images) {
