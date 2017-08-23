@@ -276,7 +276,7 @@ p {
 #matrix {
     width: 400px;
     height: 300px;
-    /*margin: auto;*/
+    display: inline-block;
     padding: 0 40px;
     overflow: auto;
     text-align: justify;
@@ -284,13 +284,15 @@ p {
 }
 
 #arrowTop {
-    height: 9px;
+    height: 20px;
     width: 14px;
     color: green;
     top: 10px;
     left: 10px;
     cursor: pointer;
     visibility: hidden;
+    display: inline-block;
+    vertical-align: top;
 }
 
 #arrowTop::before {

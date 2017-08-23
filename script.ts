@@ -801,7 +801,6 @@ window.addEventListener("load", () => {
     let arrow = document.getElementById("arrowTop") as HTMLElement;
     matrix.addEventListener("scroll", function(event: Event) {
         event.preventDefault();
-        //arrow.style.top = matrix.scrollTop + 10 + "px";
         if (matrix.scrollTop < matrix.clientHeight) {
             arrow.style.visibility = "hidden";
         } else {
