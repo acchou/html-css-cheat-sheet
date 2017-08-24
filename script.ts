@@ -20,7 +20,7 @@ interface HTMLCollection {
 HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
 
 //
-// Functions for total document height and width
+// Utility functions
 //
 function documentScrollHeight(): number {
     return Math.max(
@@ -73,6 +73,25 @@ function preloadImages(sources: string[], callback: (images: HTMLImageElement[])
         image.addEventListener("load", onLoad);
         image.addEventListener("error", onLoad);
     }
+}
+
+function copyStyle(from: HTMLElement, to: HTMLElement) {
+    let style = getComputedStyle(from);
+    to.style.width = style.width;
+    to.style.height = style.height;
+    to.style.border = style.border;
+    to.style.padding = style.padding;
+    to.style.margin = style.margin;
+    to.style.font = style.font;
+}
+
+function isSubset<T>(subset: Set<T>, ofSet: Set<T>) {
+    for (let x of subset) {
+        if (!ofSet.has(x)) {
+            return false;
+        }
+    }
+    return true;
 }
 
 // This is where the example code starts. Only do this after the
@@ -834,6 +853,78 @@ window.addEventListener("load", () => {
             document.addEventListener("scroll", imageLoader);
         }
     }
+
+    //
+    // Add an option to select
+    //
+
+    let genres = document.getElementById("genres") as HTMLSelectElement;
+    genres.options.add(new Option("Jazz", "jazz", true, true), 0);
+
+    //
+    // Add a tabindex (to allow focusing) to all codeblocks
+    //
+    let codeblocks = document.querySelectorAll(".codeblock");
+    let tabIndex = 1;
+    for (let codeblock of codeblocks) {
+        codeblock.setAttribute("tabindex", String(tabIndex++));
+    }
+
+    //
+    // Turn a div into an editable textarea
+    //
+    let view = document.getElementById("view") as HTMLElement;
+    view.tabIndex = 1;
+    view.addEventListener("focus", () => {
+        let textArea = document.createElement("textarea");
+        textArea.textContent = view.innerHTML;
+        copyStyle(view, textArea);
+        textArea.addEventListener("blur", () => {
+            view.innerHTML = textArea.value;
+            textArea.after(view);
+            textArea.remove();
+        });
+        view.after(textArea);
+        view.remove();
+        textArea.focus();
+    });
+
+    //
+    // Interest calculator that updates immediately on every input value change
+    //
+    let heightAfter = document.getElementById("height-after") as HTMLElement;
+    let heightBefore = document.getElementById("height-before") as HTMLElement;
+    let moneyBefore = document.getElementById("money-before") as HTMLElement;
+    let moneyAfter = document.getElementById("money-after") as HTMLElement;
+    let form = document.forms[0];
+    let initialDeposit = form.money as HTMLInputElement;
+    let months = form.months as HTMLSelectElement;
+    let interest = form.interest as HTMLInputElement;
+
+    function updateChart() {
+        let before = Number(initialDeposit.value);
+        if (before) {
+            moneyBefore.textContent = "$" + before;
+        } else {
+            moneyBefore.textContent = "$0";
+        }
+
+        let multiple = Math.pow(1 + Number(interest.value) / 100, Number(months.value) / 12);
+        if (multiple > 0) {
+            let after = Math.round(before * multiple);
+            moneyAfter.textContent = "$" + after;
+            heightAfter.style.height =
+                heightBefore.getBoundingClientRect().height * (after / before) + "px";
+        } else {
+            heightAfter.style.height = "0";
+            moneyAfter.textContent = "$0";
+        }
+    }
+
+    initialDeposit.addEventListener("input", () => updateChart());
+    months.addEventListener("input", () => updateChart());
+    interest.addEventListener("input", () => updateChart());
+    updateChart();
 });
 
 //
@@ -867,3 +958,21 @@ function testLoaded(images: HTMLImageElement[]) {
 
 // every image is 100x100, the total width should be 300
 preloadImages(sources, testLoaded);
+
+//
+// Extended Hotkeys example
+//
+function runOnKeys(f: () => void, ...codes: string[]) {
+    let currentlyPressedKeys = new Set();
+    let hotKeys = new Set(codes);
+    document.addEventListener("keydown", event => {
+        currentlyPressedKeys.add(event.code);
+        if (isSubset(hotKeys, currentlyPressedKeys)) {
+            f();
+            currentlyPressedKeys.clear();
+        }
+    });
+    document.addEventListener("keyup", event => currentlyPressedKeys.delete(event.code));
+}
+
+runOnKeys(() => alert("Pressed hotkey!"), "KeyQ", "KeyW");

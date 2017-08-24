@@ -300,3 +300,49 @@ p {
 .matrixcontainer {
     margin: auto;
 }
+
+:focus {
+    outline: 1px dashed green;
+}
+
+.view {
+    border: 1px solid black;
+    width: 400px;
+    height: 200px;
+}
+
+form table td {
+    border: none;
+}
+
+form td {
+    width: 200px;
+    text-align: right;
+}
+
+#diagram td select,
+#diagram td input {
+    text-align: left;
+    width: 150px;
+}
+
+#diagram {
+    padding: 20px;
+    margin-top: 50px;
+    margin-left: 10%;
+}
+
+#diagram td {
+    vertical-align: bottom;
+    text-align: center;
+    padding: 10px;
+    border: none;
+}
+
+#diagram th {
+    border: none;
+}
+
+#diagram div {
+    margin: auto;
+}

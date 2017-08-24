@@ -597,6 +597,79 @@
     </div>
 
     <div id="preload" class="scratch"></div>
+
+    <div class="scratch">
+        <p>Add an option "Jazz" using JS.</p>
+        <select id="genres">
+            <option value="rock">Rock</option>
+            <option value="blues" selected>Blues</option>
+          </select>
+    </div>
+
+    <div class="scratch">
+        <div class="codeblock">codeblock 1</div>
+        <div class="codeblock">codeblock 2</div>
+        <div class="codeblock">codeblock 3</div>
+        <div class="codeblock">codeblock 4</div>
+    </div>
+
+    <div class="scratch">
+        <div id="view" class="view">Text</div>
+    </div>
+
+    <div class="scratch">
+        Hotkey example: press '<b>q</b>' and '<b>w</b>' simultaneously.
+    </div>
+
+    <div class="scratch">
+        <form name="calculator">
+            <table>
+                <tr>
+                    <td>Initial deposit</td>
+                    <td>
+                        <input name="money" type="number" value="10000" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>How many months?</td>
+                    <td>
+                        <select name="months">
+                            <option value="3">3 (minimum)</option>
+                            <option value="6">6 (half-year)</option>
+                            <option value="12" selected>12 (one year)</option>
+                            <option value="18">18 (1.5 years)</option>
+                            <option value="24">24 (2 years)</option>
+                            <option value="30">30 (2.5 years)</option>
+                            <option value="36">36 (3 years)</option>
+                            <option value="60">60 (5   years)</option>
+                          </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Interest per year?</td>
+                    <td>
+                        <input name="interest" type="number" value="5" required>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <table id="diagram">
+            <tr>
+                <th>Was:</th>
+                <th>Becomes:</th>
+            </tr>
+            <tr>
+                <th id="money-before"></th>
+                <th id="money-after"></th>
+            </tr>
+            <td>
+                <div style="background: red;width:40px;height:100px" id="height-before"></div>
+            </td>
+            <td>
+                <div style="background: green;width:40px;height:0" id="height-after"></div>
+            </td>
+        </table>
+    </div>
 </body>
 
 </html>
