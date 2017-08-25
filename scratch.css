@@ -383,3 +383,23 @@ form td {
     height: 100%;
     width: 100%;
 }
+
+#flyjet {
+    transition: all 3s;
+    width: 40px;
+    height: 24px;
+}
+
+#flyjet.growing {
+    width: 400px;
+    height: 240px;
+}
+
+.circle {
+    height: 0;
+    width: 0;
+    transition: all 3s;
+    border-radius: 100%;
+    background-color: red;
+    position: absolute;
+}

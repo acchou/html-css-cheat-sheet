@@ -972,6 +972,21 @@ window.addEventListener("load", () => {
     formButton.addEventListener("click", () =>
         showPrompt("Hi there", (value: string) => alert("you typed " + value))
     );
+
+    let flyjet = document.getElementById("flyjet") as HTMLElement;
+    flyjet.addEventListener("click", () => {
+        flyjet.classList.add("growing");
+    });
+
+    function showCircle(cx: number, cy: number, radius: number) {
+        let circle = document.createElement("div");
+        circle.classList.add("circle");
+        document.body.appendChild(circle);
+        circle.style.top = pageYOffset + cy + "px";
+        circle.style.left = cx + "px";
+        circle.style.height = circle.style.width = radius * 2 + "px";
+    }
+    showCircle(150, 150, 100);
 });
 
 //
