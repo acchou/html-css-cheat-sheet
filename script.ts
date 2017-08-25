@@ -924,6 +924,54 @@ window.addEventListener("load", () => {
     months.addEventListener("input", () => updateChart());
     interest.addEventListener("input", () => updateChart());
     updateChart();
+
+    //
+    // Modal prompt
+    //
+    function showPrompt(html: string, callback: (value: string | null) => void) {
+        let container = document.querySelector(".prompt-form-container") as HTMLElement;
+        let form = document.getElementById("prompt-form") as HTMLFormElement;
+        let message = form.querySelector("#prompt-message") as HTMLElement;
+        let input = form.input as HTMLInputElement;
+
+        message.innerHTML = html;
+        input.value = "";
+
+        let pane = document.createElement("div") as HTMLElement;
+        pane.classList.add("semitransparent");
+
+        function show() {
+            document.body.appendChild(pane);
+            document.body.style.overflow = "hidden";
+            container.style.display = "flex";
+            input.focus();
+        }
+
+        function hide() {
+            pane.remove();
+            document.body.style.overflow = "scroll";
+            container.style.display = "none";
+        }
+
+        form.onsubmit = event => {
+            event.preventDefault();
+            hide();
+            callback(input.value);
+        };
+
+        let cancel = form.cancel as HTMLInputElement;
+        cancel.onclick = event => {
+            hide();
+            callback(null);
+        };
+
+        show();
+    }
+
+    let formButton = document.getElementById("modal-form-button") as HTMLButtonElement;
+    formButton.addEventListener("click", () =>
+        showPrompt("Hi there", (value: string) => alert("you typed " + value))
+    );
 });
 
 //

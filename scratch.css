@@ -348,3 +348,38 @@ form td {
 #diagram div {
     margin: auto;
 }
+
+#prompt-form {
+    border: 1px solid black;
+    margin: auto;
+    width: 200px;
+    padding: 20px;
+    background-color: white;
+}
+
+#prompt-form input[type='text'] {
+    display: block;
+}
+
+.prompt-form-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.semitransparent {
+    position: fixed;
+    background-color: gray;
+    opacity: 0.3;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
