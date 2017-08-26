@@ -398,8 +398,14 @@ form td {
 .circle {
     height: 0;
     width: 0;
-    transition: all 3s;
+    transition: 3s all;
     border-radius: 100%;
     background-color: red;
     position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#circleExample {
+    position: relative;
+    height: 300px;
 }

@@ -1,6 +1,7 @@
 // These interface declarations allow for common DOM apis that are becoming available,
 // without as much type casting. A little less safety in return for convenience in
 // a common case.
+
 interface Node {
     prepend(...nodes: (Node | string)[]): void;
     append(...nodes: (Node | string)[]): void;
@@ -977,16 +978,6 @@ window.addEventListener("load", () => {
     flyjet.addEventListener("click", () => {
         flyjet.classList.add("growing");
     });
-
-    function showCircle(cx: number, cy: number, radius: number) {
-        let circle = document.createElement("div");
-        circle.classList.add("circle");
-        document.body.appendChild(circle);
-        circle.style.top = pageYOffset + cy + "px";
-        circle.style.left = cx + "px";
-        circle.style.height = circle.style.width = radius * 2 + "px";
-    }
-    showCircle(150, 150, 100);
 });
 
 //
@@ -1038,3 +1029,24 @@ function runOnKeys(f: () => void, ...codes: string[]) {
 }
 
 runOnKeys(() => alert("Pressed hotkey!"), "KeyQ", "KeyW");
+
+function showCircle(inElem: HTMLElement, cx: number, cy: number, radius: number) {
+    let circle = document.createElement("div");
+    circle.classList.add("circle");
+    inElem.appendChild(circle);
+    circle.style.width = circle.style.height = 0 + "px";
+    circle.style.top = cy + "px";
+    circle.style.left = cx + "px";
+
+    setTimeout(() => {
+        circle.style.height = circle.style.width = radius * 2 + "px";
+    }, 0);
+
+    return circle;
+}
+
+let circleExample = document.getElementById("circleExample") as HTMLElement;
+
+let circleButton = document.getElementById("circleButton") as HTMLElement;
+circleButton.addEventListener("click", () => showCircle(circleExample, 200, 200, 100));
+//showCircle(document.body, 300, 300, 100);
