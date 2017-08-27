@@ -978,6 +978,30 @@ window.addEventListener("load", () => {
     flyjet.addEventListener("click", () => {
         flyjet.classList.add("growing");
     });
+
+    //
+    // Circle animation example
+    //
+    function showCircle(inElem: HTMLElement, cx: number, cy: number, radius: number) {
+        let circle = document.createElement("div");
+        circle.classList.add("circle");
+        inElem.appendChild(circle);
+        circle.style.width = circle.style.height = 0 + "px";
+        circle.style.top = cy + "px";
+        circle.style.left = cx + "px";
+
+        setTimeout(() => {
+            circle.style.height = circle.style.width = radius * 2 + "px";
+        }, 0);
+
+        return circle;
+    }
+
+    let circleExample = document.getElementById("circleExample") as HTMLElement;
+
+    let circleButton = document.getElementById("circleButton") as HTMLElement;
+    circleButton.addEventListener("click", () => showCircle(circleExample, 200, 200, 100));
+    //showCircle(document.body, 300, 300, 100);
 });
 
 //
@@ -1029,24 +1053,3 @@ function runOnKeys(f: () => void, ...codes: string[]) {
 }
 
 runOnKeys(() => alert("Pressed hotkey!"), "KeyQ", "KeyW");
-
-function showCircle(inElem: HTMLElement, cx: number, cy: number, radius: number) {
-    let circle = document.createElement("div");
-    circle.classList.add("circle");
-    inElem.appendChild(circle);
-    circle.style.width = circle.style.height = 0 + "px";
-    circle.style.top = cy + "px";
-    circle.style.left = cx + "px";
-
-    setTimeout(() => {
-        circle.style.height = circle.style.width = radius * 2 + "px";
-    }, 0);
-
-    return circle;
-}
-
-let circleExample = document.getElementById("circleExample") as HTMLElement;
-
-let circleButton = document.getElementById("circleButton") as HTMLElement;
-circleButton.addEventListener("click", () => showCircle(circleExample, 200, 200, 100));
-//showCircle(document.body, 300, 300, 100);
