@@ -405,7 +405,14 @@ form td {
     transform: translateX(-50%) translateY(-50%);
 }
 
-#circleExample {
+#circleExample,
+#circleExampleCallback {
     position: relative;
     height: 300px;
+}
+
+.circleMessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

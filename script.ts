@@ -982,7 +982,13 @@ window.addEventListener("load", () => {
     //
     // Circle animation example
     //
-    function showCircle(inElem: HTMLElement, cx: number, cy: number, radius: number) {
+    function showCircle(
+        inElem: HTMLElement,
+        cx: number,
+        cy: number,
+        radius: number,
+        callback?: (div: HTMLElement) => void
+    ) {
         let circle = document.createElement("div");
         circle.classList.add("circle");
         inElem.appendChild(circle);
@@ -992,16 +998,28 @@ window.addEventListener("load", () => {
 
         setTimeout(() => {
             circle.style.height = circle.style.width = radius * 2 + "px";
-        }, 0);
 
-        return circle;
+            circle.addEventListener("transitionend", function handler() {
+                circle.removeEventListener("transitionend", handler);
+                if (callback) {
+                    callback(circle);
+                }
+            });
+        }, 0);
     }
 
     let circleExample = document.getElementById("circleExample") as HTMLElement;
-
     let circleButton = document.getElementById("circleButton") as HTMLElement;
     circleButton.addEventListener("click", () => showCircle(circleExample, 200, 200, 100));
-    //showCircle(document.body, 300, 300, 100);
+
+    let circleExampleCallback = document.getElementById("circleExampleCallback") as HTMLElement;
+    let circleButtonCallback = document.getElementById("circleButtonCallback") as HTMLElement;
+    circleButtonCallback.addEventListener("click", () =>
+        showCircle(circleExampleCallback, 200, 200, 100, div => {
+            div.classList.add("circleMessage");
+            div.append("Hello I'm done!");
+        })
+    );
 });
 
 //
