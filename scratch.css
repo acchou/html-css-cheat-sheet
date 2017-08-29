@@ -406,7 +406,8 @@ form td {
 }
 
 #circleExample,
-#circleExampleCallback {
+#circleExampleCallback,
+#circleExamplePromise {
     position: relative;
     height: 300px;
 }
@@ -415,4 +416,18 @@ form td {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#githubProfile {
+    margin: 20px;
+    display: block;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+#githubProfileFields {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-auto-rows: 1em;
 }

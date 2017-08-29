@@ -1020,6 +1020,181 @@ window.addEventListener("load", () => {
             div.append("Hello I'm done!");
         })
     );
+
+    //
+    // showCircle with promises instead of callbacks
+    //
+    function showCirclePromise(inElem: HTMLElement, cx: number, cy: number, radius: number) {
+        let circle = document.createElement("div");
+        circle.classList.add("circle");
+        inElem.appendChild(circle);
+        circle.style.width = circle.style.height = 0 + "px";
+        circle.style.top = cy + "px";
+        circle.style.left = cx + "px";
+
+        return new Promise(resolve => {
+            setTimeout(() => {
+                circle.style.height = circle.style.width = radius * 2 + "px";
+                circle.addEventListener("transitionend", function handler() {
+                    circle.removeEventListener("transitionend", handler);
+                    resolve(circle);
+                });
+            }, 0);
+        });
+    }
+
+    let circleExamplePromise = document.getElementById("circleExamplePromise") as HTMLElement;
+    let circleButtonPromise = document.getElementById("circleButtonPromise") as HTMLElement;
+    circleButtonPromise.addEventListener("click", () =>
+        showCirclePromise(circleExamplePromise, 200, 200, 100).then((div: HTMLElement) => {
+            div.classList.add("circleMessage");
+            div.append("Hello I'm done!");
+        })
+    );
+
+    //
+    // Delay with promise
+    //
+    function delay(ms: number) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    let delayButton = document.getElementById("delayButton") as HTMLButtonElement;
+    delayButton.addEventListener("click", () => delay(3000).then(() => alert("runs after 3s")));
+
+    //
+    // async / await examples
+    //
+    function loadJson(url: string) {
+        return fetch(url).then(response => {
+            if (response.status == 200) {
+                return response.json();
+            } else {
+                throw new Error(String(response.status));
+            }
+        });
+    }
+
+    async function loadJsonAsync(url: string) {
+        let response = await fetch(url);
+        if (response.status == 200) {
+            return response.json();
+        }
+        throw new Error(String(response.status));
+    }
+
+    // loadJson("missing.json").catch(alert);
+
+    class HttpError extends Error {
+        response: Response;
+
+        constructor(response: Response) {
+            super(`${response.status} for ${response.url}`);
+            this.name = "HttpError";
+            this.response = response;
+        }
+    }
+
+    async function loadJson2(url: string) {
+        let response = await fetch(url);
+        if (response.status == 200) {
+            return response.json();
+        }
+        throw new HttpError(response);
+    }
+
+    async function demoGithubUser(): Promise<any> {
+        let name = prompt("Enter a name?", "acchou");
+
+        try {
+            let user = await loadJson2(`https://api.github.com/users/${name}`);
+            alert(`full name: ${user.name}`);
+            return user;
+        } catch (error) {
+            if (error instanceof HttpError && error.response.status == 404) {
+                alert("No such user, please reenter.");
+                return demoGithubUser();
+            }
+            throw error;
+        }
+    }
+
+    //
+    // Github profile example
+    //
+
+    let githubUserName = document.getElementById("githubUserNameInput") as HTMLInputElement;
+
+    interface GithubUser {
+        login: string;
+        id: number;
+        avatar_url: string;
+        gravatar_id: string;
+        url: string;
+        html_url: string;
+        followers_url: string;
+        following_url: string;
+        gists_url: string;
+        starred_url: string;
+        subscriptions_url: string;
+        organizations_url: string;
+        repos_url: string;
+        events_url: string;
+        received_events_url: string;
+        type: string;
+        site_admin: boolean;
+        name: string;
+        company: string;
+        blog: string;
+        location: string;
+        email: string | null;
+        hireable: string | null;
+        bio: string | null;
+        public_repos: number;
+        public_gists: number;
+        followers: number;
+        following: number;
+        created_at: string;
+        updated_at: string;
+    }
+
+    function get(id: string) {
+        return document.getElementById(id) as HTMLElement;
+    }
+
+    let avatar = get("githubAvatar") as HTMLImageElement;
+    let errorMessage = get("error");
+    let githubName = get("githubName");
+    let githubBlog = get("githubBlog");
+    let githubLogin = get("githubLogin");
+
+    function clearProfile() {
+        avatar.src = "";
+        errorMessage.textContent = "";
+        githubName.textContent = "";
+        githubBlog.textContent = "";
+        githubLogin.textContent = "";
+    }
+
+    async function fetchGitHubProfile(userName: string) {
+        try {
+            errorMessage.textContent = "";
+            let user = <GithubUser>await loadJson2(`https://api.github.com/users/${userName}`);
+            avatar.src = user.avatar_url;
+            githubName.textContent = user.name;
+            githubBlog.textContent = user.blog;
+            githubLogin.textContent = user.login;
+        } catch (error) {
+            clearProfile();
+            if (error instanceof HttpError) {
+                errorMessage.textContent = `${error.name}: ${error.message}`;
+            }
+        }
+    }
+
+    githubUserName.addEventListener("input", event => fetchGitHubProfile(githubUserName.value));
+
+    //let githubUser = demoGithubUser();
 });
 
 //
