@@ -1178,12 +1178,13 @@ window.addEventListener("load", () => {
 
     async function fetchGitHubProfile(userName: string) {
         try {
-            errorMessage.textContent = "";
             let user = <GithubUser>await loadJson2(`https://api.github.com/users/${userName}`);
+            errorMessage.textContent = "";
             avatar.src = user.avatar_url;
             githubName.textContent = user.name;
             githubBlog.textContent = user.blog;
             githubLogin.textContent = user.login;
+            return user;
         } catch (error) {
             clearProfile();
             if (error instanceof HttpError) {

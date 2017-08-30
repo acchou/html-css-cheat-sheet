@@ -426,6 +426,11 @@ form td {
     flex-direction: column;
 }
 
+#githubAvatar {
+    height: auto;
+    width: 400px;
+}
+
 #githubProfileFields {
     display: grid;
     grid-template-columns: 1fr 3fr;
