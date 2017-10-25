@@ -6,7 +6,7 @@
     --bg-color-hover: green;
     --bg-color-light: white;
     --bg-color-link: yellow;
-    --bg-color-nav: hsla(0, 0%, 30%, 0.85);
+    --bg-color-nav: hsla(0, 0%, 30%, 1);
     --bg-color-semitransparent: hsla(0, 0%, 40%, 0.8);
     --bg-color-visited: #ccc;
     --bg-color: #eee;
@@ -23,42 +23,37 @@
     --font-color-dark: black;
     --font-color-light: white;
     --font-color-medium: #777;
-    --font-family-code: 'Source Code Pro', monospace;
-    --font-family-main: 'Source Sans Pro', sans-serif;
+    --font-family-code: "Source Code Pro", monospace;
+    --font-family-main: "Source Sans Pro", sans-serif;
     --height-size-box: 100px;
 }
 
-nav > ul {
+nav {
     position: fixed;
-    list-style: none;
-    min-width: 100px;
-    background-color: var(--bg-color-nav);
-    padding: 16px;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
     z-index: 1000;
+    background-color: var(--bg-color-nav);
+    min-width: 100px;
+    min-height: 40px;
+    width: 100%;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+}
+
+nav > ul.left {
+    padding-left: 10px;
 }
 
 nav > ul > li {
-    display: inline-block;
     margin: 0px 20px;
     color: var(--font-color-light);
-}
-
-nav > ul > li.nav-right {
-    display: none;
-    float: right;
-    margin: 0 60px;
-}
-
-@media (min-width: 600px) {
-    nav > ul > li.nav-right {
-        display: block;
-    }
-}
-
-nav {
-    padding-bottom: 75px;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 nav a:link,
@@ -67,8 +62,15 @@ nav a:visited {
     text-decoration: none;
 }
 
+nav .social-logo {
+    display: block;
+    width: 28px;
+    height: 28px;
+}
+
 ul,
 ol {
+    padding: 0;
     margin: 0;
 }
 
@@ -85,10 +87,24 @@ body {
     body {
         font-size: 16px;
     }
+    nav {
+        min-height: 60px;
+    }
+    nav .social-logo {
+        width: 32px;
+        height: 32px;
+    }
+    nav > ul.left {
+        padding-left: 20px;
+    }
 }
 
 .size-boxes {
     display: none;
+}
+
+#html {
+    padding-top: 60px;
 }
 
 .size-box {
@@ -529,7 +545,7 @@ section {
 
 .margin-box,
 .ex-margin {
-    background-color: hsla(50, 100%, 50%, 0.20);
+    background-color: hsla(50, 100%, 50%, 0.2);
 }
 
 .margin-box {

@@ -13,6 +13,7 @@ Just open `html-css-cheat-sheet.html` in your browser. There are no external dep
 - **Property name headings** describe the CSS property, and the specific visual examples have property values underneath.
 - Coverage of the latest standards including **flexbox** and **native CSS grid layout**.
 - Coverage of **keyframe animations**, **transitions**, and use of the popular library **animate.css**.
+- Uses **responsive design** and should view well on mobile devices, tablets, and large screens.
 
 ## Not a tutorial
 
