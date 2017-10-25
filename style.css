@@ -103,7 +103,8 @@ body {
     display: none;
 }
 
-#html {
+#html,
+#animation-transitions {
     padding-top: 60px;
 }
 
