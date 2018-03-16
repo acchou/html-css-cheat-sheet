@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML5 and CSS cheat sheet</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+</head>
+
+<!-- div.section>h2+div.snippet>h2+div.codeblock>div.ex+code -->
+
+<body>
+    <script>
+        window.addEventListener("load", () => {
+            let matrixInput = document.querySelector("#matrix1");
+            let matrixOutput = document.querySelector("#matrix1-out");
+            function validMatrix(m) {
+                return m.length === 6 && m.filter(elem => typeof (elem) !== "number").length === 0;
+            }
+            function applyTransform(p, m) {
+                var xt = p[0] * m[0] + p[1] * m[2] + m[4];
+                var yt = p[0] * m[1] + p[1] * m[3] + m[5];
+                return [xt, yt];
+            }
+
+            matrixInput.addEventListener("input", event => {
+                let matrix = String(matrixInput.value).split(" ").filter(x => x !== "").map(Number);
+                console.log(`matrix input: ${matrixInput.value}`);
+                if (validMatrix(matrix)) {
+                    matrixOutput.textContent = `(${applyTransform([0, 0], matrix).join(" ")})`;
+                } else {
+                    matrixOutput.textContent = `Invalid input, matrix must be 6 numbers separated by spaces: ${matrix}`;
+                }
+            });
+        });
+    </script>
+
+    <nav>
+        <ul class="left">
+            <li>
+                <a href="html-css-cheat-sheet.html#html">HTML</a>
+            </li>
+            <li>
+                <a href="html-css-cheat-sheet.html#css">CSS</a>
+            </li>
+            <li>
+                <a href="animation.html#animation">Animation</a>
+            </li>
+            <li>
+                <a href="tools.html">Tools</a>
+            </li>
+        </ul>
+        <ul class="right">
+            <li>
+                <a href="https://github.com/acchou/html-css-cheat-sheet" target="_blank" rel="noopener noreferrer">
+                    <img class="social-logo" src="github.svg">
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <section id="html">
+        <h1>Tools</h1>
+        <section id="html-templates">
+            <h2>Transforms</h2>
+            <div class="snippet span-7">
+                <h2>Matrix transforms</h2>
+                <div class="matrix">
+                    <div class="codeblock">
+                        matrix(
+                        <input id="matrix1" type="text">)
+                    </div>
+                    <div class="codeblock">
+                        (0 0) =>
+                        <label id="matrix1-out" data-x="0" data-y="0" />
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>
