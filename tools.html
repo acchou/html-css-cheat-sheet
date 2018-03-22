@@ -13,10 +13,16 @@
 <!-- div.section>h2+div.snippet>h2+div.codeblock>div.ex+code -->
 
 <body>
+    <script src="https://unpkg.com/most/dist/most.min.js"></script>
     <script>
         window.addEventListener("load", () => {
-            let matrixInput = document.querySelector("#matrix1");
-            let matrixOutput = document.querySelector("#matrix1-out");
+            let matrixInput = document.getElementById("matrix1");
+            let matrixOutput = document.getElementById("matrix1-out");
+
+            let x = Number(document.getElementById("x").textContent);
+            let y = Number(document.getElementById("y").textContent);
+            let matrixOutput2 = document.getElementById("matrix1-out2");
+
             function validMatrix(m) {
                 return m.length === 6 && m.filter(elem => typeof (elem) !== "number").length === 0;
             }
@@ -31,6 +37,7 @@
                 console.log(`matrix input: ${matrixInput.value}`);
                 if (validMatrix(matrix)) {
                     matrixOutput.textContent = `(${applyTransform([0, 0], matrix).join(" ")})`;
+                    matrixOutput2.textContent = `(${applyTransform([x, y], matrix).join(" ")})`;
                 } else {
                     matrixOutput.textContent = `Invalid input, matrix must be 6 numbers separated by spaces: ${matrix}`;
                 }
@@ -77,6 +84,12 @@
                     <div class="codeblock">
                         (0 0) =>
                         <label id="matrix1-out" data-x="0" data-y="0" />
+                    </div>
+                    <div class="codeblock">
+                        (
+                        <input placeholder="x" id="x" size="5">
+                        <input placeholder="y" id="y" size="5">) =>
+                        <label id="matrix1-out2" />
                     </div>
                 </div>
             </div>
