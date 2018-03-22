@@ -13,15 +13,20 @@
 <!-- div.section>h2+div.snippet>h2+div.codeblock>div.ex+code -->
 
 <body>
-    <script src="https://unpkg.com/most/dist/most.min.js"></script>
+    <script src="https://unpkg.com/most/dist/most.js"></script>
     <script>
         window.addEventListener("load", () => {
-            let matrixInput = document.getElementById("matrix1");
-            let matrixOutput = document.getElementById("matrix1-out");
+            const { fromEvent, combine } = most;
+            let matrixInput = document.getElementById("matrix-1");
+            let out1 = document.getElementById("out-1");
+            let xInput = document.getElementById("x");
+            let yInput = document.getElementById("y");
+            let out2 = document.getElementById("out-2");
 
-            let x = Number(document.getElementById("x").textContent);
-            let y = Number(document.getElementById("y").textContent);
-            let matrixOutput2 = document.getElementById("matrix1-out2");
+            function toNumber(event) {
+                console.log(event.target.value);
+                return Number(event.target.value)
+            }
 
             function validMatrix(m) {
                 return m.length === 6 && m.filter(elem => typeof (elem) !== "number").length === 0;
@@ -32,16 +37,23 @@
                 return [xt, yt];
             }
 
-            matrixInput.addEventListener("input", event => {
-                let matrix = String(matrixInput.value).split(" ").filter(x => x !== "").map(Number);
-                console.log(`matrix input: ${matrixInput.value}`);
-                if (validMatrix(matrix)) {
-                    matrixOutput.textContent = `(${applyTransform([0, 0], matrix).join(" ")})`;
-                    matrixOutput2.textContent = `(${applyTransform([x, y], matrix).join(" ")})`;
-                } else {
-                    matrixOutput.textContent = `Invalid input, matrix must be 6 numbers separated by spaces: ${matrix}`;
-                }
-            });
+            console.dir(matrixInput);
+            console.dir(out1);
+            console.dir(out2);
+            console.dir(xInput);
+            console.dir(yInput);
+
+            const matrix$ = fromEvent("input", matrixInput).map((event) =>
+                String(event.target.value).split(" ").filter(x => x !== "").map(Number)
+            );
+            const x$ = fromEvent("input", xInput).map(toNumber);
+            const y$ = fromEvent("input", yInput).map(toNumber);
+            const point$ = combine((a, b) => { const p = [a, b]; console.log(p); return p; }, x$, y$);
+            const out1$ = matrix$.map(m => applyTransform([0, 0], m));
+            const out2$ = combine(applyTransform, point$, matrix$);
+
+            out1$.map(p => p.join(" ")).observe(p => out1.textContent = p);
+            out2$.map(p => p.join(" ")).observe(p => out2.textContent = p);
         });
     </script>
 
@@ -79,17 +91,17 @@
                 <div class="matrix">
                     <div class="codeblock">
                         matrix(
-                        <input id="matrix1" type="text">)
+                        <input id="matrix-1" type="text">)
                     </div>
                     <div class="codeblock">
                         (0 0) =>
-                        <label id="matrix1-out" data-x="0" data-y="0" />
+                        <label id="out-1" data-x="0" data-y="0" />
                     </div>
                     <div class="codeblock">
                         (
-                        <input placeholder="x" id="x" size="5">
-                        <input placeholder="y" id="y" size="5">) =>
-                        <label id="matrix1-out2" />
+                        <input placeholder="x" id="x" size="5" type="text">
+                        <input placeholder="y" id="y" size="5" type="text">) =>
+                        <label id="out-2" />
                     </div>
                 </div>
             </div>
