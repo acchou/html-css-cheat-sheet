@@ -4,10 +4,12 @@
 <head>
     <title>HTML5 and CSS cheat sheet</title>
     <link href="../css/style.css" type="text/css" rel="stylesheet">
+    <link href="../css/sidebar.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
+    <script src="../js/sidebar.js"></script>
 </head>
 
 <!-- div.section>h2+div.snippet>h2+div.codeblock>div.ex+code -->
@@ -31,7 +33,7 @@
         <ul class="right">
             <li>
                 <a href="https://github.com/acchou/html-css-cheat-sheet" target="_blank" rel="noopener noreferrer">
-                    <img class="social-logo" src="github.svg">
+                    <img class="social-logo" src="../github.svg">
                 </a>
             </li>
         </ul>
@@ -63,7 +65,21 @@
         <div class="size-box box-23">100px</div>
         <div class="size-box box-24">100px</div>
     </div>
+    <div id="side-navigation" style="padding-top: 60px">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="padding-top: 60px">&times;</a>
+        <a href="#html-templates">Templates</a>
+        <a href="#html-elements">Elements</a>
+        <a href="#html-links">Links</a>
+        <a href="#html-images">Images</a>
+        <a href="#html-lists">Lists</a>
+        <a href="#html-comments">Comments</a>
+        <a href="#html-tables">Tables</a>
+    </div>
 
+    <div id="main">
     <section id="html">
         <h1>HTML</h1>
         <section id="html-templates">
@@ -829,8 +845,7 @@
             </div>
         </section>
     </section>
-    <!-- End section HTML -->
-
+    </div>
 </body>
 
 </html>

@@ -4,10 +4,12 @@
 <head>
     <title>HTML5 and CSS cheat sheet</title>
     <link href="../css/style.css" type="text/css" rel="stylesheet">
+    <link href="../css/sidebar.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
+    <script src="../js/sidebar.js"></script>
 </head>
 
 <!-- div.section>h2+div.snippet>h2+div.codeblock>div.ex+code -->
@@ -31,7 +33,7 @@
         <ul class="right">
             <li>
                 <a href="https://github.com/acchou/html-css-cheat-sheet" target="_blank" rel="noopener noreferrer">
-                    <img class="social-logo" src="github.svg">
+                    <img class="social-logo" src="../github.svg">
                 </a>
             </li>
         </ul>
@@ -64,6 +66,29 @@
         <div class="size-box box-24">100px</div>
     </div>
 
+    <div id="side-navigation" style="padding-top: 60px">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="padding-top: 60px">&times;</a>
+        <a href="#css-structure">Structure</a>
+        <a href="#css-pseudo">Pseudo</a>
+        <a href="#css-fonts">Fonts</a>
+        <a href="#css-text">Text</a>
+        <a href="#css-list">List</a>
+        <a href="#css-box">Box</a>
+        <a href="#css-positioning">Positioning</a>
+        <a href="#css-flexbox-containers">Flexbox Containers</a>
+        <a href="#css-flexbox-items">Flexbox Items</a>
+        <a href="#css-grid-containers">Grid Containers</a>
+        <a href="#css-grid-items">Grid Items</a>
+        <a href="#css-table">Tables</a>
+        <a href="#css-borders">Borders</a>
+        <a href="#css-colors">Colors</a>
+        <a href="#css-responsive">Responsive</a>
+    </div>
+
+    <div id="main">
     <section id="css">
         <h1>CSS</h1>
         <section id="css-structure">
@@ -2086,7 +2111,7 @@
         </section>
         <!-- section Flexbox items -->
 
-        <section class="css-grid-containers">
+        <section id="css-grid-containers">
             <h2>Grid containers</h2>
             <h3>Experimental. Limited support in Safari, Edge.</h3>
             <div class="snippet" id="css-grid-display">
@@ -2487,7 +2512,7 @@
         </section>
         <!-- section Grid containers -->
 
-        <section class="css-grid-items">
+        <section id="css-grid-items">
             <h2>Grid items</h2>
             <div class="snippet span-5" id="css-grid-column">
                 <h2 class="code">grid-column:</h2>
@@ -3661,7 +3686,7 @@
             <div class="snippet span-2">
                 <h2 class="code">background-image:</h2>
                 <div class="codeblock">
-                    <div class="box biggest ex-background-image" style="background-image: url(github.svg);"></div>
+                    <div class="box biggest ex-background-image" style="background-image: url(../github.svg);"></div>
                     <code>url(...);</code>
                 </div>
             </div>
@@ -4456,6 +4481,7 @@
             </div>
         </section>
     </section>
+    </div>
     <!-- CSS -->
 </body>
 

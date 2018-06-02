@@ -106,7 +106,7 @@ body {
 #html,
 #css,
 #animation-transitions {
-    padding-top: 60px;
+    padding-top: 0px;
 }
 
 .size-box {
@@ -257,6 +257,10 @@ h6 {
     color: var(--font-color-light);
     font-size: 1em;
     font-weight: normal;
+}
+
+section {
+    padding-top: 30px;
 }
 
 section > h1 {
