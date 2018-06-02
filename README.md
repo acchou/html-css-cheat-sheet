@@ -4,7 +4,7 @@ A simple, curated HTML5 and CSS cheat sheet.
 
 ## Viewing the cheat sheet
 
-Just open [html-css-cheat-sheet.html](https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html) in your browser. There are no external dependencies.
+Just open [html/html-cheat-sheet.html](https://acchou.github.io/html-css-cheat-sheet/html/html-cheat-sheet.html) in your browser. There are no external dependencies.
 
 ## Features
 
